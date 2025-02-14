@@ -14,14 +14,16 @@ from asknews_sdk import AskNewsSDK
 
 
 ######################### CONSTANTS #########################
-# Constants
+
+# region Constants
 SUBMIT_PREDICTION = True  # set to True to publish your predictions to Metaculus
-USE_EXAMPLE_QUESTIONS = False  # set to True to forecast example questions rather than the tournament questions
+USE_EXAMPLE_QUESTIONS = True  # set to True to forecast example questions rather than the tournament questions
 NUM_RUNS_PER_QUESTION = 5  # The median forecast is taken between NUM_RUNS_PER_QUESTION runs
 SKIP_PREVIOUSLY_FORECASTED_QUESTIONS = True
-GET_NEWS = False  # set to True to enable the bot to do online research
+GET_NEWS = True  # set to True to enable the bot to do online research
+# endregion
 
-# Environment variables
+# region Environment variables
 # You only need *either* Exa or Perplexity or AskNews keys for online research
 METACULUS_TOKEN = os.getenv("METACULUS_TOKEN")
 PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")
@@ -29,7 +31,9 @@ ASKNEWS_CLIENT_ID = os.getenv("ASKNEWS_CLIENT_ID")
 ASKNEWS_SECRET = os.getenv("ASKNEWS_SECRET")
 EXA_API_KEY = os.getenv("EXA_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") # You'll also need the OpenAI API Key if you want to use the Exa Smart Searcher
+# endregion
 
+# region Tournament IDs
 # The tournament IDs below can be used for testing your bot.
 Q4_2024_AI_BENCHMARKING_ID = 32506
 Q1_2025_AI_BENCHMARKING_ID = 32627
@@ -40,17 +44,23 @@ GIVEWELL_ID = 3600
 RESPIRATORY_OUTLOOK_ID = 3411
 
 TOURNAMENT_ID = Q1_2025_AI_BENCHMARKING_ID
+# endregion
 
+# region Example Questions
 # The example questions can be used for testing your bot. (note that question and post id are not always the same)
 EXAMPLE_QUESTIONS = [  # (question_id, post_id)
     (578, 578),  # Human Extinction - Binary - https://www.metaculus.com/questions/578/human-extinction-by-2100/
     (14333, 14333),  # Age of Oldest Human - Numeric - https://www.metaculus.com/questions/14333/age-of-oldest-human-as-of-2100/
     (22427, 22427),  # Number of New Leading AI Labs - Multiple Choice - https://www.metaculus.com/questions/22427/number-of-new-leading-ai-labs/
 ]
+# endregion
 
+# region Comments
 # Also, we realize the below code could probably be cleaned up a bit in a few places
 # Though we are assuming most people will dissect it enough to make this not matter much
-# Hopefully this is a good starting point for people to build on and get a gist of whats involved
+# Hopefully this is a good starting point for people to build on and get a gist of what's involved
+# endregion
+
 
 ######################### HELPER FUNCTIONS #########################
 
