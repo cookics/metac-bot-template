@@ -1079,7 +1079,7 @@ if __name__ == "__main__":
         open_question_id_post_id = EXAMPLE_QUESTIONS
     else:
         open_question_id_post_id = get_open_question_ids_from_tournament()
-
+    print(open_question_id_post_id)
     asyncio.run(
         forecast_questions(
             open_question_id_post_id,
