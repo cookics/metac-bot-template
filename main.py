@@ -25,6 +25,7 @@ GET_NEWS = True  # set to True to enable the bot to do online research
 
 # region Environment variables
 # You only need *either* Exa or Perplexity or AskNews keys for online research
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 METACULUS_TOKEN = os.getenv("METACULUS_TOKEN")
 PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")
 ASKNEWS_CLIENT_ID = os.getenv("ASKNEWS_CLIENT_ID")
@@ -60,6 +61,11 @@ EXAMPLE_QUESTIONS = [  # (question_id, post_id)
 # Though we are assuming most people will dissect it enough to make this not matter much
 # Hopefully this is a good starting point for people to build on and get a gist of what's involved
 # endregion
+
+
+CONCURRENT_REQUESTS_LIMIT = 5
+llm_rate_limiter = asyncio.Semaphore(CONCURRENT_REQUESTS_LIMIT)
+
 
 
 ######################### HELPER FUNCTIONS #########################
@@ -212,7 +218,7 @@ CONCURRENT_REQUESTS_LIMIT = 5
 llm_rate_limiter = asyncio.Semaphore(CONCURRENT_REQUESTS_LIMIT)
 
 
-async def call_llm(prompt: str, model: str = "gpt-4o", temperature: float = 0.3) -> str:
+async def call_llm_OAI(prompt: str, model: str = "gpt-4o", temperature: float = 0.3) -> str:
     """
     Makes a streaming completion request to OpenAI's API with concurrent request limiting.
     """
@@ -245,6 +251,48 @@ async def call_llm(prompt: str, model: str = "gpt-4o", temperature: float = 0.3)
 
     return "".join(collected_content)
 
+
+async def call_llm(prompt: str, model: str = "google/gemini-2.0-flash-001", temperature: float = 0.9) -> str:
+    """
+    Makes a streaming completion request to OpenRouter's API with concurrent request limiting.
+    Uses the Gemini 2.0 Flash Thinking Experimental 01-21 model.
+    """
+    # Initialize the OpenRouter client
+    client = AsyncOpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=OPENROUTER_API_KEY,
+        default_headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        },
+        max_retries=2,
+    )
+
+    async with llm_rate_limiter:
+        collected_content = []
+        try:
+            print(f"Sending request to OpenRouter with model: {model}")
+            stream = await client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=temperature,
+                top_p=1.0,  # Supported parameter per OpenRouter docs
+                stream=True,
+            )
+
+            print("Receiving streamed response...")
+            async for chunk in stream:
+                if chunk.choices and chunk.choices[0].delta.content is not None:
+                    collected_content.append(chunk.choices[0].delta.content)
+                    print(f"Chunk received: {chunk.choices[0].delta.content}")
+
+            result = "".join(collected_content)
+            print(f"Full response: {result}")
+            return result
+
+        except Exception as e:
+            print(f"Error in call_llm: {str(e)}")
+            raise
 
 def run_research(question: str) -> str:
     research = ""
