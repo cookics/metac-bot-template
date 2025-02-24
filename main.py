@@ -1124,6 +1124,7 @@ async def forecast_questions(
 
 ######################## FINAL RUN #########################
 if __name__ == "__main__":
+    print("Starting BOT")
     if USE_EXAMPLE_QUESTIONS:
         open_question_id_post_id = EXAMPLE_QUESTIONS
     else:
