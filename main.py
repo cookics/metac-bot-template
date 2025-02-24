@@ -32,7 +32,7 @@ METACULUS_TOKEN = os.getenv("METACULUS_TOKEN")
 #ASKNEWS_SECRET = os.getenv("ASKNEWS_SECRET")
 EXA_API_KEY = os.getenv("EXA_API_KEY")
 
-#OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") # You'll also need the OpenAI API Key if you want to use the Exa Smart Searcher
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") # You'll also need the OpenAI API Key if you want to use the Exa Smart Searcher
 # endregion
 
 # region Tournament IDs
@@ -298,6 +298,8 @@ async def call_llm(prompt: str, model: str = "google/gemini-2.0-flash-001", temp
 def run_research(question: str) -> str:
     research = ""
     if GET_NEWS == True:
+        research = call_exa_smart_searcher(question)
+        """
         if ASKNEWS_CLIENT_ID and ASKNEWS_SECRET:
             research = call_asknews(question)
         elif EXA_API_KEY:
@@ -306,6 +308,7 @@ def run_research(question: str) -> str:
             research = call_perplexity(question)
         else:
             raise ValueError("No API key provided")
+        """
     else:
         research = "No research done"
 
