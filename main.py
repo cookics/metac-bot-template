@@ -1098,6 +1098,7 @@ async def forecast_questions(
         for question_id, post_id in open_question_id_post_id
     ]
     forecast_summaries = await asyncio.gather(*forecast_tasks, return_exceptions=True)
+    print("CHANGE")
     print("\n", "#" * 100, "\nForecast Summaries\n", "#" * 100)
 
     errors = []
