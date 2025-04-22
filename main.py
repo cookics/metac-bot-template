@@ -146,7 +146,7 @@ def create_forecast_payload(
     return {
         "probability_yes": None,
         "probability_yes_per_category": None,
-        "continuous_cdf": forecast,
+        "continuous_cdf": None, #AHHHHHH curenly forget this!!!!!!!!!!
     }
 
 
