@@ -254,7 +254,7 @@ async def call_llm_OAI(prompt: str, model: str = "gpt-4o", temperature: float = 
     return "".join(collected_content)
 
 
-async def call_llm(prompt: str, model: str = "google/gemini-2.0-flash-001", temperature: float = 0.9) -> str:
+async def call_llm(prompt: str, model: str = "google/gemini-2.5-flash-preview", temperature: float = 0.9) -> str:
     """
     Makes a streaming completion request to OpenRouter's API with concurrent request limiting.
     Uses the Gemini 2.0 Flash Thinking Experimental 01-21 model.
