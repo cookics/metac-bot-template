@@ -1,105 +1,61 @@
-import os
-import requests
-import dotenv
+"""
+News/research functionality using EXA.
+"""
+import asyncio
+import forecasting_tools
+from config import GET_NEWS, OPENAI_API_KEY
 
-# Load environment variables from .env file
-dotenv.load_dotenv()
 
-# Get API credentials from environment variables
-ASKNEWS_CLIENT_ID = os.getenv("ASKNEWS_CLIENT_ID")
-ASKNEWS_SECRET = os.getenv("ASKNEWS_SECRET")
-
-# API Base URL
-ASKNEWS_API_URL = "https://api.asknews.app/v1/news/search"
-
-def fetch_enriched_news(
-    query: str,
-    num_articles: int = 5,
-    historical: bool = False,
-    strategy: str = "latest news",
-    sentiment: str = None,
-    categories: list[str] = None,
-    countries: list[str] = None,
-    languages: list[str] = None,
-):
+def call_exa_smart_searcher(question: str) -> str:
     """
-    Fetches enriched real-time news from the AskNews API.
-
-    Parameters:
-        query (str): Search query string (keywords, phrases, or natural language)
-        num_articles (int): Number of articles to return (default: 5)
-        historical (bool): Search historical news archive (default: False, last 48h)
-        strategy (str): Search strategy ('latest news', 'news knowledge', 'default')
-        sentiment (str): Filter articles by sentiment (e.g., 'positive', 'negative')
-        categories (list[str]): Filter by news categories (e.g., ['Science', 'Politics'])
-        countries (list[str]): Filter by country codes (e.g., ['US', 'GB'])
-        languages (list[str]): Filter by language codes (e.g., ['en', 'fr'])
-
-    Returns:
-        list: A list of articles with key details.
+    Search for relevant news using EXA.
+    Uses SmartSearcher if OPENAI_API_KEY is available, otherwise basic ExaSearcher.
     """
+    if OPENAI_API_KEY is None:
+        searcher = forecasting_tools.ExaSearcher(
+            include_highlights=True,
+            num_results=10,
+        )
+        highlights = asyncio.run(
+            searcher.invoke_for_highlights_in_relevance_order(question)
+        )
+        prioritized_highlights = highlights[:10]
+        combined_highlights = ""
+        for i, highlight in enumerate(prioritized_highlights):
+            combined_highlights += (
+                f'[Highlight {i+1}]:\n'
+                f'Title: {highlight.source.title}\n'
+                f'URL: {highlight.source.url}\n'
+                f'Text: "{highlight.highlight_text}"\n\n'
+            )
+        response = combined_highlights
+    else:
+        searcher = forecasting_tools.SmartSearcher(
+            temperature=0,
+            num_searches_to_run=2,
+            num_sites_per_search=10,
+        )
+        prompt = (
+            "You are an assistant to a superforecaster. The superforecaster will give "
+            "you a question they intend to forecast on. To be a great assistant, you generate "
+            "a concise but detailed rundown of the most relevant news, including if the question "
+            "would resolve Yes or No based on current information. You do not produce forecasts yourself."
+            f"\n\nThe question is: {question}"
+        )
+        response = asyncio.run(searcher.invoke(prompt))
 
-    if not ASKNEWS_CLIENT_ID or not ASKNEWS_SECRET:
-        raise ValueError("AskNews API credentials not found in .env file.")
+    return response
 
-    headers = {
-        "Authorization": f"Bearer {ASKNEWS_SECRET}",
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-    }
 
-    # Construct request parameters
-    payload = {
-        "query": query,
-        "n_articles": num_articles,
-        "return_type": "dicts",  # Get structured metadata-rich response
-        "historical": historical,
-        "strategy": strategy,  # "latest news" (past 24h) or "news knowledge" (past 60 days)
-    }
+def run_research(question: str) -> str:
+    """
+    Run research for a question using EXA.
+    Returns research summary or 'No research done' if GET_NEWS is False.
+    """
+    if GET_NEWS:
+        research = call_exa_smart_searcher(question)
+    else:
+        research = "No research done"
 
-    if sentiment:
-        payload["sentiment"] = sentiment
-    if categories:
-        payload["categories"] = categories
-    if countries:
-        payload["countries"] = countries
-    if languages:
-        payload["languages"] = languages
-
-    response = requests.get(ASKNEWS_API_URL, headers=headers, params=payload)
-
-    if response.status_code != 200:
-        raise RuntimeError(f"Error fetching articles: {response.status_code}, {response.text}")
-
-    articles = response.json()
-
-    # Extract relevant fields from API response
-    formatted_articles = []
-    for article in articles:
-        formatted_articles.append({
-            "Title": article["title"],
-            "Summary": article["summary"],
-            "Source": article["source_id"],
-            "Country": article["country"],
-            "Language": article["language"],
-            "Publication Date": article["pub_date"],
-            "Article URL": article["article_url"],
-            "Sentiment": article.get("sentiment", "N/A"),
-            "Keywords": article.get("keywords", []),
-            "Classification": article.get("classification", "N/A"),
-        })
-
-    return formatted_articles
-
-# Example Usage
-if __name__ == "__main__":
-    search_query = "Artificial Intelligence"
-    articles = fetch_enriched_news(
-        query=search_query, num_articles=5, categories=["Technology", "Science"]
-    )
-
-    print("\n🔹 Enriched News Articles:")
-    for idx, article in enumerate(articles, start=1):
-        print(f"\n🔹 Article {idx}:")
-        for key, value in article.items():
-            print(f"   {key}: {value}")
+    print(f"########################\nResearch Found:\n{research}\n########################")
+    return research
