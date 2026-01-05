@@ -40,3 +40,9 @@ jobs:
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           #OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Job Summary
+        if: always()
+        run: |
+          if [ -f summary.md ]; then
+            cat summary.md >> $GITHUB_STEP_SUMMARY
+          fi

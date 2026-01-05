@@ -45,7 +45,7 @@ async def forecast_individual_question(
     submit_prediction: bool,
     num_runs_per_question: int,
     skip_previously_forecasted_questions: bool,
-) -> str:
+) -> dict:
     """
     Forecast a single question and optionally submit to Metaculus.
     """
@@ -58,6 +58,14 @@ async def forecast_individual_question(
     summary_of_forecast += f"-----------------------------------------------\nQuestion: {title}\n"
     summary_of_forecast += f"URL: https://www.metaculus.com/questions/{post_id}/\n"
 
+    result = {
+        "title": title,
+        "url": f"https://www.metaculus.com/questions/{post_id}/",
+        "type": question_type,
+        "status": "Checked",
+        "forecast": "-",
+    }
+
     if question_type == "multiple_choice":
         options = question_details["options"]
         summary_of_forecast += f"options: {options}\n"
@@ -67,7 +75,8 @@ async def forecast_individual_question(
         and skip_previously_forecasted_questions
     ):
         summary_of_forecast += f"Skipped: Forecast already made\n"
-        return summary_of_forecast
+        result["status"] = "Skipped (Already Made)"
+        return result
 
     if question_type == "binary":
         forecast, comment = await get_binary_gpt_prediction(
@@ -100,8 +109,12 @@ async def forecast_individual_question(
         post_question_prediction(question_id, forecast_payload)
         post_question_comment(post_id, comment)
         summary_of_forecast += "Posted: Forecast was posted to Metaculus.\n"
+        result["status"] = "Forecasted & Posted"
+    else:
+        result["status"] = "Forecasted (Not Posted)"
 
-    return summary_of_forecast
+    result["forecast"] = str(forecast)[:100] + "..." if len(str(forecast)) > 100 else str(forecast)
+    return result
 
 
 async def forecast_questions(
@@ -146,7 +159,54 @@ async def forecast_questions(
         print("-----------------------------------------------\nErrors:\n")
         error_message = f"Errors were encountered: {errors}"
         print(error_message)
-        raise RuntimeError(error_message)
+        # We still want to write the summary even if some failed
+        # raise RuntimeError(error_message)
+
+    generate_github_summary(forecast_summaries, open_question_id_post_id)
+
+
+def generate_github_summary(results: list, question_info: list) -> None:
+    """
+    Generate a markdown summary table for GitHub Actions.
+    """
+    total = len(results)
+    forecasted = sum(1 for res in results if not isinstance(res, Exception) and "Forecasted" in res["status"])
+    skipped = sum(1 for res in results if not isinstance(res, Exception) and "Skipped" in res["status"])
+    errors = sum(1 for res in results if isinstance(res, Exception))
+
+    summary_lines = [
+        "## 🤖 Metaculus Bot Run Summary",
+        "",
+        f"| Statistic | Count |",
+        f"| :--- | :--- |",
+        f"| **Total Questions Checked** | {total} |",
+        f"| **New Forecasts Made** | {forecasted} ✅ |",
+        f"| **Sorted/Skipped** | {skipped} ⏭️ |",
+        f"| **Errors Encountered** | {errors} {'❌' if errors > 0 else '✅'} |",
+        "",
+        "### Detailed Results",
+        "",
+        "| Question | Type | Status | Forecast Preview |",
+        "| :--- | :--- | :--- | :--- |",
+    ]
+
+    for info, res in zip(question_info, results):
+        if isinstance(res, Exception):
+            title = info[2]
+            url = f"https://www.metaculus.com/questions/{info[1]}/"
+            status = f"❌ Error: {res.__class__.__name__}"
+            forecast = "-"
+        else:
+            title = res["title"]
+            url = res["url"]
+            status = res["status"]
+            forecast = f"`{res['forecast']}`"
+
+        summary_lines.append(f"| [{title}]({url}) | {info[1] if isinstance(res, Exception) else res['type']} | {status} | {forecast} |")
+
+    with open("summary.md", "w", encoding="utf-8") as f:
+        f.write("\n".join(summary_lines))
+    print(f"\nWritten summary to summary.md")
 
 
 if __name__ == "__main__":

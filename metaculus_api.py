@@ -79,7 +79,10 @@ def create_forecast_payload(
 
 
 def list_posts_from_tournament(
-    tournament_id: int | str = TOURNAMENT_ID, offset: int = 0, count: int = 50
+    tournament_id: int | str = TOURNAMENT_ID,
+    offset: int = 0,
+    count: int = 50,
+    order_by: str = "-publish_time",
 ) -> list[dict]:
     """
     List (all details) {count} posts from the {tournament_id}
@@ -87,7 +90,7 @@ def list_posts_from_tournament(
     url_qparams = {
         "limit": count,
         "offset": offset,
-        "order_by": "-hotness",
+        "order_by": order_by,
         "forecast_type": ",".join(["binary", "multiple_choice", "numeric"]),
         "tournaments": [tournament_id],
         "statuses": "open",
@@ -101,10 +104,10 @@ def list_posts_from_tournament(
     return data
 
 
-def get_open_question_ids_from_tournament() -> list[tuple[int, int]]:
+def get_open_question_ids_from_tournament() -> list[tuple[int, int, str]]:
     """
     Get all open question IDs from the configured tournament.
-    Returns list of (question_id, post_id) tuples.
+    Returns list of (question_id, post_id, title) tuples.
     """
     posts = list_posts_from_tournament()
 
@@ -121,7 +124,7 @@ def get_open_question_ids_from_tournament() -> list[tuple[int, int]]:
                     f"ID: {question['id']}\nQ: {question['title']}\nCloses: "
                     f"{question['scheduled_close_time']}"
                 )
-                open_question_id_post_id.append((question["id"], post_id))
+                open_question_id_post_id.append((question["id"], post_id, question["title"]))
 
     return open_question_id_post_id
 
