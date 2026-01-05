@@ -101,3 +101,34 @@ jobs:
           if [ -f summary.md ]; then
             cat summary.md >> $GITHUB_STEP_SUMMARY
           fi
+      - name: Set Job to Neutral if No Forecasts
+        if: always()
+        run: |
+          if [ -f forecast_count.txt ]; then
+            COUNT=$(cat forecast_count.txt)
+            if [ "$COUNT" -eq 0 ]; then
+              echo "No forecasts made, setting job to neutral status..."
+              
+              # Get the current job's check run ID
+              JOB_ID=$(gh api /repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs \
+                --jq '.jobs[] | select(.name == "daily_build") | .id')
+              
+              echo "Job ID: $JOB_ID"
+              
+              # Patch the check run to neutral
+              gh api --method PATCH \
+                -H "Accept: application/vnd.github+json" \
+                -H "X-GitHub-Api-Version: 2022-11-28" \
+                /repos/${{ github.repository }}/check-runs/$JOB_ID \
+                -f status="completed" \
+                -f conclusion="neutral" \
+                -F output[title]="No New Forecasts" \
+                -F output[summary]="Bot checked questions but found nothing new to forecast."
+              
+              echo "Job conclusion set to neutral"
+            else
+              echo "Forecasts were made ($COUNT), keeping success status"
+            fi
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
