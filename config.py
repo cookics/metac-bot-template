@@ -14,6 +14,7 @@ USE_EXAMPLE_QUESTIONS = False  # Set to True to forecast example questions
 NUM_RUNS_PER_QUESTION = 1  # The median forecast is taken between runs
 SKIP_PREVIOUSLY_FORECASTED_QUESTIONS = True
 GET_NEWS = True  # Set to True to enable EXA research
+USE_SMART_SEARCHER = False  # Set to True to use forecasting-tools SmartSearcher instead of pure Exa search
 
 # ========================= API KEYS =========================
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
