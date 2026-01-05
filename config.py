@@ -26,6 +26,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # For EXA Smart Searcher
 LLM_PROVIDER = "openrouter"
 
 OPENROUTER_MODEL = "google/gemini-2.0-flash-001"
+OPENROUTER_MODEL = "google/gemini-3-flash-preview"
 OPENROUTER_TEMP = 0.9
 
 METACULUS_PROXY_MODEL = "gpt-4o"
