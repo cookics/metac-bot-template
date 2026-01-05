@@ -67,24 +67,31 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Report Visual Result
         if: always()
+        continue-on-error: true
         run: |
           if [ -f forecast_count.txt ]; then
             COUNT=$(cat forecast_count.txt)
             if [ "$COUNT" -eq 0 ]; then
               CONCLUSION="neutral"
-              SUMMARY="⏭️ No new forecasts were needed today. Everything is up to date."
+              TITLE="Bot Run: Neutral"
+              SUMMARY="No new forecasts were needed today. Everything is up to date."
             else
               CONCLUSION="success"
-              SUMMARY="✅ Successfully made $COUNT new forecasts."
+              TITLE="Bot Run: Success"
+              SUMMARY="Successfully made $COUNT new forecasts."
             fi
             
             # Create a custom check run to show the "Neutral" or "Success" status visually
-            gh api --method POST /repos/${{ github.repository }}/check-runs \
+            gh api --method POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              /repos/${{ github.repository }}/check-runs \
               -f name="Metaculus Bot Result" \
               -f head_sha="${{ github.sha }}" \
               -f status="completed" \
               -f conclusion="$CONCLUSION" \
-              -f output="{\"title\":\"Bot Run: $CONCLUSION\",\"summary\":\"$SUMMARY\"}"
+              -F output[title]="$TITLE" \
+              -F output[summary]="$SUMMARY"
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
