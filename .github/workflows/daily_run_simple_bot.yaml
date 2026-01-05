@@ -10,12 +10,49 @@ permissions:
   contents: read
   actions: write
 
-# Daily job to run the simple forecast bot
+# Two-job workflow: check first, then conditionally forecast
 jobs:
-  daily_build:
-    runs-on: ubuntu-latest # determines the machine that will run the job - keep as is
-    steps: # sets up the steps that will be run in order
-      # setup repository with all necessary dependencies - keep as is
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      needs_forecast: ${{ steps.check_step.outputs.needs_forecast }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+          installer-parallel: true
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root
+      - name: Check if forecasting needed
+        id: check_step
+        run: |
+          poetry run python main.py --check-only
+          NEEDS_FORECAST=$(cat needs_forecast.txt)
+          echo "needs_forecast=$NEEDS_FORECAST" >> $GITHUB_OUTPUT
+          echo "Needs forecast: $NEEDS_FORECAST"
+        env:
+          METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+
+  forecast:
+    runs-on: ubuntu-latest
+    needs: check
+    if: needs.check.outputs.needs_forecast == 'true'
+    steps:
       - name: Check out repository
         uses: actions/checkout@v3
       - uses: actions/setup-python@v4
@@ -38,97 +75,13 @@ jobs:
       - name: Run bot
         run: |
           poetry run python main.py
-        # this reads the environment variables from the github repository.
-        # Store under Settings --> Secrets and variables --> Actions
         env:
-          METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }} # replace this with the name of the variable under which you stored your own Metaculus token
+          METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          #OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      - name: Update Run Title
-        if: always()
-        continue-on-error: true
-        run: |
-          if [ -f forecast_count.txt ]; then
-            COUNT=$(cat forecast_count.txt)
-            if [ "$COUNT" -gt 0 ]; then
-              TITLE="✅ YES ($COUNT New) - Metaculus Bot"
-            else
-              TITLE="⏭️ NO (0 New) - Metaculus Bot"
-            fi
-            # Use GitHub CLI to update the run title with correct headers and robust syntax
-            gh api --method PATCH \
-              -H "Accept: application/vnd.github+json" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              "/repos/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
-              -f display_title="$TITLE"
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Report Visual Result
-        if: always()
-        continue-on-error: true
-        run: |
-          if [ -f forecast_count.txt ]; then
-            COUNT=$(cat forecast_count.txt)
-            if [ "$COUNT" -eq 0 ]; then
-              CONCLUSION="neutral"
-              TITLE="Bot Run: Neutral"
-              SUMMARY="No new forecasts were needed today. Everything is up to date."
-            else
-              CONCLUSION="success"
-              TITLE="Bot Run: Success"
-              SUMMARY="Successfully made $COUNT new forecasts."
-            fi
-            
-            # Create a custom check run to show the "Neutral" or "Success" status visually
-            gh api --method POST \
-              -H "Accept: application/vnd.github+json" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              /repos/${{ github.repository }}/check-runs \
-              -f name="Metaculus Bot Result" \
-              -f head_sha="${{ github.sha }}" \
-              -f status="completed" \
-              -f conclusion="$CONCLUSION" \
-              -F output[title]="$TITLE" \
-              -F output[summary]="$SUMMARY"
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Job Summary
         if: always()
         run: |
           if [ -f summary.md ]; then
             cat summary.md >> $GITHUB_STEP_SUMMARY
           fi
-      - name: Set Job to Neutral if No Forecasts
-        if: always()
-        run: |
-          if [ -f forecast_count.txt ]; then
-            COUNT=$(cat forecast_count.txt)
-            if [ "$COUNT" -eq 0 ]; then
-              echo "No forecasts made, setting job to neutral status..."
-              
-              # Get the current job's check run ID
-              JOB_ID=$(gh api /repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs \
-                --jq '.jobs[] | select(.name == "daily_build") | .id')
-              
-              echo "Job ID: $JOB_ID"
-              
-              # Patch the check run to neutral
-              gh api --method PATCH \
-                -H "Accept: application/vnd.github+json" \
-                -H "X-GitHub-Api-Version: 2022-11-28" \
-                /repos/${{ github.repository }}/check-runs/$JOB_ID \
-                -f status="completed" \
-                -f conclusion="neutral" \
-                -F output[title]="No New Forecasts" \
-                -F output[summary]="Bot checked questions but found nothing new to forecast."
-              
-              echo "Job conclusion set to neutral"
-            else
-              echo "Forecasts were made ($COUNT), keeping success status"
-            fi
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

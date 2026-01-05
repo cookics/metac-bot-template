@@ -214,17 +214,57 @@ def generate_github_summary(results: list, question_info: list) -> None:
 
 
 if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Metaculus Forecasting Bot")
+    parser.add_argument(
+        "--check-only",
+        action="store_true",
+        help="Only check if forecasting is needed, don't actually forecast"
+    )
+    args = parser.parse_args()
+    
     print("Starting BOT")
     if USE_EXAMPLE_QUESTIONS:
         open_question_id_post_id = EXAMPLE_QUESTIONS
     else:
         open_question_id_post_id = get_open_question_ids_from_tournament()
     print(open_question_id_post_id)
-    asyncio.run(
-        forecast_questions(
-            open_question_id_post_id,
-            SUBMIT_PREDICTION,
-            NUM_RUNS_PER_QUESTION,
-            SKIP_PREVIOUSLY_FORECASTED_QUESTIONS,
+    
+    if args.check_only:
+        # Just check if there are questions that need forecasting
+        if SKIP_PREVIOUSLY_FORECASTED_QUESTIONS:
+            # Count how many questions need forecasting
+            needs_forecast_count = 0
+            for question_id, post_id, title in open_question_id_post_id:
+                post_details = get_post_details(post_id)
+                if not forecast_is_already_made(post_details):
+                    needs_forecast_count += 1
+            
+            print(f"Questions needing forecast: {needs_forecast_count}")
+            
+            # Write output for GitHub Actions
+            with open("needs_forecast.txt", "w") as f:
+                f.write("true" if needs_forecast_count > 0 else "false")
+            
+            # Exit with appropriate message
+            if needs_forecast_count > 0:
+                print(f"✅ {needs_forecast_count} questions need forecasting")
+            else:
+                print("⏭️ No questions need forecasting")
+        else:
+            # If not skipping, always needs forecasting
+            with open("needs_forecast.txt", "w") as f:
+                f.write("true")
+            print(f"✅ {len(open_question_id_post_id)} questions to forecast")
+    else:
+        # Normal forecasting mode
+        asyncio.run(
+            forecast_questions(
+                open_question_id_post_id,
+                SUBMIT_PREDICTION,
+                NUM_RUNS_PER_QUESTION,
+                SKIP_PREVIOUSLY_FORECASTED_QUESTIONS,
+            )
         )
-    )
+
