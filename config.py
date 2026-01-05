@@ -21,6 +21,24 @@ METACULUS_TOKEN = os.getenv("METACULUS_TOKEN")
 EXA_API_KEY = os.getenv("EXA_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # For EXA Smart Searcher
 
+# ========================= LLM SETTINGS =========================
+# Supported providers: "openrouter", "metaculus_proxy"
+LLM_PROVIDER = "openrouter"
+
+OPENROUTER_MODEL = "google/gemini-2.0-flash-001"
+OPENROUTER_TEMP = 0.9
+
+METACULUS_PROXY_MODEL = "gpt-4o"
+METACULUS_PROXY_TEMP = 0.3
+
+# Derived defaults
+if LLM_PROVIDER == "openrouter":
+    DEFAULT_MODEL = OPENROUTER_MODEL
+    DEFAULT_TEMP = OPENROUTER_TEMP
+else:
+    DEFAULT_MODEL = METACULUS_PROXY_MODEL
+    DEFAULT_TEMP = METACULUS_PROXY_TEMP
+
 # ========================= METACULUS API =========================
 AUTH_HEADERS = {"headers": {"Authorization": f"Token {METACULUS_TOKEN}"}}
 API_BASE_URL = "https://www.metaculus.com/api"

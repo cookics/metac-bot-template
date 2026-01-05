@@ -3,10 +3,36 @@ LLM client wrappers for OpenRouter and OpenAI.
 These are stable once configured and rarely need changes.
 """
 from openai import AsyncOpenAI
-from config import OPENROUTER_API_KEY, METACULUS_TOKEN, llm_rate_limiter
+from config import (
+    OPENROUTER_API_KEY, 
+    METACULUS_TOKEN, 
+    llm_rate_limiter,
+    LLM_PROVIDER,
+    DEFAULT_MODEL,
+    DEFAULT_TEMP,
+    METACULUS_PROXY_MODEL,
+    METACULUS_PROXY_TEMP,
+)
 
 
 async def call_llm(
+    prompt: str, 
+    model: str = DEFAULT_MODEL, 
+    temperature: float = DEFAULT_TEMP,
+    provider: str = LLM_PROVIDER
+) -> str:
+    """
+    Unified entry point for LLM calls. Routes to OpenRouter or Metaculus Proxy.
+    """
+    if provider == "openrouter":
+        return await call_llm_openrouter(prompt, model, temperature)
+    elif provider == "metaculus_proxy":
+        return await call_llm_metaculus_proxy(prompt, model, temperature)
+    else:
+        raise ValueError(f"Unknown LLM provider: {provider}")
+
+
+async def call_llm_openrouter(
     prompt: str, 
     model: str = "google/gemini-2.0-flash-001", 
     temperature: float = 0.9
@@ -40,21 +66,21 @@ async def call_llm(
             async for chunk in stream:
                 if chunk.choices and chunk.choices[0].delta.content is not None:
                     collected_content.append(chunk.choices[0].delta.content)
-                    print(f"Chunk received: {chunk.choices[0].delta.content}")
+                    # print(f"Chunk received: {chunk.choices[0].delta.content}") # Quiet down logs a bit
 
             result = "".join(collected_content)
-            print(f"Full response: {result}")
+            # print(f"Full response: {result}") # Quiet down logs a bit
             return result
 
         except Exception as e:
-            print(f"Error in call_llm: {str(e)}")
+            print(f"Error in call_llm_openrouter: {str(e)}")
             raise
 
 
-async def call_llm_oai(
+async def call_llm_metaculus_proxy(
     prompt: str, 
-    model: str = "gpt-4o", 
-    temperature: float = 0.3
+    model: str = METACULUS_PROXY_MODEL, 
+    temperature: float = METACULUS_PROXY_TEMP
 ) -> str:
     """
     Makes a streaming completion request to OpenAI via Metaculus proxy.
@@ -71,15 +97,25 @@ async def call_llm_oai(
 
     async with llm_rate_limiter:
         collected_content = []
-        stream = await client.chat.completions.create(
-            model=model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=temperature,
-            stream=True,
-        )
+        try:
+            print(f"Sending request to Metaculus Proxy with model: {model}")
+            stream = await client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=temperature,
+                stream=True,
+            )
 
-        async for chunk in stream:
-            if chunk.choices and chunk.choices[0].delta.content is not None:
-                collected_content.append(chunk.choices[0].delta.content)
+            async for chunk in stream:
+                if chunk.choices and chunk.choices[0].delta.content is not None:
+                    collected_content.append(chunk.choices[0].delta.content)
 
-    return "".join(collected_content)
+            return "".join(collected_content)
+        except Exception as e:
+            print(f"Error in call_llm_metaculus_proxy: {str(e)}")
+            raise
+
+
+# Backward compatibility if needed
+async def call_llm_oai(prompt: str, model: str = METACULUS_PROXY_MODEL, temperature: float = METACULUS_PROXY_TEMP) -> str:
+    return await call_llm_metaculus_proxy(prompt, model, temperature)

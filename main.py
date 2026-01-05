@@ -134,7 +134,7 @@ async def forecast_questions(
             num_runs_per_question,
             skip_previously_forecasted_questions,
         )
-        for question_id, post_id in open_question_id_post_id
+        for question_id, post_id, _ in open_question_id_post_id
     ]
     forecast_summaries = await asyncio.gather(*forecast_tasks, return_exceptions=True)
     
@@ -144,7 +144,7 @@ async def forecast_questions(
     for question_id_post_id, forecast_summary in zip(
         open_question_id_post_id, forecast_summaries
     ):
-        question_id, post_id = question_id_post_id
+        question_id, post_id, _ = question_id_post_id
         if isinstance(forecast_summary, Exception):
             print(
                 f"-----------------------------------------------\nPost {post_id} Question {question_id}:\n"
