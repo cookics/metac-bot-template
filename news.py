@@ -7,6 +7,39 @@ import forecasting_tools
 from config import GET_NEWS, OPENAI_API_KEY, EXA_API_KEY, USE_SMART_SEARCHER
 
 
+def exa_search_raw(query: str, num_results: int = 10) -> list[dict]:
+    """
+    Perform a search using Exa API and return raw results as list of dicts.
+    This is used by the research agent to filter relevant results.
+    """
+    if not EXA_API_KEY:
+        return []
+
+    exa = Exa(api_key=EXA_API_KEY)
+    
+    result = exa.search_and_contents(
+        query,
+        context=True,
+        num_results=num_results,
+        text=True,
+        type="deep",
+        user_location="US"
+    )
+
+    raw_results = []
+    for i, res in enumerate(result.results):
+        raw_results.append({
+            "index": i,
+            "title": res.title,
+            "url": res.url,
+            "score": res.score,
+            "published_date": res.published_date,
+            "text": res.text[:1000] if res.text else "",
+            "highlights": res.highlights if res.highlights else [],
+        })
+    return raw_results
+
+
 def exa_search_and_contents(query: str, num_results: int = 10) -> str:
     """
     Perform a search and get contents using the pure Exa API.

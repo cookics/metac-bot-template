@@ -8,7 +8,8 @@ import re
 import numpy as np
 
 from llm import call_llm
-from news import run_research
+from research_agent import run_research_agent, format_results_for_forecaster
+from config import FORECAST_MODEL, FORECAST_TEMP
 from prompts import (
     BINARY_PROMPT_TEMPLATE,
     NUMERIC_PROMPT_TEMPLATE,
@@ -241,7 +242,9 @@ async def get_binary_gpt_prediction(
     background = question_details["description"]
     fine_print = question_details["fine_print"]
 
-    summary_report = run_research(title)
+    # Two-agent pipeline: Research Agent filters/summarizes, then Forecasting Agent predicts
+    relevant_results, research_summary = await run_research_agent(title)
+    summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
     content = BINARY_PROMPT_TEMPLATE.format(
         title=title,
@@ -253,7 +256,7 @@ async def get_binary_gpt_prediction(
     )
 
     async def get_rationale_and_probability(content: str) -> tuple[float, str]:
-        rationale = await call_llm(content)
+        rationale = await call_llm(content, model=FORECAST_MODEL, temperature=FORECAST_TEMP)
         probability = extract_probability_from_response_as_percentage_not_decimal(rationale)
         comment = f"Extracted Probability: {probability}%\n\nGPT's Answer: {rationale}\n\n\n"
         return probability, comment
@@ -300,7 +303,9 @@ async def get_numeric_gpt_prediction(
     else:
         lower_bound_message = f"The outcome can not be lower than {lower_bound}."
 
-    summary_report = run_research(title)
+    # Two-agent pipeline: Research Agent filters/summarizes, then Forecasting Agent predicts
+    relevant_results, research_summary = await run_research_agent(title)
+    summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
     content = NUMERIC_PROMPT_TEMPLATE.format(
         title=title,
@@ -314,7 +319,7 @@ async def get_numeric_gpt_prediction(
     )
 
     async def ask_llm_to_get_cdf(content: str) -> tuple[list[float], str]:
-        rationale = await call_llm(content)
+        rationale = await call_llm(content, model=FORECAST_MODEL, temperature=FORECAST_TEMP)
         percentile_values = extract_percentiles_from_response(rationale)
 
         comment = (
@@ -362,7 +367,9 @@ async def get_multiple_choice_gpt_prediction(
     fine_print = question_details["fine_print"]
     options = question_details["options"]
 
-    summary_report = run_research(title)
+    # Two-agent pipeline: Research Agent filters/summarizes, then Forecasting Agent predicts
+    relevant_results, research_summary = await run_research_agent(title)
+    summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
     content = MULTIPLE_CHOICE_PROMPT_TEMPLATE.format(
         title=title,
@@ -377,7 +384,7 @@ async def get_multiple_choice_gpt_prediction(
     async def ask_llm_for_multiple_choice_probabilities(
         content: str,
     ) -> tuple[dict[str, float], str]:
-        rationale = await call_llm(content)
+        rationale = await call_llm(content, model=FORECAST_MODEL, temperature=FORECAST_TEMP)
 
         option_probabilities = extract_option_probabilities_from_response(
             rationale, options

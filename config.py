@@ -26,17 +26,26 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # For EXA Smart Searcher
 # Supported providers: "openrouter", "metaculus_proxy"
 LLM_PROVIDER = "openrouter"
 
-OPENROUTER_MODEL = "google/gemini-2.0-flash-001"
-OPENROUTER_MODEL = "google/gemini-3-flash-preview"
-OPENROUTER_TEMP = 0.9
+# Two-Agent System Models
+# Research Agent: Cheaper model for search, filtering, and summarization
+RESEARCH_MODEL = "google/gemini-2.0-flash-001"
+RESEARCH_TEMP = 0.3  # Lower temp for more factual/consistent research
+
+# Forecast Agent: Larger model for making predictions
+FORECAST_MODEL = "google/gemini-3-flash-preview"
+FORECAST_TEMP = 0.9  # Higher temp for creative reasoning
+
+# Legacy settings (for backward compatibility)
+OPENROUTER_MODEL = FORECAST_MODEL
+OPENROUTER_TEMP = FORECAST_TEMP
 
 METACULUS_PROXY_MODEL = "gpt-4o"
 METACULUS_PROXY_TEMP = 0.7
 
-# Derived defaults
+# Derived defaults (uses forecast model as default)
 if LLM_PROVIDER == "openrouter":
-    DEFAULT_MODEL = OPENROUTER_MODEL
-    DEFAULT_TEMP = OPENROUTER_TEMP
+    DEFAULT_MODEL = FORECAST_MODEL
+    DEFAULT_TEMP = FORECAST_TEMP
 else:
     DEFAULT_MODEL = METACULUS_PROXY_MODEL
     DEFAULT_TEMP = METACULUS_PROXY_TEMP

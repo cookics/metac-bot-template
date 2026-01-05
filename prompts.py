@@ -3,6 +3,30 @@ Prompt templates for forecasting.
 These are the templates you'll iterate on to improve forecast quality.
 """
 
+# ========================= RESEARCH AGENT PROMPT =========================
+
+RESEARCH_AGENT_PROMPT = """
+You are a research assistant helping a forecaster answer questions.
+
+The forecaster needs to answer this question:
+{question}
+
+Below are search results from the web. Your job is to:
+1. Review each result and determine if it is RELEVANT to answering the question
+2. Select only the most relevant results (usually 3-5, but use your judgment)
+3. Write a brief summary of the key findings that would help answer the question
+
+Search Results (JSON):
+{results_json}
+
+Respond in EXACTLY this format:
+
+RELEVANT_INDICES: [list the index numbers of relevant results, e.g., 0, 2, 5]
+SUMMARY: Write a 2-4 sentence summary of the key information from the relevant results that would help forecast this question. Focus on facts, data, and recent developments.
+"""
+
+# ========================= FORECASTING PROMPTS =========================
+
 BINARY_PROMPT_TEMPLATE = """
 You are a professional forecaster interviewing for a job.
 
