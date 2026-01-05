@@ -5,6 +5,11 @@ on:
   schedule:
     - cron: "*/30 * * * *" # runs every 30 minutes. Make sure to skip already forecasted questions!
 
+# Give the GITHUB_TOKEN permissions to update the run title
+permissions:
+  contents: read
+  actions: write
+
 # Daily job to run the simple forecast bot
 jobs:
   daily_build:
@@ -40,6 +45,23 @@ jobs:
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           #OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Update Run Title
+        if: always()
+        run: |
+          if [ -f forecast_count.txt ]; then
+            COUNT=$(cat forecast_count.txt)
+            if [ "$COUNT" -gt 0 ]; then
+              TITLE="✅ YES ($COUNT New) - Metaculus Bot"
+            else
+              TITLE="⏭️ NO (0 New) - Metaculus Bot"
+            fi
+            # Use GitHub CLI to update the run title
+            gh api --method PATCH -H "Accept: application/vnd.github+json" \
+              /repos/${{ github.repository }}/actions/runs/${{ github.run_id }} \
+              -f display_title="$TITLE"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Job Summary
         if: always()
         run: |

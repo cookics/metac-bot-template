@@ -206,7 +206,11 @@ def generate_github_summary(results: list, question_info: list) -> None:
 
     with open("summary.md", "w", encoding="utf-8") as f:
         f.write("\n".join(summary_lines))
-    print(f"\nWritten summary to summary.md")
+    
+    with open("forecast_count.txt", "w", encoding="utf-8") as f:
+        f.write(str(forecasted))
+        
+    print(f"\nWritten summary to summary.md and count to forecast_count.txt")
 
 
 if __name__ == "__main__":
