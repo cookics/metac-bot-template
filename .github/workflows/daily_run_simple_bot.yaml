@@ -47,6 +47,7 @@ jobs:
           #OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       - name: Update Run Title
         if: always()
+        continue-on-error: true
         run: |
           if [ -f forecast_count.txt ]; then
             COUNT=$(cat forecast_count.txt)
@@ -55,10 +56,35 @@ jobs:
             else
               TITLE="⏭️ NO (0 New) - Metaculus Bot"
             fi
-            # Use GitHub CLI to update the run title
-            gh api --method PATCH -H "Accept: application/vnd.github+json" \
-              /repos/${{ github.repository }}/actions/runs/${{ github.run_id }} \
+            # Use GitHub CLI to update the run title with correct headers and robust syntax
+            gh api --method PATCH \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "/repos/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
               -f display_title="$TITLE"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Report Visual Result
+        if: always()
+        run: |
+          if [ -f forecast_count.txt ]; then
+            COUNT=$(cat forecast_count.txt)
+            if [ "$COUNT" -eq 0 ]; then
+              CONCLUSION="neutral"
+              SUMMARY="⏭️ No new forecasts were needed today. Everything is up to date."
+            else
+              CONCLUSION="success"
+              SUMMARY="✅ Successfully made $COUNT new forecasts."
+            fi
+            
+            # Create a custom check run to show the "Neutral" or "Success" status visually
+            gh api --method POST /repos/${{ github.repository }}/check-runs \
+              -f name="Metaculus Bot Result" \
+              -f head_sha="${{ github.sha }}" \
+              -f status="completed" \
+              -f conclusion="$CONCLUSION" \
+              -f output="{\"title\":\"Bot Run: $CONCLUSION\",\"summary\":\"$SUMMARY\"}"
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

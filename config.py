@@ -29,7 +29,7 @@ OPENROUTER_MODEL = "google/gemini-2.0-flash-001"
 OPENROUTER_TEMP = 0.9
 
 METACULUS_PROXY_MODEL = "gpt-4o"
-METACULUS_PROXY_TEMP = 0.3
+METACULUS_PROXY_TEMP = 0.7
 
 # Derived defaults
 if LLM_PROVIDER == "openrouter":
