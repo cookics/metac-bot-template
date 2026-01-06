@@ -31,6 +31,7 @@ from metaculus_api import (
     sample_questions_evenly,
     extract_question_for_backtest,
     get_community_forecast,
+    get_community_forecast_from_csv,
 )
 from cache import (
     save_search_cache,
@@ -462,11 +463,44 @@ def grade_backtest_run(run_id: str = "latest", run_name: str = "backtest_1") -> 
         if post_id:
             # Get community forecast specifically at the time of publication (time-matched)
             cf = get_community_forecast(post_id, at_time=publish_time)
+            
+            # Fallback to CSV if API returns error, missing results, or a "dummy" (all 1.0 or all 0.0) CDF
+            is_dummy_cdf = False
+            if question_type == "numeric" and cf.get("forecast_values"):
+                vals = cf["forecast_values"]
+                if all(v == 1.0 for v in vals) or all(v == 0.0 for v in vals):
+                    is_dummy_cdf = True
+            
+            should_fallback = "error" in cf
+            if not should_fallback:
+                if question_type == "binary" and not cf.get("probability_yes"):
+                    should_fallback = True
+                elif question_type == "multiple_choice" and not cf.get("probability_yes_per_category"):
+                    should_fallback = True
+                elif question_type == "numeric" and (not cf.get("forecast_values") or is_dummy_cdf):
+                    should_fallback = True
+                    
+            # 1st fallback: CSV download
+            if should_fallback:
+                q_id = fc.get("question_id")
+                cf_csv = get_community_forecast_from_csv(post_id, q_id)
+                if "error" not in cf_csv:
+                    cf = cf_csv
+                    should_fallback = False  # CSV worked
+                    
+            # 2nd fallback: Use 'latest' (non-time-matched) as last resort
+            if should_fallback:
+                cf_latest = get_community_forecast(post_id, at_time=None)  # No time constraint
+                if "error" not in cf_latest:
+                    cf = cf_latest
+            
             if "error" not in cf:
                 if question_type == "numeric":
                     community_forecast = cf.get("forecast_values")
                 elif question_type == "binary":
                     community_forecast = cf.get("probability_yes")
+                elif question_type == "multiple_choice":
+                    community_forecast = cf.get("probability_yes_per_category")
         
         # Grade with community comparison
         grade = grade_forecast(
@@ -503,6 +537,18 @@ def grade_backtest_run(run_id: str = "latest", run_name: str = "backtest_1") -> 
         }, f, indent=2)
     
     print(f"[Backtest] Saved grades to {grades_path}")
+    
+    # Generate detailed text tables
+    try:
+        from grading import generate_detailed_tables
+        tables = generate_detailed_tables(grades, results)
+        for filename, content in tables.items():
+            table_path = plots_dir / filename
+            with open(table_path, "w") as f:
+                f.write(content)
+            print(f"[Backtest] Saved summary table to {table_path}")
+    except Exception as e:
+        print(f"[Backtest] Failed to generate detailed tables: {e}")
     
     # Generate visualizations
     try:

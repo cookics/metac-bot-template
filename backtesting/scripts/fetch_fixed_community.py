@@ -13,7 +13,7 @@ sys.path.append(str(ROOT_DIR / "src"))
 from config import AUTH_HEADERS, API_BASE_URL
 
 # PATHS
-grades_path = Path('backtest_results/run_20260105_234222_clean_run.grades.json')
+grades_path = ROOT_DIR / 'backtesting' / 'data' / 'runs' / 'backtest_2' / 'results' / 'run_20260106_014406_default.grades.json'
 
 def fetch_group_community(post_id, question_id):
     """Fetch community forecast from CSV download for group sub-questions."""
@@ -85,13 +85,31 @@ def fetch_group_community(post_id, question_id):
     return None
 
 def main():
-    results_dir = Path(__file__).resolve().parent.parent / "data" / "results"
-    grades_file = results_dir / 'run_20260105_234222_clean_run.grades.json'
-    run_file = results_dir / 'run_20260105_234222_clean_run.json'
-
-    if not grades_file.exists():
-        print(f"Grades file {grades_file} not found.")
+    import argparse
+    parser = argparse.ArgumentParser(description="Fetch community forecasts via CSV API")
+    parser.add_argument("--run-name", type=str, default="backtest_3", help="Name of the run folder")
+    args = parser.parse_args()
+    
+    run_name = args.run_name
+    results_dir = Path(__file__).resolve().parent.parent / "data" / "runs" / run_name / "results"
+    
+    # Auto-detect latest grades file
+    grades_files = sorted(results_dir.glob("*.grades.json"), reverse=True)
+    run_files = sorted(results_dir.glob("run_*.json"), reverse=True)
+    run_files = [f for f in run_files if not f.name.endswith('.grades.json')]
+    
+    if not grades_files:
+        print(f"No grades files found in {results_dir}")
         return
+    if not run_files:
+        print(f"No run files found in {results_dir}")
+        return
+        
+    grades_file = grades_files[0]
+    run_file = run_files[0]
+    
+    print(f"[{run_name}] Using grades: {grades_file.name}")
+    print(f"[{run_name}] Using run: {run_file.name}")
 
     with open(run_file, 'r', encoding='utf-8') as f:
         run_data = json.load(f)
@@ -104,7 +122,7 @@ def main():
             fc.get('question_details', {}).get('post_id')
         )
 
-    with open(grades_path, 'r', encoding='utf-8') as f:
+    with open(grades_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     grades = data['grades']
@@ -133,14 +151,15 @@ def main():
             print(f"    STILL MISSING.")
         
         import time
-        time.sleep(2)  # Avoid 429
+        time.sleep(1.5)  # Avoid 429
 
     if updated_count > 0:
-        with open(grades_path, 'w', encoding='utf-8') as f:
+        with open(grades_file, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2)
-        print(f"\nUpdated {updated_count} community forecasts in {grades_path.name}")
+        print(f"\nUpdated {updated_count} community forecasts in {grades_file.name}")
     else:
-        print("\nNo community forecasts updated.")
+        print("\nNo community forecasts needed updating (all already present).")
 
 if __name__ == "__main__":
     main()
+

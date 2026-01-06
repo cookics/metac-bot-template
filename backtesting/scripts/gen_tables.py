@@ -1,6 +1,7 @@
 import json
 import math
 import sys
+import argparse
 from pathlib import Path
 
 # Add root and src to sys.path
@@ -8,15 +9,35 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.append(str(ROOT_DIR))
 sys.path.append(str(ROOT_DIR / "src"))
 
-PLOTS_DIR = Path(__file__).resolve().parent.parent / "data" / "plots"
-grades_path = Path(__file__).resolve().parent.parent / "data" / "results" / 'run_20260105_234222_clean_run.grades.json'
+# Parse arguments
+parser = argparse.ArgumentParser(description="Generate results tables from grades")
+parser.add_argument("--run-name", type=str, default="backtest_3", help="Name of the run folder")
+args = parser.parse_args()
+
+run_name = args.run_name
+RUNS_DIR = Path(__file__).resolve().parent.parent / "data" / "runs" / run_name
+PLOTS_DIR = RUNS_DIR / "plots"
+results_dir = RUNS_DIR / "results"
+
+# Auto-detect latest files
+grades_files = sorted(results_dir.glob("*.grades.json"), reverse=True)
+run_files = sorted(results_dir.glob("run_*.json"), reverse=True)
+run_files = [f for f in run_files if not f.name.endswith('.grades.json')]
+
+if not grades_files or not run_files:
+    print(f"No grades or run files found in {results_dir}")
+    sys.exit(1)
+
+grades_path = grades_files[0]
+run_path = run_files[0]
+
+print(f"[{run_name}] Using grades: {grades_path.name}")
+print(f"[{run_name}] Using run: {run_path.name}")
 
 # Load grades and run data
 with open(grades_path) as f:
     grades_data = json.load(f)
 
-# Hardcoded run path for now as per session context
-run_path = Path(__file__).resolve().parent.parent / "data" / "results" / 'run_20260105_234222_clean_run.json'
 with open(run_path) as f:
     run_data = json.load(f)
 
@@ -26,6 +47,7 @@ for f in run_data.get('forecasts', []):
     title_to_scaling[f.get('title')] = scaling
 
 grades = grades_data.get('grades', [])
+
 
 def log_score_binary(fc, outcome, eps=0.001):
     fc = max(eps, min(1-eps, fc))

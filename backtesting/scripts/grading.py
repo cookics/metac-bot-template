@@ -184,6 +184,35 @@ def generate_naive_cdf(n_points: int = 201, tail_prob: float = 0.05) -> list[flo
     return [tail_prob + (1 - 2 * tail_prob) * i / (n_points - 1) for i in range(n_points)]
 
 
+def get_normalized_density(cdf: list[float], resolution: float, range_min: float, range_max: float) -> float:
+    """Estimate normalized PDF density (0-1 space) at resolution point from 201-point CDF."""
+    if not cdf or len(cdf) != 201 or resolution is None:
+        return 0.0
+    if range_max <= range_min:
+        return 0.0
+
+    # Normalize resolution to [0, 1]
+    res_norm = (resolution - range_min) / (range_max - range_min)
+    res_norm = max(0.0, min(1.0, res_norm))
+
+    # Grid index (0 to 200)
+    idx = res_norm * 200
+    i = int(round(idx))
+    
+    # Use a small window for stability (3 points)
+    low = max(0, i - 1)
+    high = min(200, i + 1)
+    if high == low: return 0.0
+    
+    dp = cdf[high] - cdf[low]
+    # Corresponding range in unit-less normalized space
+    dx_norm = (high - low) / 200.0
+    
+    # Normalized density (PDF height in unit-range space)
+    # Uniform distribution = 1.0, Max = 200.0
+    return dp / dx_norm if dx_norm > 0 else 0.0
+
+
 # ========================= GRADING FUNCTIONS =========================
 
 def grade_binary_forecast(forecast: float, resolution: bool, community_forecast: float = None) -> dict:
@@ -449,3 +478,155 @@ def generate_report(grades: list[dict], config_name: str = "default") -> str:
 """
     
     return report
+
+
+def generate_detailed_tables(grades: list[dict], run_data: dict = None) -> dict[str, str]:
+    """
+    Generate detailed text-based results tables for each question type.
+    Returns a dict mapping filename (sluggified) to the table content string.
+    """
+    tables = {}
+    
+    # ============= BINARY =============
+    binary_grades = [g for g in grades if g.get('question_type') == 'binary']
+    if binary_grades:
+        lines = []
+        lines.append("=" * 130)
+        lines.append("BINARY QUESTIONS RESULTS")
+        lines.append("=" * 130 + "\n")
+        lines.append(f"{'#':<3} {'Our Pred':<10} {'Comm Pred':<10} {'Outcome':<8} {'Log Score':<12} {'Peer Score':<12} Title")
+        lines.append("-" * 130)
+        
+        for i, g in enumerate(binary_grades, 1):
+            our = g.get('forecast', 0)
+            comm = g.get('community_forecast')
+            comm_str = f"{comm:.3f}" if comm is not None else "N/A"
+            outcome = g.get('outcome', 0)
+            log_score = g.get('log_score', 0)
+            peer = g.get('peer_score')
+            peer_str = f"{peer:.2f}" if peer is not None else "N/A"
+            title = g.get('title', '')[:65]
+            correct = (our > 0.5 and outcome == 1) or (our < 0.5 and outcome == 0)
+            marker = "" if correct else " *** WRONG"
+            lines.append(f"{i:<3} {our:<10.3f} {comm_str:<10} {outcome:<8} {log_score:<12.4f} {peer_str:<12} {title}{marker}")
+        
+        lines.append("-" * 130)
+        lines.append(f"\nSUMMARY: {len(binary_grades)} binary questions")
+        correct_count = sum(1 for g in binary_grades if (g.get('forecast', 0) > 0.5 and g.get('outcome') == 1) or (g.get('forecast', 0) < 0.5 and g.get('outcome') == 0))
+        lines.append(f"Correct predictions: {correct_count}/{len(binary_grades)} ({100*correct_count/len(binary_grades):.1f}%)")
+        peer_scores = [g['peer_score'] for g in binary_grades if g.get('peer_score') is not None]
+        if peer_scores:
+            lines.append(f"Mean Peer Score: {sum(peer_scores)/len(peer_scores):.2f} (n={len(peer_scores)}) (positive = beating community)")
+        lines.append(f"Mean Log Score: {sum(g.get('log_score', 0) for g in binary_grades)/len(binary_grades):.4f}")
+        
+        tables["binary_results.txt"] = "\n".join(lines)
+
+    # ============= MULTIPLE CHOICE =============
+    mc_grades = [g for g in grades if g.get('question_type') == 'multiple_choice']
+    if mc_grades:
+        lines = []
+        lines.append("=" * 140)
+        lines.append("MULTIPLE CHOICE QUESTIONS RESULTS")
+        lines.append("=" * 140 + "\n")
+        
+        for i, g in enumerate(mc_grades, 1):
+            title = g.get('title', '')[:80]
+            resolution = g.get('resolution', '')
+            our_fc = g.get('forecast', {})
+            comm_fc = g.get('community_forecast', {})
+            our_prob = g.get('correct_probability', 0)
+            
+            # Recalculate comm_prob if needed (if it was a list)
+            comm_prob = 0
+            if isinstance(comm_fc, dict):
+                comm_prob = comm_fc.get(resolution, 0)
+            
+            log_score = g.get('log_score', 0)
+            brier = g.get('brier_score', 0)
+            peer = g.get('peer_score')
+            
+            lines.append(f"\n[{i}] {title}")
+            lines.append("-" * 110)
+            lines.append(f"Resolution: {resolution}")
+            comm_prob_str = f"{comm_prob:.3f}" if comm_prob else "N/A"
+            line = f"Our prob on correct: {our_prob:.3f} | Community: {comm_prob_str}"
+            if peer is not None:
+                line += f" | Peer Score: {peer:.2f}"
+            lines.append(line)
+            lines.append(f"Log Score: {log_score:.4f} | Brier: {brier:.4f}\n")
+
+            lines.append(f"{'Option':<55} {'Us':<10} {'Comm':<10} {'Correct?'}")
+            lines.append("-" * 90)
+
+            all_opts = sorted(set(our_fc.keys()) | set(comm_fc.keys() if isinstance(comm_fc, dict) else []))
+            for opt in all_opts:
+                our_p = our_fc.get(opt, 0)
+                comm_p = comm_fc.get(opt) if isinstance(comm_fc, dict) else None
+                comm_str = f"{comm_p:.3f}" if comm_p is not None else "N/A"
+                is_correct = "  <-- CORRECT" if str(opt) == str(resolution) else ""
+                lines.append(f"{str(opt)[:54]:<55} {our_p:<10.3f} {comm_str:<10} {is_correct}")
+        
+        lines.append("\n" + "=" * 140)
+        lines.append(f"SUMMARY: {len(mc_grades)} multiple choice questions")
+        peer_scores = [g['peer_score'] for g in mc_grades if g.get('peer_score') is not None]
+        if peer_scores:
+            lines.append(f"Mean Peer Score: {sum(peer_scores)/len(peer_scores):.2f} (n={len(peer_scores)})")
+        lines.append(f"Mean Log Score: {sum(g.get('log_score', 0) for g in mc_grades)/len(mc_grades):.4f}")
+        lines.append(f"Mean Brier Score: {sum(g.get('brier_score', 0) for g in mc_grades)/len(mc_grades):.4f}")
+        
+        tables["mc_results.txt"] = "\n".join(lines)
+
+    # ============= NUMERIC =============
+    num_grades = [g for g in grades if g.get('question_type') == 'numeric']
+    if num_grades:
+        lines = []
+        lines.append("=" * 130)
+        lines.append("NUMERIC QUESTIONS RESULTS (Normalized Density scoring)")
+        lines.append("=" * 130 + "\n")
+        lines.append(f"{'#':<3} {'Resolution':<14} {'Our NormD':<10} {'Comm NormD':<10} {'Our Log':<10} {'Peer':<10} Title")
+        lines.append("-" * 130)
+
+        for i, g in enumerate(num_grades, 1):
+            res = g.get('resolution', 0)
+            title = g.get('title', '')
+            
+            # Recalculate normalized densities for the table if not present
+            # We need the original our_cdf from run_data if it's not in the grade
+            
+            # Find scaling and our forecast in run_data if provided
+            range_min, range_max = 0, 1
+            our_cdf = None
+            if run_data:
+                for fc in run_data.get('forecasts', []):
+                    if fc.get('title') == title:
+                        scaling = fc.get('question_details', {}).get('scaling', {})
+                        range_min = scaling.get('range_min', 0)
+                        range_max = scaling.get('range_max', 1)
+                        our_cdf = fc.get('forecast')
+                        break
+            
+            comm_cdf = g.get('community_forecast')
+            comm_den = get_normalized_density(comm_cdf, res, range_min, range_max)
+            our_den = get_normalized_density(our_cdf, res, range_min, range_max) if our_cdf else 0
+            
+            our_log = math.log(max(1e-10, our_den)) if our_den > 0 else -10 # Conservative log for table
+            peer = 100 * (our_log - math.log(max(1e-10, comm_den))) if comm_den > 0 else None
+            
+            peer_str = f"{peer:.2f}" if peer is not None else "N/A"
+            title_short = title[:65]
+
+            # Use scientific notation for resolution if large, standard for density
+            res_str = f"{res:.4g}" if abs(res) > 1e6 else f"{res:.4f}"
+            lines.append(f"{i:<3} {res_str:<14} {our_den:<10.3f} {comm_den:<10.3f} {our_log:<10.4f} {peer_str:<10} {title_short}")
+
+        lines.append("-" * 130)
+        lines.append(f"\nSUMMARY: {len(num_grades)} numeric questions")
+        log_scores = [g.get('log_score', 0) for g in num_grades] # Default to 0
+        lines.append(f"Mean Log Score (Original): {sum(log_scores)/len(num_grades):.4f}")
+        peer_scores = [g['peer_score'] for g in num_grades if g.get('peer_score') is not None]
+        if peer_scores:
+            lines.append(f"Mean Peer Score: {sum(peer_scores)/len(peer_scores):.2f} (n={len(peer_scores)}) (positive = beating community)")
+        
+        tables["numeric_results.txt"] = "\n".join(lines)
+        
+    return tables

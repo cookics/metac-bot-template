@@ -4,6 +4,10 @@ All functions here are standardized and should rarely need modification.
 """
 import json
 import requests
+import zipfile
+import io
+import csv
+from pathlib import Path
 from config import AUTH_HEADERS, API_BASE_URL, TOURNAMENT_ID
 
 
@@ -327,18 +331,24 @@ def get_community_forecast(post_id: int, at_time: str = None) -> dict:
                 found = False
                 for bin in history:
                     # Check if target_time falls within this bin
-                    if bin.get("start_time") <= target_ts <= bin.get("end_time"):
-                        target_forecast = bin
-                        found = True
-                        break
+                    start = bin.get("start_time")
+                    end = bin.get("end_time")
+                    if start is not None and end is not None:
+                        if start <= target_ts <= end:
+                            target_forecast = bin
+                            found = True
+                            break
                 
                 if not found:
                     # Fallback logic:
                     # 1. If before history starts, use first available (initial forecast)
-                    if history and target_ts < history[0].get("start_time"):
+                    first_start = history[0].get("start_time") if history else None
+                    last_end = history[-1].get("end_time") if history else None
+                    
+                    if history and first_start is not None and target_ts < first_start:
                          target_forecast = history[0]
                     # 2. If after history ends (e.g. question resolved but looking at late date), use last
-                    elif history and target_ts > history[-1].get("end_time"):
+                    elif history and last_end is not None and target_ts > last_end:
                          target_forecast = history[-1]
                     # 3. If mostly empty history but has items? Ensure we return something if possible.
                     elif history:
@@ -388,9 +398,6 @@ def get_community_forecast(post_id: int, at_time: str = None) -> dict:
                         forecast_values = constructed_cdf
             except Exception as e:
                 print(f"Error constructing CDF from centers: {e}")
-
-            except Exception as e:
-                print(f"Error constructing CDF from centers: {e}")
         
         # If multiple choice and we have centers (probabilities) but no options mapping, map them
         if question_type == "multiple_choice":
@@ -423,3 +430,99 @@ def get_community_forecast(post_id: int, at_time: str = None) -> dict:
         return {"error": str(e)}
 
 
+def get_community_forecast_from_csv(post_id: int, question_id: int) -> dict:
+    """
+    Fetch community forecast by downloading the ZIP/CSV data from Metaculus.
+    This is a fallback for group sub-questions where the standard API is missing data.
+    """
+    # Check cache first
+    cache_dir = Path(__file__).resolve().parent.parent / "backtesting" / "data" / "cache" / "community"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    cache_file = cache_dir / f"comm_{post_id}_{question_id}.json"
+    
+    if cache_file.exists():
+        with open(cache_file, "r") as f:
+            return json.load(f)
+            
+    url = f"{API_BASE_URL}/posts/{post_id}/download-data/?sub_question={question_id}"
+    print(f"  [Metaculus] Downloading CSV fallback for Q{question_id} in Post {post_id}...")
+    
+    try:
+        response = requests.get(url, **AUTH_HEADERS)
+        if not response.ok:
+            return {"error": f"Download failed: {response.status_code}"}
+            
+        with zipfile.ZipFile(io.BytesIO(response.content)) as z:
+            csv_name = 'forecast_data.csv'
+            if csv_name not in z.namelist():
+                csv_files = [n for n in z.namelist() if n.endswith('.csv')]
+                if not csv_files: return {"error": "No CSV in ZIP"}
+                csv_name = csv_files[0]
+                
+            with z.open(csv_name) as f:
+                content = f.read().decode('utf-8')
+                reader = csv.DictReader(io.StringIO(content))
+                rows = list(reader)
+                
+                # Filter for "Forecaster Username" == "unweighted" or "recency_weighted"
+                agg_rows = [r for r in rows if r.get('Forecaster Username') in ['unweighted', 'recency_weighted']]
+                if not agg_rows:
+                    return {"error": "No aggregation rows found in CSV"}
+                
+                # Take the latest one
+                target = agg_rows[-1]
+                result = {"source": "csv"}
+                
+                # 1. Binary
+                if target.get('Probability Yes'):
+                    try:
+                        result["question_type"] = "binary"
+                        result["probability_yes"] = float(target.get('Probability Yes'))
+                    except: pass
+                
+                # 2. Multiple Choice
+                if not result.get("probability_yes") and target.get('Probability Yes Per Category'):
+                    try:
+                        val_str = target.get('Probability Yes Per Category').replace("'", '"')
+                        probs = json.loads(val_str)
+                        if 'yes' in probs and len(probs) == 1:
+                            result["question_type"] = "binary"
+                            result["probability_yes"] = probs['yes']
+                        else:
+                            result["question_type"] = "multiple_choice"
+                            result["probability_yes_per_category"] = probs
+                    except: pass
+                        
+                # 3. Numeric (CDF)
+                if target.get('Continuous CDF'):
+                    try:
+                        val_str = target.get('Continuous CDF')
+                        cdf = json.loads(val_str)
+                        if isinstance(cdf, list) and len(cdf) == 201:
+                            # Reject dummy CDFs (all 1.0 or all 0.0)
+                            if all(v == 1.0 for v in cdf) or all(v == 0.0 for v in cdf):
+                                return {"error": "CSV contains dummy all-ones or all-zeros CDF"}
+                            result["question_type"] = "numeric"
+                            result["forecast_values"] = cdf
+                    except: pass
+                
+                # Check for alternative column names often found in sub-questions
+                if "question_type" not in result:
+                    # Try 'Probability' for binary if 'Probability Yes' is missing
+                    if target.get('Probability'):
+                        try:
+                            result["question_type"] = "binary"
+                            result["probability_yes"] = float(target.get('Probability'))
+                        except: pass
+                
+                if "question_type" not in result:
+                    return {"error": "Could not extract forecast from CSV (missing valid data columns)"}
+                
+                # Save to cache
+                with open(cache_file, "w") as f:
+                    json.dump(result, f, indent=2)
+                
+                return result
+                
+    except Exception as e:
+        return {"error": f"CSV processing error: {str(e)}"}

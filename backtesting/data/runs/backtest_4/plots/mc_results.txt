@@ -1,0 +1,242 @@
+============================================================================================================================================
+MULTIPLE CHOICE QUESTIONS RESULTS
+============================================================================================================================================
+
+
+[1] How many Major Atlantic Hurricanes will occur during September 2025?
+--------------------------------------------------------------------------------------------------------------
+Resolution: 2
+Our prob on correct: 0.300 | Community: 0.258 | Peer Score: 15.08
+Log Score: -1.2040 | Brier: 0.4900
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+0                                                       0.150      0.170      
+1                                                       0.350      0.284      
+2                                                       0.300      0.258        <-- CORRECT
+3                                                       0.150      0.174      
+4 or more                                               0.050      0.114      
+
+[2] Will TikTok still be available in the United States on December 31, 2025?
+--------------------------------------------------------------------------------------------------------------
+Resolution: Yes, still owned by foreign adversary
+Our prob on correct: 0.250 | Community: 0.790 | Peer Score: -115.04
+Log Score: -1.3863 | Brier: 0.5625
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+No                                                      0.050      0.100      
+Yes, non-adversary owner                                0.700      0.110      
+Yes, still owned by foreign adversary                   0.250      0.790        <-- CORRECT
+
+[3] How many people will be added to the Viasna Belarusian political prisoners track
+--------------------------------------------------------------------------------------------------------------
+Resolution: 0-12
+Our prob on correct: 0.420 | Community: 0.417 | Peer Score: 0.79
+Log Score: -0.8675 | Brier: 0.3364
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+0-12                                                    0.420      0.417        <-- CORRECT
+13-24                                                   0.480      0.427      
+25 or more                                              0.100      0.156      
+
+[4] Which grouping will the Prime Minister of France belong to on December 31, 2025?
+--------------------------------------------------------------------------------------------------------------
+Resolution: Together for the Republic
+Our prob on correct: 0.150 | Community: 0.130 | Peer Score: 14.37
+Log Score: -1.8971 | Brier: 0.7225
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Horizons                                                0.050      0.065      
+La France Insoumise                                     0.020      0.043      
+National Rally                                          0.070      0.104      
+No Prime Minister                                       0.300      0.143      
+Other                                                   0.080      0.087      
+Republican Right                                        0.100      0.143      
+Socialists and affiliated                               0.030      0.130      
+The Democrats                                           0.200      0.156      
+Together for the Republic                               0.150      0.130        <-- CORRECT
+
+[5] Who will win Big Brother 27 (US)?
+--------------------------------------------------------------------------------------------------------------
+Resolution: Ashley Hollis
+Our prob on correct: 0.100 | Community: 0.086 | Peer Score: 14.84
+Log Score: -2.3026 | Brier: 0.8100
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Ashley Hollis                                           0.100      0.086        <-- CORRECT
+Ava Pearl                                               0.350      0.111      
+Cliffton "Will" Williams                                0.050      0.084      
+Keanu Soto                                              0.080      0.092      
+Kelley Jorgensen                                        0.050      0.059      
+Lauren Domingue                                         0.050      0.069      
+Mickey Lee                                              0.050      0.020      
+Morgan Pope                                             0.050      0.206      
+Rachel Reilly                                           0.180      0.165      
+Vince "Vinny" Panaro                                    0.040      0.108      
+
+[6] What will be the result of the game between IM Levy Rozman Vs The World?
+--------------------------------------------------------------------------------------------------------------
+Resolution: Rozman victory
+Our prob on correct: 0.650 | Community: 0.204 | Peer Score: 116.09
+Log Score: -0.4308 | Brier: 0.1225
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Draw                                                    0.300      0.461      
+Rozman loss                                             0.050      0.336      
+Rozman victory                                          0.650      0.204        <-- CORRECT
+
+[7] Who will win the UK Labour Party's Deputy Leadership election in 2025?
+--------------------------------------------------------------------------------------------------------------
+Resolution: Lucy Powell
+Our prob on correct: 0.640 | Community: 0.425 | Peer Score: 41.04
+Log Score: -0.4463 | Brier: 0.1296
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Bridget Phillipson                                      0.350      0.521      
+Lucy Powell                                             0.640      0.425        <-- CORRECT
+Someone else                                            0.010      0.054      
+
+[8] How will the Supreme Court rule on Trump's tariffs in 2025?
+--------------------------------------------------------------------------------------------------------------
+Resolution: No 2025 ruling
+Our prob on correct: 0.500 | Community: 0.054 | Peer Score: 222.09
+Log Score: -0.6931 | Brier: 0.2500
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Mixed ruling                                            0.100      0.215      
+No 2025 ruling                                          0.500      0.054        <-- CORRECT
+Other ruling                                            0.050      0.074      
+Tariffs lawful                                          0.150      0.217      
+Tariffs unlawful                                        0.200      0.440      
+
+[9] Which team will win the 2025 League of Legends World Championship?
+--------------------------------------------------------------------------------------------------------------
+Resolution: T1
+Our prob on correct: 0.009 | Community: 0.227 | Peer Score: -320.91
+Log Score: -4.6913 | Brier: 0.9817
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+An Americas team                                        0.009      0.019      
+An Asia-Pacific team                                    0.009      0.028      
+An EMEA team                                            0.009      0.043      
+Anyone's Legend                                         0.009      0.044      
+Bilibili Gaming                                         0.009      0.144      
+Gen.G                                                   0.908      0.241      
+Hanwha Life Esports                                     0.009      0.086      
+Invictus Gaming                                         0.009      0.032      
+KT Rolster                                              0.009      0.062      
+T1                                                      0.009      0.227        <-- CORRECT
+Top Esports                                             0.009      0.075      
+
+[10] Which of the 2025 Virginia and New Jersey gubernatorial elections will the Democ
+--------------------------------------------------------------------------------------------------------------
+Resolution: Both elections
+Our prob on correct: 0.940 | Community: 0.605 | Peer Score: 44.06
+Log Score: -0.0619 | Brier: 0.0036
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Both elections                                          0.940      0.605        <-- CORRECT
+Neither election                                        0.010      0.057      
+Only New Jersey                                         0.020      0.095      
+Only Virginia                                           0.030      0.242      
+
+[11] Which country will host the 31st Conference of the Parties (COP 31) in 2026?
+--------------------------------------------------------------------------------------------------------------
+Resolution: Turkey
+Our prob on correct: 0.080 | Community: 0.171 | Peer Score: -76.09
+Log Score: -2.5257 | Brier: 0.8464
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Another Pacific Island Nation                           0.010      0.024      
+Australia                                               0.850      0.592      
+Germany                                                 0.050      0.184      
+Other                                                   0.010      0.028      
+Turkey                                                  0.080      0.171        <-- CORRECT
+
+[12] Will President Donald J. Trump take legal action against the BBC before 2026?
+--------------------------------------------------------------------------------------------------------------
+Resolution: Trump files a lawsuit in the USA only
+Our prob on correct: 0.600 | Community: 0.369 | Peer Score: 48.53
+Log Score: -0.5108 | Brier: 0.1600
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Trump does not file a lawsuit in the USA or the UK      0.250      0.474      
+Trump files a lawsuit in both the USA and the UK        0.100      0.098      
+Trump files a lawsuit in the UK only                    0.050      0.059      
+Trump files a lawsuit in the USA only                   0.600      0.369        <-- CORRECT
+
+[13] In which decade will the 2025 UK Christmas number one have been originally relea
+--------------------------------------------------------------------------------------------------------------
+Resolution: 2020s
+Our prob on correct: 0.250 | Community: 0.218 | Peer Score: 13.92
+Log Score: -1.3863 | Brier: 0.5625
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+1960s or earlier                                        0.040      0.014      
+1970s                                                   0.060      0.023      
+1980s                                                   0.450      0.585      
+1990s                                                   0.150      0.085      
+2000s                                                   0.020      0.033      
+2010s                                                   0.030      0.044      
+2020s                                                   0.250      0.218        <-- CORRECT
+
+[14] Which game will win the 2025 Game of the Year Award?
+--------------------------------------------------------------------------------------------------------------
+Resolution: Clair Obscur: Expedition 33
+Our prob on correct: 0.896 | Community: 0.537 | Peer Score: 51.16
+Log Score: -0.1103 | Brier: 0.0109
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Clair Obscur: Expedition 33                             0.896      0.537        <-- CORRECT
+Death Stranding 2: On the Beach                         0.040      0.132      
+Donkey Kong Bananza                                     0.010      0.051      
+Hades II                                                0.025      0.146      
+Hollow Knight: Silksong                                 0.015      0.097      
+Kingdom Come: Deliverance II                            0.015      0.038      
+
+[15] Who will win the 2025 Chilean presidential election?
+--------------------------------------------------------------------------------------------------------------
+Resolution: José Antonio Kast
+Our prob on correct: 0.850 | Community: 0.770 | Peer Score: 9.88
+Log Score: -0.1625 | Brier: 0.0225
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Jeannette Jara                                          0.150      0.230      
+José Antonio Kast                                       0.850      0.770        <-- CORRECT
+
+[16] [Short fuse] Who will win the 2025 NBA Cup?
+--------------------------------------------------------------------------------------------------------------
+Resolution: New York Knicks
+Our prob on correct: 0.009 | Community: 0.050 | Peer Score: -166.77
+Log Score: -4.6634 | Brier: 0.9812
+
+Option                                                  Us         Comm       Correct?
+------------------------------------------------------------------------------------------
+Los Angeles Lakers                                      0.009      0.200      
+Miami Heat                                              0.009      0.200      
+New York Knicks                                         0.009      0.050        <-- CORRECT
+Oklahoma City Thunder                                   0.934      0.300      
+Orlando Magic                                           0.009      0.050      
+Phoenix Suns                                            0.009      0.100      
+San Antonio Spurs                                       0.009      0.050      
+Toronto Raptors                                         0.009      0.050      
+
+============================================================================================================================================
+SUMMARY: 16 multiple choice questions
+Mean Peer Score: -5.43 (n=16)
+Mean Log Score: -1.4588
+Mean Brier Score: 0.4370

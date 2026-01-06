@@ -1,0 +1,28 @@
+==================================================================================================================================
+NUMERIC QUESTIONS RESULTS (Normalized Density scoring)
+==================================================================================================================================
+
+#   Resolution     Our NormD  Comm NormD Our Log    Peer       Title
+----------------------------------------------------------------------------------------------------------------------------------
+1   4.2000         0.062      2.845      -2.7850    -383.05    What will be the ending value of the UST 10Y Yield for the follow
+2   2.7500         0.421      0.000      -4.6052    0.00       What will be the ending value of the ICE BofA US High Yield Optio
+3   10.6100        1.250      0.788      0.2231     46.20      What will the winning time be in the Women's 100 meter final at t
+4   2.8870         2.963      2.155      1.0862     31.86      How much will Nvidia's stock price returns exceed Microsoft's in 
+5   22.4400        2.264      2.355      0.8172     -3.94      What will be the maximum intraday value of the VIX over the follo
+6   4.0200         2.297      2.187      0.8317     4.90       What will be the ending value of the UST 10Y Yield for these biwe
+7   0.0702         1.676      2.406      0.5167     -36.14     How much will Gold Futures total price returns exceed S&P 500 Fut
+8   3.7200         0.084      3.671      -2.4737    -377.42    What will the first reported earnings per share after September 2
+9   3.1500         5.333      3.136      1.6740     53.12      What will be the ending value of the ICE BofA US High Yield Optio
+10  -1.7730        1.455      1.446      0.3747     0.61       How much will Crude Oil Futures total price returns exceed S&P 50
+11  4.0600         0.169      2.501      -1.7750    -269.17    What will be the ending value of the UST 10Y Yield for these biwe
+12  -1.4440        0.889      0.772      -0.1178    14.15      How much will Nasdaq-100 Futures total price returns exceed S&P 5
+13  6.7e+09        0.035      1.658      -3.3524    -385.82    What will be NVIDIA's forward guidance in their Q3 FY2026 earning
+14  23.6800        0.063      2.648      -2.7705    -374.42    What will be the maximum intraday value of the VIX over these biw
+15  -0.5562        2.400      2.280      0.8755     5.14       How much will Gold Futures total price returns exceed S&P 500 Fut
+16  42.8000        0.132      0.752      -2.0223    -173.77    What will be Donald Trump's approval rating be on December 14, 20
+17  3.45e+07       0.146      0.599      -1.9222    -140.97    How many views will the top Netflix release receive in 2025 Chris
+----------------------------------------------------------------------------------------------------------------------------------
+
+SUMMARY: 17 numeric questions
+Mean Log Score: -0.9073 (Uniform = 0.0)
+Mean Peer Score: -116.98 (n=17) (positive = beating community)

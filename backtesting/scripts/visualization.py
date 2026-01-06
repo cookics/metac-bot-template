@@ -27,17 +27,51 @@ def ensure_plots_dir():
     PLOTS_DIR.mkdir(exist_ok=True)
 
 
-def plot_cdf(
+def cdf_to_pdf(cdf: list[float], smooth: bool = True) -> list[float]:
+    """
+    Convert a 201-point CDF to PDF by taking finite differences.
+    Optionally applies Gaussian smoothing for a cleaner plot.
+    """
+    if not cdf or len(cdf) != 201:
+        return [0.0] * 201
+    
+    # Take differences (PDF is derivative of CDF)
+    pdf = [0.0] * 201
+    for i in range(200):
+        pdf[i] = (cdf[i+1] - cdf[i]) * 200  # Scale by 200 to normalize
+    pdf[200] = pdf[199]  # Copy last value
+    
+    # Gaussian smoothing for less jagged appearance
+    if smooth:
+        try:
+            import numpy as np
+            from scipy.ndimage import gaussian_filter1d
+            pdf = gaussian_filter1d(np.array(pdf), sigma=3).tolist()
+        except ImportError:
+            # Manual simple moving average as fallback
+            window = 5
+            smoothed = []
+            for i in range(len(pdf)):
+                start = max(0, i - window//2)
+                end = min(len(pdf), i + window//2 + 1)
+                smoothed.append(sum(pdf[start:end]) / (end - start))
+            pdf = smoothed
+    
+    return pdf
+
+
+def plot_pdf(
     cdf: list[float],
     resolution: float,
     range_min: float,
     range_max: float,
-    title: str = "CDF Visualization",
+    title: str = "Probability Density",
     save_path: Optional[Path] = None,
     community_cdf: list[float] = None
 ) -> Optional[Path]:
     """
-    Plot a CDF with the resolution point marked.
+    Plot a PDF (probability density) with the resolution point marked.
+    Converts the 201-point CDF to a smooth density curve.
     
     Args:
         cdf: 201-point CDF
@@ -56,46 +90,67 @@ def plot_cdf(
     
     ensure_plots_dir()
     
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(12, 7))
     
-    # X-axis values
-    x = [range_min + (range_max - range_min) * i / 200 for i in range(201)]
+    # High-resolution X-axis (1000 points interpolated from 201)
+    x_201 = [range_min + (range_max - range_min) * i / 200 for i in range(201)]
     
-    # Plot our CDF
-    ax.plot(x, cdf, 'b-', linewidth=2, label='Our Forecast')
+    # Convert CDF to PDF
+    our_pdf = cdf_to_pdf(cdf, smooth=True)
     
-    # Plot community CDF if available
+    # Plot our density as filled curve
+    ax.fill_between(x_201, our_pdf, alpha=0.3, color='blue')
+    ax.plot(x_201, our_pdf, 'b-', linewidth=2, label='Our Forecast')
+    
+    # Plot community density if available
     if community_cdf and len(community_cdf) == 201:
-        ax.plot(x, community_cdf, 'g--', linewidth=2, alpha=0.7, label='Community')
+        comm_pdf = cdf_to_pdf(community_cdf, smooth=True)
+        ax.fill_between(x_201, comm_pdf, alpha=0.2, color='green')
+        ax.plot(x_201, comm_pdf, 'g-', linewidth=2, alpha=0.8, label='Community')
     
-    # Mark the resolution
-    ax.axvline(x=resolution, color='r', linestyle='--', linewidth=2, label=f'Resolution: {resolution:.2f}')
+    # Mark the resolution with a vertical line
+    ax.axvline(x=resolution, color='red', linestyle='--', linewidth=2.5, label=f'Resolution: {resolution:.4g}')
     
-    # Find CDF value at resolution
+    # Find density at resolution point and mark it
     res_idx = min(200, max(0, int((resolution - range_min) / (range_max - range_min) * 200)))
-    cdf_at_resolution = cdf[res_idx]
-    ax.scatter([resolution], [cdf_at_resolution], color='r', s=100, zorder=5)
-    ax.annotate(f'P(X ≤ {resolution:.2f}) = {cdf_at_resolution:.2%}', 
-                xy=(resolution, cdf_at_resolution),
-                xytext=(10, -20), textcoords='offset points',
-                fontsize=10, color='red')
+    our_density_at_res = our_pdf[res_idx]
+    ax.scatter([resolution], [our_density_at_res], color='red', s=150, zorder=5, edgecolors='black', linewidths=1)
+    ax.annotate(f'Density = {our_density_at_res:.3f}', 
+                xy=(resolution, our_density_at_res),
+                xytext=(15, 10), textcoords='offset points',
+                fontsize=11, color='red', fontweight='bold',
+                arrowprops=dict(arrowstyle='->', color='red', lw=1.5))
     
     ax.set_xlabel('Value', fontsize=12)
-    ax.set_ylabel('Cumulative Probability', fontsize=12)
-    ax.set_title(title, fontsize=14)
-    ax.legend()
+    ax.set_ylabel('Probability Density', fontsize=12)
+    ax.set_title(title, fontsize=14, fontweight='bold')
+    ax.legend(loc='upper right', fontsize=11)
     ax.grid(True, alpha=0.3)
-    ax.set_ylim(0, 1)
+    ax.set_ylim(bottom=0)
     
-    # Save
+    # Save at higher resolution
     if save_path is None:
-        save_path = PLOTS_DIR / "cdf_plot.png"
+        save_path = PLOTS_DIR / "pdf_plot.png"
     
     plt.tight_layout()
-    plt.savefig(save_path, dpi=100)
+    plt.savefig(save_path, dpi=200)  # Higher DPI for cleaner output
     plt.close()
     
     return save_path
+
+
+# Keep old name as alias for compatibility
+def plot_cdf(
+    cdf: list[float],
+    resolution: float,
+    range_min: float,
+    range_max: float,
+    title: str = "CDF Visualization",
+    save_path: Optional[Path] = None,
+    community_cdf: list[float] = None
+) -> Optional[Path]:
+    """Alias for plot_pdf - now plots density instead of CDF."""
+    return plot_pdf(cdf, resolution, range_min, range_max, title, save_path, community_cdf)
 
 
 def plot_score_comparison(grades: list[dict], save_path: Optional[Path] = None) -> Optional[Path]:
