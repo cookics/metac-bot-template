@@ -92,21 +92,25 @@ def plot_pdf(
     
     fig, ax = plt.subplots(figsize=(12, 7))
     
-    # High-resolution X-axis (1000 points interpolated from 201)
-    x_201 = [range_min + (range_max - range_min) * i / 200 for i in range(201)]
-    
     # Convert CDF to PDF
     our_pdf = cdf_to_pdf(cdf, smooth=True)
     
+    # Interpolate to 1000 points for smoother plotting
+    import numpy as np
+    x_201 = np.linspace(range_min, range_max, 201)
+    x_1000 = np.linspace(range_min, range_max, 1000)
+    our_pdf_interp = np.interp(x_1000, x_201, our_pdf)
+    
     # Plot our density as filled curve
-    ax.fill_between(x_201, our_pdf, alpha=0.3, color='blue')
-    ax.plot(x_201, our_pdf, 'b-', linewidth=2, label='Our Forecast')
+    ax.fill_between(x_1000, our_pdf_interp, alpha=0.3, color='blue', label='_nolegend_')
+    ax.plot(x_1000, our_pdf_interp, 'b-', linewidth=2.5, label='Our Forecast')
     
     # Plot community density if available
     if community_cdf and len(community_cdf) == 201:
         comm_pdf = cdf_to_pdf(community_cdf, smooth=True)
-        ax.fill_between(x_201, comm_pdf, alpha=0.2, color='green')
-        ax.plot(x_201, comm_pdf, 'g-', linewidth=2, alpha=0.8, label='Community')
+        comm_pdf_interp = np.interp(x_1000, x_201, comm_pdf)
+        ax.fill_between(x_1000, comm_pdf_interp, alpha=0.2, color='green', label='_nolegend_')
+        ax.plot(x_1000, comm_pdf_interp, 'g-', linewidth=2.5, alpha=0.8, label='Community')
     
     # Mark the resolution with a vertical line
     ax.axvline(x=resolution, color='red', linestyle='--', linewidth=2.5, label=f'Resolution: {resolution:.4g}')
@@ -387,7 +391,13 @@ def generate_all_plots(grades: list[dict], forecasts: list[dict] = None, plots_d
             
             # Find community forecast in grades if exists
             qid = fc.get("question_id")
+            title = fc.get("title")
             grade_entry = next((g for g in grades if g.get("question_id") == qid), {})
+            
+            # Fallback to title if QID didn't match (for older grades files)
+            if not grade_entry:
+                grade_entry = next((g for g in grades if g.get("title") == title), {})
+                
             comm_cdf = grade_entry.get("community_forecast")
             
             plot_path = plots_dir / f"cdf_{i+1}_{qid}.png"

@@ -433,7 +433,11 @@ def get_community_forecast(post_id: int, at_time: str = None) -> dict:
 def get_community_forecast_from_csv(post_id: int, question_id: int) -> dict:
     """
     Fetch community forecast by downloading the ZIP/CSV data from Metaculus.
-    This is a fallback for group sub-questions where the standard API is missing data.
+    Works for both standalone questions and group sub-questions.
+    
+    Tries two approaches:
+    1. Download without sub_question parameter (standalone questions)
+    2. Download with sub_question parameter (group sub-questions)
     """
     # Check cache first
     cache_dir = Path(__file__).resolve().parent.parent / "backtesting" / "data" / "cache" / "community"
@@ -442,87 +446,108 @@ def get_community_forecast_from_csv(post_id: int, question_id: int) -> dict:
     
     if cache_file.exists():
         with open(cache_file, "r") as f:
-            return json.load(f)
-            
-    url = f"{API_BASE_URL}/posts/{post_id}/download-data/?sub_question={question_id}"
-    print(f"  [Metaculus] Downloading CSV fallback for Q{question_id} in Post {post_id}...")
+            cached = json.load(f)
+            # Don't return cached errors - retry instead
+            if "error" not in cached:
+                return cached
     
-    try:
-        response = requests.get(url, **AUTH_HEADERS)
-        if not response.ok:
-            return {"error": f"Download failed: {response.status_code}"}
-            
-        with zipfile.ZipFile(io.BytesIO(response.content)) as z:
-            csv_name = 'forecast_data.csv'
-            if csv_name not in z.namelist():
-                csv_files = [n for n in z.namelist() if n.endswith('.csv')]
-                if not csv_files: return {"error": "No CSV in ZIP"}
-                csv_name = csv_files[0]
+    def try_download(url):
+        """Try to download and parse CSV from given URL."""
+        try:
+            response = requests.get(url, **AUTH_HEADERS)
+            if not response.ok:
+                return {"error": f"Download failed: {response.status_code}"}
                 
-            with z.open(csv_name) as f:
-                content = f.read().decode('utf-8')
-                reader = csv.DictReader(io.StringIO(content))
-                rows = list(reader)
-                
-                # Filter for "Forecaster Username" == "unweighted" or "recency_weighted"
-                agg_rows = [r for r in rows if r.get('Forecaster Username') in ['unweighted', 'recency_weighted']]
-                if not agg_rows:
-                    return {"error": "No aggregation rows found in CSV"}
-                
-                # Take the latest one
-                target = agg_rows[-1]
-                result = {"source": "csv"}
-                
-                # 1. Binary
-                if target.get('Probability Yes'):
-                    try:
-                        result["question_type"] = "binary"
-                        result["probability_yes"] = float(target.get('Probability Yes'))
-                    except: pass
-                
-                # 2. Multiple Choice
-                if not result.get("probability_yes") and target.get('Probability Yes Per Category'):
-                    try:
-                        val_str = target.get('Probability Yes Per Category').replace("'", '"')
-                        probs = json.loads(val_str)
-                        if 'yes' in probs and len(probs) == 1:
+            with zipfile.ZipFile(io.BytesIO(response.content)) as z:
+                csv_name = 'forecast_data.csv'
+                if csv_name not in z.namelist():
+                    csv_files = [n for n in z.namelist() if n.endswith('.csv')]
+                    if not csv_files: return {"error": "No CSV in ZIP"}
+                    csv_name = csv_files[0]
+                    
+                with z.open(csv_name) as f:
+                    content = f.read().decode('utf-8')
+                    reader = csv.DictReader(io.StringIO(content))
+                    rows = list(reader)
+                    
+                    # Filter for aggregation rows
+                    agg_rows = [r for r in rows if r.get('Forecaster Username') in ['unweighted', 'recency_weighted']]
+                    if not agg_rows:
+                        return {"error": "No aggregation rows found in CSV"}
+                    
+                    # Take the latest aggregation row
+                    target = agg_rows[-1]
+                    result = {"source": "csv"}
+                    
+                    # 1. Binary
+                    if target.get('Probability Yes'):
+                        try:
                             result["question_type"] = "binary"
-                            result["probability_yes"] = probs['yes']
-                        else:
-                            result["question_type"] = "multiple_choice"
-                            result["probability_yes_per_category"] = probs
-                    except: pass
-                        
-                # 3. Numeric (CDF)
-                if target.get('Continuous CDF'):
-                    try:
-                        val_str = target.get('Continuous CDF')
-                        cdf = json.loads(val_str)
-                        if isinstance(cdf, list) and len(cdf) == 201:
-                            # Reject dummy CDFs (all 1.0 or all 0.0)
-                            if all(v == 1.0 for v in cdf) or all(v == 0.0 for v in cdf):
-                                return {"error": "CSV contains dummy all-ones or all-zeros CDF"}
-                            result["question_type"] = "numeric"
-                            result["forecast_values"] = cdf
-                    except: pass
-                
-                # Check for alternative column names often found in sub-questions
-                if "question_type" not in result:
+                            result["probability_yes"] = float(target.get('Probability Yes'))
+                        except: pass
+                    
+                    # 2. Multiple Choice
+                    if not result.get("probability_yes") and target.get('Probability Yes Per Category'):
+                        try:
+                            val_str = target.get('Probability Yes Per Category').replace("'", '"')
+                            probs = json.loads(val_str)
+                            if 'yes' in probs and len(probs) == 1:
+                                result["question_type"] = "binary"
+                                result["probability_yes"] = probs['yes']
+                            else:
+                                result["question_type"] = "multiple_choice"
+                                result["probability_yes_per_category"] = probs
+                        except: pass
+                            
+                    # 3. Numeric (CDF)
+                    if target.get('Continuous CDF'):
+                        try:
+                            val_str = target.get('Continuous CDF')
+                            cdf = json.loads(val_str)
+                            if isinstance(cdf, list) and len(cdf) == 201:
+                                # Reject dummy CDFs (all 1.0 or all 0.0)
+                                if all(v == 1.0 for v in cdf) or all(v == 0.0 for v in cdf):
+                                    return {"error": "CSV contains dummy all-ones or all-zeros CDF"}
+                                result["question_type"] = "numeric"
+                                result["forecast_values"] = cdf
+                        except: pass
+                    
                     # Try 'Probability' for binary if 'Probability Yes' is missing
-                    if target.get('Probability'):
+                    if "question_type" not in result and target.get('Probability'):
                         try:
                             result["question_type"] = "binary"
                             result["probability_yes"] = float(target.get('Probability'))
                         except: pass
-                
-                if "question_type" not in result:
-                    return {"error": "Could not extract forecast from CSV (missing valid data columns)"}
-                
-                # Save to cache
-                with open(cache_file, "w") as f:
-                    json.dump(result, f, indent=2)
-                
-                return result
-                
-    except Exception as e:
-        return {"error": f"CSV processing error: {str(e)}"}
+                    
+                    if "question_type" not in result:
+                        return {"error": "Could not extract forecast from CSV (missing valid data columns)"}
+                    
+                    return result
+                    
+        except Exception as e:
+            return {"error": f"CSV processing error: {str(e)}"}
+    
+    # Try 1: Download without sub_question parameter (for standalone questions)
+    url_standalone = f"{API_BASE_URL}/posts/{post_id}/download-data/"
+    print(f"  [Metaculus] Trying CSV download for Post {post_id} (standalone)...")
+    result = try_download(url_standalone)
+    
+    if "error" not in result:
+        # Success! Save to cache and return
+        with open(cache_file, "w") as f:
+            json.dump(result, f, indent=2)
+        return result
+    
+    # Try 2: Download with sub_question parameter (for group sub-questions)
+    url_subq = f"{API_BASE_URL}/posts/{post_id}/download-data/?sub_question={question_id}"
+    print(f"  [Metaculus] Trying CSV download for Q{question_id} in Post {post_id} (sub_question)...")
+    result = try_download(url_subq)
+    
+    if "error" not in result:
+        # Success! Save to cache and return
+        with open(cache_file, "w") as f:
+            json.dump(result, f, indent=2)
+        return result
+    
+    # Both failed - return the last error (but don't cache it)
+    return result

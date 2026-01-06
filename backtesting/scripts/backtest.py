@@ -292,20 +292,17 @@ async def run_backtest(
     }
     
     consecutive_errors = 0  # Track for early stopping
+    BATCH_SIZE = 10  # Process 10 questions at a time
     
-    for i, qid in enumerate(cached_ids):
-        cache = load_search_cache(qid)
+    async def forecast_one(qid_data):
+        """Forecast a single question - used for batching."""
+        qid, cache, custom_prompts = qid_data
         
         if not cache:
-            continue
+            return None
         
         metadata = cache.get("metadata", {})
         question_type = metadata.get("type", metadata.get("question_type"))
-        title = cache.get("question_title", "")[:50]
-        
-        print(f"[{i+1}/{len(cached_ids)}] Forecasting ({question_type}): {title}...")
-        
-        # Build question details and extract cached research
         search_results = cache.get("search_results", [])
         question_details = {
             "title": cache.get("question_title"),
@@ -313,8 +310,8 @@ async def run_backtest(
             "resolution_criteria": metadata.get("resolution_criteria", ""),
             "fine_print": metadata.get("fine_print", ""),
             "type": question_type,
-            "options": metadata.get("options"),  # For multiple choice
-            "scaling": metadata.get("scaling"),  # For numeric
+            "options": metadata.get("options"),
+            "scaling": metadata.get("scaling"),
             "open_upper_bound": metadata.get("open_upper_bound"),
             "open_lower_bound": metadata.get("open_lower_bound"),
             "post_id": metadata.get("post_id"),
@@ -347,37 +344,68 @@ async def run_backtest(
                     prompt_template=getattr(custom_prompts, "MULTIPLE_CHOICE_PROMPT_TEMPLATE", None) if custom_prompts else None
                 )
             else:
-                print(f"  Unknown type: {question_type}")
-                continue
+                return None
             
-            results["forecasts"].append({
+            return {
                 "question_id": qid,
                 "title": cache.get("question_title"),
                 "question_type": question_type,
                 "forecast": forecast,
                 "resolution": metadata.get("resolution"),
-                "question_details": question_details,  # For grading
+                "question_details": question_details,
                 "comment_preview": comment[:500] if comment else "",
                 "search_results_used": len(search_results),
-            })
-            consecutive_errors = 0  # Reset on success
+            }
             
         except Exception as e:
-            print(f"  Forecast failed: {e}")
-            results["forecasts"].append({
+            return {
                 "question_id": qid,
                 "title": cache.get("question_title"),
                 "question_type": question_type,
                 "error": str(e),
-            })
+            }
+    
+    # Prepare all question data
+    all_qdata = []
+    for qid in cached_ids:
+        cache = load_search_cache(qid)
+        if cache:
+            all_qdata.append((qid, cache, custom_prompts))
+    
+    # Process in batches of BATCH_SIZE
+    total_batches = (len(all_qdata) + BATCH_SIZE - 1) // BATCH_SIZE
+    
+    for batch_idx in range(total_batches):
+        start = batch_idx * BATCH_SIZE
+        end = min(start + BATCH_SIZE, len(all_qdata))
+        batch = all_qdata[start:end]
+        
+        print(f"\n[Backtest] Processing batch {batch_idx + 1}/{total_batches} ({len(batch)} questions)...")
+        
+        # Run batch in parallel
+        batch_results = await asyncio.gather(*[forecast_one(qd) for qd in batch])
+        
+        # Process results
+        batch_errors = 0
+        for result in batch_results:
+            if result is None:
+                continue
+            results["forecasts"].append(result)
+            if "error" in result:
+                batch_errors += 1
+                print(f"  ⚠ Error: {result.get('title', 'Unknown')[:40]}...")
+            else:
+                print(f"  ✓ {result.get('question_type')}: {result.get('title', '')[:40]}...")
+        
+        # Track consecutive errors across batches
+        if batch_errors == len(batch):
             consecutive_errors += 1
-            
-            # Early stop if we hit 3 consecutive errors (likely API issue)
-            if consecutive_errors >= 3:
-                print(f"\n[Backtest] ⚠️ STOPPING EARLY: {consecutive_errors} consecutive errors!")
-                print(f"[Backtest] Last error: {e}")
+            if consecutive_errors >= 2:
+                print(f"\n[Backtest] ⚠️ STOPPING EARLY: {consecutive_errors} batches with all errors!")
                 print(f"[Backtest] Saving partial results...")
                 break
+        else:
+            consecutive_errors = 0
     
     results["completed_at"] = datetime.now().isoformat()
     results["n_forecasts"] = len([f for f in results["forecasts"] if "forecast" in f])
@@ -461,46 +489,45 @@ def grade_backtest_run(run_id: str = "latest", run_name: str = "backtest_1") -> 
         publish_time = question_details.get("publish_time")
         
         if post_id:
-            # Get community forecast specifically at the time of publication (time-matched)
-            cf = get_community_forecast(post_id, at_time=publish_time)
+            q_id = fc.get("question_id")
             
-            # Fallback to CSV if API returns error, missing results, or a "dummy" (all 1.0 or all 0.0) CDF
-            is_dummy_cdf = False
-            if question_type == "numeric" and cf.get("forecast_values"):
-                vals = cf["forecast_values"]
-                if all(v == 1.0 for v in vals) or all(v == 0.0 for v in vals):
-                    is_dummy_cdf = True
+            # AUTONOMOUS COMMUNITY FETCHING: Try CSV, then API
+            # No manual intervention needed - runs automatically for every question
+            print(f"  [{i+1}] Fetching community for Q{q_id}...")
             
-            should_fallback = "error" in cf
-            if not should_fallback:
-                if question_type == "binary" and not cf.get("probability_yes"):
-                    should_fallback = True
-                elif question_type == "multiple_choice" and not cf.get("probability_yes_per_category"):
-                    should_fallback = True
-                elif question_type == "numeric" and (not cf.get("forecast_values") or is_dummy_cdf):
-                    should_fallback = True
-                    
-            # 1st fallback: CSV download
-            if should_fallback:
-                q_id = fc.get("question_id")
-                cf_csv = get_community_forecast_from_csv(post_id, q_id)
-                if "error" not in cf_csv:
-                    cf = cf_csv
-                    should_fallback = False  # CSV worked
-                    
-            # 2nd fallback: Use 'latest' (non-time-matched) as last resort
-            if should_fallback:
-                cf_latest = get_community_forecast(post_id, at_time=None)  # No time constraint
-                if "error" not in cf_latest:
-                    cf = cf_latest
+            # STEP 1: Try CSV download (most reliable source)
+            cf_csv = get_community_forecast_from_csv(post_id, q_id)
             
-            if "error" not in cf:
+            if "error" not in cf_csv:
                 if question_type == "numeric":
-                    community_forecast = cf.get("forecast_values")
+                    community_forecast = cf_csv.get("forecast_values")
                 elif question_type == "binary":
-                    community_forecast = cf.get("probability_yes")
+                    community_forecast = cf_csv.get("probability_yes")
                 elif question_type == "multiple_choice":
-                    community_forecast = cf.get("probability_yes_per_category")
+                    community_forecast = cf_csv.get("probability_yes_per_category")
+                    
+                if community_forecast is not None:
+                    print(f"      ✓ CSV success")
+            
+            # STEP 2: If CSV failed, try API
+            if community_forecast is None:
+                cf_api = get_community_forecast(post_id, at_time=None)  # Get latest
+                
+                if "error" not in cf_api:
+                    if question_type == "numeric":
+                        vals = cf_api.get("forecast_values")
+                        if vals and len(vals) == 201 and not (all(v == 1.0 for v in vals) or all(v == 0.0 for v in vals)):
+                            community_forecast = vals
+                    elif question_type == "binary":
+                        community_forecast = cf_api.get("probability_yes")
+                    elif question_type == "multiple_choice":
+                        community_forecast = cf_api.get("probability_yes_per_category")
+                    
+                    if community_forecast is not None:
+                        print(f"      ✓ API success")
+            
+            if community_forecast is None:
+                print(f"      ✗ No community data available")
         
         # Grade with community comparison
         grade = grade_forecast(
@@ -517,6 +544,7 @@ def grade_backtest_run(run_id: str = "latest", run_name: str = "backtest_1") -> 
             continue
         
         grade["title"] = fc.get("title", "")
+        grade["question_id"] = fc.get("question_id")
         grades.append(grade)
     
     # Calculate aggregates

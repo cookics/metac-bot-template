@@ -364,10 +364,24 @@ def grade_forecast(
         )
     
     elif question_type == "multiple_choice":
-        community = community_forecast if isinstance(community_forecast, dict) else None
-        # Unwrap if nested
-        if community and "probability_yes_per_category" in community:
-            community = community["probability_yes_per_category"]
+        # Handle community forecast in either dict or list format
+        community = None
+        
+        # First, extract the community forecast data (might be in a wrapper dict or raw)
+        cf = community_forecast
+        if isinstance(cf, dict) and "probability_yes_per_category" in cf:
+            cf = cf["probability_yes_per_category"]
+        
+        if isinstance(cf, dict):
+            # Already in dict format - use directly
+            community = cf
+        elif isinstance(cf, list) and isinstance(forecast, dict):
+            # List format from CSV - convert to dict using our forecast's keys
+            # This assumes the list order matches the option order
+            options = list(forecast.keys())
+            if len(cf) == len(options):
+                community = dict(zip(options, cf))
+        
         return grade_multiple_choice_forecast(forecast, resolution, community)
     
     return {"error": f"Unknown question type: {question_type}"}

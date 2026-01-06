@@ -1,0 +1,9 @@
+{
+  "source": "csv",
+  "question_type": "multiple_choice",
+  "probability_yes_per_category": [
+    0.20358000680702096,
+    0.3359187047211552,
+    0.46050128847182376
+  ]
+}

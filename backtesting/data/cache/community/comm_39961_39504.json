@@ -1,0 +1,5 @@
+{
+  "source": "csv",
+  "question_type": "binary",
+  "probability_yes": 0.7
+}

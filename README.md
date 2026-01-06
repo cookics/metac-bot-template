@@ -74,76 +74,23 @@ poetry run python main.py
 ```
 Make sure to set the environment variables as described above and to set the parameters in the code to your liking. In particular, to submit predictions, make sure that `submit_predictions` is set to `True`.
 
-## Fetching Community Forecasts from Metaculus API
+## 🧪 Backtesting
 
-When backtesting, you may want to compare your forecasts against the Metaculus community prediction. The API structure is non-trivial, so here's what we learned:
+The repository includes a comprehensive framework for backtesting your bot's performance against historical Metaculus data.
 
-### Question Types & API Endpoints
+### Running a Backtest
+We've automated the entire backtesting pipeline. You can now run a full test (Forecasting → Grading → Community Comparison → Reports) with a single command:
 
-**Standalone Questions** (binary, numeric, multiple choice)
-- Endpoint: `GET /api/posts/{post_id}/`
-- Community forecast location: `response.question.aggregations.unweighted.latest`
-- For binary: `latest.centers[0]` = probability of "Yes"
-- For numeric: `latest.forecast_values` = 201-point CDF
-- For MC: `latest.centers` = list of probabilities per option
-
-**Group Questions** (questions with sub-questions)
-- The parent post has `response.group_of_questions` instead of `response.question`
-- The parent post does NOT contain aggregations for sub-questions
-- Sub-questions are identified by their `question_id` (different from `post_id`)
-
-### The Solution for Group Questions
-
-Use the download-data endpoint with the `sub_question` parameter:
-
-```
-GET /api/posts/{post_id}/download-data/?sub_question={question_id}
+```bash
+python backtesting/scripts/run_full_backtest.py --run-name my_backtest --limit 50
 ```
 
-This returns a ZIP file containing CSVs. Parse `forecast_data.csv`:
-- Look for rows where `Forecaster Username` is `"unweighted"` or `"recency_weighted"`
-- For MC questions: `Probability Yes Per Category` column (parse as Python list)
-- For numeric: `Continuous CDF` column (parse as 201-element list)
+### Detailed Documentation
+For deep dives into:
+- **Autonomous Workflows**: Chaining all scripts for 100% autonomous execution.
+- **Scoring Logic**: How Normalized Density and Peer Scores are calculated.
+- **Visualizations**: High-res PDF density plots with Gaussian smoothing.
+- **CSV Data Recovery**: Handling the Metaculus API "CSV Hell" for group questions.
 
-### Key Gotchas
-
-1. **`recency_weighted.latest` is often empty** for resolved questions. Always fallback to `unweighted.latest`
-2. **`/api/questions/{id}/` exists** but often returns `aggregations.*.latest: null` - use download-data instead
-3. **Rate limits**: The API throttles at ~1000 requests/hour. Space your requests accordingly
-4. **Group vs standalone**: Check for `response.question` vs `response.group_of_questions` to determine question type
-5. **Question ID vs Post ID**: Group sub-questions have their own `question_id` which is different from the parent `post_id`
-
-### Example Code
-
-```python
-import requests, zipfile, io, csv, ast
-
-def get_community_forecast(post_id, question_id, question_type):
-    """Fetch community forecast for any question, including group sub-questions."""
-    headers = {"Authorization": f"Token {METACULUS_TOKEN}"}
-    
-    # Use download-data endpoint - works for all question types
-    url = f"https://www.metaculus.com/api/posts/{post_id}/download-data/"
-    if question_id != post_id:  # It's a sub-question
-        url += f"?sub_question={question_id}"
-    
-    resp = requests.get(url, headers=headers, timeout=60)
-    z = zipfile.ZipFile(io.BytesIO(resp.content))
-    
-    for name in z.namelist():
-        if 'forecast_data' not in name:
-            continue
-        content = z.read(name).decode('utf-8')
-        for row in csv.DictReader(io.StringIO(content)):
-            if row.get('Forecaster Username') not in ['unweighted', 'recency_weighted']:
-                continue
-            
-            if question_type == 'multiple_choice':
-                return ast.literal_eval(row.get('Probability Yes Per Category', '[]'))
-            elif question_type == 'numeric':
-                return ast.literal_eval(row.get('Continuous CDF', '[]'))
-            elif question_type == 'binary':
-                return float(row.get('Probability Yes', 0))
-    return None
-```
+See the dedicated [**Backtesting README**](backtesting/README_backtest.md).
 

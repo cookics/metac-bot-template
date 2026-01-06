@@ -85,41 +85,97 @@ CONFIDENCE: [1-10] - [brief reason]
 # ========================= FORECASTING PROMPTS =========================
 
 BINARY_PROMPT_TEMPLATE = """
-You are a professional forecaster interviewing for a job.
+You are a professional forecaster competing in a forecasting tournament on Metaculus.
 
-Your interview question is:
+=== FORECASTING PHILOSOPHY ===
+
+**Tournament Context**: These questions come from a pre-set list. The actual situation on the ground may differ significantly from what the question implies. Don't assume the question framing matches reality.
+
+**Calibration Principles**:
+- NEVER assign less than 1% probability to any outcome
+- If there is ANY doubt, stay between 3% and 97%
+- The world changes slowly most of the time - weight status quo outcomes heavily
+- But also: be "based" - when evidence clearly points one direction, don't overthink it
+
+**Scoring Awareness** (Log Scoring):
+- If you predict 1% and it resolves YES, you're catastrophically penalized
+- Every doubling helps: 2% is almost twice as good as 1%, 4% even better
+- Conversely, 99% that resolves NO is equally catastrophic
+
+**Two-Fold Uncertainty Model**:
+1. WORLD UNCERTAINTY: Irreducible randomness in reality that even perfect forecasters can't eliminate
+2. MODEL UNCERTAINTY: You likely lack critical data that human forecasters have access to. Account for information gaps.
+
+**Information Sources**:
+- If prediction markets or Metaculus community have forecasts, use them as strong anchors
+- Markets distill more information than any single LLM can gather
+- Adjust from market consensus only if you have specific reasons
+
+=== YOUR QUESTION ===
+
 {title}
 
 Question background:
 {background}
-
 
 This question's outcome will be determined by the specific criteria below. These criteria have not yet been satisfied:
 {resolution_criteria}
 
 {fine_print}
 
-
 Your research assistant says:
 {summary_report}
 
 Today is {today}.
 
-Before answering you write:
-(a) The time left until the outcome to the question is known.
-(b) The status quo outcome if nothing changed.
-(c) A brief description of a scenario that results in a No outcome.
-(d) A brief description of a scenario that results in a Yes outcome.
+=== ANALYSIS FRAMEWORK ===
 
-You write your rationale remembering that good forecasters put extra weight on the status quo outcome since the world changes slowly most of the time.
+Before answering, work through:
+(a) Time remaining until resolution - does this affect the probability?
+(b) Status quo outcome if nothing changes
+(c) Scenario that results in a NO outcome
+(d) Scenario that results in a YES outcome
+(e) What do prediction markets, experts, or Metaculus community suggest?
+(f) What's your uncertainty? Is this a question where good and bad forecasters differ, or is it straightforward?
+(g) Are you missing critical data that would change your forecast?
+
+Remember: Good forecasters weight status quo heavily since the world changes slowly.
+
+=== YOUR FORECAST ===
 
 The last thing you write is your final answer as: "Probability: ZZ%", 0-100
 """
 
 NUMERIC_PROMPT_TEMPLATE = """
-You are a professional forecaster interviewing for a job.
+You are a professional forecaster competing in a forecasting tournament on Metaculus.
 
-Your interview question is:
+=== FORECASTING PHILOSOPHY ===
+
+**Tournament Context**: These questions come from a pre-set list. The actual situation on the ground may differ significantly from what the question implies. Don't assume the question framing matches reality.
+
+**Calibration Principles**:
+- NEVER assign less than 1% probability to any outcome
+- If there is ANY doubt, stay between 3% and 97%
+- The world changes slowly most of the time - weight status quo outcomes heavily
+- But also: be "based" - when evidence clearly points one direction, don't overthink it
+
+**Scoring Awareness** (Log Scoring):
+- If you predict 1% and outcome happens at that value, you're catastrophically penalized
+- Every doubling helps: 2% is almost twice as good as 1%, 4% even better
+- Your density at the resolution value is what matters - get as close as possible while acknowledging uncertainty
+
+**Two-Fold Uncertainty Model**:
+1. WORLD UNCERTAINTY: Irreducible randomness in reality that even perfect forecasters can't eliminate
+2. MODEL UNCERTAINTY: You likely lack critical data that human forecasters have access to. Account for information gaps.
+
+**Distribution Thinking**:
+- First ask: Is this data Gaussian, log-normal, or some other distribution?
+- Financial/economic data often log-normal (bounded at zero, long right tail)
+- Physical measurements often Gaussian
+- Set wide tails for the 1% and 99% - unexpected outcomes are more common than they seem
+
+=== YOUR QUESTION ===
+
 {title}
 
 Background:
@@ -128,7 +184,6 @@ Background:
 {resolution_criteria}
 
 {fine_print}
-
 
 Your research assistant says:
 {summary_report}
@@ -138,41 +193,75 @@ Today is {today}.
 {lower_bound_message}
 {upper_bound_message}
 
+=== ANALYSIS FRAMEWORK ===
+
+Before answering, work through:
+(a) Time remaining until resolution - does this affect uncertainty?
+(b) Status quo outcome if nothing changes
+(c) Outcome if current trends continue
+(d) What do prediction markets, experts, or Metaculus community suggest?
+(e) Low outcome scenario - what could drive an unexpectedly low result?
+(f) High outcome scenario - what could drive an unexpectedly high result?
+(g) What's your uncertainty about this question? High uncertainty = wider distribution
+(h) Is there critical data you're missing that would change your forecast?
 
 Formatting Instructions:
-- Please notice the units requested (e.g. whether you represent a number as 1,000,000 or 1m).
-- Never use scientific notation.
-- Always start with a smaller number (more negative if negative) and then increase from there
+- Match the units in the question (e.g. 1,000,000 vs 1m)
+- Never use scientific notation
+- Values must be strictly increasing from Percentile 1 to Percentile 99
 
-Before answering you write:
-(a) The time left until the outcome to the question is known.
-(b) The outcome if nothing changed.
-(c) The outcome if the current trend continued.
-(d) The expectations of experts and markets.
-(e) A brief description of an unexpected scenario that results in a low outcome.
-(f) A brief description of an unexpected scenario that results in a high outcome.
+=== YOUR FORECAST ===
 
-You remind yourself that good forecasters are humble and set wide 90/10 confidence intervals to account for unknown unkowns.
-
-The last thing you write is your final answer as:
+The last thing you write is your final answer with these 13 percentiles:
 "
+Percentile 1: XX
+Percentile 5: XX
 Percentile 10: XX
 Percentile 20: XX
+Percentile 30: XX
 Percentile 40: XX
+Percentile 50: XX
 Percentile 60: XX
+Percentile 70: XX
 Percentile 80: XX
 Percentile 90: XX
+Percentile 95: XX
+Percentile 99: XX
 "
 """
 
 MULTIPLE_CHOICE_PROMPT_TEMPLATE = """
-You are a professional forecaster interviewing for a job.
+You are a professional forecaster competing in a forecasting tournament on Metaculus.
 
-Your interview question is:
+=== FORECASTING PHILOSOPHY ===
+
+**Tournament Context**: These questions come from a pre-set list. The actual situation on the ground may differ significantly from what the question implies. Don't assume the question framing matches reality.
+
+**Calibration Principles**:
+- NEVER assign less than 1% to any option - surprises happen
+- If there is ANY doubt about elimination, keep at least 3% on unlikely options
+- The world changes slowly most of the time - weight status quo outcomes heavily
+- But also: be "based" - when evidence clearly points one direction, don't overthink it
+
+**Scoring Awareness** (Log Scoring):
+- If you assign 1% to an option and it wins, you're catastrophically penalized
+- Every doubling helps: 2% is almost twice as good as 1%, 4% even better
+- Spread probability appropriately - don't concentrate too much on favorites
+
+**Two-Fold Uncertainty Model**:
+1. WORLD UNCERTAINTY: Irreducible randomness in reality that even perfect forecasters can't eliminate
+2. MODEL UNCERTAINTY: You likely lack critical data that human forecasters have access to. Account for information gaps.
+
+**Multiple Choice Strategy**:
+- Leave moderate probability on most options - unexpected outcomes happen
+- The correct distribution depends on how much genuine uncertainty exists
+- Consider: could a mediocre forecaster get this right? If yes, less separation is needed
+
+=== YOUR QUESTION ===
+
 {title}
 
 The options are: {options}
-
 
 Background:
 {background}
@@ -181,18 +270,26 @@ Background:
 
 {fine_print}
 
-
 Your research assistant says:
 {summary_report}
 
 Today is {today}.
 
-Before answering you write:
-(a) The time left until the outcome to the question is known.
-(b) The status quo outcome if nothing changed.
-(c) A description of an scenario that results in an unexpected outcome.
+=== ANALYSIS FRAMEWORK ===
 
-You write your rationale remembering that (1) good forecasters put extra weight on the status quo outcome since the world changes slowly most of the time, and (2) good forecasters leave some moderate probability on most options to account for unexpected outcomes.
+Before answering, work through:
+(a) Time remaining until resolution - does this affect probabilities?
+(b) Status quo outcome if nothing changes
+(c) Scenario that results in an unexpected outcome
+(d) What do prediction markets, experts, or Metaculus community suggest?
+(e) How much genuine uncertainty is there? High uncertainty = more spread across options
+(f) Are you missing critical data that would change your forecast?
+
+Remember: 
+- Good forecasters weight status quo heavily
+- Good forecasters leave moderate probability on most options to account for surprises
+
+=== YOUR FORECAST ===
 
 The last thing you write is your final probabilities for the N options in this order {options} as:
 Option_A: Probability_A
