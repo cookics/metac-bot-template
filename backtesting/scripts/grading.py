@@ -13,8 +13,10 @@ import sys
 from pathlib import Path
 from typing import Union
 
-# Add root to sys.path
-sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
+# Add root and src to sys.path
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(ROOT_DIR))
+sys.path.append(str(ROOT_DIR / "src"))
 
 # Minimum PDF value (like Metaculus's 0.01 floor)
 MIN_PDF = 0.01

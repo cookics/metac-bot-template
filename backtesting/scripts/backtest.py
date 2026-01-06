@@ -20,8 +20,10 @@ from datetime import datetime
 from typing import Optional
 from collections import defaultdict
 
-# Add root to sys.path to import config/api from parent
-sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
+# Add root and src to sys.path
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(ROOT_DIR))
+sys.path.append(str(ROOT_DIR / "src"))
 
 from metaculus_api import (
     get_resolved_questions_from_tournament,

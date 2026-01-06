@@ -2,7 +2,7 @@ import json
 import os
 from pathlib import Path
 
-cache_dir = Path(r"c:\Users\cooki\Desktop\Spring Bot\metac-bot-template\backtest_cache")
+cache_dir = Path(__file__).resolve().parent.parent / "data" / "cache"
 removed_total = 0
 files_processed = 0
 

@@ -2,6 +2,14 @@ import requests
 import zipfile
 import io
 import csv
+import sys
+from pathlib import Path
+
+# Add root and src to sys.path
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(ROOT_DIR))
+sys.path.append(str(ROOT_DIR / "src"))
+
 from config import AUTH_HEADERS, API_BASE_URL
 
 def debug_csv_structure(post_id, question_id):

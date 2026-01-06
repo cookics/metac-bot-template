@@ -1,9 +1,16 @@
-
 import json
 import math
+import sys
+from pathlib import Path
 
-grades_path = 'backtest_results/run_20260105_192050_honest_50_fixed_dates.grades.json'
-run_path = 'backtest_results/run_20260105_192050_honest_50_fixed_dates.json'
+# Add root and src to sys.path
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(ROOT_DIR))
+sys.path.append(str(ROOT_DIR / "src"))
+
+results_dir = Path(__file__).resolve().parent.parent / "data" / "results"
+grades_path = results_dir / 'run_20260105_192050_honest_50_fixed_dates.grades.json'
+run_path = results_dir / 'run_20260105_192050_honest_50_fixed_dates.json'
 
 with open(grades_path) as f:
     grades = json.load(f)['grades']

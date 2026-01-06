@@ -7,8 +7,10 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional
 
-# Add root to sys.path
-sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
+# Add root and src to sys.path
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(ROOT_DIR))
+sys.path.append(str(ROOT_DIR / "src"))
 
 CACHE_DIR = Path(__file__).resolve().parent.parent / "data" / "cache"
 

@@ -3,8 +3,10 @@ import math
 import sys
 from pathlib import Path
 
-# Add root to sys.path to import config/api from parent
-sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
+# Add root and src to sys.path
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(ROOT_DIR))
+sys.path.append(str(ROOT_DIR / "src"))
 
 PLOTS_DIR = Path(__file__).resolve().parent.parent / "data" / "plots"
 grades_path = Path(__file__).resolve().parent.parent / "data" / "results" / 'run_20260105_234222_clean_run.grades.json'

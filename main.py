@@ -10,6 +10,11 @@ For testing without submission, use test_forecast.py instead.
 """
 import asyncio
 import sys
+from pathlib import Path
+
+# Add src to sys.path so modules can find each other
+ROOT_DIR = Path(__file__).resolve().parent
+sys.path.append(str(ROOT_DIR / "src"))
 
 # Ensure stdout handles Unicode correctly on Windows
 if hasattr(sys, 'stdout') and sys.stdout.encoding != 'utf-8':
@@ -162,10 +167,10 @@ async def forecast_questions(
         # We still want to write the summary even if some failed
         # raise RuntimeError(error_message)
 
-    generate_github_summary(forecast_summaries, open_question_id_post_id)
+    generate_github_summary(forecast_summaries, open_question_id_post_id, logs_dir)
 
 
-def generate_github_summary(results: list, question_info: list) -> None:
+def generate_github_summary(results: list, question_info: list, logs_dir: Path) -> None:
     """
     Generate a markdown summary table for GitHub Actions.
     """
@@ -204,13 +209,13 @@ def generate_github_summary(results: list, question_info: list) -> None:
 
         summary_lines.append(f"| [{title}]({url}) | {info[1] if isinstance(res, Exception) else res['type']} | {status} | {forecast} |")
 
-    with open("summary.md", "w", encoding="utf-8") as f:
+    with open(logs_dir / "summary.md", "w", encoding="utf-8") as f:
         f.write("\n".join(summary_lines))
     
-    with open("forecast_count.txt", "w", encoding="utf-8") as f:
+    with open(logs_dir / "forecast_count.txt", "w", encoding="utf-8") as f:
         f.write(str(forecasted))
         
-    print(f"\nWritten summary to summary.md and count to forecast_count.txt")
+    print(f"\nWritten summary to {logs_dir / 'summary.md'} and count to {logs_dir / 'forecast_count.txt'}")
 
 
 if __name__ == "__main__":
@@ -224,6 +229,10 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     
+    # Setup log paths
+    logs_dir = ROOT_DIR / "logs"
+    logs_dir.mkdir(exist_ok=True)
+
     print("Starting BOT")
     if USE_EXAMPLE_QUESTIONS:
         open_question_id_post_id = EXAMPLE_QUESTIONS
@@ -243,7 +252,7 @@ if __name__ == "__main__":
             
             print(f"Questions needing forecast: {needs_forecast_count}")
             
-            # Write output for GitHub Actions
+            # Write output for GitHub Actions (at root for actions compatibility)
             with open("needs_forecast.txt", "w") as f:
                 f.write("true" if needs_forecast_count > 0 else "false")
             
