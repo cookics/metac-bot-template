@@ -233,7 +233,11 @@ def generate_multiple_choice_forecast(options, option_probabilities) -> dict:
 # ========================= PREDICTION FUNCTIONS =========================
 
 async def get_binary_gpt_prediction(
-    question_details: dict, num_runs: int, research_data: list[dict] = None
+    question_details: dict, 
+    num_runs: int, 
+    research_data: list[dict] = None,
+    model: str = None,
+    prompt_template: str = None
 ) -> tuple[float, str]:
     """Generate prediction for binary question."""
     today = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -246,7 +250,8 @@ async def get_binary_gpt_prediction(
     relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
     summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
-    content = BINARY_PROMPT_TEMPLATE.format(
+    template = prompt_template or BINARY_PROMPT_TEMPLATE
+    content = template.format(
         title=title,
         today=today,
         background=background,
@@ -256,7 +261,7 @@ async def get_binary_gpt_prediction(
     )
 
     async def get_rationale_and_probability(content: str) -> tuple[float, str]:
-        rationale = await call_llm(content, model=FORECAST_MODEL, temperature=FORECAST_TEMP)
+        rationale = await call_llm(content, model=model or FORECAST_MODEL, temperature=FORECAST_TEMP)
         probability = extract_probability_from_response_as_percentage_not_decimal(rationale)
         comment = f"Extracted Probability: {probability}%\n\nGPT's Answer: {rationale}\n\n\n"
         return probability, comment
@@ -278,7 +283,11 @@ async def get_binary_gpt_prediction(
 
 
 async def get_numeric_gpt_prediction(
-    question_details: dict, num_runs: int, research_data: list[dict] = None
+    question_details: dict, 
+    num_runs: int, 
+    research_data: list[dict] = None,
+    model: str = None,
+    prompt_template: str = None
 ) -> tuple[list[float], str]:
     """Generate prediction for numeric question."""
     today = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -303,11 +312,11 @@ async def get_numeric_gpt_prediction(
     else:
         lower_bound_message = f"The outcome can not be lower than {lower_bound}."
 
-    # Two-agent pipeline: Research Agent filters/summarizes, then Forecasting Agent predicts
     relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
     summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
-    content = NUMERIC_PROMPT_TEMPLATE.format(
+    template = prompt_template or NUMERIC_PROMPT_TEMPLATE
+    content = template.format(
         title=title,
         today=today,
         background=background,
@@ -319,7 +328,7 @@ async def get_numeric_gpt_prediction(
     )
 
     async def ask_llm_to_get_cdf(content: str) -> tuple[list[float], str]:
-        rationale = await call_llm(content, model=FORECAST_MODEL, temperature=FORECAST_TEMP)
+        rationale = await call_llm(content, model=model or FORECAST_MODEL, temperature=FORECAST_TEMP)
         percentile_values = extract_percentiles_from_response(rationale)
 
         comment = (
@@ -359,6 +368,8 @@ async def get_multiple_choice_gpt_prediction(
     question_details: dict,
     num_runs: int,
     research_data: list[dict] = None,
+    model: str = None,
+    prompt_template: str = None
 ) -> tuple[dict[str, float], str]:
     """Generate prediction for multiple choice question."""
     today = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -368,11 +379,11 @@ async def get_multiple_choice_gpt_prediction(
     fine_print = question_details["fine_print"]
     options = question_details["options"]
 
-    # Two-agent pipeline: Research Agent filters/summarizes, then Forecasting Agent predicts
     relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
     summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
-    content = MULTIPLE_CHOICE_PROMPT_TEMPLATE.format(
+    template = prompt_template or MULTIPLE_CHOICE_PROMPT_TEMPLATE
+    content = template.format(
         title=title,
         today=today,
         background=background,
@@ -385,7 +396,7 @@ async def get_multiple_choice_gpt_prediction(
     async def ask_llm_for_multiple_choice_probabilities(
         content: str,
     ) -> tuple[dict[str, float], str]:
-        rationale = await call_llm(content, model=FORECAST_MODEL, temperature=FORECAST_TEMP)
+        rationale = await call_llm(content, model=model or FORECAST_MODEL, temperature=FORECAST_TEMP)
 
         option_probabilities = extract_option_probabilities_from_response(
             rationale, options

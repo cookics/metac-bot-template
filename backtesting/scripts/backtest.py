@@ -15,6 +15,7 @@ import argparse
 import asyncio
 import json
 import sys
+import importlib.util
 from pathlib import Path
 from datetime import datetime
 from typing import Optional
@@ -44,6 +45,20 @@ from config import RESEARCH_MODEL, FORECAST_MODEL
 
 
 RUNS_DIR = Path(__file__).resolve().parent.parent / "data" / "runs"
+
+
+def load_custom_prompts(run_name: str):
+    """Load custom prompts from the run directory if they exist."""
+    run_dir = RUNS_DIR / run_name
+    prompts_path = run_dir / "prompts.py"
+    
+    if prompts_path.exists():
+        print(f"[Backtest] Loading custom prompts from {prompts_path}")
+        spec = importlib.util.spec_from_file_location("custom_prompts", prompts_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+    return None
 
 
 def get_run_dirs(run_name: str):
@@ -226,7 +241,8 @@ async def collect_backtest_data(
 
 async def run_backtest(
     config_name: str = "default",
-    model: str = None,
+    forecast_model: str = None,
+    research_model: str = None,
     temperature: float = None,
     limit: int = None,
     run_name: str = "backtest_1"
@@ -260,11 +276,15 @@ async def run_backtest(
     if limit:
         cached_ids = cached_ids[:limit]
     
+    # Load custom prompts if any
+    custom_prompts = load_custom_prompts(run_name)
+    
     print(f"[Backtest] Running forecasts on {len(cached_ids)} questions with config '{config_name}'")
     
     results = {
         "config_name": config_name,
-        "model": model or FORECAST_MODEL,
+        "forecast_model": forecast_model or FORECAST_MODEL,
+        "research_model": research_model or RESEARCH_MODEL,
         "temperature": temperature,
         "started_at": datetime.now().isoformat(),
         "forecasts": []
@@ -305,19 +325,25 @@ async def run_backtest(
                 forecast, comment = await get_binary_gpt_prediction(
                     question_details, 
                     num_runs=1,
-                    research_data=search_results
+                    research_data=search_results,
+                    model=forecast_model,
+                    prompt_template=getattr(custom_prompts, "BINARY_PROMPT_TEMPLATE", None) if custom_prompts else None
                 )
             elif question_type == "numeric":
                 forecast, comment = await get_numeric_gpt_prediction(
                     question_details, 
                     num_runs=1,
-                    research_data=search_results
+                    research_data=search_results,
+                    model=forecast_model,
+                    prompt_template=getattr(custom_prompts, "NUMERIC_PROMPT_TEMPLATE", None) if custom_prompts else None
                 )
             elif question_type == "multiple_choice":
                 forecast, comment = await get_multiple_choice_gpt_prediction(
                     question_details, 
                     num_runs=1,
-                    research_data=search_results
+                    research_data=search_results,
+                    model=forecast_model,
+                    prompt_template=getattr(custom_prompts, "MULTIPLE_CHOICE_PROMPT_TEMPLATE", None) if custom_prompts else None
                 )
             else:
                 print(f"  Unknown type: {question_type}")
@@ -504,6 +530,8 @@ async def main():
     parser.add_argument("--config", type=str, default="default", help="Config name for run")
     parser.add_argument("--run-id", type=str, default="latest", help="Run ID to grade")
     parser.add_argument("--run-name", type=str, default="backtest_1", help="Name for the run folder")
+    parser.add_argument("--forecast-model", type=str, help="Override forecasting model")
+    parser.add_argument("--research-model", type=str, help="Override research model")
     
     args = parser.parse_args()
     
@@ -511,7 +539,13 @@ async def main():
         await collect_backtest_data(args.tournament, args.limit)
     
     elif args.run:
-        await run_backtest(config_name=args.config, limit=args.limit, run_name=args.run_name)
+        await run_backtest(
+            config_name=args.config, 
+            limit=args.limit, 
+            run_name=args.run_name,
+            forecast_model=args.forecast_model,
+            research_model=args.research_model
+        )
     
     elif args.grade:
         grade_backtest_run(args.run_id, run_name=args.run_name)
