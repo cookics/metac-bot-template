@@ -1,0 +1,90 @@
+{
+  "config_name": "test_run",
+  "model": "google/gemini-3-flash-preview",
+  "temperature": null,
+  "started_at": "2026-01-06T01:10:52.373264",
+  "forecasts": [
+    {
+      "question_id": 38965,
+      "title": "Will Boris Johnson return as the leader of the UK Conservative Party before 2026?",
+      "question_type": "binary",
+      "forecast": 0.01,
+      "resolution": "no",
+      "question_details": {
+        "title": "Will Boris Johnson return as the leader of the UK Conservative Party before 2026?",
+        "description": "This question is synced with an identical question on Metaculus. The original question opened on 2022-10-27 05:00:00 and can be found [here](https://www.metaculus.com/questions/12613). This question will resolve to the same value as the synced question. The original question's background info at this time is below. \n\n[Alexander Boris de Pfeffel Johnson](https://en.wikipedia.org/wiki/Boris_Johnson), born 19 June 1964, is a British politician who served as Prime Minister of the United Kingdom and Leader of the Conservative Party from 2019 to 2022. He previously served as Secretary of State for Foreign and Commonwealth Affairs from 2016 to 2018 and as Mayor of London from 2008 to 2016. Johnson has been Member of Parliament (MP) for Uxbridge and South Ruislip since 2015, having previously been MP for Henley from 2001 to 2008.\n\nIn 2022, Johnson resigned the leadership of the Conservative Party subsequent to [a wave of resignations](https://en.wikipedia.org/wiki/2022_United_Kingdom_government_crisis) from his cabinet and government, following numerous scandals. Following a leadership contest, he was succeeded in September 2022 by Liz Truss.\n\nHowever, there is speculation that should Truss fare poorly as leader, she may be replaced swiftly, and Johnson may make a comeback. As of September 26, 2022, [according to betting exchange Smarkets](https://twitter.com/SmarketsPol/status/1574408957124386818):\n\n>Boris Johnson is now second favourite to be the next Prime Minister \u2014 behind only Keir Starmer \u2014 suggesting that in the event Liz Truss goes before the next election, Johnson would be favourite to take over.\n\n`{\"format\":\"metac_closes_in_period\",\"info\":{\"post_id\":12613,\"question_id\":12613}}`",
+        "resolution_criteria": "This question will resolve as **Yes** if, at any time between October 24, 2022 to January 1, 2026, Boris Johnson again holds the office of Leader of the Conservative and Unionist Party. This does not require that he becomes Prime Minister; only that he is formally the leader of the Conservatives.  An acting or caretaker leadership of the party that is intended to be temporary, e.g. during a leadership contest, does not count; he must formally be the leader of the party.  To resolve this question, it is not necessary for Johnson to remain leader of the Conservatives for any minimum length of time.\n\nIf Johnson does not again hold the office of Leader of the Conservative Party before January 1, 2026, this question will resolve as **No**",
+        "fine_print": "",
+        "type": "binary",
+        "options": null,
+        "scaling": {
+          "range_min": null,
+          "range_max": null,
+          "nominal_min": null,
+          "nominal_max": null,
+          "zero_point": null,
+          "open_upper_bound": false,
+          "open_lower_bound": false,
+          "inbound_outcome_count": null,
+          "continuous_range": null
+        },
+        "open_upper_bound": false,
+        "open_lower_bound": false,
+        "post_id": 39588,
+        "publish_time": "2025-11-05T08:26:09Z"
+      },
+      "comment_preview": "Median Probability: 0.01\n\n## Rationale 1\nExtracted Probability: 1%\n\nGPT's Answer: As a professional forecaster, I have evaluated the likelihood of Boris Johnson returning to the leadership of the Conservative Party based on the historical record and the situation as of early 2026.\n\n**(a) The time left until the outcome to the question is known:**\nThe time has elapsed. The resolution window closed on January 1, 2026. As today is January 6, 2026, the outcome is now historically fixed.\n\n**(b) The s",
+      "search_results_used": 10
+    },
+    {
+      "question_id": 38969,
+      "title": "How many Major Atlantic Hurricanes will occur during September 2025?",
+      "question_type": "multiple_choice",
+      "forecast": {
+        "0": 0.08,
+        "1": 0.27,
+        "2": 0.38,
+        "3": 0.2,
+        "4 or more": 0.07
+      },
+      "resolution": "2",
+      "question_details": {
+        "title": "How many Major Atlantic Hurricanes will occur during September 2025?",
+        "description": "This question is synced with an identical question on Metaculus. The original question opened on 2025-08-16 14:30:00 and can be found [here](https://www.metaculus.com/questions/39125). This question will resolve to the same value as the synced question. The original question's background info at this time is below. \n\nThe Atlantic hurricane season typically runs from June 1 to November 30, with peak activity occurring in August, September, and October. Major hurricanes, classified as Category 3 or higher on the Saffir-Simpson Hurricane Wind Scale, have sustained wind speeds of at least 111 miles per hour (178 km/h) and can cause significant damage and loss of life.\n\nIn recent years, the frequency and intensity of Atlantic hurricanes have been a topic of concern, with many scientists attributing the increase in powerful storms to [climate change](https://www.noaa.gov/news-release/noaa-predicts-above-normal-2024-atlantic-hurricane-season). Forecasting the number of major hurricanes in a given month can help communities, governments, and industries prepare for potential impacts.\n\nThis question focuses on the number of major Atlantic hurricanes that will occur specifically in September 2024, as this month is typically one of the most active periods of the hurricane season.\n\n`{\"format\":\"metac_closes_in_period\",\"info\":{\"post_id\":39125,\"question_id\":38461}}`",
+        "resolution_criteria": "This question will resolve as the number of major Atlantic hurricanes (Category 3 or higher) that occur during September 2025, according to the [National Hurricane Center (NHC)](https://www.nhc.noaa.gov/?atlc) of the United States National Weather Service.",
+        "fine_print": "* The question will be resolved using storm reports and data published by the National Hurricane Center as of October 1, 2025. Any subsequent revisions upgrading or downgrading a storm's intensity will not be considered. The NHC's [Tropical Cyclone Advisory Archive](https://www.nhc.noaa.gov/archive/2024/) and [Monthly Atlantic Tropical Weather Summary](https://www.nhc.noaa.gov/text/MIATWSAT.shtml) may be of primary use.\n* If the NHC no longer tracks hurricane severity or is found to be severely unreliable, this question will be annulled.",
+        "type": "multiple_choice",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4 or more"
+        ],
+        "scaling": {
+          "range_min": null,
+          "range_max": null,
+          "nominal_min": null,
+          "nominal_max": null,
+          "zero_point": null,
+          "open_upper_bound": false,
+          "open_lower_bound": false,
+          "inbound_outcome_count": null,
+          "continuous_range": null
+        },
+        "open_upper_bound": false,
+        "open_lower_bound": false,
+        "post_id": 39592,
+        "publish_time": "2025-09-04T18:40:04Z"
+      },
+      "comment_preview": "Average Probability Yes Per Category: `{'0': 0.08, '1': 0.27, '2': 0.38, '3': 0.2, '4 or more': 0.07}`\n\n## Rationale 1\nEXTRACTED_PROBABILITIES: [0.08, 0.27, 0.38, 0.2, 0.07]\n\nGPT's Answer: In answering this question, I will evaluate the climatological data for the Atlantic basin in September against the specific atmospheric conditions reported for the 2025 season.\n\n**(a) The time left until the outcome to the question is known.**\nThe outcome for this question is already technically determined, a",
+      "search_results_used": 8
+    }
+  ],
+  "completed_at": "2026-01-06T01:11:05.975420",
+  "n_forecasts": 2,
+  "forecasts_by_type": {
+    "binary": 1,
+    "multiple_choice": 1
+  }
+}

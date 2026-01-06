@@ -294,7 +294,7 @@ def plot_numeric_summary(grades: list[dict], save_path: Optional[Path] = None) -
     return save_path
 
 
-def generate_all_plots(grades: list[dict], forecasts: list[dict] = None) -> list[Path]:
+def generate_all_plots(grades: list[dict], forecasts: list[dict] = None, plots_dir: Path = PLOTS_DIR) -> list[Path]:
     """
     Generate all visualization plots for a backtest run.
     """
@@ -305,16 +305,16 @@ def generate_all_plots(grades: list[dict], forecasts: list[dict] = None) -> list
     plots = []
     
     # 1. Individual Question Plots (Summary)
-    cat_summary = plot_categorical_summary(grades)
+    cat_summary = plot_categorical_summary(grades, save_path=plots_dir / "categorical_summary.png")
     if cat_summary:
         plots.append(cat_summary)
         
-    num_summary = plot_numeric_summary(grades)
+    num_summary = plot_numeric_summary(grades, save_path=plots_dir / "numeric_summary.png")
     if num_summary:
         plots.append(num_summary)
 
     # 2. Score comparison stats
-    score_plot = plot_score_comparison(grades)
+    score_plot = plot_score_comparison(grades, save_path=plots_dir / "score_comparison.png")
     if score_plot:
         plots.append(score_plot)
     
@@ -335,7 +335,7 @@ def generate_all_plots(grades: list[dict], forecasts: list[dict] = None) -> list
             grade_entry = next((g for g in grades if g.get("question_id") == qid), {})
             comm_cdf = grade_entry.get("community_forecast")
             
-            plot_path = PLOTS_DIR / f"cdf_{i+1}_{qid}.png"
+            plot_path = plots_dir / f"cdf_{i+1}_{qid}.png"
             
             result = plot_cdf(
                 cdf=cdf,

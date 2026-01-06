@@ -1,0 +1,47 @@
+{
+  "run_file": "C:\\Users\\cooki\\Desktop\\Spring Bot\\metac-bot-template\\backtesting\\data\\runs\\backtest_test\\results\\run_20260106_011105_test_run.json",
+  "grades": [
+    {
+      "question_type": "binary",
+      "forecast": 0.01,
+      "outcome": 0,
+      "brier_score": 0.0001,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "community_forecast": 0.01,
+      "peer_score": 0.0,
+      "title": "Will Boris Johnson return as the leader of the UK Conservative Party before 2026?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "0": 0.08,
+        "1": 0.27,
+        "2": 0.38,
+        "3": 0.2,
+        "4 or more": 0.07
+      },
+      "resolution": "2",
+      "correct_probability": 0.38,
+      "brier_score": 0.3844,
+      "log_score": -0.9675840262617056,
+      "baseline_score": 64.18538861723947,
+      "title": "How many Major Atlantic Hurricanes will occur during September 2025?"
+    }
+  ],
+  "aggregate": {
+    "total_graded": 2,
+    "binary": {
+      "n": 1,
+      "mean_brier": 0.0001,
+      "mean_log_score": -0.01005033585350145,
+      "mean_baseline": 68.30968447064438,
+      "mean_peer": 0.0
+    },
+    "multiple_choice": {
+      "n": 1,
+      "mean_brier": 0.3844,
+      "mean_baseline": 64.18538861723947
+    }
+  }
+}

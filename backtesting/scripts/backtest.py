@@ -43,14 +43,23 @@ from grading import grade_forecast, calculate_aggregate_scores, generate_report
 from config import RESEARCH_MODEL, FORECAST_MODEL
 
 
-RESULTS_DIR = Path(__file__).resolve().parent.parent / "data" / "results"
-PLOTS_DIR = Path(__file__).resolve().parent.parent / "data" / "plots"
+RUNS_DIR = Path(__file__).resolve().parent.parent / "data" / "runs"
 
 
-def ensure_dirs():
-    """Create output directories if needed."""
-    RESULTS_DIR.mkdir(exist_ok=True)
-    PLOTS_DIR.mkdir(exist_ok=True)
+def get_run_dirs(run_name: str):
+    """Get paths for a specific run."""
+    run_dir = RUNS_DIR / run_name
+    results_dir = run_dir / "results"
+    plots_dir = run_dir / "plots"
+    return run_dir, results_dir, plots_dir
+
+
+def ensure_run_dirs(run_name: str):
+    """Create output directories for a specific run."""
+    run_dir, results_dir, plots_dir = get_run_dirs(run_name)
+    results_dir.mkdir(parents=True, exist_ok=True)
+    plots_dir.mkdir(parents=True, exist_ok=True)
+    return results_dir, plots_dir
 
 
 def sample_balanced_by_type(questions: list[dict], n: int = 50) -> list[dict]:
@@ -219,7 +228,8 @@ async def run_backtest(
     config_name: str = "default",
     model: str = None,
     temperature: float = None,
-    limit: int = None
+    limit: int = None,
+    run_name: str = "backtest_1"
 ) -> dict:
     """
     Run forecasts on cached question data (all question types).
@@ -353,9 +363,9 @@ async def run_backtest(
     results["forecasts_by_type"] = by_type
     
     # Save results
-    ensure_dirs()
+    results_dir, _ = ensure_run_dirs(run_name)
     run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-    results_path = RESULTS_DIR / f"run_{run_id}_{config_name}.json"
+    results_path = results_dir / f"run_{run_id}_{config_name}.json"
     
     with open(results_path, "w") as f:
         json.dump(results, f, indent=2, default=str)
@@ -368,27 +378,40 @@ async def run_backtest(
 
 # ========================= PHASE 3: GRADING =========================
 
-def grade_backtest_run(run_id: str = "latest") -> dict:
+def grade_backtest_run(run_id: str = "latest", run_name: str = "backtest_1") -> dict:
     """
     Grade a backtest run with Peer Scores (vs community).
     
     Args:
         run_id: Run ID or "latest" for most recent
+        run_name: Name of the run folder
     
     Returns:
         Grading results
     """
-    ensure_dirs()
+    results_dir, plots_dir = ensure_run_dirs(run_name)
     
     # Find run file
     if run_id == "latest":
-        run_files = sorted(RESULTS_DIR.glob("run_*.json"), reverse=True)
+        run_files = sorted(results_dir.glob("run_*.json"), reverse=True)
         if not run_files:
-            print("[Backtest] No run files found")
+            print(f"[Backtest] No run files found in {results_dir}")
             return {}
         run_file = run_files[0]
     else:
-        run_file = RESULTS_DIR / f"run_{run_id}.json"
+        # Check if run_id is a full path or just a part of the filename
+        if Path(run_id).exists():
+            run_file = Path(run_id)
+        else:
+            run_file = results_dir / f"run_{run_id}.json"
+            if not run_file.exists():
+                # Try finding by partial match
+                matches = list(results_dir.glob(f"run_{run_id}*.json"))
+                if matches:
+                    run_file = matches[0]
+                else:
+                    print(f"[Backtest] Could not find run file for {run_id} in {results_dir}")
+                    return {}
     
     with open(run_file) as f:
         results = json.load(f)
@@ -458,9 +481,9 @@ def grade_backtest_run(run_id: str = "latest") -> dict:
     # Generate visualizations
     try:
         from visualization import generate_all_plots
-        plots = generate_all_plots(grades, results.get("forecasts", []))
+        plots = generate_all_plots(grades, results.get("forecasts", []), plots_dir=plots_dir)
         if plots:
-            print(f"[Backtest] Generated {len(plots)} visualization plots")
+            print(f"[Backtest] Generated {len(plots)} visualization plots in {plots_dir}")
     except Exception as e:
         print(f"[Backtest] Visualization failed: {e}")
     
@@ -480,6 +503,7 @@ async def main():
     parser.add_argument("--limit", type=int, default=100, help="Number of questions")
     parser.add_argument("--config", type=str, default="default", help="Config name for run")
     parser.add_argument("--run-id", type=str, default="latest", help="Run ID to grade")
+    parser.add_argument("--run-name", type=str, default="backtest_1", help="Name for the run folder")
     
     args = parser.parse_args()
     
@@ -487,10 +511,10 @@ async def main():
         await collect_backtest_data(args.tournament, args.limit)
     
     elif args.run:
-        await run_backtest(config_name=args.config, limit=args.limit)
+        await run_backtest(config_name=args.config, limit=args.limit, run_name=args.run_name)
     
     elif args.grade:
-        grade_backtest_run(args.run_id)
+        grade_backtest_run(args.run_id, run_name=args.run_name)
     
     else:
         parser.print_help()
