@@ -1,0 +1,392 @@
+{
+  "config_name": "batch50",
+  "model": "google/gemini-3-flash-preview",
+  "temperature": null,
+  "started_at": "2026-01-05T18:32:55.557743",
+  "forecasts": [
+    {
+      "question_id": 38965,
+      "title": "Will Boris Johnson return as the leader of the UK Conservative Party before 2026?",
+      "question_type": "binary",
+      "forecast": 0.01,
+      "resolution": "no",
+      "question_details": {
+        "title": "Will Boris Johnson return as the leader of the UK Conservative Party before 2026?",
+        "description": "This question is synced with an identical question on Metaculus. The original question opened on 2022-10-27 05:00:00 and can be found [here](https://www.metaculus.com/questions/12613). This question will resolve to the same value as the synced question. The original question's background info at this time is below. \n\n[Alexander Boris de Pfeffel Johnson](https://en.wikipedia.org/wiki/Boris_Johnson), born 19 June 1964, is a British politician who served as Prime Minister of the United Kingdom and Leader of the Conservative Party from 2019 to 2022. He previously served as Secretary of State for Foreign and Commonwealth Affairs from 2016 to 2018 and as Mayor of London from 2008 to 2016. Johnson has been Member of Parliament (MP) for Uxbridge and South Ruislip since 2015, having previously been MP for Henley from 2001 to 2008.\n\nIn 2022, Johnson resigned the leadership of the Conservative Party subsequent to [a wave of resignations](https://en.wikipedia.org/wiki/2022_United_Kingdom_government_crisis) from his cabinet and government, following numerous scandals. Following a leadership contest, he was succeeded in September 2022 by Liz Truss.\n\nHowever, there is speculation that should Truss fare poorly as leader, she may be replaced swiftly, and Johnson may make a comeback. As of September 26, 2022, [according to betting exchange Smarkets](https://twitter.com/SmarketsPol/status/1574408957124386818):\n\n>Boris Johnson is now second favourite to be the next Prime Minister \u2014 behind only Keir Starmer \u2014 suggesting that in the event Liz Truss goes before the next election, Johnson would be favourite to take over.\n\n`{\"format\":\"metac_closes_in_period\",\"info\":{\"post_id\":12613,\"question_id\":12613}}`",
+        "resolution_criteria": "This question will resolve as **Yes** if, at any time between October 24, 2022 to January 1, 2026, Boris Johnson again holds the office of Leader of the Conservative and Unionist Party. This does not require that he becomes Prime Minister; only that he is formally the leader of the Conservatives.  An acting or caretaker leadership of the party that is intended to be temporary, e.g. during a leadership contest, does not count; he must formally be the leader of the party.  To resolve this question, it is not necessary for Johnson to remain leader of the Conservatives for any minimum length of time.\n\nIf Johnson does not again hold the office of Leader of the Conservative Party before January 1, 2026, this question will resolve as **No**",
+        "fine_print": "",
+        "type": "binary",
+        "options": null,
+        "scaling": {
+          "range_min": null,
+          "range_max": null,
+          "nominal_min": null,
+          "nominal_max": null,
+          "zero_point": null,
+          "open_upper_bound": false,
+          "open_lower_bound": false,
+          "inbound_outcome_count": null,
+          "continuous_range": null
+        },
+        "open_upper_bound": false,
+        "open_lower_bound": false
+      },
+      "comment_preview": "Median Probability: 0.01\n\n## Rationale 1\nExtracted Probability: 1%\n\nGPT's Answer: As a professional forecaster, here is my assessment of the question regarding Boris Johnson\u2019s potential return as leader of the Conservative Party.\n\n**(a) Time left until known:**\nThe outcome is already technically known, as the resolution date was January 1, 2026, and today is January 5, 2026. However, even within the context of the prediction window (late 2022 to start of 2026), the window for change has effectiv"
+    },
+    {
+      "question_id": 38971,
+      "title": "Will TikTok still be available in the United States on December 31, 2025?",
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Yes, still owned by foreign adversary": 0.85,
+        "Yes, non-adversary owner": 0.12,
+        "No": 0.03
+      },
+      "resolution": "Yes, still owned by foreign adversary",
+      "question_details": {
+        "title": "Will TikTok still be available in the United States on December 31, 2025?",
+        "description": "This question is synced with an identical question on Metaculus. The original question opened on 2024-05-11 11:00:00 and can be found [here](https://www.metaculus.com/questions/22559). This question will resolve to the same value as the synced question. The original question's background info at this time is below. \n\nCongress has passed a law requiring TikTok to shut down or sell to a non-CPC affiliated entity within 9 months, with a possible 3 month extension for a sale in progress. Original house version of the bill [here](https://www.congress.gov/bill/118th-congress/house-bill/7521/text) (the senate folded it into a larger piece of legislation). In legal terms, congress is defining TikTok as a \"foreign adversary controlled application\". ByteDance is challenging the bill and [has indicated](https://www.reuters.com/technology/bytedance-prefers-tiktok-shutdown-us-if-legal-options-fail-sources-say-2024-04-25/) it would shut down rather than sell.\n\nThis question is about whether the service will continue to exist as a result of this bill passing, and in what form. It is possible that ByteDance will maintain ownership, for example via legal challenges to the bill. If ByteDance does comply is it not clear whether they would shut the service down or sell to a non-CPC entity.\n\n`{\"format\":\"metac_closes_in_period\",\"info\":{\"post_id\":22559,\"question_id\":22559}}`",
+        "resolution_criteria": "Resolves to \"Yes, still owned by foreign adversary\" if TikTok is available in the US on December 31 2025, and the US app continues to be owned by ByteDance or another Chinese or foreign adversary firm contrary to the divestment written in the letter of the law. \"Ownership\" here is defined the way the law does, such that it is deemed to be \"controlled by\" a foreign adversary. If courts make a ruling about its status, that decision will apply, otherwise it will be based on reading of the law as passed. Details in fine print.\n\nResolves to \"Yes, non-adversary owner\" if TikTok is available in the US on December 31 2025, but the US app is no longer owned by ByteDance or any other firm headquartered in China, including Hong Kong or Macau but not Taiwan, or a foreign adversary. In the event that TikTok is sold to a company in another country that is deemed a US adversary, it will resolve to \"Yes, still owned by foreign adversary\"\n\nResolves to \"No\" otherwise.\n\n\"Available\" means a video streaming app with at least 50% of the current US TikTok user base and at least 50% of the current TikTok content library is available for download to US users on the Google Play store or the Apple app store. If TikTok is renamed but these conditions hold then it is deemed \"available.\" Changes to the TikTok algorithm do not affect this definition. The app must allow users to watch videos but changes to other app features such as users' ability to upload content or make comments do not affect this definition.",
+        "fine_print": "Quoting the law: \"An entity \u201ccontrolled by a foreign adversary\u201d means an individual or entity that is:\n(A) a foreign person domiciled in, is headquartered in, has its principal place of business in, or is organized under the laws of a foreign adversary country;\n(B) an entity with respect to which a foreign person or combination of foreign persons described in (A) directly or indirectly own at least a 20 percent stake; or\n(C) a person subject to the direction or control of a foreign person or entity described in (A) or (B).\"\n\nDefinition of foreign adversary: \"\u201cForeign adversary countries\u201d are those specified in 10 U.S.C. \u00a7 4872(d)(2), which currently includes the Democratic People\u2019s Republic of North Korea, the People\u2019s Republic of China, the Russian Federation, and the Islamic Republic of Iran.\" The list of countries at time of resolution will be used.",
+        "type": "multiple_choice",
+        "options": [
+          "Yes, still owned by foreign adversary",
+          "Yes, non-adversary owner",
+          "No"
+        ],
+        "scaling": {
+          "range_min": null,
+          "range_max": null,
+          "nominal_min": null,
+          "nominal_max": null,
+          "zero_point": null,
+          "open_upper_bound": false,
+          "open_lower_bound": false,
+          "inbound_outcome_count": null,
+          "continuous_range": null
+        },
+        "open_upper_bound": false,
+        "open_lower_bound": false
+      },
+      "comment_preview": "Average Probability Yes Per Category: `{'Yes, still owned by foreign adversary': 0.85, 'Yes, non-adversary owner': 0.12, 'No': 0.03}`\n\n## Rationale 1\nEXTRACTED_PROBABILITIES: [0.85, 0.12, 0.03]\n\nGPT's Answer: As a professional forecaster reviewing the status of TikTok on December 31, 2025, from the current perspective of January 5, 2026, I am evaluating this retrospectively based on the available data from late December.\n\n**(a) Time left until the outcome is known:**\nThe outcome is already known"
+    },
+    {
+      "question_id": 38980,
+      "title": "Will Bud Light cease production by 2026?",
+      "question_type": "binary",
+      "forecast": 0.01,
+      "resolution": "no",
+      "question_details": {
+        "title": "Will Bud Light cease production by 2026?",
+        "description": "This question is synced with an identical question on Metaculus. The original question opened on 2023-11-23 19:00:00 and can be found [here](https://www.metaculus.com/questions/19398). This question will resolve to the same value as the synced question. The original question's background info at this time is below. \n\nIn April 2023, Bud Light attracted controversy by running an ad campaign with transgender activist Dylan Mulvaney. American conservatives began to boycott the company in response. As of the 4th of July weekend of 2023, [Bud Light had fallen to 14th place in popularity among American beers,](https://finance.yahoo.com/news/bud-light-plummets-14th-place-210130892.html) [the company had fired hundreds of workers and sales had plummeted 26.5%.](https://www.cbsnews.com/news/anheuser-busch-bud-light-layoffs-dylan-mulvaney-kid-rock-ryan-young/)\n\n`{\"format\":\"metac_closes_in_period\",\"info\":{\"post_id\":19398,\"question_id\":19398}}`",
+        "resolution_criteria": "This question will resolve as Yes based on credible media reports that Bud Light has been discontinued before January 1, 2026.",
+        "fine_print": "If Bud Light is re-branded under a different name but Anheuser Busch continues to sell the same product, this question will resolve Ambigious. This question will resolve as Yes if Anheuser Busch becomes defunct.",
+        "type": "binary",
+        "options": null,
+        "scaling": {
+          "range_min": null,
+          "range_max": null,
+          "nominal_min": null,
+          "nominal_max": null,
+          "zero_point": null,
+          "open_upper_bound": false,
+          "open_lower_bound": false,
+          "inbound_outcome_count": null,
+          "continuous_range": null
+        },
+        "open_upper_bound": false,
+        "open_lower_bound": false
+      },
+      "comment_preview": "Median Probability: 0.01\n\n## Rationale 1\nExtracted Probability: 1%\n\nGPT's Answer: As a professional forecaster, I have evaluated the current situation regarding Bud Light\u2019s production status as of January 5, 2026.\n\n**(a) The time left until the outcome to the question is known.**\nThe question asks if Bud Light ceased production before January 1, 2026. Since that date has passed, the outcome is determined by events that occurred prior to five days ago. We are currently in the verification phase.\n"
+    },
+    {
+      "question_id": 38989,
+      "title": "Will Rachel Reeves remain UK Chancellor of the Exchequer until December, 2025?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 65337. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39000,
+      "title": "Will 3M file for bankruptcy before 2026?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 65086. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39002,
+      "title": "How many vehicle deliveries will Tesla report for Q3 2025?",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 65086. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39008,
+      "title": "How much will Gold Futures total price returns exceed S&P 500 Futures's in the following biweekly periods of Q3 2025? (Sep 15 - Sep 26)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64643. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39098,
+      "title": "How many people will be added to the Viasna Belarusian political prisoners tracker in September 2025?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64643. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39099,
+      "title": "What will AfD's vote share be in the 2025 North Rhine-Westphalia local elections?",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64215. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39103,
+      "title": "Will the United States attack Venezuela before 2026?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 63739. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39105,
+      "title": "Which grouping will the Prime Minister of France belong to on December 31, 2025?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 63509. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39106,
+      "title": "Who will win Big Brother 27 (US)?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 63509. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39175,
+      "title": "What will be the result of the game between IM Levy Rozman Vs The World?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 63509. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39505,
+      "title": "How much will Nvidia's stock price returns exceed Apple's in the following biweekly periods of Q3 2025? (Sep 29 - Oct 10)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 62847. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39506,
+      "title": "Who will be the next non-caretaker prime minister of Nepal? (Rabi Lamichhane)",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 62667. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39510,
+      "title": "Who will be the next non-caretaker prime minister of Nepal? (Kulman Ghising)",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 62667. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39514,
+      "title": "What will be the maximum intraday value of the VIX over the following biweekly periods in Q3, 2025? (Sep 29 - Oct 10)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 62441. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39538,
+      "title": "Who will win the UK Labour Party's Deputy Leadership election in 2025?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 62062. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39539,
+      "title": "Will California's Proposition 50 (allowing redistricting of House seats) pass in the 2025 election?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 62062. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39562,
+      "title": "How will the Supreme Court rule on Trump's tariffs in 2025?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 62062. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39566,
+      "title": "Will there be a stronger hurricane than Erin during the 2025 Atlantic hurricane season?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 61703. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39591,
+      "title": "How much will Nvidia's stock price returns exceed Microsoft's in these biweekly periods of Q4 2025? (Oct 13 - Oct 24)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 61420. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39596,
+      "title": "What will be the maximum intraday value of the VIX over these biweekly periods in Q4 2025? (Oct 13 - Oct 24)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 60955. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39751,
+      "title": "Which team will win the 2025 League of Legends World Championship?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 60955. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39788,
+      "title": "What will the first reported revenues after September 2025 be for the following companies? (MSFT)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 60684. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39793,
+      "title": "Will the following companies be added to the S&P 500 before 2026? (CVNA)",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 60315. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39834,
+      "title": "Which of the 2025 Virginia and New Jersey gubernatorial elections will the Democrats win?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 60315. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39837,
+      "title": "Will Ukraine extend martial law beyond November 5, 2025?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 59902. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39912,
+      "title": "How much will Gold Futures total price returns exceed S&P 500 Futures's in these biweekly periods of Q4 2025? (Oct 27 - Nov 7)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 59679. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 39917,
+      "title": "What will be the maximum intraday value of the VIX over these biweekly periods in Q4 2025? (Oct 27 - Nov 7)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 59679. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40083,
+      "title": "Will the US national debt be under $38.5 trillion on December 31, 2025?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 59155. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40085,
+      "title": "Which country will host the 31st Conference of the Parties (COP 31) in 2026?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 59155. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40088,
+      "title": "What will be the maximum intraday value of the VIX over these biweekly periods in Q4 2025? (Nov 10 - Nov 21)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 58910. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40093,
+      "title": "How much will Gold Futures total price returns exceed S&P 500 Futures's in these biweekly periods of Q4 2025? (Nov 10 - Nov 21)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 58504. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40166,
+      "title": "What will be NVIDIA's forward guidance in their Q3 FY2026 earnings release? (GAAP Gross Margin)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 58222. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40169,
+      "title": "Will Yuma, Arizona receive any rain in November 2025?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 58026. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40217,
+      "title": "What will be the ending value of the ICE BofA US High Yield Option-Adjusted Spread for these biweekly periods of Q4 2025? (Nov 24 - Dec 5)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 58026. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40222,
+      "title": "How much will Nvidia's stock price returns exceed Microsoft's in these biweekly periods of Q4 2025? (Nov 24 - Dec 5)",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 58026. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40300,
+      "title": "Will the United States conduct a military attack within Nigeria before 2026?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 57578. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40414,
+      "title": "Will Iran announce an evacuation of Tehran before 2026?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 57220. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40416,
+      "title": "Will President Donald J. Trump take legal action against the BBC before 2026?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 57220. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40417,
+      "title": "In which decade will the 2025 UK Christmas number one have been originally released?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 56763. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40441,
+      "title": "Which game will win the 2025 Game of the Year Award?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 56487. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40446,
+      "title": "What will the Democrats' lead be in the congressional generic ballot (for the 2026 midterms) on December 2, 2025?",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 56487. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40626,
+      "title": "Will Iran announce a new capital location before January 3, 2026?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 56487. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40641,
+      "title": "Will a sixth contentious case be opened at the International Court of Justice in 2025?",
+      "question_type": "binary",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 55866. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40790,
+      "title": "Who will win the 2025 Chilean presidential election?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 55866. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40833,
+      "title": "[Short fuse] Who will win the 2025 NBA Cup?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 55286. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40836,
+      "title": "How many views will the top Netflix release receive in 2025 Christmas week?",
+      "question_type": "numeric",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 55286. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    },
+    {
+      "question_id": 40838,
+      "title": "How many top-four seeds will reach the semifinals of the 2025 NCAA College Football playoff?",
+      "question_type": "multiple_choice",
+      "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65535 tokens, but can only afford 55286. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+    }
+  ],
+  "completed_at": "2026-01-05T18:36:00.170822",
+  "n_forecasts": 3,
+  "forecasts_by_type": {
+    "binary": 17,
+    "multiple_choice": 16,
+    "numeric": 17
+  }
+}

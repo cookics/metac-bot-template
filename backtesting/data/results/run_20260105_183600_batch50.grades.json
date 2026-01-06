@@ -1,0 +1,51 @@
+{
+  "run_file": "C:\\Users\\cooki\\Desktop\\Spring Bot\\metac-bot-template\\backtest_results\\run_20260105_183600_batch50.json",
+  "grades": [
+    {
+      "question_type": "binary",
+      "forecast": 0.01,
+      "outcome": 0,
+      "brier_score": 0.0001,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will Boris Johnson return as the leader of the UK Conservative Party before 2026?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Yes, still owned by foreign adversary": 0.85,
+        "Yes, non-adversary owner": 0.12,
+        "No": 0.03
+      },
+      "resolution": "Yes, still owned by foreign adversary",
+      "correct_probability": 0.85,
+      "brier_score": 0.022500000000000006,
+      "log_score": -0.16251892949777494,
+      "baseline_score": 93.60933591703349,
+      "title": "Will TikTok still be available in the United States on December 31, 2025?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.01,
+      "outcome": 0,
+      "brier_score": 0.0001,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will Bud Light cease production by 2026?"
+    }
+  ],
+  "aggregate": {
+    "total_graded": 3,
+    "binary": {
+      "n": 2,
+      "mean_brier": 0.0001,
+      "mean_log_score": -0.01005033585350145,
+      "mean_baseline": 68.30968447064438
+    },
+    "multiple_choice": {
+      "n": 1,
+      "mean_brier": 0.022500000000000006,
+      "mean_baseline": 93.60933591703349
+    }
+  }
+}

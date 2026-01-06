@@ -1,65 +1,154 @@
 """
-Research Agent - Filters and summarizes search results.
+Research Agent - Filters, summarizes, and follows links in search results.
 
 This agent uses a cheaper LLM to:
 1. Review raw search results
 2. Select only relevant results
-3. Generate a brief summary for the forecasting agent
+3. Identify useful links to crawl for additional data
+4. Generate a brief summary for the forecasting agent
 """
 import asyncio
 import json
 import re
 
 from llm import call_llm
-from news import exa_search_raw
+from news import exa_search_raw, exa_crawl_urls
 from config import RESEARCH_MODEL, RESEARCH_TEMP, GET_NEWS
-from prompts import RESEARCH_AGENT_PROMPT
+from prompts import RESEARCH_AGENT_PROMPT, LINK_ANALYSIS_PROMPT
 
 
-async def run_research_agent(question: str) -> tuple[list[dict], str]:
+async def run_research_agent(
+    question: str, 
+    existing_results: list[dict] = None
+) -> tuple[list[dict], str]:
     """
-    Run the research agent to search, filter, and summarize.
+    Run the research agent to search, filter, follow links, and summarize.
     
-    Returns:
-        tuple: (relevant_results, summary)
-            - relevant_results: List of filtered search result dicts
-            - summary: Brief summary of findings for the forecaster
+    Args:
+        question: The question title/query
+        existing_results: Optional list of search results to use (skips fresh search)
     """
     if not GET_NEWS:
         return [], "No research performed (GET_NEWS is disabled)."
 
-    print(f"[Research Agent] Searching for: {question}")
-    
-    # Get raw search results
-    raw_results = exa_search_raw(question)
+    if existing_results:
+        print(f"[Research Agent] Using {len(existing_results)} provided search results")
+        raw_results = existing_results
+    else:
+        print(f"[Research Agent] Searching for: {question}")
+        raw_results = exa_search_raw(question)
     
     if not raw_results:
         return [], "No search results found."
     
     print(f"[Research Agent] Found {len(raw_results)} results, filtering...")
     
-    # Format results for the LLM
+    # Step 2: Filter to relevant results and get summary
     results_json = json.dumps(raw_results, indent=2, default=str)
     
-    # Ask the research agent to filter and summarize
-    prompt = RESEARCH_AGENT_PROMPT.format(
+    filter_prompt = RESEARCH_AGENT_PROMPT.format(
         question=question,
         results_json=results_json
     )
     
-    response = await call_llm(
-        prompt, 
+    filter_response = await call_llm(
+        filter_prompt, 
         model=RESEARCH_MODEL, 
         temperature=RESEARCH_TEMP
     )
     
-    # Parse the response to extract selected indices and summary
-    relevant_results, summary = parse_research_agent_response(response, raw_results)
-    
+    relevant_results, summary = parse_research_agent_response(filter_response, raw_results)
     print(f"[Research Agent] Selected {len(relevant_results)} relevant results")
+    
+    # NOTE: Link crawling disabled - Exa crawl doesn't support date filtering
+    # so it could leak future information. Only using search results.
+    # crawled_pages = await analyze_and_crawl_links(question, relevant_results)
+    # if crawled_pages:
+    #     print(f"[Research Agent] Crawled {len(crawled_pages)} additional pages")
+    #     for page in crawled_pages:
+    #         relevant_results.append({
+    #             "title": page.get("title", "Crawled Page"),
+    #             "url": page.get("url", ""),
+    #             "text": page.get("text", ""),
+    #             "published_date": "N/A",
+    #             "crawled": True  # Mark as crawled content
+    #         })
+    
     print(f"[Research Agent] Summary: {summary[:200]}...")
     
     return relevant_results, summary
+
+
+async def analyze_and_crawl_links(question: str, results: list[dict]) -> list[dict]:
+    """
+    Analyze search results for useful links and crawl the top ones.
+    
+    Returns:
+        list[dict]: Crawled page contents
+    """
+    if not results:
+        return []
+    
+    # Format the results content for link analysis
+    results_content = ""
+    for i, result in enumerate(results):
+        results_content += (
+            f"[Result {i}]:\n"
+            f"Title: {result.get('title', 'N/A')}\n"
+            f"URL: {result.get('url', 'N/A')}\n"
+            f"Content: {result.get('text', '')[:1500]}\n\n"
+        )
+    
+    # Ask the agent to identify useful links
+    link_prompt = LINK_ANALYSIS_PROMPT.format(
+        question=question,
+        results_content=results_content
+    )
+    
+    link_response = await call_llm(
+        link_prompt,
+        model=RESEARCH_MODEL,
+        temperature=RESEARCH_TEMP
+    )
+    
+    # Parse the URLs to crawl
+    urls_to_crawl = parse_urls_from_response(link_response)
+    
+    if not urls_to_crawl:
+        print("[Research Agent] No additional links identified for crawling")
+        return []
+    
+    print(f"[Research Agent] Identified {len(urls_to_crawl)} links to crawl: {urls_to_crawl}")
+    
+    # Crawl the URLs
+    crawled = exa_crawl_urls(urls_to_crawl)
+    
+    return crawled
+
+
+def parse_urls_from_response(response: str) -> list[str]:
+    """
+    Extract URLs from the link analysis response.
+    
+    Expected format:
+    URLS_TO_CRAWL: ["url1", "url2", "url3"]
+    """
+    # Try to find the URLS_TO_CRAWL line
+    urls_match = re.search(r'URLS_TO_CRAWL:\s*\[(.*?)\]', response, re.DOTALL)
+    
+    if not urls_match:
+        return []
+    
+    urls_str = urls_match.group(1)
+    
+    # Extract quoted strings
+    urls = re.findall(r'"([^"]+)"', urls_str)
+    
+    # Filter to valid URLs (basic check)
+    valid_urls = [url for url in urls if url.startswith(('http://', 'https://'))]
+    
+    # Limit to 4 URLs max
+    return valid_urls[:4]
 
 
 def parse_research_agent_response(response: str, raw_results: list[dict]) -> tuple[list[dict], str]:
@@ -105,8 +194,9 @@ def format_results_for_forecaster(relevant_results: list[dict], summary: str) ->
     output += "Relevant Sources:\n"
     
     for i, result in enumerate(relevant_results):
+        source_type = "[Crawled]" if result.get('crawled') else "[Search]"
         output += (
-            f"[{i+1}] {result['title']}\n"
+            f"{source_type} [{i+1}] {result['title']}\n"
             f"    URL: {result['url']}\n"
             f"    Published: {result.get('published_date', 'Unknown')}\n"
             f"    Content: {result['text'][:500]}...\n\n"

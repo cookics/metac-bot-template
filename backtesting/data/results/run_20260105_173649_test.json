@@ -1,0 +1,17 @@
+{
+  "config_name": "test",
+  "model": "google/gemini-3-flash-preview",
+  "temperature": null,
+  "started_at": "2026-01-05T17:36:39.132734",
+  "forecasts": [
+    {
+      "question_id": 40640,
+      "title": "Will Germany enact the Aktivrente before 2026?",
+      "forecast": 0.72,
+      "resolution": "yes",
+      "comment_preview": "Median Probability: 0.72\n\n## Rationale 1\nExtracted Probability: 72%\n\nGPT's Answer: As a professional forecaster, I have evaluated the current situation regarding the German \"Aktivrente\" legislation based on the details provided and the current date of January 5, 2026.\n\n(a) **Time left until the outcome is known:** The outcome should be known now, as the resolution criteria specify a deadline of January 3, 2026.\n(b) **Status quo outcome:** The status quo is that the bill was approved by the Feder"
+    }
+  ],
+  "completed_at": "2026-01-05T17:36:49.946220",
+  "n_forecasts": 1
+}

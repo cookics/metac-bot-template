@@ -1,0 +1,29 @@
+==================================================================================================================================
+BINARY QUESTIONS RESULTS
+==================================================================================================================================
+
+#   Our Pred   Comm Pred  Outcome  Log Score    Peer Score   Title
+----------------------------------------------------------------------------------------------------------------------------------
+1   0.010      0.010      0        -0.0101      0.00         Will Boris Johnson return as the leader of the UK Conservative Pa
+2   0.010      0.025      0        -0.0101      1.53         Will Bud Light cease production by 2026?
+3   0.150      0.250      0        -0.1625      12.52        Will the Nonlinear Fund have more than eight full-time equivalent
+4   0.010      0.170      0        -0.0101      17.63        Will Russia test a nuclear device before January 1, 2026?
+5   0.980      0.784      1        -0.0202      22.35        Which states will Pope Leo XIV visit in 2025? (Turkiye)
+6   0.150      0.182      1        -1.8971      -19.34       Will the United States attack Venezuela before 2026? *** WRONG
+7   0.620      0.700      1        -0.4780      -12.14       Will Alassane Ouattara win 80% or more of the first round vote in
+8   0.280      0.050      0        -0.3285      -27.72       Who will be the next non-caretaker prime minister of Nepal? (Bale
+9   0.120      0.250      1        -2.1203      -73.40       Will there be a stronger hurricane than Erin during the 2025 Atla *** WRONG
+10  0.010      0.250      1        -4.6052      -321.89      Will the following companies be added to the S&P 500 before 2026? *** WRONG
+11  0.990      0.900      1        -0.0101      9.53         Will Ukraine extend martial law beyond November 5, 2025?
+12  0.050      0.149      0        -0.0513      10.98        Will the US national debt be under $38.5 trillion on December 31,
+13  0.850      0.650      1        -0.1625      26.83        Will the US government shutdown end before November 21, 2025?
+14  0.010      0.120      1        -4.6052      -248.49      Will the United States conduct a military attack within Nigeria b *** WRONG
+15  0.050      0.100      0        -0.0513      5.41         Will Iran announce an evacuation of Tehran before 2026?
+16  0.150      0.150      0        -0.1625      0.00         Will Iran announce a new capital location before January 3, 2026?
+17  0.050      0.200      0        -0.0513      17.19        Will a sixth contentious case be opened at the International Cour
+----------------------------------------------------------------------------------------------------------------------------------
+
+SUMMARY: 17 binary questions
+Correct predictions: 13/17 (76.5%)
+Mean Peer Score: -34.06 (n=17) (positive = beating community)
+Mean Log Score: -0.8668

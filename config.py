@@ -29,7 +29,7 @@ LLM_PROVIDER = "openrouter"
 # Two-Agent System Models
 # Research Agent: Cheaper model for search, filtering, and summarization
 RESEARCH_MODEL = "google/gemini-2.0-flash-001"
-RESEARCH_TEMP = 0.3  # Lower temp for more factual/consistent research
+RESEARCH_TEMP = 0.75  # Lower temp for more factual/consistent research
 
 # Forecast Agent: Larger model for making predictions
 FORECAST_MODEL = "google/gemini-3-flash-preview"

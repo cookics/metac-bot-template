@@ -1,0 +1,27 @@
+{
+  "run_file": "C:\\Users\\cooki\\Desktop\\Spring Bot\\metac-bot-template\\backtest_results\\run_20260105_175345_all_types_test.json",
+  "grades": [
+    {
+      "question_type": "numeric",
+      "resolution": 5.6,
+      "resolution_idx": 129,
+      "predicted_percentile": 0.786666666666667,
+      "crps": 0.059316538519523634,
+      "log_score": -4.317488113536329,
+      "baseline_score": 28.768207245176214,
+      "skill_score": 0.4619068431591907,
+      "brier_score": 0.059316538519523634,
+      "title": "What will the Democrats' lead be in the congressional generic ballot (for the 2026 midterms) on December 2, 2025?"
+    }
+  ],
+  "aggregate": {
+    "total_graded": 1,
+    "numeric": {
+      "n": 1,
+      "mean_crps": 0.059316538519523634,
+      "mean_log_score": -4.317488113536329,
+      "mean_baseline": 28.768207245176214,
+      "mean_skill": 0.4619068431591907
+    }
+  }
+}

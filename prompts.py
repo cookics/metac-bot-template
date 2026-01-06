@@ -25,6 +25,63 @@ RELEVANT_INDICES: [list the index numbers of relevant results, e.g., 0, 2, 5]
 SUMMARY: Write a 2-4 sentence summary of the key information from the relevant results that would help forecast this question. Focus on facts, data, and recent developments.
 """
 
+LINK_ANALYSIS_PROMPT = """
+You are a research assistant analyzing search results to find additional useful sources.
+
+The forecaster is trying to answer this question:
+{question}
+
+Below are search results that were already retrieved. Your job is to look through the content and identify any LINKS or URLS mentioned within the text that might provide additional valuable data for answering the question.
+
+Think about:
+- What kind of data would be most useful for this forecast? (statistics, official reports, recent news, expert analysis)
+- Which mentioned links might contain that data?
+- Only select links that are likely to have NEW information not already in the search results
+
+Search Results Content:
+{results_content}
+
+Select UP TO 4 of the most promising URLs to crawl. Only select links that:
+1. Are mentioned in the search result text (not the source URLs themselves)
+2. Likely contain data, statistics, or expert analysis relevant to the question
+3. Are from reputable sources (government sites, research institutions, major news outlets)
+
+If no additional links are worth crawling, return an empty list.
+
+Respond in EXACTLY this format:
+REASONING: Brief explanation of what data you're looking for and why these links might help
+URLS_TO_CRAWL: ["url1", "url2", "url3"]
+"""
+
+SELF_ASSESSMENT_PROMPT = """
+You just made a forecast. Now honestly assess your work:
+
+Question: {question}
+Your Forecast: {forecast}
+
+Rate the following on a scale of 1-10 and explain briefly:
+
+1. **Information Quality** (1-10): How much relevant, reliable data did you have?
+   - 1-3: Very little info, mostly guessing
+   - 4-6: Some relevant data but gaps
+   - 7-10: Rich, recent, authoritative sources
+
+2. **Reasoning Depth** (1-10): How thorough was your analysis?
+   - 1-3: Surface level, didn't consider alternatives
+   - 4-6: Considered main factors
+   - 7-10: Deep analysis, multiple scenarios, calibrated
+
+3. **Confidence** (1-10): How sure are you of this forecast?
+   - 1-3: Very uncertain, could easily be wrong
+   - 4-6: Moderate confidence
+   - 7-10: High confidence based on strong evidence
+
+Respond in this format:
+INFO_QUALITY: [1-10] - [brief reason]
+REASONING_DEPTH: [1-10] - [brief reason]  
+CONFIDENCE: [1-10] - [brief reason]
+"""
+
 # ========================= FORECASTING PROMPTS =========================
 
 BINARY_PROMPT_TEMPLATE = """

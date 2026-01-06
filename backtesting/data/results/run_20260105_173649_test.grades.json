@@ -1,0 +1,19 @@
+{
+  "run_file": "C:\\Users\\cooki\\Desktop\\Spring Bot\\metac-bot-template\\backtest_results\\run_20260105_173649_test.json",
+  "grades": [
+    {
+      "forecast": 0.72,
+      "outcome": 1,
+      "brier_score": 0.07840000000000001,
+      "log_score": -0.3285040669720361,
+      "title": "Will Germany enact the Aktivrente before 2026?"
+    }
+  ],
+  "aggregate": {
+    "n_forecasts": 1,
+    "mean_brier": 0.07840000000000001,
+    "mean_log_score": -0.3285040669720361,
+    "best_brier": 0.07840000000000001,
+    "worst_brier": 0.07840000000000001
+  }
+}

@@ -1,0 +1,647 @@
+{
+  "run_file": "C:\\Users\\cooki\\Desktop\\Spring Bot\\metac-bot-template\\backtest_results\\run_20260105_184912_batch50_v2.json",
+  "grades": [
+    {
+      "question_type": "binary",
+      "forecast": 0.01,
+      "outcome": 0,
+      "brier_score": 0.0001,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will Boris Johnson return as the leader of the UK Conservative Party before 2026?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Yes, still owned by foreign adversary": 0.15,
+        "Yes, non-adversary owner": 0.83,
+        "No": 0.02
+      },
+      "resolution": "Yes, still owned by foreign adversary",
+      "correct_probability": 0.15,
+      "brier_score": 0.7224999999999999,
+      "log_score": -1.8971199848858813,
+      "baseline_score": -79.85076962177715,
+      "title": "Will TikTok still be available in the United States on December 31, 2025?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.01,
+      "outcome": 0,
+      "brier_score": 0.0001,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will Bud Light cease production by 2026?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.98,
+      "outcome": 1,
+      "brier_score": 0.0004000000000000007,
+      "log_score": -0.020202707317519466,
+      "baseline_score": 67.29444732424258,
+      "title": "Will Rachel Reeves remain UK Chancellor of the Exchequer until December, 2025?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.01,
+      "outcome": 0,
+      "brier_score": 0.0001,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will 3M file for bankruptcy before 2026?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 497099.0,
+      "resolution_idx": 97,
+      "predicted_percentile": 0.8991333587369592,
+      "crps": 0.13870624943850599,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": -0.502381485174318,
+      "brier_score": 0.13870624943850599,
+      "title": "How many vehicle deliveries will Tesla report for Q3 2025?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 1.8068,
+      "resolution_idx": 115,
+      "predicted_percentile": 0.7538461538461539,
+      "crps": 0.043813779254135723,
+      "log_score": -3.992065713101691,
+      "baseline_score": 61.31044728864001,
+      "skill_score": 0.5471775819540246,
+      "brier_score": 0.043813779254135723,
+      "title": "How much will Gold Futures total price returns exceed S&P 500 Futures's in the following biweekly periods of Q3 2025? (Sep 15 - Sep 26)"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "0-12": 0.25,
+        "13-24": 0.45,
+        "25 or more": 0.3
+      },
+      "resolution": "0-12",
+      "correct_probability": 0.25,
+      "brier_score": 0.5625,
+      "log_score": -1.3862943611198906,
+      "baseline_score": -28.76820724517808,
+      "title": "How many people will be added to the Viasna Belarusian political prisoners tracker in September 2025?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 14.5,
+      "resolution_idx": 95,
+      "predicted_percentile": 0.2,
+      "crps": 0.012989263555779383,
+      "log_score": -2.3025850929940455,
+      "baseline_score": 230.25850929940455,
+      "skill_score": 0.8599196555074916,
+      "brier_score": 0.012989263555779383,
+      "title": "What will AfD's vote share be in the 2025 North Rhine-Westphalia local elections?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.95,
+      "outcome": 1,
+      "brier_score": 0.0025000000000000044,
+      "log_score": -0.05129329438755058,
+      "baseline_score": 64.18538861723947,
+      "title": "Will the United States attack Venezuela before 2026?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "The Democrats": 0.05,
+        "Together for the Republic": 0.15,
+        "Horizons": 0.05,
+        "La France Insoumise": 0.01,
+        "Socialists and affiliated": 0.08,
+        "Republican Right": 0.12,
+        "National Rally": 0.01,
+        "Other": 0.18,
+        "No Prime Minister": 0.35
+      },
+      "resolution": "Together for the Republic",
+      "correct_probability": 0.15,
+      "brier_score": 0.7224999999999999,
+      "log_score": -1.8971199848858813,
+      "baseline_score": 30.01045924503383,
+      "title": "Which grouping will the Prime Minister of France belong to on December 31, 2025?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Ashley Hollis": 0.08,
+        "Ava Pearl": 0.35,
+        "Keanu Soto": 0.1,
+        "Kelley Jorgensen": 0.12,
+        "Lauren Domingue": 0.05,
+        "Mickey Lee": 0.12,
+        "Morgan Pope": 0.04,
+        "Rachel Reilly": 0.03,
+        "Vince \"Vinny\" Panaro": 0.06,
+        "Cliffton \"Will\" Williams": 0.05
+      },
+      "resolution": "Ashley Hollis",
+      "correct_probability": 0.08,
+      "brier_score": 0.8464,
+      "log_score": -2.5257286443082556,
+      "baseline_score": -22.314355131421017,
+      "title": "Who will win Big Brother 27 (US)?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Rozman victory": 0.98,
+        "Rozman loss": 0.01,
+        "Draw": 0.01
+      },
+      "resolution": "Rozman victory",
+      "correct_probability": 0.98,
+      "brier_score": 0.0004000000000000007,
+      "log_score": -0.020202707317519466,
+      "baseline_score": 107.84095813505903,
+      "title": "What will be the result of the game between IM Levy Rozman Vs The World?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 6.778,
+      "resolution_idx": 133,
+      "predicted_percentile": 0.7771428571428572,
+      "crps": 0.07028256471286935,
+      "log_score": -4.471638793363576,
+      "baseline_score": 13.353139262451474,
+      "skill_score": 0.3925311029787242,
+      "brier_score": 0.07028256471286935,
+      "title": "How much will Nvidia's stock price returns exceed Apple's in the following biweekly periods of Q3 2025? (Sep 29 - Oct 10)"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.01,
+      "outcome": 0,
+      "brier_score": 0.0001,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Who will be the next non-caretaker prime minister of Nepal? (Rabi Lamichhane)"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.01,
+      "outcome": 0,
+      "brier_score": 0.0001,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Who will be the next non-caretaker prime minister of Nepal? (Kulman Ghising)"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 22.44,
+      "resolution_idx": 41,
+      "predicted_percentile": 0.6487804878048781,
+      "crps": 0.03202237025554744,
+      "log_score": -4.224397690470298,
+      "baseline_score": 38.07724955177933,
+      "skill_score": 0.8130728165100942,
+      "brier_score": 0.03202237025554744,
+      "title": "What will be the maximum intraday value of the VIX over the following biweekly periods in Q3, 2025? (Sep 29 - Oct 10)"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Bridget Phillipson": 0.01,
+        "Lucy Powell": 0.98,
+        "Someone else": 0.01
+      },
+      "resolution": "Lucy Powell",
+      "correct_probability": 0.98,
+      "brier_score": 0.0004000000000000007,
+      "log_score": -0.020202707317519466,
+      "baseline_score": 107.84095813505903,
+      "title": "Who will win the UK Labour Party's Deputy Leadership election in 2025?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.99,
+      "outcome": 1,
+      "brier_score": 0.00010000000000000018,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will California's Proposition 50 (allowing redistricting of House seats) pass in the 2025 election?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Tariffs lawful": 0.01,
+        "Tariffs unlawful": 0.01,
+        "Mixed ruling": 0.01,
+        "Other ruling": 0.02,
+        "No 2025 ruling": 0.95
+      },
+      "resolution": "No 2025 ruling",
+      "correct_probability": 0.95,
+      "brier_score": 0.0025000000000000044,
+      "log_score": -0.05129329438755058,
+      "baseline_score": 155.81446180465497,
+      "title": "How will the Supreme Court rule on Trump's tariffs in 2025?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.99,
+      "outcome": 1,
+      "brier_score": 0.00010000000000000018,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will there be a stronger hurricane than Erin during the 2025 Atlantic hurricane season?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": -0.7832,
+      "resolution_idx": 96,
+      "predicted_percentile": 0.38285714285714284,
+      "crps": 0.044781502013740856,
+      "log_score": -4.471638793363572,
+      "baseline_score": 13.353139262451919,
+      "skill_score": 0.5158932293832592,
+      "brier_score": 0.044781502013740856,
+      "title": "How much will Nvidia's stock price returns exceed Microsoft's in these biweekly periods of Q4 2025? (Oct 13 - Oct 24)"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 28.99,
+      "resolution_idx": 63,
+      "predicted_percentile": 0.7223880597014924,
+      "crps": 0.05839915029746651,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": 0.5272595054287463,
+      "brier_score": 0.05839915029746651,
+      "title": "What will be the maximum intraday value of the VIX over these biweekly periods in Q4 2025? (Oct 13 - Oct 24)"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "T1": 0.9082568807339448,
+        "Hanwha Life Esports": 0.009174311926605503,
+        "KT Rolster": 0.009174311926605503,
+        "Gen.G": 0.009174311926605503,
+        "Bilibili Gaming": 0.009174311926605503,
+        "Anyone's Legend": 0.009174311926605503,
+        "Top Esports": 0.009174311926605503,
+        "Invictus Gaming": 0.009174311926605503,
+        "An Asia-Pacific team": 0.009174311926605503,
+        "An EMEA team": 0.009174311926605503,
+        "An Americas team": 0.009174311926605614
+      },
+      "resolution": "T1",
+      "correct_probability": 0.9082568807339448,
+      "brier_score": 0.008416799932665623,
+      "log_score": -0.0962280320945539,
+      "baseline_score": 230.16672407038166,
+      "title": "Which team will win the 2025 League of Legends World Championship?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 77673000000.0,
+      "resolution_idx": 141,
+      "predicted_percentile": 0.9493941035397773,
+      "crps": 0.6235584276359611,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": -3.8423442624341186,
+      "brier_score": 0.6235584276359611,
+      "title": "What will the first reported revenues after September 2025 be for the following companies? (MSFT)"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.99,
+      "outcome": 1,
+      "brier_score": 0.00010000000000000018,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will the following companies be added to the S&P 500 before 2026? (CVNA)"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Both elections": 0.9705882352941176,
+        "Only Virginia": 0.00980392156862745,
+        "Only New Jersey": 0.00980392156862745,
+        "Neither election": 0.00980392156862745
+      },
+      "resolution": "Both elections",
+      "correct_probability": 0.9705882352941176,
+      "brier_score": 0.0008650519031141872,
+      "log_score": -0.02985296314968116,
+      "baseline_score": 135.64413979702096,
+      "title": "Which of the 2025 Virginia and New Jersey gubernatorial elections will the Democrats win?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.99,
+      "outcome": 1,
+      "brier_score": 0.00010000000000000018,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will Ukraine extend martial law beyond November 5, 2025?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": -1.8165,
+      "resolution_idx": 84,
+      "predicted_percentile": 0.39,
+      "crps": 0.051695247328116,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": 0.47327761258511036,
+      "brier_score": 0.051695247328116,
+      "title": "How much will Gold Futures total price returns exceed S&P 500 Futures's in these biweekly periods of Q4 2025? (Oct 27 - Nov 7)"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 22.72,
+      "resolution_idx": 42,
+      "predicted_percentile": 0.5675675675675677,
+      "crps": 0.032882738077947116,
+      "log_score": -4.121743536410212,
+      "baseline_score": 48.34266495778792,
+      "skill_score": 0.8050440612241732,
+      "brier_score": 0.032882738077947116,
+      "title": "What will be the maximum intraday value of the VIX over these biweekly periods in Q4 2025? (Oct 27 - Nov 7)"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.12,
+      "outcome": 0,
+      "brier_score": 0.0144,
+      "log_score": -0.12783337150988489,
+      "baseline_score": 56.531380905006046,
+      "title": "Will the US national debt be under $38.5 trillion on December 31, 2025?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Australia": 0.009756097560975611,
+        "Turkey": 0.9609756097560976,
+        "Germany": 0.009756097560975611,
+        "Another Pacific Island Nation": 0.009756097560975611,
+        "Other": 0.009756097560975611
+      },
+      "resolution": "Turkey",
+      "correct_probability": 0.9609756097560976,
+      "brier_score": 0.001522903033908382,
+      "log_score": -0.039806250400419595,
+      "baseline_score": 156.96316620336808,
+      "title": "Which country will host the 31st Conference of the Parties (COP 31) in 2026?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 28.27,
+      "resolution_idx": 60,
+      "predicted_percentile": 0.9059748427672956,
+      "crps": 0.11555494033605274,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": 0.10263933974303285,
+      "brier_score": 0.11555494033605274,
+      "title": "What will be the maximum intraday value of the VIX over these biweekly periods in Q4 2025? (Nov 10 - Nov 21)"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 3.9095,
+      "resolution_idx": 132,
+      "predicted_percentile": 0.9109569377990431,
+      "crps": 0.08589163302370917,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": 0.24830902199484473,
+      "brier_score": 0.08589163302370917,
+      "title": "How much will Gold Futures total price returns exceed S&P 500 Futures's in these biweekly periods of Q4 2025? (Nov 10 - Nov 21)"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 74.8,
+      "resolution_idx": 147,
+      "predicted_percentile": 0.8942567567567572,
+      "crps": 0.20607698901542207,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": -0.46717264228136335,
+      "brier_score": 0.20607698901542207,
+      "title": "What will be NVIDIA's forward guidance in their Q3 FY2026 earnings release? (GAAP Gross Margin)"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.42,
+      "outcome": 1,
+      "brier_score": 0.3364000000000001,
+      "log_score": -0.8675005677047231,
+      "baseline_score": -17.435338714477776,
+      "title": "Will Yuma, Arizona receive any rain in November 2025?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 2.85,
+      "resolution_idx": 21,
+      "predicted_percentile": 0.09421052631578947,
+      "crps": 0.03137221206089919,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": 0.8656713223116942,
+      "brier_score": 0.03137221206089919,
+      "title": "What will be the ending value of the ICE BofA US High Yield Option-Adjusted Spread for these biweekly periods of Q4 2025? (Nov 24 - Dec 5)"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": -0.3593,
+      "resolution_idx": 98,
+      "predicted_percentile": 0.34857142857142864,
+      "crps": 0.04269144443414399,
+      "log_score": -4.471638793363557,
+      "baseline_score": 13.353139262453428,
+      "skill_score": 0.5369185487313018,
+      "brier_score": 0.04269144443414399,
+      "title": "How much will Nvidia's stock price returns exceed Microsoft's in these biweekly periods of Q4 2025? (Nov 24 - Dec 5)"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.99,
+      "outcome": 1,
+      "brier_score": 0.00010000000000000018,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Will the United States conduct a military attack within Nigeria before 2026?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.18,
+      "outcome": 0,
+      "brier_score": 0.0324,
+      "log_score": -0.19845093872383818,
+      "baseline_score": 49.46962418361071,
+      "title": "Will Iran announce an evacuation of Tehran before 2026?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Trump files a lawsuit in the USA only": 0.88,
+        "Trump files a lawsuit in the UK only": 0.02,
+        "Trump files a lawsuit in both the USA and the UK": 0.08,
+        "Trump does not file a lawsuit in the USA or the UK": 0.02
+      },
+      "resolution": "Trump files a lawsuit in the USA only",
+      "correct_probability": 0.88,
+      "brier_score": 0.0144,
+      "log_score": -0.12783337150988489,
+      "baseline_score": 125.84609896100056,
+      "title": "Will President Donald J. Trump take legal action against the BBC before 2026?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "1960s or earlier": 0.009523809523809523,
+        "1970s": 0.009523809523809523,
+        "1980s": 0.009523809523809523,
+        "1990s": 0.009523809523809523,
+        "2000s": 0.009523809523809523,
+        "2010s": 0.009523809523809523,
+        "2020s": 0.9428571428571428
+      },
+      "resolution": "2020s",
+      "correct_probability": 0.9428571428571428,
+      "brier_score": 0.003265306122448982,
+      "log_score": -0.058840500022933465,
+      "baseline_score": 188.706964903238,
+      "title": "In which decade will the 2025 UK Christmas number one have been originally released?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Clair Obscur: Expedition 33": 0.95,
+        "Death Stranding 2: On the Beach": 0.01,
+        "Donkey Kong Bananza": 0.01,
+        "Hades II": 0.01,
+        "Hollow Knight: Silksong": 0.01,
+        "Kingdom Come: Deliverance II": 0.01
+      },
+      "resolution": "Clair Obscur: Expedition 33",
+      "correct_probability": 0.95,
+      "brier_score": 0.0025000000000000044,
+      "log_score": -0.05129329438755058,
+      "baseline_score": 174.04661748405044,
+      "title": "Which game will win the 2025 Game of the Year Award?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 5.6,
+      "resolution_idx": 129,
+      "predicted_percentile": 0.69,
+      "crps": 0.05461740948037588,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": 0.5045352439760232,
+      "brier_score": 0.05461740948037588,
+      "title": "What will the Democrats' lead be in the congressional generic ballot (for the 2026 midterms) on December 2, 2025?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.05,
+      "outcome": 0,
+      "brier_score": 0.0025000000000000005,
+      "log_score": -0.05129329438755058,
+      "baseline_score": 64.18538861723947,
+      "title": "Will Iran announce a new capital location before January 3, 2026?"
+    },
+    {
+      "question_type": "binary",
+      "forecast": 0.15,
+      "outcome": 0,
+      "brier_score": 0.0225,
+      "log_score": -0.16251892949777494,
+      "baseline_score": 53.06282510621704,
+      "title": "Will a sixth contentious case be opened at the International Court of Justice in 2025?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Jeannette Jara": 0.01,
+        "Jos\u00e9 Antonio Kast": 0.99
+      },
+      "resolution": "Jos\u00e9 Antonio Kast",
+      "correct_probability": 0.99,
+      "brier_score": 0.00010000000000000018,
+      "log_score": -0.01005033585350145,
+      "baseline_score": 68.30968447064438,
+      "title": "Who will win the 2025 Chilean presidential election?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "Toronto Raptors": 0.009433962264150943,
+        "Orlando Magic": 0.009433962264150943,
+        "Miami Heat": 0.009433962264150943,
+        "Oklahoma City Thunder": 0.009433962264150943,
+        "Los Angeles Lakers": 0.009433962264150943,
+        "Phoenix Suns": 0.009433962264150943,
+        "San Antonio Spurs": 0.009433962264150943,
+        "New York Knicks": 0.9339622641509434
+      },
+      "resolution": "New York Knicks",
+      "correct_probability": 0.9339622641509434,
+      "brier_score": 0.004360982556069774,
+      "log_score": -0.0683192439774772,
+      "baseline_score": 201.11222977023587,
+      "title": "[Short fuse] Who will win the 2025 NBA Cup?"
+    },
+    {
+      "question_type": "numeric",
+      "resolution": 34500000.0,
+      "resolution_idx": 87,
+      "predicted_percentile": 0.0721671124201202,
+      "crps": 0.2198747565446669,
+      "log_score": -4.605170185988091,
+      "baseline_score": 0.0,
+      "skill_score": -1.2872593828323202,
+      "brier_score": 0.2198747565446669,
+      "title": "How many views will the top Netflix release receive in 2025 Christmas week?"
+    },
+    {
+      "question_type": "multiple_choice",
+      "forecast": {
+        "0": 0.05,
+        "1": 0.15,
+        "2": 0.35,
+        "3": 0.3,
+        "4": 0.15
+      },
+      "resolution": "1",
+      "correct_probability": 0.15,
+      "brier_score": 0.7224999999999999,
+      "log_score": -1.8971199848858813,
+      "baseline_score": -28.7682072451781,
+      "title": "How many top-four seeds will reach the semifinals of the 2025 NCAA College Football playoff?"
+    }
+  ],
+  "aggregate": {
+    "total_graded": 50,
+    "binary": {
+      "n": 17,
+      "mean_brier": 0.024241176470588238,
+      "mean_log_score": -0.09291743894493272,
+      "mean_baseline": 60.02297416150126
+    },
+    "multiple_choice": {
+      "n": 16,
+      "mean_brier": 0.22594569022176292,
+      "mean_baseline": 95.16255773351203
+    },
+    "numeric": {
+      "n": 17,
+      "mean_crps": 0.10971827514501997,
+      "mean_log_score": -4.359259427820462,
+      "mean_baseline": 24.591075816762864,
+      "mean_skill": 0.0642994864474353
+    }
+  }
+}

@@ -3,28 +3,51 @@ News/research functionality using EXA.
 """
 import asyncio
 from exa_py import Exa
-import forecasting_tools
+try:
+    import forecasting_tools
+    HAS_FORECASTING_TOOLS = True
+except ImportError:
+    HAS_FORECASTING_TOOLS = False
+
 from config import GET_NEWS, OPENAI_API_KEY, EXA_API_KEY, USE_SMART_SEARCHER
 
 
-def exa_search_raw(query: str, num_results: int = 10) -> list[dict]:
+def exa_search_raw(
+    query: str, 
+    num_results: int = 10,
+    end_published_date: str = None,
+    start_published_date: str = None
+) -> list[dict]:
     """
     Perform a search using Exa API and return raw results as list of dicts.
     This is used by the research agent to filter relevant results.
+    
+    Args:
+        query: Search query
+        num_results: Number of results to return
+        end_published_date: Only return results published before this date (ISO format)
+        start_published_date: Only return results published after this date (ISO format)
     """
     if not EXA_API_KEY:
         return []
 
     exa = Exa(api_key=EXA_API_KEY)
     
-    result = exa.search_and_contents(
-        query,
-        context=True,
-        num_results=num_results,
-        text=True,
-        type="deep",
-        user_location="US"
-    )
+    # Build search parameters
+    search_params = {
+        "query": query,
+        "num_results": num_results,
+        "text": True,
+        "type": "auto",
+    }
+    
+    # Add date filters for backtesting (no future peeking)
+    if end_published_date:
+        search_params["end_published_date"] = end_published_date
+    if start_published_date:
+        search_params["start_published_date"] = start_published_date
+    
+    result = exa.search_and_contents(**search_params)
 
     raw_results = []
     for i, res in enumerate(result.results):
@@ -73,6 +96,31 @@ def exa_search_and_contents(query: str, num_results: int = 10) -> str:
     return combined_results
 
 
+def exa_crawl_urls(urls: list[str]) -> list[dict]:
+    """
+    Crawl URLs and return raw content as list of dicts.
+    Used by the research agent to get full page content.
+    """
+    if not EXA_API_KEY or not urls:
+        return []
+
+    exa = Exa(api_key=EXA_API_KEY)
+    
+    try:
+        result = exa.get_contents(urls, text=True)
+        crawled = []
+        for res in result.results:
+            crawled.append({
+                "url": res.url,
+                "title": res.title,
+                "text": res.text[:3000] if res.text else "",  # Limit content size
+            })
+        return crawled
+    except Exception as e:
+        print(f"[Exa Crawl] Error crawling URLs: {e}")
+        return []
+
+
 def exa_get_contents(urls: list[str]) -> str:
     """
     Retrieve webpage contents for a list of URLs using the pure Exa API.
@@ -99,6 +147,9 @@ def call_exa_smart_searcher(question: str) -> str:
     Search for relevant news using EXA via forecasting-tools.
     Uses SmartSearcher if OPENAI_API_KEY is available, otherwise basic ExaSearcher.
     """
+    if not HAS_FORECASTING_TOOLS:
+        return "forecasting-tools package not installed. Cannot use SmartSearcher."
+
     if OPENAI_API_KEY is None:
         searcher = forecasting_tools.ExaSearcher(
             include_highlights=True,

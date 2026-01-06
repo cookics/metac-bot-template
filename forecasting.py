@@ -233,7 +233,7 @@ def generate_multiple_choice_forecast(options, option_probabilities) -> dict:
 # ========================= PREDICTION FUNCTIONS =========================
 
 async def get_binary_gpt_prediction(
-    question_details: dict, num_runs: int
+    question_details: dict, num_runs: int, research_data: list[dict] = None
 ) -> tuple[float, str]:
     """Generate prediction for binary question."""
     today = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -243,7 +243,7 @@ async def get_binary_gpt_prediction(
     fine_print = question_details["fine_print"]
 
     # Two-agent pipeline: Research Agent filters/summarizes, then Forecasting Agent predicts
-    relevant_results, research_summary = await run_research_agent(title)
+    relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
     summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
     content = BINARY_PROMPT_TEMPLATE.format(
@@ -278,7 +278,7 @@ async def get_binary_gpt_prediction(
 
 
 async def get_numeric_gpt_prediction(
-    question_details: dict, num_runs: int
+    question_details: dict, num_runs: int, research_data: list[dict] = None
 ) -> tuple[list[float], str]:
     """Generate prediction for numeric question."""
     today = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -304,7 +304,7 @@ async def get_numeric_gpt_prediction(
         lower_bound_message = f"The outcome can not be lower than {lower_bound}."
 
     # Two-agent pipeline: Research Agent filters/summarizes, then Forecasting Agent predicts
-    relevant_results, research_summary = await run_research_agent(title)
+    relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
     summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
     content = NUMERIC_PROMPT_TEMPLATE.format(
@@ -358,6 +358,7 @@ async def get_numeric_gpt_prediction(
 async def get_multiple_choice_gpt_prediction(
     question_details: dict,
     num_runs: int,
+    research_data: list[dict] = None,
 ) -> tuple[dict[str, float], str]:
     """Generate prediction for multiple choice question."""
     today = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -368,7 +369,7 @@ async def get_multiple_choice_gpt_prediction(
     options = question_details["options"]
 
     # Two-agent pipeline: Research Agent filters/summarizes, then Forecasting Agent predicts
-    relevant_results, research_summary = await run_research_agent(title)
+    relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
     summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
     content = MULTIPLE_CHOICE_PROMPT_TEMPLATE.format(
