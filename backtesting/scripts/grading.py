@@ -18,8 +18,8 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.append(str(ROOT_DIR))
 sys.path.append(str(ROOT_DIR / "src"))
 
-# Minimum PDF value (like Metaculus's 0.01 floor)
-MIN_PDF = 0.01
+# Minimum PDF value (sharper floor for 200 bins)
+MIN_PDF = 0.0001
 
 
 def brier_score(forecast: float, outcome: int) -> float:
@@ -295,6 +295,9 @@ def grade_numeric_forecast(
     # Skill score (improvement over naive)
     skill_score = 1 - (forecast_crps / baseline_crps) if baseline_crps > 0 else 0
     
+    # Calculate normalized densities for table reporting (not used directly for Peer score math, but helpful)
+    our_norm_den = get_normalized_density(cdf, resolution, range_min, range_max)
+    
     result = {
         "question_type": "numeric",
         "resolution": resolution,
@@ -302,13 +305,16 @@ def grade_numeric_forecast(
         "predicted_percentile": cdf[resolution_idx],
         "crps": forecast_crps,
         "log_score": log_score_continuous(cdf, resolution_idx),
+        "our_density_norm": our_norm_den,
         "baseline_score": baseline_score_continuous(cdf, resolution_idx),
         "skill_score": skill_score,
         "brier_score": forecast_crps,  # For aggregate compatibility
     }
     
     if community_cdf and len(community_cdf) == 201:
+        comm_norm_den = get_normalized_density(community_cdf, resolution, range_min, range_max)
         result["community_forecast"] = community_cdf
+        result["community_density_norm"] = comm_norm_den
         result["peer_score"] = peer_score_continuous(cdf, community_cdf, resolution_idx)
         result["community_crps"] = calculate_crps(community_cdf, resolution_idx)
     
@@ -602,41 +608,28 @@ def generate_detailed_tables(grades: list[dict], run_data: dict = None) -> dict[
 
         for i, g in enumerate(num_grades, 1):
             res = g.get('resolution', 0)
-            title = g.get('title', '')
+            our_log = g.get('log_score', 0)
+            peer = g.get('peer_score')
             
-            # Recalculate normalized densities for the table if not present
-            # We need the original our_cdf from run_data if it's not in the grade
+            # Use stored densities if available, else zero
+            our_den = g.get('our_density_norm', 0)
+            comm_den = g.get('community_density_norm', 0)
             
-            # Find scaling and our forecast in run_data if provided
-            range_min, range_max = 0, 1
-            our_cdf = None
-            if run_data:
-                for fc in run_data.get('forecasts', []):
-                    if fc.get('title') == title:
-                        scaling = fc.get('question_details', {}).get('scaling', {})
-                        range_min = scaling.get('range_min', 0)
-                        range_max = scaling.get('range_max', 1)
-                        our_cdf = fc.get('forecast')
-                        break
-            
-            comm_cdf = g.get('community_forecast')
-            comm_den = get_normalized_density(comm_cdf, res, range_min, range_max)
-            our_den = get_normalized_density(our_cdf, res, range_min, range_max) if our_cdf else 0
-            
-            our_log = math.log(max(1e-10, our_den)) if our_den > 0 else -10 # Conservative log for table
-            peer = 100 * (our_log - math.log(max(1e-10, comm_den))) if comm_den > 0 else None
+            # If not in the grade dict (older runs), we can't show them here easily
+            # but for newly graded ones they will be there.
             
             peer_str = f"{peer:.2f}" if peer is not None else "N/A"
-            title_short = title[:65]
+            title = g.get('title', '')[:65]
 
-            # Use scientific notation for resolution if large, standard for density
             res_str = f"{res:.4g}" if abs(res) > 1e6 else f"{res:.4f}"
-            lines.append(f"{i:<3} {res_str:<14} {our_den:<10.3f} {comm_den:<10.3f} {our_log:<10.4f} {peer_str:<10} {title_short}")
+            lines.append(f"{i:<3} {res_str:<14} {our_den:<10.3f} {comm_den:<10.3f} {our_log:<10.4f} {peer_str:<10} {title}")
 
         lines.append("-" * 130)
         lines.append(f"\nSUMMARY: {len(num_grades)} numeric questions")
-        log_scores = [g.get('log_score', 0) for g in num_grades] # Default to 0
-        lines.append(f"Mean Log Score (Original): {sum(log_scores)/len(num_grades):.4f}")
+        log_scores = [g.get('log_score') for g in num_grades if g.get('log_score') is not None]
+        if log_scores:
+            lines.append(f"Mean Log Score: {sum(log_scores)/len(log_scores):.4f}")
+        
         peer_scores = [g['peer_score'] for g in num_grades if g.get('peer_score') is not None]
         if peer_scores:
             lines.append(f"Mean Peer Score: {sum(peer_scores)/len(peer_scores):.2f} (n={len(peer_scores)}) (positive = beating community)")

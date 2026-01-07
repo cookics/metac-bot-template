@@ -95,7 +95,7 @@ You are a professional forecaster competing in a forecasting tournament on Metac
 - NEVER assign less than 1% probability to any outcome
 - If there is ANY doubt, stay between 3% and 97%
 - The world changes slowly most of the time - weight status quo outcomes heavily
-- But also: be "based" - when evidence clearly points one direction, don't overthink it
+- But also: be "based" 
 
 **Scoring Awareness** (Log Scoring):
 - If you predict 1% and it resolves YES, you're catastrophically penalized
@@ -139,7 +139,7 @@ Before answering, work through:
 (f) What's your uncertainty? Is this a question where good and bad forecasters differ, or is it straightforward?
 (g) Are you missing critical data that would change your forecast?
 
-Remember: Good forecasters weight status quo heavily since the world changes slowly.
+
 
 === YOUR FORECAST ===
 

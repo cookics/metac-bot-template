@@ -45,6 +45,9 @@ def main():
     parser.add_argument("--limit", type=int, default=50, help="Number of questions to sample")
     parser.add_argument("--skip-run", action="store_true", help="Skip forecasting step (reuse existing)")
     parser.add_argument("--skip-grade", action="store_true", help="Skip grading step (reuse existing)")
+    parser.add_argument("--forecast-model", type=str, help="Model to use for forecasting (comma-separated for multi)")
+    parser.add_argument("--research-model", type=str, help="Model to use for research")
+    parser.add_argument("--compare-runs", type=str, help="Comma-separated list of other run names to include in comparison")
     args = parser.parse_args()
     
     run_name = args.run_name
@@ -60,40 +63,57 @@ def main():
     (runs_dir / "results").mkdir(parents=True, exist_ok=True)
     (runs_dir / "plots").mkdir(parents=True, exist_ok=True)
     
-    steps = []
-    
-    # Step 1: Forecasting
-    if not args.skip_run:
-        steps.append((
-            "Forecasting (backtest.py --run)",
-            [PYTHON, str(SCRIPTS_DIR / "backtest.py"), "--run", "--run-name", run_name, "--limit", str(limit)]
-        ))
-    
-    # Step 2: Grading  
-    if not args.skip_grade:
-        steps.append((
-            "Grading (backtest.py --grade)",
-            [PYTHON, str(SCRIPTS_DIR / "backtest.py"), "--grade", "--run-name", run_name]
-        ))
-    
-    # Step 3: Fetch community forecasts via CSV
-    steps.append((
-        "Fetch Community (fetch_fixed_community.py)",
-        [PYTHON, str(SCRIPTS_DIR / "fetch_fixed_community.py"), "--run-name", run_name]
-    ))
-    
-    # Step 4: Generate tables
-    steps.append((
-        "Generate Tables (gen_tables.py)",
-        [PYTHON, str(SCRIPTS_DIR / "gen_tables.py"), "--run-name", run_name]
-    ))
-    
-    # Run all steps
+    # Step 1 & 2: Forecasting and Grading (Loop per model)
+    forecast_models = args.forecast_model.split(",") if args.forecast_model else [None]
     failed = False
-    for step_name, cmd in steps:
-        if not run_step(step_name, cmd):
+    
+    for model_name in forecast_models:
+        model_name = model_name.strip() if model_name else None
+        # Create a simplified config name for filenames
+        model_slug = "default"
+        if model_name:
+            model_slug = model_name.split("/")[-1].replace(":", "_").replace(".", "_")
+            
+        print(f"\n>>> PROCESSING MODEL: {model_name or 'Default'} (Slug: {model_slug})")
+        
+        # Forecasting
+        if not args.skip_run:
+            cmd = [PYTHON, str(SCRIPTS_DIR / "backtest.py"), "--run", "--run-name", run_name, "--config", model_slug, "--limit", str(limit)]
+            if model_name:
+                cmd.extend(["--forecast-model", model_name])
+            if args.research_model:
+                cmd.extend(["--research-model", args.research_model])
+            
+            if not run_step(f"Forecasting: {model_slug}", cmd):
+                failed = True
+                break
+        
+        # Grading
+        if not args.skip_grade:
+            cmd = [PYTHON, str(SCRIPTS_DIR / "backtest.py"), "--grade", "--run-name", run_name, "--config", model_slug]
+            if model_name:
+                cmd.extend(["--forecast-model", model_name])
+            if args.research_model:
+                cmd.extend(["--research-model", args.research_model])
+                
+            if not run_step(f"Grading: {model_slug}", cmd):
+                failed = True
+                break
+
+    if not failed:
+        # Step 3: Fetch community forecasts via CSV (Generic for the run)
+        if not run_step("Fetch Community (fetch_fixed_community.py)", 
+                       [PYTHON, str(SCRIPTS_DIR / "fetch_fixed_community.py"), "--run-name", run_name]):
             failed = True
-            break
+            
+    if not failed:
+        # Step 4: Generate tables (now handles all models in run)
+        cmd = [PYTHON, str(SCRIPTS_DIR / "gen_tables.py"), "--run-name", run_name]
+        if args.compare_runs:
+            cmd.extend(["--compare-runs", args.compare_runs])
+            
+        if not run_step("Generate Tables (gen_tables.py)", cmd):
+            failed = True
     
     # Summary
     print(f"\n{'#'*60}")
@@ -103,9 +123,7 @@ def main():
         print(f"# ✅ PIPELINE COMPLETED SUCCESSFULLY")
         print(f"#")
         print(f"# Results: backtesting/data/runs/{run_name}/plots/")
-        print(f"#   - binary_results.txt")
-        print(f"#   - mc_results.txt")  
-        print(f"#   - numeric_results.txt")
+        print(f"# Comparison: comparison_summary.txt")
     print(f"{'#'*60}\n")
     
     return 0 if not failed else 1

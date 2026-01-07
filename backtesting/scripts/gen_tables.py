@@ -9,289 +9,151 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 sys.path.append(str(ROOT_DIR))
 sys.path.append(str(ROOT_DIR / "src"))
 
-# Parse arguments
-parser = argparse.ArgumentParser(description="Generate results tables from grades")
-parser.add_argument("--run-name", type=str, default="backtest_3", help="Name of the run folder")
-args = parser.parse_args()
-
-run_name = args.run_name
-RUNS_DIR = Path(__file__).resolve().parent.parent / "data" / "runs" / run_name
-PLOTS_DIR = RUNS_DIR / "plots"
-results_dir = RUNS_DIR / "results"
-
-# Auto-detect latest files
-grades_files = sorted(results_dir.glob("*.grades.json"), reverse=True)
-run_files = sorted(results_dir.glob("run_*.json"), reverse=True)
-run_files = [f for f in run_files if not f.name.endswith('.grades.json')]
-
-if not grades_files or not run_files:
-    print(f"No grades or run files found in {results_dir}")
-    sys.exit(1)
-
-grades_path = grades_files[0]
-run_path = run_files[0]
-
-print(f"[{run_name}] Using grades: {grades_path.name}")
-print(f"[{run_name}] Using run: {run_path.name}")
-
-# Load grades and run data
-with open(grades_path) as f:
-    grades_data = json.load(f)
-
-with open(run_path) as f:
-    run_data = json.load(f)
-
-title_to_scaling = {}
-for f in run_data.get('forecasts', []):
-    scaling = f.get('question_details', {}).get('scaling', {})
-    title_to_scaling[f.get('title')] = scaling
-
-grades = grades_data.get('grades', [])
-
-
-def log_score_binary(fc, outcome, eps=0.001):
-    fc = max(eps, min(1-eps, fc))
-    return math.log(fc) if outcome == 1 else math.log(1-fc)
-
-def peer_score_binary(our_fc, comm_fc, outcome):
-    return 100 * (log_score_binary(our_fc, outcome) - log_score_binary(comm_fc, outcome))
-
-def log_score_mc(prob_on_correct, eps=0.001):
-    return math.log(max(eps, prob_on_correct))
-
-def peer_score_mc(our_prob, comm_prob, eps=0.001):
-    return 100 * (log_score_mc(our_prob, eps) - log_score_mc(comm_prob, eps))
-
-def get_normalized_density(cdf, resolution, range_min, range_max):
-    """Estimate normalized PDF density (0-1 space) at resolution point from 201-point CDF."""
-    if not cdf or len(cdf) != 201 or resolution is None:
-        return 0.0
-    if range_max <= range_min:
-        return 0.0
-
-    # Normalize resolution to [0, 1]
-    res_norm = (resolution - range_min) / (range_max - range_min)
-    res_norm = max(0.0, min(1.0, res_norm))
-
-    # Grid index (0 to 200)
-    idx = res_norm * 200
-    i = int(round(idx))
+def load_run_data_from_file(grades_file):
+    results_dir = grades_file.parent
     
-    # Use a small window for stability (3 points)
-    low = max(0, i - 1)
-    high = min(200, i + 1)
-    if high == low: return 0.0
+    # Matching run file usually starts with "run_" and has same timestamp
+    run_file_name = grades_file.name.replace(".grades.json", ".json")
+    run_file = results_dir / run_file_name
     
-    dp = cdf[high] - cdf[low]
-    # Corresponding range in unit-less normalized space
-    dx_norm = (high - low) / 200.0
-    
-    # Normalized density (PDF height in unit-range space)
-    # Uniform distribution = 1.0, Max = 200.0
-    return dp / dx_norm if dx_norm > 0 else 0.0
-
-def crps_from_cdf(cdf, resolution, range_min, range_max):
-    pass
-
-# ============= BINARY =============
-print("=" * 60)
-print("BINARY QUESTIONS")
-print("=" * 60)
-binary_grades = [g for g in grades if g.get('question_type') == 'binary']
-
-# Recalc peer scores
-for g in binary_grades:
-    comm = g.get('community_forecast')
-    if comm is not None:
-        g['peer_score'] = peer_score_binary(g['forecast'], comm, g['outcome'])
-
-with open(PLOTS_DIR / 'binary_results.txt', 'w') as f:
-    f.write("=" * 130 + "\n")
-    f.write("BINARY QUESTIONS RESULTS\n")
-    f.write("=" * 130 + "\n\n")
-    f.write(f"{'#':<3} {'Our Pred':<10} {'Comm Pred':<10} {'Outcome':<8} {'Log Score':<12} {'Peer Score':<12} Title\n")
-    f.write("-" * 130 + "\n")
-    
-    for i, g in enumerate(binary_grades, 1):
-        our = g.get('forecast', 0)
-        comm = g.get('community_forecast')
-        comm_str = f"{comm:.3f}" if comm is not None else "N/A"
-        outcome = g.get('outcome', 0)
-        log_score = g.get('log_score', 0)
-        peer = g.get('peer_score')
-        peer_str = f"{peer:.2f}" if peer is not None else "N/A"
-        title = g.get('title', '')[:65]
-        correct = (our > 0.5 and outcome == 1) or (our < 0.5 and outcome == 0)
-        marker = "" if correct else " *** WRONG"
-        f.write(f"{i:<3} {our:<10.3f} {comm_str:<10} {outcome:<8} {log_score:<12.4f} {peer_str:<12} {title}{marker}\n")
-    
-    f.write("-" * 130 + "\n")
-    f.write(f"\nSUMMARY: {len(binary_grades)} binary questions\n")
-    correct_count = sum(1 for g in binary_grades if (g['forecast'] > 0.5 and g['outcome'] == 1) or (g['forecast'] < 0.5 and g['outcome'] == 0))
-    f.write(f"Correct predictions: {correct_count}/{len(binary_grades)} ({100*correct_count/len(binary_grades):.1f}%)\n")
-    peer_scores = [g['peer_score'] for g in binary_grades if g.get('peer_score') is not None]
-    if peer_scores:
-        f.write(f"Mean Peer Score: {sum(peer_scores)/len(peer_scores):.2f} (n={len(peer_scores)}) (positive = beating community)\n")
-    f.write(f"Mean Log Score: {sum(g['log_score'] for g in binary_grades)/len(binary_grades):.4f}\n")
-
-print(f"Binary: {len(binary_grades)} questions, {len(peer_scores)} with peer scores")
-
-# ============= MULTIPLE CHOICE =============
-print("\n" + "=" * 60)
-print("MULTIPLE CHOICE QUESTIONS")
-print("=" * 60)
-mc_grades = [g for g in grades if g.get('question_type') == 'multiple_choice']
-
-# Calc peer scores for MC
-for g in mc_grades:
-    comm_fc = g.get('community_forecast', {})
-    our_fc = g.get('forecast', {})
-    resolution = g.get('resolution', '')
-    
-    # If community forecast is a list (common from CSV), map to options
-    if isinstance(comm_fc, list):
-        # Find options from run_data
-        options = []
-        for fc in run_data.get('forecasts', []):
-            if fc.get('title') == g.get('title'):
-                options = fc.get('question_details', {}).get('options', [])
-                break
-        if options and len(options) == len(comm_fc):
-            comm_fc = dict(zip(options, comm_fc))
-            g['community_forecast'] = comm_fc
-        else:
-            comm_fc = {}
-
-    our_prob = our_fc.get(resolution, 0) if our_fc else 0
-    comm_prob = comm_fc.get(resolution, 0) if comm_fc else 0
-    
-    g['correct_probability'] = our_prob
-    g['community_correct_probability'] = comm_prob
-    
-    if comm_prob > 0:
-        g['peer_score'] = peer_score_mc(our_prob, comm_prob)
-
-with open(PLOTS_DIR / 'mc_results.txt', 'w') as f:
-    f.write("=" * 140 + "\n")
-    f.write("MULTIPLE CHOICE QUESTIONS RESULTS\n")
-    f.write("=" * 140 + "\n\n")
-    
-    for i, g in enumerate(mc_grades, 1):
-        title = g.get('title', '')[:80]
-        resolution = g.get('resolution', '')
-        our_fc = g.get('forecast', {})
-        comm_fc = g.get('community_forecast', {})
-        our_prob = g.get('correct_probability', 0)
-        comm_prob = g.get('community_correct_probability', 0)
-        log_score = g.get('log_score', 0)
-        brier = g.get('brier_score', 0)
-        peer = g.get('peer_score')
+    if not run_file.exists():
+        # Fallback to finding the nearest run_*.json that isn't a grade
+        run_files = [f for f in results_dir.glob("run_*.json") if not f.name.endswith(".grades.json")]
+        if not run_files:
+            return None
+        run_file = run_files[0]
         
-        f.write(f"\n[{i}] {title}\n")
-        f.write("-" * 110 + "\n")
-        f.write(f"Resolution: {resolution}\n")
-        comm_prob_str = f"{comm_prob:.3f}" if comm_prob else "N/A"
-        f.write(f"Our prob on correct: {our_prob:.3f} | Community: {comm_prob_str}")
-        if peer is not None:
-            f.write(f" | Peer Score: {peer:.2f}")
-        f.write(f"\nLog Score: {log_score:.4f} | Brier: {brier:.4f}\n\n")
+    with open(grades_file) as f:
+        grades_data = json.load(f)
+    with open(run_file) as f:
+        run_data = json.load(f)
+        
+    return {
+        "run_file": grades_file.name,
+        "grades": grades_data.get('grades', []),
+        "run_info": run_data
+    }
 
-        f.write(f"{'Option':<55} {'Us':<10} {'Comm':<10} {'Correct?'}\n")
-        f.write("-" * 90 + "\n")
-
-        all_opts = sorted(set(our_fc.keys()) | set(comm_fc.keys() if comm_fc else []))
-        for opt in all_opts:
-            our_p = our_fc.get(opt, 0)
-            comm_p = comm_fc.get(opt) if comm_fc else None
-            comm_str = f"{comm_p:.3f}" if comm_p is not None else "N/A"
-            is_correct = "  <-- CORRECT" if str(opt) == str(resolution) else ""
-            f.write(f"{str(opt)[:54]:<55} {our_p:<10.3f} {comm_str:<10} {is_correct}\n")
+def main():
+    parser = argparse.ArgumentParser(description="Generate results tables and comparisons")
+    parser.add_argument("--run-name", type=str, required=True, help="Name of the primary run folder")
+    parser.add_argument("--compare-runs", type=str, help="Comma-separated list of other run names to include")
+    args = parser.parse_args()
     
-    f.write("\n" + "=" * 140 + "\n")
-    f.write(f"SUMMARY: {len(mc_grades)} multiple choice questions\n")
-    peer_scores = [g['peer_score'] for g in mc_grades if g.get('peer_score') is not None]
-    if peer_scores:
-        f.write(f"Mean Peer Score: {sum(peer_scores)/len(peer_scores):.2f} (n={len(peer_scores)})\n")
-    f.write(f"Mean Log Score: {sum(g['log_score'] for g in mc_grades)/len(mc_grades):.4f}\n")
-    f.write(f"Mean Brier Score: {sum(g['brier_score'] for g in mc_grades)/len(mc_grades):.4f}\n")
+    RUN_DIR = Path(__file__).resolve().parent.parent / "data" / "runs" / args.run_name
+    RESULTS_DIR = RUN_DIR / "results"
+    PLOTS_DIR = RUN_DIR / "plots"
+    
+    if not RESULTS_DIR.exists():
+        print(f"Error: Results directory {RESULTS_DIR} does not exist.")
+        sys.exit(1)
+        
+    grades_files = sorted(RESULTS_DIR.glob("*.grades.json"))
+    
+    if not grades_files:
+        print(f"No grades found in {RESULTS_DIR}")
+        sys.exit(1)
+        
+    all_runs = []
+    
+    # Process primary run
+    for gf in sorted(RESULTS_DIR.glob("*.grades.json")):
+        data = load_run_data_from_file(gf)
+        if data:
+            all_runs.append(data)
+            
+    # Process additional comparison runs
+    if args.compare_runs:
+        for other_run_name in args.compare_runs.split(","):
+            other_run_name = other_run_name.strip()
+            other_results_dir = RUN_DIR.parent / other_run_name / "results"
+            if other_results_dir.exists():
+                for gf in sorted(other_results_dir.glob("*.grades.json")):
+                    data = load_run_data_from_file(gf)
+                    if data:
+                        all_runs.append(data)
+            else:
+                print(f"Warning: Comparison run directory {other_results_dir} not found.")
 
-print(f"MC: {len(mc_grades)} questions, {len(peer_scores)} with peer scores")
+    print(f"Found {len(all_runs)} graded models total.")
+    
+    # 1. Update individual results tables for each run based on latest grading.py logic
+    from grading import generate_detailed_tables
+    for r in all_runs:
+        tables = generate_detailed_tables(r["grades"], r["run_info"])
+        # We might want to prefix these with the model name to avoid overwriting if they use the same plots dir
+        # But usually each run_full_backtest.py run points to the same PLOTS_DIR.
+        # Let's save them as [model]_binary_results.txt etc.
+        model_slug = r["run_info"].get("config_name", "default")
+        for filename, content in tables.items():
+            out_name = f"{model_slug}_{filename}"
+            with open(PLOTS_DIR / out_name, 'w') as f:
+                f.write(content)
+        print(f"  [{model_slug}] Updated results tables.")
 
-# ============= NUMERIC =============
-print("\n" + "=" * 60)
-print("NUMERIC QUESTIONS")
-print("=" * 60)
-num_grades = [g for g in grades if g.get('question_type') == 'numeric']
+    # 2. Generate the Comparison Summary
+    if len(all_runs) >= 1:
+        comp_file = PLOTS_DIR / "comparison_summary.txt"
+        
+        # Sort runs by model name for consistency
+        all_runs.sort(key=lambda x: x['run_info'].get('forecast_model', 'unknown'))
+        
+        with open(comp_file, 'w') as f:
+            f.write("=" * 120 + "\n")
+            f.write("BACKTEST MULTI-MODEL COMPARISON SUMMARY\n")
+            f.write("=" * 120 + "\n\n")
+            
+            # Header
+            header = f"{'Category':<20}"
+            for r in all_runs:
+                model = r['run_info'].get('forecast_model', 'unknown').split('/')[-1]
+                slug = r['run_info'].get('config_name', 'default')
+                header += f" | {slug:<25}"
+            f.write(header + "\n")
+            
+            header_models = f"{'Model':<20}"
+            for r in all_runs:
+                model = r['run_info'].get('forecast_model', 'unknown').split('/')[-1]
+                header_models += f" | {model[:25]:<25}"
+            f.write(header_models + "\n")
+            f.write("-" * 120 + "\n")
+            
+            # Binary Accuracy
+            f.write(f"{'Binary Accuracy':<20}")
+            for r in all_runs:
+                bg = [g for g in r['grades'] if g.get('question_type') == 'binary']
+                if bg:
+                    acc = sum(1 for g in bg if (g.get('forecast', 0) > 0.5 and g.get('outcome') == 1) or (g.get('forecast', 0) < 0.5 and g.get('outcome') == 0)) / len(bg)
+                    f.write(f" | {acc*100:>6.1f}% ({len(bg)}q)          ")
+                else:
+                    f.write(f" | {'N/A':<25}")
+            f.write("\n")
+            
+            # Peer Scores
+            for cat in ['binary', 'multiple_choice', 'numeric']:
+                f.write(f"{cat.capitalize() + ' Avg Peer':<20}")
+                for r in all_runs:
+                    cg = [g for g in r['grades'] if g.get('question_type') == cat]
+                    peer_scores = [g.get('peer_score') for g in cg if g.get('peer_score') is not None]
+                    if peer_scores:
+                        avg = sum(peer_scores) / len(peer_scores)
+                        f.write(f" | {avg:>10.2f}                ")
+                    else:
+                        f.write(f" | {'N/A':<25}")
+                f.write("\n")
+            
+            f.write("-" * 120 + "\n")
+            f.write(f"{'OVERALL AVG PEER':<20}")
+            for r in all_runs:
+                all_peers = [g.get('peer_score') for g in r['grades'] if g.get('peer_score') is not None]
+                if all_peers:
+                    avg = sum(all_peers) / len(all_peers)
+                    f.write(f" | {avg:>10.2f}                ")
+                else:
+                    f.write(f" | {'N/A':<25}")
+            f.write("\n")
 
-# Calc peer Density/Log scores for numeric
-for g in num_grades:
-    title = g.get('title')
-    comm_cdf = g.get('community_forecast')
-    # Find the CDF and scaling in the original run data
-    for fc in run_data.get('forecasts', []):
-        if fc.get('title') == title:
-            our_cdf = fc.get('forecast')
-            details = fc.get('question_details', {})
-            scaling = details.get('scaling', {})
-            range_min = scaling.get('range_min', 0)
-            range_max = scaling.get('range_max', 1)
-            break
-    else:
-        our_cdf = None
-        range_min, range_max = 0, 1
+        print(f"Final comparison table saved to {comp_file}")
 
-    resolution = g.get('resolution')
-
-    if comm_cdf and isinstance(comm_cdf, list) and len(comm_cdf) == 201 and resolution is not None:
-        # Calculate normalized densities (0-1 range space)
-        comm_norm_den = get_normalized_density(comm_cdf, resolution, range_min, range_max)
-        our_norm_den = get_normalized_density(our_cdf, resolution, range_min, range_max) if our_cdf else 0
-
-        g['community_density_norm'] = comm_norm_den
-        g['our_density_norm'] = our_norm_den
-
-        if comm_norm_den > 0:
-            # Numeric Log Score = ln(normalized_density)
-            # Uniform = ln(1) = 0. Use 1e-5 as floor (very conservative)
-            our_log = math.log(max(0.00001, our_norm_den))
-            comm_log = math.log(max(0.00001, comm_norm_den))
-            g['peer_score'] = 100 * (our_log - comm_log)
-            g['log_score'] = our_log
-            g['community_log_score'] = comm_log
-
-with open(PLOTS_DIR / 'numeric_results.txt', 'w') as f:
-    f.write("=" * 130 + "\n")
-    f.write("NUMERIC QUESTIONS RESULTS (Normalized Density scoring)\n")
-    f.write("=" * 130 + "\n\n")
-    f.write(f"{'#':<3} {'Resolution':<14} {'Our NormD':<10} {'Comm NormD':<10} {'Our Log':<10} {'Peer':<10} Title\n")
-    f.write("-" * 130 + "\n")
-
-    for i, g in enumerate(num_grades, 1):
-        res = g.get('resolution', 0)
-        our_den = g.get('our_density_norm', 0)
-        comm_den = g.get('community_density_norm', 0)
-        our_log = g.get('log_score', 0)
-        peer = g.get('peer_score')
-        peer_str = f"{peer:.2f}" if peer is not None else "N/A"
-        title = g.get('title', '')[:65]
-
-        # Use scientific notation for resolution if large, standard for density
-        res_str = f"{res:.4g}" if abs(res) > 1e6 else f"{res:.4f}"
-        f.write(f"{i:<3} {res_str:<14} {our_den:<10.3f} {comm_den:<10.3f} {our_log:<10.4f} {peer_str:<10} {title}\n")
-
-    f.write("-" * 130 + "\n")
-    f.write(f"\nSUMMARY: {len(num_grades)} numeric questions\n")
-    log_scores = [g['log_score'] for g in num_grades if g.get('log_score') is not None]
-    if log_scores:
-        f.write(f"Mean Log Score: {sum(log_scores)/len(log_scores):.4f} (Uniform = 0.0)\n")
-    peer_scores = [g['peer_score'] for g in num_grades if g.get('peer_score') is not None]
-    if peer_scores:
-        f.write(f"Mean Peer Score: {sum(peer_scores)/len(peer_scores):.2f} (n={len(peer_scores)}) (positive = beating community)\n")
-
-print(f"Numeric: {len(num_grades)} questions, {len(peer_scores)} with peer scores")
-
-# Save updated grades
-with open(grades_path, 'w') as f:
-    json.dump(grades_data, f, indent=2)
-print(f"\nSaved updated grades to {grades_path}")
-print(f"Tables written to {PLOTS_DIR}")
+if __name__ == "__main__":
+    main()

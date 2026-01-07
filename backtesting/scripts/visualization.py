@@ -67,7 +67,8 @@ def plot_pdf(
     range_max: float,
     title: str = "Probability Density",
     save_path: Optional[Path] = None,
-    community_cdf: list[float] = None
+    community_cdf: list[float] = None,
+    extra_cdfs: dict[str, list[float]] = None # label -> cdf
 ) -> Optional[Path]:
     """
     Plot a PDF (probability density) with the resolution point marked.
@@ -111,6 +112,15 @@ def plot_pdf(
         comm_pdf_interp = np.interp(x_1000, x_201, comm_pdf)
         ax.fill_between(x_1000, comm_pdf_interp, alpha=0.2, color='green', label='_nolegend_')
         ax.plot(x_1000, comm_pdf_interp, 'g-', linewidth=2.5, alpha=0.8, label='Community')
+    
+    # Plot extra CDFs
+    if extra_cdfs:
+        colors = plt.cm.plasma(np.linspace(0, 0.8, len(extra_cdfs)))
+        for (label, cdf_extra), color in zip(extra_cdfs.items(), colors):
+            if cdf_extra and len(cdf_extra) == 201:
+                e_pdf = cdf_to_pdf(cdf_extra, smooth=True)
+                e_pdf_interp = np.interp(x_1000, x_201, e_pdf)
+                ax.plot(x_1000, e_pdf_interp, '-', color=color, linewidth=2.0, alpha=0.8, label=label)
     
     # Mark the resolution with a vertical line
     ax.axvline(x=resolution, color='red', linestyle='--', linewidth=2.5, label=f'Resolution: {resolution:.4g}')
@@ -377,9 +387,9 @@ def generate_all_plots(grades: list[dict], forecasts: list[dict] = None, plots_d
     if score_plot:
         plots.append(score_plot)
     
-    # 3. Individual CDF plots for numeric questions (first 10)
+    # 3. Individual PDF plots for numeric questions (ALL)
     if forecasts:
-        numeric_forecasts = [f for f in forecasts if f.get("question_type") == "numeric" and "forecast" in f][:10]
+        numeric_forecasts = [f for f in forecasts if f.get("question_type") == "numeric" and "forecast" in f]
         
         for i, fc in enumerate(numeric_forecasts):
             cdf = fc.get("forecast", [])
