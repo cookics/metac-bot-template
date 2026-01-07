@@ -26,14 +26,53 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # For EXA Smart Searcher
 # Supported providers: "openrouter", "metaculus_proxy"
 LLM_PROVIDER = "openrouter"
 
-# Two-Agent System Models
-# Research Agent: Cheaper model for search, filtering, and summarization
-RESEARCH_MODEL = "google/gemini-2.0-flash-001"
-RESEARCH_TEMP = 0.75  # Lower temp for more factual/consistent research
+# ========================= MODE SELECTION =========================
+# Toggle between EXPENSIVE (high quality) and CHEAP (cost-effective) mode
+EXPENSIVE_MODE = False  # Set to True for premium models, False for budget models
 
-# Forecast Agent: Larger model for making predictions
-FORECAST_MODEL = "google/gemini-3-flash-preview"
-FORECAST_TEMP = 0.9  # Higher temp for creative reasoning
+# ========================= MODEL PRESETS =========================
+# EXPENSIVE MODE:
+#   - Research: x-ai/grok-4.1-fast      (ALWAYS THINKS on OpenRouter)
+#   - Forecast: anthropic/claude-opus-4.5 (Extended thinking available)
+#
+# CHEAP MODE:
+#   - Research: google/gemini-2.0-flash-001  (No thinking)
+#   - Forecast: google/gemini-3-flash-preview (Thinking ENABLED)
+
+# Global reasoning effort for models with thinking modes (Gemini 3, Grok, Claude 4.5)
+REASONING_EFFORT = "medium" # Options: low, medium, high
+REASONING_MAX_TOKENS = 4096 # Minimum is usually 1024 for Claude models
+
+# CLAUDE 4.5 OPUS THINKING TOGGLE
+# By default, Claude 4.5 Opus does NOT use extended thinking (to save cost/tokens).
+# Set this to True to explicitly EXPOSE and ENABLE the thinking mode for Opus.
+CLAUDE_OPUS_THINKING_ENABLED = False 
+
+if EXPENSIVE_MODE:
+    # --- EXPENSIVE MODE MODELS ---
+    # Grok 4.1 Fast: Excellent for tool-calling, fast context processing.
+    # Thinking: ALWAYS ENABLED by OpenRouter for this model variant.
+    RESEARCH_MODEL = "x-ai/grok-4.1-fast"
+    RESEARCH_TEMP = 0.6
+    RESEARCH_THINKING = True # Mark as True because it returns reasoning anyway
+    
+    # Claude 4.5 Opus: Frontier reasoning model.
+    # Thinking: Only enabled if 'CLAUDE_OPUS_THINKING_ENABLED' is wired to True below.
+    FORECAST_MODEL = "anthropic/claude-opus-4.5"
+    FORECAST_TEMP = 1.0 # Preferred for the new Claude models
+    FORECAST_THINKING = CLAUDE_OPUS_THINKING_ENABLED 
+else:
+    # --- CHEAP MODE MODELS ---
+    # Gemini 2.0 Flash: Standard fast research
+    RESEARCH_MODEL = "google/gemini-2.0-flash-001"
+    RESEARCH_TEMP = 0.75
+    RESEARCH_THINKING = False
+    
+    # Gemini 3 Flash Preview: Reasoning-enabled forecaster
+    # Thinking: ENABLED (user requested 'gemini flash thiking')
+    FORECAST_MODEL = "google/gemini-3-flash-preview"
+    FORECAST_TEMP = 1.0 # High temp works well with reasoning
+    FORECAST_THINKING = True
 
 # Legacy settings (for backward compatibility)
 OPENROUTER_MODEL = FORECAST_MODEL

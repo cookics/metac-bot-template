@@ -47,11 +47,13 @@ def main():
     parser.add_argument("--skip-grade", action="store_true", help="Skip grading step (reuse existing)")
     parser.add_argument("--forecast-model", type=str, help="Model to use for forecasting (comma-separated for multi)")
     parser.add_argument("--research-model", type=str, help="Model to use for research")
+    parser.add_argument("--config", type=str, help="Custom slug for the config (replaces model name in filenames)")
     parser.add_argument("--compare-runs", type=str, help="Comma-separated list of other run names to include in comparison")
     args = parser.parse_args()
     
     run_name = args.run_name
     limit = args.limit
+    custom_config = args.config
     
     print(f"\n{'#'*60}")
     print(f"# FULL BACKTEST PIPELINE: {run_name}")
@@ -70,8 +72,8 @@ def main():
     for model_name in forecast_models:
         model_name = model_name.strip() if model_name else None
         # Create a simplified config name for filenames
-        model_slug = "default"
-        if model_name:
+        model_slug = custom_config or "default"
+        if not custom_config and model_name:
             model_slug = model_name.split("/")[-1].replace(":", "_").replace(".", "_")
             
         print(f"\n>>> PROCESSING MODEL: {model_name or 'Default'} (Slug: {model_slug})")

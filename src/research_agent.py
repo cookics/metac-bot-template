@@ -13,13 +13,14 @@ import re
 
 from llm import call_llm
 from news import exa_search_raw, exa_crawl_urls
-from config import RESEARCH_MODEL, RESEARCH_TEMP, GET_NEWS
+from config import RESEARCH_MODEL, RESEARCH_TEMP, RESEARCH_THINKING, GET_NEWS
 from prompts import RESEARCH_AGENT_PROMPT, LINK_ANALYSIS_PROMPT
 
 
 async def run_research_agent(
     question: str, 
-    existing_results: list[dict] = None
+    existing_results: list[dict] = None,
+    thinking: bool = RESEARCH_THINKING
 ) -> tuple[list[dict], str]:
     """
     Run the research agent to search, filter, follow links, and summarize.
@@ -54,7 +55,8 @@ async def run_research_agent(
     filter_response = await call_llm(
         filter_prompt, 
         model=RESEARCH_MODEL, 
-        temperature=RESEARCH_TEMP
+        temperature=RESEARCH_TEMP,
+        thinking=thinking
     )
     
     relevant_results, summary = parse_research_agent_response(filter_response, raw_results)
@@ -79,7 +81,11 @@ async def run_research_agent(
     return relevant_results, summary
 
 
-async def analyze_and_crawl_links(question: str, results: list[dict]) -> list[dict]:
+async def analyze_and_crawl_links(
+    question: str, 
+    results: list[dict],
+    thinking: bool = RESEARCH_THINKING
+) -> list[dict]:
     """
     Analyze search results for useful links and crawl the top ones.
     
@@ -108,7 +114,8 @@ async def analyze_and_crawl_links(question: str, results: list[dict]) -> list[di
     link_response = await call_llm(
         link_prompt,
         model=RESEARCH_MODEL,
-        temperature=RESEARCH_TEMP
+        temperature=RESEARCH_TEMP,
+        thinking=thinking
     )
     
     # Parse the URLs to crawl

@@ -12,8 +12,8 @@ def aggregate_results():
     aggregated_data = {}
     all_models = set()
 
-    # Find all .grades.json files in backtest_7 through backtest_10
-    for i in range(7, 11):
+    # Find all .grades.json files in backtest_7 through backtest_11
+    for i in range(7, 12):
         backtest_path = data_dir / f"backtest_{i}" / "results"
         if not backtest_path.exists():
             continue

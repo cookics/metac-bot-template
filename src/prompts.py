@@ -6,15 +6,15 @@ These are the templates you'll iterate on to improve forecast quality.
 # ========================= RESEARCH AGENT PROMPT =========================
 
 RESEARCH_AGENT_PROMPT = """
-You are a research assistant helping a forecaster answer questions.
+You are a Research Agent and Summarizer. Your goal is to provide a forecaster with a comprehensive yet dense "Short Report" that distills all critical information into a single synthesis.
 
 The forecaster needs to answer this question:
 {question}
 
 Below are search results from the web. Your job is to:
-1. Review each result and determine if it is RELEVANT to answering the question
-2. Select only the most relevant results (usually 3-5, but use your judgment)
-3. Write a brief summary of the key findings that would help answer the question
+1. Review each result and determine if it is RELEVANT to answering the question.
+2. Select only the most relevant results.
+3. Synthesize the findings into a SHORT REPORT. You MUST pull out all of the key data points, facts, and causal factors that the forecaster needs to think about. Your goal is to do the "heavy lifting" of research and summarization so that the forecaster can focus entirely on high-level synthesis and probabilistic judgment without needing to ramble or investigate raw data.
 
 Search Results (JSON):
 {results_json}
@@ -22,7 +22,7 @@ Search Results (JSON):
 Respond in EXACTLY this format:
 
 RELEVANT_INDICES: [list the index numbers of relevant results, e.g., 0, 2, 5]
-SUMMARY: Write a 2-4 sentence summary of the key information from the relevant results that would help forecast this question. Focus on facts, data, and recent developments.
+SUMMARY: [Your Short Report]. Be explicit about dates, numbers, and conflicting evidence. Pull out every detail that matters for the forecast.
 """
 
 LINK_ANALYSIS_PROMPT = """
@@ -85,7 +85,7 @@ CONFIDENCE: [1-10] - [brief reason]
 # ========================= FORECASTING PROMPTS =========================
 
 BINARY_PROMPT_TEMPLATE = """
-You are a professional forecaster competing in a forecasting tournament on Metaculus.
+You are a professional forecaster. Your specific strength is the ability to take complex information and piece it together in an integrated way to form accurate probabilistic judgments.
 
 === FORECASTING PHILOSOPHY ===
 
@@ -133,6 +133,15 @@ Your research assistant says:
 
 Today is {today}.
 
+=== INTEGRATIVE REASONING ===
+
+Your research assistant has done the preliminary research for you. Your task is NOT to re-summarize the data, but to **coalesce your own thoughts** and use your specialized ability to **piece together the information in an integrated way**. 
+
+Avoid rambling. Focus on the final synthesis:
+(a) How do these specific facts interact to change the probability?
+(b) What is the most likely "integrated" scenario?
+(c) What is your final, calibrated judgment?
+
 === ANALYSIS FRAMEWORK ===
 
 Before answering, work through:
@@ -145,15 +154,13 @@ Before answering, work through:
 (g) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
 (h) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
 
-
-
 === YOUR FORECAST ===
 
 The last thing you write is your final answer as: "Probability: ZZ%", 0-100
 """
 
 NUMERIC_PROMPT_TEMPLATE = """
-You are a professional forecaster competing in a forecasting tournament on Metaculus.
+You are a professional forecaster. Your specific strength is the ability to take complex information and piece it together in an integrated way to form accurate probabilistic distributions.
 
 === FORECASTING PHILOSOPHY ===
 
@@ -199,6 +206,15 @@ Today is {today}.
 
 {lower_bound_message}
 {upper_bound_message}
+
+=== INTEGRATIVE REASONING ===
+
+Your research assistant has done the preliminary research for you. Your task is NOT to re-summarize the data, but to **coalesce your own thoughts** and use your specialized ability to **piece together the information in an integrated way**. 
+
+Avoid rambling. Focus on the final synthesis of the probability density:
+(a) How do these specific facts shift the mean or widen the variance?
+(b) What is the most likely "integrated" outcome distribution?
+(c) What is your final, calibrated judgment?
 
 === ANALYSIS FRAMEWORK ===
 
@@ -251,7 +267,7 @@ Percentile 99: XX
 """
 
 MULTIPLE_CHOICE_PROMPT_TEMPLATE = """
-You are a professional forecaster competing in a forecasting tournament on Metaculus.
+You are a professional forecaster. Your specific strength is the ability to take complex information and piece it together in an integrated way to form accurate probabilistic judgments across multiple options.
 
 === FORECASTING PHILOSOPHY ===
 
@@ -298,6 +314,15 @@ Your research assistant says:
 {summary_report}
 
 Today is {today}.
+
+=== INTEGRATIVE REASONING ===
+
+Your research assistant has done the preliminary research for you. Your task is NOT to re-summarize the data, but to **coalesce your own thoughts** and use your specialized ability to **piece together the information in an integrated way**. 
+
+Avoid rambling. Focus on the final synthesis across all options:
+(a) How do these specific facts redistribute probability between options?
+(b) What is the most likely "integrated" outcome scenario?
+(c) What is your final, calibrated judgment?
 
 === ANALYSIS FRAMEWORK ===
 

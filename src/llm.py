@@ -12,6 +12,8 @@ from config import (
     DEFAULT_TEMP,
     METACULUS_PROXY_MODEL,
     METACULUS_PROXY_TEMP,
+    REASONING_EFFORT,
+    REASONING_MAX_TOKENS
 )
 
 
@@ -19,13 +21,14 @@ async def call_llm(
     prompt: str, 
     model: str = DEFAULT_MODEL, 
     temperature: float = DEFAULT_TEMP,
-    provider: str = LLM_PROVIDER
+    provider: str = LLM_PROVIDER,
+    thinking: bool = False
 ) -> str:
     """
     Unified entry point for LLM calls. Routes to OpenRouter or Metaculus Proxy.
     """
     if provider == "openrouter":
-        return await call_llm_openrouter(prompt, model, temperature)
+        return await call_llm_openrouter(prompt, model, temperature, thinking)
     elif provider == "metaculus_proxy":
         return await call_llm_metaculus_proxy(prompt, model, temperature)
     else:
@@ -35,7 +38,8 @@ async def call_llm(
 async def call_llm_openrouter(
     prompt: str, 
     model: str = "google/gemini-2.0-flash-001", 
-    temperature: float = 0.9
+    temperature: float = 0.9,
+    thinking: bool = False
 ) -> str:
     """
     Makes a streaming completion request to OpenRouter's API with rate limiting.
@@ -50,26 +54,33 @@ async def call_llm_openrouter(
         max_retries=2,
     )
 
+    extra_body = {}
+    if thinking:
+        # OpenRouter only allows ONE of 'effort' or 'max_tokens'
+        # We use max_tokens for strict wiring as requested
+        extra_body["reasoning"] = {
+            "max_tokens": REASONING_MAX_TOKENS
+        }
+
     async with llm_rate_limiter:
         collected_content = []
         try:
-            print(f"Sending request to OpenRouter with model: {model}")
+            print(f"Sending request to OpenRouter with model: {model} (Thinking: {thinking})")
             stream = await client.chat.completions.create(
                 model=model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=temperature,
                 top_p=1.0,
                 stream=True,
+                extra_body=extra_body
             )
 
             print("Receiving streamed response...")
             async for chunk in stream:
                 if chunk.choices and chunk.choices[0].delta.content is not None:
                     collected_content.append(chunk.choices[0].delta.content)
-                    # print(f"Chunk received: {chunk.choices[0].delta.content}") # Quiet down logs a bit
 
             result = "".join(collected_content)
-            # print(f"Full response: {result}") # Quiet down logs a bit
             return result
 
         except Exception as e:
