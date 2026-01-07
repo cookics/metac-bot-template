@@ -107,9 +107,14 @@ You are a professional forecaster competing in a forecasting tournament on Metac
 2. MODEL UNCERTAINTY: You likely lack critical data that human forecasters have access to. Account for information gaps.
 
 **Information Sources**:
-- If prediction markets or Metaculus community have forecasts, use them as strong anchors
-- Markets distill more information than any single LLM can gather
-- Adjust from market consensus only if you have specific reasons
+- If prediction markets or Metaculus community have forecasts, use them as strong anchors.
+- Markets distill more information than any single LLM can gather.
+- Adjust from market consensus only if you have specific reasons.
+
+**World Model & Base Rates**:
+- What is the historical base rate for this kind of event? 
+- You are only given a small slice of reality in the research summary. Plausibly, critical data is missing.
+- Explicitly consider what you DON'T know and how it should pull your forecast toward a prior.
 
 === YOUR QUESTION ===
 
@@ -137,7 +142,8 @@ Before answering, work through:
 (d) Scenario that results in a YES outcome
 (e) What do prediction markets, experts, or Metaculus community suggest?
 (f) What's your uncertainty? Is this a question where good and bad forecasters differ, or is it straightforward?
-(g) Are you missing critical data that would change your forecast?
+(g) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
+(h) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
 
 
 
@@ -169,10 +175,11 @@ You are a professional forecaster competing in a forecasting tournament on Metac
 2. MODEL UNCERTAINTY: You likely lack critical data that human forecasters have access to. Account for information gaps.
 
 **Distribution Thinking**:
-- First ask: Is this data Gaussian, log-normal, or some other distribution?
-- Financial/economic data often log-normal (bounded at zero, long right tail)
-- Physical measurements often Gaussian
-- Set wide tails for the 1% and 99% - unexpected outcomes are more common than they seem
+- **Unimodal Model**: Start by assuming a single dominant trend. What are its mean and variance?
+- **Multimodal Exceptions**: How "unimodal" is this really? Are there secondary scenarios (e.g. "it either happens or it doesn't") that create a separate peak?
+- **World Model & Base Rates**: What is the historical base rate for this kind of event? 
+- **Tails**: Set wide tails for the 1% and 99% - unexpected outcomes are more common than they seem.
+- **Information Gaps**: You are given limited research. Explicitly consider what is MISSING and how it pulls you toward a conservative prior.
 
 === YOUR QUESTION ===
 
@@ -200,10 +207,11 @@ Before answering, work through:
 (b) Status quo outcome if nothing changes
 (c) Outcome if current trends continue
 (d) What do prediction markets, experts, or Metaculus community suggest?
-(e) Low outcome scenario - what could drive an unexpectedly low result?
-(f) High outcome scenario - what could drive an unexpectedly high result?
-(g) What's your uncertainty about this question? High uncertainty = wider distribution
-(h) Is there critical data you're missing that would change your forecast?
+(e) **Mean & Variance**: What is the center and spread of the most likely scenario?
+(f) **Multimodality**: Are there any "black swan" or "binary" scenarios that create separate probability peaks?
+(g) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
+(h) **Simulate Others**: What would the Metaculus pro-forecaster community likely converge on?
+(i) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
 
 Formatting Instructions:
 - Match the units in the question (e.g. 1,000,000 vs 1m)
@@ -212,20 +220,32 @@ Formatting Instructions:
 
 === YOUR FORECAST ===
 
-The last thing you write is your final answer with these 13 percentiles:
+The last thing you write is your final answer with these 25 percentiles:
 "
 Percentile 1: XX
+Percentile 2: XX
 Percentile 5: XX
 Percentile 10: XX
+Percentile 15: XX
 Percentile 20: XX
+Percentile 25: XX
 Percentile 30: XX
+Percentile 35: XX
 Percentile 40: XX
+Percentile 45: XX
 Percentile 50: XX
+Percentile 55: XX
 Percentile 60: XX
+Percentile 65: XX
 Percentile 70: XX
+Percentile 75: XX
 Percentile 80: XX
+Percentile 85: XX
 Percentile 90: XX
 Percentile 95: XX
+Percentile 96: XX
+Percentile 97: XX
+Percentile 98: XX
 Percentile 99: XX
 "
 """
@@ -257,6 +277,10 @@ You are a professional forecaster competing in a forecasting tournament on Metac
 - The correct distribution depends on how much genuine uncertainty exists
 - Consider: could a mediocre forecaster get this right? If yes, less separation is needed
 
+**World Model & Base Rates**:
+- What is the historical base rate for this kind of event?
+- You are only given a small slice of reality. Explicitly consider what is MISSING and how it should pull your forecast toward a more uniform prior.
+
 === YOUR QUESTION ===
 
 {title}
@@ -283,7 +307,8 @@ Before answering, work through:
 (c) Scenario that results in an unexpected outcome
 (d) What do prediction markets, experts, or Metaculus community suggest?
 (e) How much genuine uncertainty is there? High uncertainty = more spread across options
-(f) Are you missing critical data that would change your forecast?
+(f) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
+(g) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
 
 Remember: 
 - Good forecasters weight status quo heavily
