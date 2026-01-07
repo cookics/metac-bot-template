@@ -8,13 +8,28 @@ import re
 import numpy as np
 
 from llm import call_llm
-from research_agent import run_research_agent, format_results_for_forecaster
-from config import FORECAST_MODEL, FORECAST_TEMP, FORECAST_THINKING
+from research_agent import run_research_agent, format_results_for_forecaster, run_research_pipeline
+from config import FORECAST_MODEL, FORECAST_TEMP, FORECAST_THINKING, USE_TOOLS
 from prompts import (
     BINARY_PROMPT_TEMPLATE,
     NUMERIC_PROMPT_TEMPLATE,
     MULTIPLE_CHOICE_PROMPT_TEMPLATE,
 )
+
+
+# ========================= HELPERS =========================
+
+def detect_question_type(title: str) -> str:
+    """Detect if a question is a market-related question."""
+    market_keywords = [
+        "treasury", "yield", "bond", "oas", "spread", "vix", 
+        "nvda", "aapl", "msft", "goog", "tsla", "meta", "amzn",
+        "stock", "equity", "commodity", "oil", "gold", "dgs10"
+    ]
+    title_lower = title.lower()
+    if any(kw in title_lower for kw in market_keywords):
+        return "market"
+    return "general"
 
 
 # ========================= EXTRACTION FUNCTIONS =========================
@@ -248,8 +263,13 @@ async def get_binary_gpt_prediction(
     fine_print = question_details["fine_print"]
 
     # Two-agent pipeline: Research Agent filters/summarizes, then Forecasting Agent predicts
-    relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
-    summary_report = format_results_for_forecaster(relevant_results, research_summary)
+    if USE_TOOLS:
+        q_type = detect_question_type(title)
+        research = await run_research_pipeline(title, question_type=q_type)
+        summary_report = research["formatted_for_forecaster"]
+    else:
+        relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
+        summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
     template = prompt_template or BINARY_PROMPT_TEMPLATE
     content = template.format(
@@ -314,8 +334,13 @@ async def get_numeric_gpt_prediction(
     else:
         lower_bound_message = f"The outcome can not be lower than {lower_bound}."
 
-    relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
-    summary_report = format_results_for_forecaster(relevant_results, research_summary)
+    if USE_TOOLS:
+        q_type = detect_question_type(title)
+        research = await run_research_pipeline(title, question_type=q_type)
+        summary_report = research["formatted_for_forecaster"]
+    else:
+        relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
+        summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
     template = prompt_template or NUMERIC_PROMPT_TEMPLATE
     content = template.format(
@@ -382,8 +407,13 @@ async def get_multiple_choice_gpt_prediction(
     fine_print = question_details["fine_print"]
     options = question_details["options"]
 
-    relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
-    summary_report = format_results_for_forecaster(relevant_results, research_summary)
+    if USE_TOOLS:
+        q_type = detect_question_type(title)
+        research = await run_research_pipeline(title, question_type=q_type)
+        summary_report = research["formatted_for_forecaster"]
+    else:
+        relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
+        summary_report = format_results_for_forecaster(relevant_results, research_summary)
 
     template = prompt_template or MULTIPLE_CHOICE_PROMPT_TEMPLATE
     content = template.format(

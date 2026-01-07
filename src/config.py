@@ -15,6 +15,7 @@ NUM_RUNS_PER_QUESTION = 1  # The median forecast is taken between runs
 SKIP_PREVIOUSLY_FORECASTED_QUESTIONS = True
 GET_NEWS = True  # Set to True to enable EXA research
 USE_SMART_SEARCHER = False  # Set to True to use forecasting-tools SmartSearcher instead of pure Exa search
+USE_TOOLS = True  # Set to True to enable agentic tool-calling during research
 
 # ========================= API KEYS =========================
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
@@ -27,8 +28,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # For EXA Smart Searcher
 LLM_PROVIDER = "openrouter"
 
 # ========================= MODE SELECTION =========================
-# Toggle between EXPENSIVE (high quality) and CHEAP (cost-effective) mode
-EXPENSIVE_MODE = False  # Set to True for premium models, False for budget models
+#Toggle between EXPENSIVE (high quality) and CHEAP (cost-effective) mode
+EXPENSIVE_MODE = True  # Set to True for premium models, False for budget models
 
 # ========================= MODEL PRESETS =========================
 # EXPENSIVE MODE:
