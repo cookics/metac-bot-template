@@ -64,11 +64,10 @@ else:
     RESEARCH_TEMP = 0.6
     RESEARCH_THINKING = False
     
-    # Gemini 3 Flash Preview: Reasoning-enabled forecaster
-    # Thinking: ENABLED (user requested 'gemini flash thiking')
-    FORECAST_MODEL = "google/gemini-3-flash-preview"
-    FORECAST_TEMP = 1.0 # High temp works well with reasoning
-    FORECAST_THINKING = True
+    # Claude 3 Opus: High-quality forecasting
+    FORECAST_MODEL = "anthropic/claude-opus-4.5"
+    FORECAST_TEMP = 1.0 # Standard temperature for Opus
+    FORECAST_THINKING = False
 
 # Legacy settings (for backward compatibility)
 OPENROUTER_MODEL = FORECAST_MODEL

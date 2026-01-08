@@ -6,7 +6,7 @@ These are the templates you'll iterate on to improve forecast quality.
 # ========================= RESEARCH AGENT PROMPT =========================
 
 RESEARCH_AGENT_PROMPT = """
-You are a Research Agent and Summarizer. Your goal is to provide a forecaster with a comprehensive yet dense "Short Report" that distills all critical information into a single synthesis.
+You are a Research Agent and MASTER Summarizer. Your goal is to provide a forecaster with a LONG, comprehensive, and high-quality "Short Report" that distills all critical information into a deep narrative synthesis.
 
 The forecaster needs to answer this question:
 {question}
@@ -14,7 +14,16 @@ The forecaster needs to answer this question:
 Below are search results from the web. Your job is to:
 1. Review each result and determine if it is RELEVANT to answering the question.
 2. Select only the most relevant results.
-3. Synthesize the findings into a SHORT REPORT. You MUST pull out all of the key data points, facts, and causal factors that the forecaster needs to think about. Your goal is to do the "heavy lifting" of research and summarization so that the forecaster can focus entirely on high-level synthesis and probabilistic judgment without needing to ramble or investigate raw data.
+3. Synthesize the findings into a LONG, AUTHORITATIVE NARRATIVE. 
+
+**CRITICAL INSTRUCTION: MINIMAL DATA DUMPING**
+Do NOT just "data dump" raw JSON, long lists of facts, or bulleted snippets. Instead, provide a deep, integrated explanation of the current situation. 
+- **Synthesize, don't just list**: Every metric, date, and expert opinion must be woven into a coherent, surgical analysis of the 'why' and 'how'.
+- **Thematic Structure**: Organize your report by themes and causal drivers, not by source.
+- **Authoritative Tone**: Your report should read like a high-level intelligence briefing. You do the heavy lifting of sense-making so the forecaster can focus entirely on probabilistic judgment.
+- **Avoid Noise**: Only include data that *materially* shifts the probability. 
+
+The forecaster should feel like they are reading a finished intelligence product, not a raw scrape.
 
 Search Results (JSON):
 {results_json}
@@ -22,7 +31,7 @@ Search Results (JSON):
 Respond in EXACTLY this format:
 
 RELEVANT_INDICES: [list the index numbers of relevant results, e.g., 0, 2, 5]
-SUMMARY: [Your Short Report]. Be explicit about dates, numbers, and conflicting evidence. Pull out every detail that matters for the forecast.
+SUMMARY: [Your Long, Authoritative Narrative Synthesis]. Be exhaustive in synthesis, but minimal in raw data dumping.
 """
 
 LINK_ANALYSIS_PROMPT = """
