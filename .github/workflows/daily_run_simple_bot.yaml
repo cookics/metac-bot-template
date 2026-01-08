@@ -5,9 +5,9 @@ on:
   schedule:
     - cron: "*/30 * * * *" # runs every 30 minutes. Make sure to skip already forecasted questions!
 
-# Give the GITHUB_TOKEN permissions to update the run title and check runs
+# Give the GITHUB_TOKEN permissions to update the repo content and run title
 permissions:
-  contents: read
+  contents: write
   actions: write
   checks: write
 
@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags
       - uses: actions/setup-python@v4
         with:
           python-version: "3.11"
@@ -41,6 +43,22 @@ jobs:
           METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      - name: Commit and Push Tournament Records
+        if: always()
+        run: |
+          git config --global user.name "metaculus-bot[bot]"
+          git config --global user.email "metaculus-bot@users.noreply.github.com"
+          
+          # Stage all changes in tournament folders and logs (if any)
+          git add spring-aib-2026/ minibench/ logs/
+          
+          # Only commit if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "🤖 Update tournament records and logs [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          else
+            echo "No changes in records to commit."
+          fi
       - name: Job Summary
         if: always()
         run: |
