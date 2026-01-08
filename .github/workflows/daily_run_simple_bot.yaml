@@ -49,8 +49,12 @@ jobs:
           git config --global user.name "metaculus-bot[bot]"
           git config --global user.email "metaculus-bot@users.noreply.github.com"
           
-          # Stage all changes in tournament folders and logs (if any)
-          git add spring-aib-2026/ minibench/ logs/
+          # Stage changes only if directories exist to avoid pathspec errors
+          for dir in spring-aib-2026/ minibench/ logs/; do
+            if [ -d "$dir" ]; then
+              git add "$dir"
+            fi
+          done
           
           # Only commit if there are changes
           if ! git diff --cached --quiet; then
