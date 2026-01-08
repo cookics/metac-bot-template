@@ -1,0 +1,608 @@
+=== RAW RESEARCH LOG: When will the first weakly general AI system be devised, tested, and publicly announced? ===
+Timestamp: 20260107_205142
+================================================================================
+
+[SYSTEM]
+CONTENT:
+You are a Research Agent with access to specialized tools for market data and forecasting.
+
+Your job is to gather information to help forecast the following question. You can use tools to:
+1. Get market forecast distributions (bonds, spreads, VIX) - these return percentile data
+2. Fetch financial data (Yahoo Finance, options, FRED economic data)
+3. Search the web for relevant news and context
+
+For MARKET FORECAST questions (bond yields, stock spreads, VIX levels), use the appropriate forecast tool FIRST.
+These tools run Monte Carlo simulations and return probability distributions.
+
+For GENERAL questions, use data tools and web search to gather context.
+
+After gathering data, write a SHORT REPORT synthesizing:
+- Key quantitative data from tool calls
+- Probability distributions (if from forecast tools)
+- Relevant context and factors
+
+Be concise. The forecaster will use your report to make predictions.
+
+------------------------------------------------------------
+
+[USER]
+CONTENT:
+Question to forecast:
+When will the first weakly general AI system be devised, tested, and publicly announced?
+
+Initial search results:
+[Source 1]
+Title: Integral AI Unveils World’s First AGI-capable Model
+Date: 2025-12-08T00:00:00.000Z
+URL: https://www.morningstar.com/news/business-wire/20251207766692/integral-ai-unveils-worlds-first-agi-capable-model
+Content: Integral AI Unveils World’s First AGI-capable Model | Morningstar
+[![Morningstar](https://www.morningstar.com/assets/img/morningstar.d826858.svg)](https://www.morningstar.com/)
+[](https://www.morningstar.com/login?destination=https://www.morningstar.com/news/business-wire/20251207766692/integral-ai-unveils-worlds-first-agi-capable-model)
+# Integral AI Unveils World’s First AGI-capable Model
+![](https://www.morningstar.com/assets/img/business-wire.45f21a7.svg)
+Provided byBusiness WireDec 8, 2025, 11:30:00 AM
+**Integral AI Unveils World’s First AGI-capable Model**
+*Team led by ex-Googlers generative AI pioneers, Jad Tarifi &amp; Nima Asgharbeygi, create an interactive sandbox showcasing the world’s first AGI-capable model*
+[Integral AI](https://cts.businesswire.com/ct/CT?id=smartlink&amp;url
+
+[Source 2]
+Title: Are Metaculus AI Timelines Inconsistent? - LessWrong
+Date: 2024-01-01T00:00:00.000Z
+URL: https://www.lesswrong.com/posts/FCgpT4sj5BSEdeHHy/are-metaculus-ai-timelines-inconsistent
+Content: x
+## [LESSWRONG](https://www.lesswrong.com/)
+[is fundraising!](https://www.lesswrong.com/posts/eKGdCNdKjvTBG9i6y)
+[LW](https://www.lesswrong.com/)
+Login
+Are Metaculus AI Timelines Inconsistent? —LessWrong
+[Prediction Markets](https://www.lesswrong.com/w/prediction-markets)[AI](https://www.lesswrong.com/w/ai)[
+Frontpage
+](https://www.lesswrong.com/posts/5conQhfa4rgb4SaWx/site-guide-personal-blogposts-vs-frontpage-posts)
+[](#)
+# 17
+# [Are Metaculus AI TimelinesInconsistent?](https://www.lesswrong.com/posts/FCgpT4sj5BSEdeHHy/are-metaculus-ai-timelines-inconsistent)
+by[Chris\_Leong](https://www.lesswrong.com/users/chris_leong?from=post_header)
+2nd Jan 2024
+2min read
+[7](#comments)
+[](#)
+# 17
+Review
+The Metaculus prediction markets on AI timelines are the most referenced ones that I&#x27;ve see
+
+[Source 3]
+Title: AGI Timelines Dashboard: When Will We Get AGI?
+Date: None
+URL: https://agi-timelines-dashboard.vercel.app/
+Content: When Will We Get AGI? | AGI Timelines Dashboard
+# When might we achieve AGI?
+2031(80% confidence:2027–2044)Our combined forecast estimates AGI will arrive in2031, as ofJanuary 4, 2026.
+## AGI Timeline Forecasts
+Median year predictions from multiple forecasting sources.
+Data sources:[Metaculus](https://www.metaculus.com),[Manifold](https://manifold.markets),[Kalshi](https://kalshi.com)
+Download data
+2060Full
+LogLinear
+### Individual Forecasts:
+[## Date of &quot;weakly general AI&quot; - Metaculus
+](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/)
+From the forecasting site Metaculus, full title: &quot;When will the first weakly general AI system be devised, tested, and publicly announced?&quot;
+Metaculus Prediction (Year)
+Source:[Metaculus](https://www.meta
+
+[Source 4]
+Title: When Will the First General AI Be Announced? - Metaculus
+Date: None
+URL: https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/
+Content: When Will the First General AI Be Announced?
+[# ](https://www.metaculus.com/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Services](https://www.metaculus.com/services/)
+* [News](https://www.metaculus.com/news/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Questions](https://www.metaculus.com/questions/)
+* More
+* Log inSign Up
+* a/文
+* Log inSign Up
+[**638**comments](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/#comments)
+**1.8k**forecasters
+# When will the first general AI system be devised, tested, and publicly announced?
+Current estimate
+Jun 2033
+Share
+Predict
+Top Key Fac
+
+[Source 5]
+Title: When Will Weakly General AI Arrive? - Metaculus
+Date: None
+URL: https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/
+Content: Question
+
+# When will the first weakly general AI system be devised, tested, and publicly announced?
+
+216
+
+[534 comments534](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)
+
+1d1w2mall
+
+Community Prediction15 Mar 202424 Dec 202426 Nov 202530 Dec 202618 Apr 202802 Nov 2029Sep 2031Nov 2033Apr 12Apr 16Apr 20Apr 24Apr 28May 02May 06May 10May 14May 18May 22May 26May 30Jun 03Jun 07now
+
+Total Forecasters1642
+
+Community Prediction
+31 Dec 2026
+
+(01 Nov 2025 - 27 Oct 2029)
+
+### Make a Prediction
+
+SliderTable
+
+PDF
+
+CDF
+
+20202020202020212022202520312043206521102200
+
+Sign Up to Predict
+
+| 2200 |
+| --- | --- | --- | --- | --- |
+| community | 0.2% | 01 Nov 2025 | 31 Dec 2026 | 27 Oct 2029 | 1.8% |
+| My Prediction | — | — | — | — | — |
+
+| Lower bound | community
+
+
+Based on these search results and your available tools:
+1. If you see an interesting link, use crawl_urls to get full content
+2. If you need financial data, use the data tools (yahoo, fred, options)
+3. If this is a market question, use forecast tools for distributions
+
+When done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.
+Focus on NUMBERS and FACTS that help forecasting.
+
+
+------------------------------------------------------------
+
+[ASSISTANT]
+
+[TOOL CALLS]
+  - crawl_urls({"urls": ["https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/", "https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/", "https://agi-timelines-dashboard.vercel.app/", "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/", "https://www.morningstar.com/news/business-wire/20251207766692/integral-ai-unveils-worlds-first-agi-capable-model"], "max_content_length": 3000})
+  - search_web({"query": "\"weakly general AI\" OR AGI Metaculus current prediction", "num_results": 10, "days_back": 60})
+  - search_web({"query": "recent AGI announcements 2024 \"weakly general\"", "num_results": 10, "days_back": 30})
+
+------------------------------------------------------------
+
+[TOOL]
+CONTENT:
+{
+  "type": "data_report",
+  "title": "Crawled 5 pages",
+  "source": "Exa Crawl",
+  "data": {
+    "pages": [
+      {
+        "url": "https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/",
+        "title": "When Will Weakly General AI Arrive?",
+        "content": "[**567** comments](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n**1.7k** forecasters\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\nCurrent estimate\n\n13 Nov 2027\n\nShare\n\nPredict\n\nTop Key Factors\n\nView all (5)\n\nChina starts a war with the land of Taiwan BEFORE said weakly general AI\n\nImpact\n\nEarlier\n\nStrength\n\n27 votes\n\n\u2191 reliable >50-step agent chains with published evals\n\nImpact\n\nlater\n\nStrength\n\n1 vote\n\n\u2193 grid/permit delays & export controls on HBM/nodes\n\nImpact\n\nlater\n\nStrength\n\n0 vote\n\n\u2191 multi-year compute/colo contracts confirmed via filings\n\nImpact\n\nlater\n\nStrength\n\n0 vote\n\nAI become student of arts university in Vienna\n\nImpact\n\nlater\n\nStrength\n\n22 votes\n\nCommentsTimelineKey FactorsQuestion Info\n\nTimeline\n\n1d1w2mall\n\nResolution Criteria\n\nKey Factors\n\nBackground Info\n\nFollowembed\n\nAuthors:\n\n[Anthony](https://www.metaculus.com/accounts/profile/8/)\n\nOpened:Jan 18, 2020\n\nCloses:Jan 1, 2200\n\nScheduled resolution:Jan 1, 2200\n\nSpot Scoring Time:Jan 20, 2020\n\n[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)\n\n[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&for_main_feed=false)\n\n[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&for_main_feed=false)\n\nSimilar Questions\n\n[**When will the first general AI system be devised, tested, and publicly announced?** \\\n\\\nAug 2033\\\n\\\n(07 Oct 2028 - Mar 2046)\\\n\\\nAug 2033\\\n\\\n(07 Oct 2028 - Mar 2046)\\\n\\\n**1.8k** forecasters](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/) [**After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?** \\\n\\\n36.5 months\\\n\\\n(9.91 - 147)\\\n\\\n36.5 months\\\n\\\n(9.91 - 147)\\\n\\\n**335** forecasters](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/) [**Will a major AI lab claim in 2025 that they have developed AGI?**\\\n\\\n1%chance\\\n\\\n371](https://www.metaculus.com/questions/30923/major-ai-lab-claims-to-have-created-agi-in-2025/)\n\nShow More Questions",
+        "content_length": 2170
+      },
+      {
+        "url": "https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/",
+        "title": "When will the first general AI system be devised, tested, and publicly announced?",
+        "content": "When Will the First General AI Be Announced?\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questions/)\n* More\n* Log inSign Up\n* a/\u6587\n* Log inSign Up\n[**638**comments](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/#comments)\n**1.8k**forecasters\n# When will the first general AI system be devised, tested, and publicly announced?\nCurrent estimate\nJun 2033\nShare\nPredict\nTop Key Factors\nView all (9)\n\u2191reliable &gt;50-step agent chains with published evals\nImpact\nlater\nStrength\n6 votes\nAI companies dont get funding (due to AI bubble bursting)\nImpact\nEarlier\nStrength\n10 votes\n\u2193grid/permit delays &amp; export controls on HBM/nodes\nImpact\nEarlier\nStrength\n3 votes\nSomeone solves the alignment problem (I'd hope timelines are longer without this &amp; shorter with it)\nImpact\nlater\nStrength\n6 votes\nChina starts a war with Taiwan\nImpact\nEarlier\nStrength\n80 votes\nStrong regulation of AI companies by US government\nImpact\nEarlier\nStrength\n48 votes\nGenuinely good US government policy on AI safety (something like SB 1047)\nImpact\nlater\nStrength\n5 votes\n\u2191multi-year compute/colo contracts confirmed via filings\nImpact\nlater\nStrength\n5 votes\nCommentsTimelineIn the NewsKey FactorsQuestion Info\nTimeline\n1d1w2mall\nResolution Criteria\nKey Factors\nBackground Info\nFollowembed\nAuthors:\n[Matthew\\_Barnett](https://www.metaculus.com/accounts/profile/108770/)\nOpened:Aug 23, 2020\nCloses:Dec 24, 2199\nScheduled resolution:Dec 24, 2199\nSpot Scoring Time:Aug 25, 2020\n[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)\n[AGI Outcomes](https://www.metaculus.com/tournament/agi-horizons/)\n[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&amp;for_main_feed=false)\n[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&amp;for_main_feed=false)\nNews Match\n[![The Conversation logo](https://www.metaculus.com/newsmatch/favicon?url=https%3A%2F%2Fcdn.theconversation.com%2Fstatic%2Ftc%2F%40theconversation%2Fui%2Fdist%2Flogos%2Ffavicon-ae7bd7a3096e6cda828b4576fa9b32c6.ico)\nAI agents arrived in 2025 \u2013here\u2019s what happened and the challenges ahead in 2026\nThe Conversation\u2022Dec 29, 2025\n](https://theconversation.com/ai-agents-arrived-in-2025-heres-what-happened-and-the-challenges-ahead-in-2026-272325)\n[![Wired logo](https://www.metaculus.com/newsmatch/favicon?url=https%3A%2F%2Fwww.wired.com%2Ffavicon.ico)\n6 Scary Predictions for AI in 2026\nWired\u2022Dec 26, 2025\n](https://www.wired.com/story/backchannel-2026-predictions-tech-robots-ai/)\n[Learn more](https://www.metaculus.com/faq",
+        "content_length": 3000
+      },
+      {
+        "url": "https://agi-timelines-dashboard.vercel.app/",
+        "title": "When might we achieve AGI?",
+        "content": "When Will We Get AGI? | AGI Timelines Dashboard\n# When might we achieve AGI?\n2031(80% confidence:2027\u20132044)Our combined forecast estimates AGI will arrive in2031, as ofJanuary 4, 2026.\n## AGI Timeline Forecasts\nMedian year predictions from multiple forecasting sources.\nData sources:[Metaculus](https://www.metaculus.com),[Manifold](https://manifold.markets),[Kalshi](https://kalshi.com)\nDownload data\n2060Full\nLogLinear\n### Individual Forecasts:\n[## Date of &quot;weakly general AI&quot; - Metaculus\n](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/)\nFrom the forecasting site Metaculus, full title: &quot;When will the first weakly general AI system be devised, tested, and publicly announced?&quot;\nMetaculus Prediction (Year)\nSource:[Metaculus](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/)\nDownload data\n2060Full\nLogLinear\n[## Date of &quot;general AI&quot; - Metaculus\n](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/)\nFrom the forecasting site Metaculus, full title: &quot;When will the first general AI system be devised, tested, and publicly announced?&quot;\nMetaculus Prediction (Year)\nSource:[Metaculus](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/)\nDownload data\n2060Full\nLogLinear\n[## Date of AI passing &quot;difficult Turing Test&quot; - Metaculus\n](https://www.metaculus.com/questions/11861/when-will-ai-pass-a-difficult-turing-test/)\nFrom the forecasting site Metaculus, full title: &quot;When will an AI first pass a long, informed, adversarial Turing test?&quot;\nMetaculus Prediction (Year)\nSource:[Metaculus](https://www.metaculus.com/questions/11861/when-will-ai-pass-a-difficult-turing-test/)\nDownload data\n2060Full\nLogLinear\n[## When will AGI arrive? (Manifold Markets Distribution)\n](https://manifold.markets/ManifoldAI/agi-when-resolves-to-the-year-in-wh-d5c5ad8e4708)\nFrom the prediction market Manifold Markets, full title: &quot;AGI When? [High Quality Turing Test]&quot;\nManifold Prediction (Year)\nSource:[Manifold Markets](https://manifold.markets/ManifoldAI/agi-when-resolves-to-the-year-in-wh-d5c5ad8e4708)\nDownload data\n2060Full\nLogLinear\n[## Will AI pass the Turing Test before 2030? (Kalshi)\n](https://kalshi.com/markets/aituring/ai-passes-turing-test)\nFrom the prediction market Kalshi. Shows probability (0-100%) that AI passes the Turing test before 2030.\nKalshi Prediction (% before 2030)\nSource:[Kalshi](https://kalshi.com/markets/aituring/ai-passes-turing-test)\nDownload data",
+        "content_length": 2561
+      },
+      {
+        "url": "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/",
+        "title": "When Will Weakly General AI Arrive?",
+        "content": "Question\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\n216\n\n[534 comments534](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n1d1w2mall\n\nCommunity Prediction15 Mar 202424 Dec 202426 Nov 202530 Dec 202618 Apr 202802 Nov 2029Sep 2031Nov 2033Apr 12Apr 16Apr 20Apr 24Apr 28May 02May 06May 10May 14May 18May 22May 26May 30Jun 03Jun 07now\n\nTotal Forecasters1642\n\nCommunity Prediction\n31 Dec 2026\n\n(01 Nov 2025 - 27 Oct 2029)\n\n### Make a Prediction\n\nSliderTable\n\nPDF\n\nCDF\n\n20202020202020212022202520312043206521102200\n\nSign Up to Predict\n\n| 2200 |\n| --- | --- | --- | --- | --- |\n| community | 0.2% | 01 Nov 2025 | 31 Dec 2026 | 27 Oct 2029 | 1.8% |\n| My Prediction | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n\n| Lower bound | community | My Prediction |\n| --- | --- | --- |\n| 2200 | 1.8% | \u2014 |\n\nResolution Criteria\n\nKey Factors\n\nChina starts a war with the land of Taiwan BEFORE said weakly general AI\n\nIncreases likelihoodDecreases likelihood\n\nAI become student of arts university in Vienna\n\nIncreases likelihoodDecreases likelihood\n\nBackground Info\n\nAuthors:\n\n[Anthony](https://www.metaculus.com/accounts/profile/8/)\n\nOpened:Jan 18, 2020\n\nCloses:Jan 1, 2200\n\nScheduled resolution:Jan 1, 2200\n\nSpot Scoring Time:Jan 20, 2020\n\n[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)\n\n[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&for_main_feed=false)\n\n[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&for_main_feed=false)\n\n[Turing test](https://www.metaculus.com/questions/?tags=turing-test&for_main_feed=false)\n\n[Machine learning](https://www.metaculus.com/questions/?tags=machine-learning&for_main_feed=false)\n\n[Philosophy](https://www.metaculus.com/questions/?tags=philosophy&for_main_feed=false)\n\n[Linguistics](https://www.metaculus.com/questions/?tags=linguistics&for_main_feed=false)\n\n[Data analysis](https://www.metaculus.com/questions/?tags=data-analysis&for_main_feed=false)\n\nSubmit Tags Feedback\n\n## Comments\n\nLog in\n\n534 comments\n\nrecent\n\n[**nickmoes**](https://www.metaculus.com/accounts/profile/273690/)\u00b7 [Jun 10, 2025](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/#comment-361188)\n\n3\n\nChanged my mind (0)Reply\n\n[**hold\\_my\\_fish**](https://www.metaculus.com/accounts/profile/127280/)\u00b7 [May 28, 2025](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/#comment-352294)\n\n11\n\nChanged my mind (1)Reply\n\nhide 2 replies\n\n[**Sourian**](https://www.metaculus.com/accounts/profile/121058/)\u00b7 [Jun 8, 2025](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/#comment-360662)\n\n4\n\nChanged my mind (0)Reply\n\n[**Order**](https://www.m",
+        "content_length": 3000
+      },
+      {
+        "url": "https://www.morningstar.com/news/business-wire/20251207766692/integral-ai-unveils-worlds-first-agi-capable-model",
+        "title": "Integral AI Unveils World\u2019s First AGI-capable Model",
+        "content": "Integral AI Unveils World\u2019s First AGI-capable Model | Morningstar\n[![Morningstar](https://www.morningstar.com/assets/img/morningstar.d826858.svg)](https://www.morningstar.com/)\n[](https://www.morningstar.com/login?destination=https://www.morningstar.com/news/business-wire/20251207766692/integral-ai-unveils-worlds-first-agi-capable-model)\n# Integral AI Unveils World\u2019s First AGI-capable Model\n![](https://www.morningstar.com/assets/img/business-wire.45f21a7.svg)\nProvided byBusiness WireDec 8, 2025, 11:30:00 AM\n**Integral AI Unveils World\u2019s First AGI-capable Model**\n*Team led by ex-Googlers generative AI pioneers, Jad Tarifi &amp; Nima Asgharbeygi, create an interactive sandbox showcasing the world\u2019s first AGI-capable model*\n[Integral AI](https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=https://www.integral.ai/&amp;esheet=54371227&amp;newsitemid=20251207766692&amp;lan=en-US&amp;anchor=Integral+AI&amp;index=1&amp;md5=65e989188e2158e47700b70a4a134c12), a global leader in the development of embodied AGI, today announced the successful testing of the world\u2019s first AGI-capable[model](https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=https://youtu.be/6vTkPHk32l8&amp;esheet=54371227&amp;newsitemid=20251207766692&amp;lan=en-US&amp;anchor=model&amp;index=2&amp;md5=3e812d9822cac53eab275d0667cdbd9a). Led by AGI expert and ex-Google AI veteran, Jad Tarifi, company engineers have successfully developed a system that autonomously learns new skills safely, efficiently, and reliably. Thus, marking a fundamental leap beyond the limits of current AI technologies and establishing a scalable foundation for self-improving generality intelligence moving towards superintelligence.\nDuring the research stage, Integral AI identified clearly defined parameters to effectively measure and determine the arrival of AGI by using three fundamental qualifiers:**Autonomous Skill Learning**defined as a system that must teach itself entirely new skills in novel domains without pre-existing datasets or human intervention,**Safe and Reliable Mastery**defined as learning that must occur without catastrophic risks or unintended side effects, and**Energy Efficiency**defined as the total energy cost of system learning being equal to or lower than that of a human acquiring the same skill. For Integral AI engineers, these principles served as fundamental cornerstones and developmental benchmarks during the inception and testing of this first-in-its-class AGI learning system.\nMirroring the multi-layered neocortex that underpins human thought, Integral AI\u2019s model architecture grows, abstracts, plans, and acts as a unified system. Model testing revealed unprecedented adaptability, particularly in autonomous robotics, where robots were observed acquiring new skills in real-world environments without human supervision.\n\u201c*Today\u2019s announcement is more than just a technical achievement, it marks the next chapter in the story of human civilization*,\u201d said Jad Tarifi, Ph.D., CEO and co-found",
+        "content_length": 3000
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T20:51:55.881836"
+}
+Result for Call ID call_38073627 (crawl_urls):
+{
+  "type": "data_report",
+  "title": "Crawled 5 pages",
+  "source": "Exa Crawl",
+  "data": {
+    "pages": [
+      {
+        "url": "https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/",
+        "title": "When Will Weakly General AI Arrive?",
+        "content": "[**567** comments](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n**1.7k** forecasters\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\nCurrent estimate\n\n13 Nov 2027\n\nShare\n\nPredict\n\nTop Key Factors\n\nView all (5)\n\nChina starts a war with the land of Taiwan BEFORE said weakly general AI\n\nImpact\n\nEarlier\n\nStrength\n\n27 votes\n\n\u2191 reliable >50-step agent chains with published evals\n\nImpact\n\nlater\n\nStrength\n\n1 vote\n\n\u2193 grid/permit delays & export controls on HBM/nodes\n\nImpact\n\nlater\n\nStrength\n\n0 vote\n\n\u2191 multi-year compute/colo contracts confirmed via filings\n\nImpact\n\nlater\n\nStrength\n\n0 vote\n\nAI become student of arts university in Vienna\n\nImpact\n\nlater\n\nStrength\n\n22 votes\n\nCommentsTimelineKey FactorsQuestion Info\n\nTimeline\n\n1d1w2mall\n\nResolution Criteria\n\nKey Factors\n\nBackground Info\n\nFollowembed\n\nAuthors:\n\n[Anthony](https://www.metaculus.com/accounts/profile/8/)\n\nOpened:Jan 18, 2020\n\nCloses:Jan 1, 2200\n\nScheduled resolution:Jan 1, 2200\n\nSpot Scoring Time:Jan 20, 2020\n\n[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)\n\n[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&for_main_feed=false)\n\n[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&for_main_feed=false)\n\nSimilar Questions\n\n[**When will the first general AI system be devised, tested, and publicly announced?** \\\n\\\nAug 2033\\\n\\\n(07 Oct 2028 - Mar 2046)\\\n\\\nAug 2033\\\n\\\n(07 Oct 2028 - Mar 2046)\\\n\\\n**1.8k** forecasters](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/) [**After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?** \\\n\\\n36.5 months\\\n\\\n(9.91 - 147)\\\n\\\n36.5 months\\\n\\\n(9.91 - 147)\\\n\\\n**335** forecasters](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/) [**Will a major AI lab claim in 2025 that they have developed AGI?**\\\n\\\n1%chance\\\n\\\n371](https://www.metaculus.com/questions/30923/major-ai-lab-claims-to-have-created-agi-in-2025/)\n\nShow More Questions",
+        "content_length": 2170
+      },
+      {
+        "url": "https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/",
+        "title": "When will the first general AI system be devised, tested, and publicly announced?",
+        "content": "When Will the First General AI Be Announced?\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questions/)\n* More\n* Log inSign Up\n* a/\u6587\n* Log inSign Up\n[**638**comments](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/#comments)\n**1.8k**forecasters\n# When will the first general AI system be devised, tested, and publicly announced?\nCurrent estimate\nJun 2033\nShare\nPredict\nTop Key Factors\nView all (9)\n\u2191reliable &gt;50-step agent chains with published evals\nImpact\nlater\nStrength\n6 votes\nAI companies dont get funding (due to AI bubble bursting)\nImpact\nEarlier\nStrength\n10 votes\n\u2193grid/permit delays &amp; export controls on HBM/nodes\nImpact\nEarlier\nStrength\n3 votes\nSomeone solves the alignment problem (I'd hope timelines are longer without this &amp; shorter with it)\nImpact\nlater\nStrength\n6 votes\nChina starts a war with Taiwan\nImpact\nEarlier\nStrength\n80 votes\nStrong regulation of AI companies by US government\nImpact\nEarlier\nStrength\n48 votes\nGenuinely good US government policy on AI safety (something like SB 1047)\nImpact\nlater\nStrength\n5 votes\n\u2191multi-year compute/colo contracts confirmed via filings\nImpact\nlater\nStrength\n5 votes\nCommentsTimelineIn the NewsKey FactorsQuestion Info\nTimeline\n1d1w2mall\nResolution Criteria\nKey Factors\nBackground Info\nFollowembed\nAuthors:\n[Matthew\\_Barnett](https://www.metaculus.com/accounts/profile/108770/)\nOpened:Aug 23, 2020\nCloses:Dec 24, 2199\nScheduled resolution:Dec 24, 2199\nSpot Scoring Time:Aug 25, 2020\n[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)\n[AGI Outcomes](https://www.metaculus.com/tournament/agi-horizons/)\n[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&amp;for_main_feed=false)\n[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&amp;for_main_feed=false)\nNews Match\n[![The Conversation logo](https://www.metaculus.com/newsmatch/favicon?url=https%3A%2F%2Fcdn.theconversation.com%2Fstatic%2Ftc%2F%40theconversation%2Fui%2Fdist%2Flogos%2Ffavicon-ae7bd7a3096e6cda828b4576fa9b32c6.ico)\nAI agents arrived in 2025 \u2013here\u2019s what happened and the challenges ahead in 2026\nThe Conversation\u2022Dec 29, 2025\n](https://theconversation.com/ai-agents-arrived-in-2025-heres-what-happened-and-the-challenges-ahead-in-2026-272325)\n[![Wired logo](https://www.metaculus.com/newsmatch/favicon?url=https%3A%2F%2Fwww.wired.com%2Ffavicon.ico)\n6 Scary Predictions for AI in 2026\nWired\u2022Dec 26, 2025\n](https://www.wired.com/story/backchannel-2026-predictions-tech-robots-ai/)\n[Learn more](https://www.metaculus.com/faq",
+        "content_length": 3000
+      },
+      {
+        "url": "https://agi-timelines-dashboard.vercel.app/",
+        "title": "When might we achieve AGI?",
+        "content": "When Will We Get AGI? | AGI Timelines Dashboard\n# When might we achieve AGI?\n2031(80% confidence:2027\u20132044)Our combined forecast estimates AGI will arrive in2031, as ofJanuary 4, 2026.\n## AGI Timeline Forecasts\nMedian year predictions from multiple forecasting sources.\nData sources:[Metaculus](https://www.metaculus.com),[Manifold](https://manifold.markets),[Kalshi](https://kalshi.com)\nDownload data\n2060Full\nLogLinear\n### Individual Forecasts:\n[## Date of &quot;weakly general AI&quot; - Metaculus\n](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/)\nFrom the forecasting site Metaculus, full title: &quot;When will the first weakly general AI system be devised, tested, and publicly announced?&quot;\nMetaculus Prediction (Year)\nSource:[Metaculus](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/)\nDownload data\n2060Full\nLogLinear\n[## Date of &quot;general AI&quot; - Metaculus\n](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/)\nFrom the forecasting site Metaculus, full title: &quot;When will the first general AI system be devised, tested, and publicly announced?&quot;\nMetaculus Prediction (Year)\nSource:[Metaculus](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/)\nDownload data\n2060Full\nLogLinear\n[## Date of AI passing &quot;difficult Turing Test&quot; - Metaculus\n](https://www.metaculus.com/questions/11861/when-will-ai-pass-a-difficult-turing-test/)\nFrom the forecasting site Metaculus, full title: &quot;When will an AI first pass a long, informed, adversarial Turing test?&quot;\nMetaculus Prediction (Year)\nSource:[Metaculus](https://www.metaculus.com/questions/11861/when-will-ai-pass-a-difficult-turing-test/)\nDownload data\n2060Full\nLogLinear\n[## When will AGI arrive? (Manifold Markets Distribution)\n](https://manifold.markets/ManifoldAI/agi-when-resolves-to-the-year-in-wh-d5c5ad8e4708)\nFrom the prediction market Manifold Markets, full title: &quot;AGI When? [High Quality Turing Test]&quot;\nManifold Prediction (Year)\nSource:[Manifold Markets](https://manifold.markets/ManifoldAI/agi-when-resolves-to-the-year-in-wh-d5c5ad8e4708)\nDownload data\n2060Full\nLogLinear\n[## Will AI pass the Turing Test before 2030? (Kalshi)\n](https://kalshi.com/markets/aituring/ai-passes-turing-test)\nFrom the prediction market Kalshi. Shows probability (0-100%) that AI passes the Turing test before 2030.\nKalshi Prediction (% before 2030)\nSource:[Kalshi](https://kalshi.com/markets/aituring/ai-passes-turing-test)\nDownload data",
+        "content_length": 2561
+      },
+      {
+        "url": "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/",
+        "title": "When Will Weakly General AI Arrive?",
+        "content": "Question\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\n216\n\n[534 comments534](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n1d1w2mall\n\nCommunity Prediction15 Mar 202424 Dec 202426 Nov 202530 Dec 202618 Apr 202802 Nov 2029Sep 2031Nov 2033Apr 12Apr 16Apr 20Apr 24Apr 28May 02May 06May 10May 14May 18May 22May 26May 30Jun 03Jun 07now\n\nTotal Forecasters1642\n\nCommunity Prediction\n31 Dec 2026\n\n(01 Nov 2025 - 27 Oct 2029)\n\n### Make a Prediction\n\nSliderTable\n\nPDF\n\nCDF\n\n20202020202020212022202520312043206521102200\n\nSign Up to Predict\n\n| 2200 |\n| --- | --- | --- | --- | --- |\n| community | 0.2% | 01 Nov 2025 | 31 Dec 2026 | 27 Oct 2029 | 1.8% |\n| My Prediction | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n\n| Lower bound | community | My Prediction |\n| --- | --- | --- |\n| 2200 | 1.8% | \u2014 |\n\nResolution Criteria\n\nKey Factors\n\nChina starts a war with the land of Taiwan BEFORE said weakly general AI\n\nIncreases likelihoodDecreases likelihood\n\nAI become student of arts university in Vienna\n\nIncreases likelihoodDecreases likelihood\n\nBackground Info\n\nAuthors:\n\n[Anthony](https://www.metaculus.com/accounts/profile/8/)\n\nOpened:Jan 18, 2020\n\nCloses:Jan 1, 2200\n\nScheduled resolution:Jan 1, 2200\n\nSpot Scoring Time:Jan 20, 2020\n\n[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)\n\n[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&for_main_feed=false)\n\n[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&for_main_feed=false)\n\n[Turing test](https://www.metaculus.com/questions/?tags=turing-test&for_main_feed=false)\n\n[Machine learning](https://www.metaculus.com/questions/?tags=machine-learning&for_main_feed=false)\n\n[Philosophy](https://www.metaculus.com/questions/?tags=philosophy&for_main_feed=false)\n\n[Linguistics](https://www.metaculus.com/questions/?tags=linguistics&for_main_feed=false)\n\n[Data analysis](https://www.metaculus.com/questions/?tags=data-analysis&for_main_feed=false)\n\nSubmit Tags Feedback\n\n## Comments\n\nLog in\n\n534 comments\n\nrecent\n\n[**nickmoes**](https://www.metaculus.com/accounts/profile/273690/)\u00b7 [Jun 10, 2025](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/#comment-361188)\n\n3\n\nChanged my mind (0)Reply\n\n[**hold\\_my\\_fish**](https://www.metaculus.com/accounts/profile/127280/)\u00b7 [May 28, 2025](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/#comment-352294)\n\n11\n\nChanged my mind (1)Reply\n\nhide 2 replies\n\n[**Sourian**](https://www.metaculus.com/accounts/profile/121058/)\u00b7 [Jun 8, 2025](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/#comment-360662)\n\n4\n\nChanged my mind (0)Reply\n\n[**Order**](https://www.m",
+        "content_length": 3000
+      },
+      {
+        "url": "https://www.morningstar.com/news/business-wire/20251207766692/integral-ai-unveils-worlds-first-agi-capable-model",
+        "title": "Integral AI Unveils World\u2019s First AGI-capable Model",
+        "content": "Integral AI Unveils World\u2019s First AGI-capable Model | Morningstar\n[![Morningstar](https://www.morningstar.com/assets/img/morningstar.d826858.svg)](https://www.morningstar.com/)\n[](https://www.morningstar.com/login?destination=https://www.morningstar.com/news/business-wire/20251207766692/integral-ai-unveils-worlds-first-agi-capable-model)\n# Integral AI Unveils World\u2019s First AGI-capable Model\n![](https://www.morningstar.com/assets/img/business-wire.45f21a7.svg)\nProvided byBusiness WireDec 8, 2025, 11:30:00 AM\n**Integral AI Unveils World\u2019s First AGI-capable Model**\n*Team led by ex-Googlers generative AI pioneers, Jad Tarifi &amp; Nima Asgharbeygi, create an interactive sandbox showcasing the world\u2019s first AGI-capable model*\n[Integral AI](https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=https://www.integral.ai/&amp;esheet=54371227&amp;newsitemid=20251207766692&amp;lan=en-US&amp;anchor=Integral+AI&amp;index=1&amp;md5=65e989188e2158e47700b70a4a134c12), a global leader in the development of embodied AGI, today announced the successful testing of the world\u2019s first AGI-capable[model](https://cts.businesswire.com/ct/CT?id=smartlink&amp;url=https://youtu.be/6vTkPHk32l8&amp;esheet=54371227&amp;newsitemid=20251207766692&amp;lan=en-US&amp;anchor=model&amp;index=2&amp;md5=3e812d9822cac53eab275d0667cdbd9a). Led by AGI expert and ex-Google AI veteran, Jad Tarifi, company engineers have successfully developed a system that autonomously learns new skills safely, efficiently, and reliably. Thus, marking a fundamental leap beyond the limits of current AI technologies and establishing a scalable foundation for self-improving generality intelligence moving towards superintelligence.\nDuring the research stage, Integral AI identified clearly defined parameters to effectively measure and determine the arrival of AGI by using three fundamental qualifiers:**Autonomous Skill Learning**defined as a system that must teach itself entirely new skills in novel domains without pre-existing datasets or human intervention,**Safe and Reliable Mastery**defined as learning that must occur without catastrophic risks or unintended side effects, and**Energy Efficiency**defined as the total energy cost of system learning being equal to or lower than that of a human acquiring the same skill. For Integral AI engineers, these principles served as fundamental cornerstones and developmental benchmarks during the inception and testing of this first-in-its-class AGI learning system.\nMirroring the multi-layered neocortex that underpins human thought, Integral AI\u2019s model architecture grows, abstracts, plans, and acts as a unified system. Model testing revealed unprecedented adaptability, particularly in autonomous robotics, where robots were observed acquiring new skills in real-world environments without human supervision.\n\u201c*Today\u2019s announcement is more than just a technical achievement, it marks the next chapter in the story of human civilization*,\u201d said Jad Tarifi, Ph.D., CEO and co-found",
+        "content_length": 3000
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T20:51:55.881836"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+CONTENT:
+{
+  "type": "data_report",
+  "title": "Search: \"weakly general AI\" OR AGI Metaculus current prediction",
+  "source": "Exa Search",
+  "data": {
+    "query": "\"weakly general AI\" OR AGI Metaculus current prediction",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "Metaculus",
+        "url": "https://www.metaculus.com/",
+        "published_date": "2023-02-21T00:00:00.000Z",
+        "snippet": "Metaculus\n[# ](https://metaculus.com/)\n* [Questions](https://metaculus.com/questions/)\n* [Tournaments](https://metaculus.com/tournaments/)\n* [Services](https://metaculus.com/services/)\n* [News](https://metaculus.com/news/)\n* [Questions](https://metaculus.com/questions/)\n* [Tournaments](https://metaculus.com/tournaments/)\n* [Questions](https://metaculus.com/questions/)\n* [Questions](https://metaculus.com/questions/)\n* More\n* Log inSign Up\n* a/\u6587\n* Log inSign Up\n# Forecasting for acomplex world\nMet..."
+      },
+      {
+        "index": 1,
+        "title": "Will we reach \"weak AGI\" by the end of 2025? - Manifold Markets",
+        "url": "https://manifold.markets/vicli/will-we-reach-weak-agi-by-the-end-o",
+        "published_date": "2025-10-18T00:00:00.000Z",
+        "snippet": "Will we reach &quot;weak AGI&quot; by the end of 2025? | Manifold\n![](https://manifold.markets/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fmantic-markets.appspot.com%2Fo%2Fdream%252FqXOKqxFpsB.png%3Falt%3Dmedia%26token%3D85e245c6-5fc0-4843-ac4d-e329a098ed50&amp;w=3840&amp;q=75)\nOpen options\nWill we reach &quot;weak AGI&quot; by the end of 2025?\n![vicli avatar](https://manifold.markets/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fmantic-marke..."
+      },
+      {
+        "index": 2,
+        "title": "Date Weakly General AI is Publicly Known",
+        "url": "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/?invite=Olx7Ci",
+        "published_date": "2025-10-06T00:00:00.000Z",
+        "snippet": "Question\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\n214\n\nCloses Jan 1, 2200\n\n[525 comments525](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n1d1w2mall\n\nCommunity Prediction15 Mar 202426 Nov 202518 Apr 2028Sep 2031Mar 07Mar 11Mar 15Mar 19Mar 23Mar 27Mar 31Apr 04Apr 08Apr 12Apr 16Apr 20Apr 24Apr 28May 02now\n\nTotal Forecasters1620\n\nCommunity Prediction\n16 Oct 2026\n\n(06 Oct 2025 - 22 May 2029)\n\n### Make..."
+      },
+      {
+        "index": 3,
+        "title": "When will the first weakly general AI system be devised, tested, and publicly announced?",
+        "url": "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/",
+        "published_date": "2020-01-18T00:00:00.000Z",
+        "snippet": "Question\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\n216\n\n[534 comments534](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n1d1w2mall\n\nCommunity Prediction15 Mar 202424 Dec 202426 Nov 202530 Dec 202618 Apr 202802 Nov 2029Sep 2031Nov 2033Apr 12Apr 16Apr 20Apr 24Apr 28May 02May 06May 10May 14May 18May 22May 26May 30Jun 03Jun 07now\n\nTotal Forecasters1642\n\nCommunity Prediction\n31 Dec 2026\n\n(01 Nov 2025 - 2..."
+      },
+      {
+        "index": 4,
+        "title": "As of July 1, 2022, when will top forecasters expect the first Artificial General Intelligence to be developed and demonstrated?",
+        "url": "https://www.metaculus.com/questions/4815/date-of-first-agi-according-to-forecasters/",
+        "published_date": "2020-07-15T00:00:00.000Z",
+        "snippet": "Question\n\n# As of July 1, 2022, when will top forecasters expect the first Artificial General Intelligence to be developed and demonstrated?\n\nResolved:Jun 2030\n\n13\n\n[12 comments12](https://www.metaculus.com/questions/4815/as-of-july-1-2022-when-will-top-forecasters-expect-the-first-artificial-general-intelligence-to-be-developed-and-demonstrated/#comments)\n\n1d1w2mall\n\nTotal Forecasters81\n\nCommunity Prediction\nMay 2035\n\n(May 2031 - Oct 2040)\n\n### Make a Prediction\n\nPDF\n\nCDF\n\n| <21 Jul 2023 | lowe..."
+      },
+      {
+        "index": 5,
+        "title": "Metaforecast",
+        "url": "https://metaforecast.org/questions/metaculus-9062",
+        "published_date": "2024-10-07T00:00:00.000Z",
+        "snippet": "# \u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n# [After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n[Metaculus](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n\u2605\u2605\u2605\u2606\u2606\n\n## Question description [\\#](https://metaforecast.org/questions/metaculus-9062\\#description)\n\n_Related Question on Metaculus:_\n\n- [After an AGI is created, how many months will it..."
+      },
+      {
+        "index": 6,
+        "title": "AGI Readiness Index",
+        "url": "https://www.metaculus.com/tournament/agi-readiness-index/",
+        "published_date": "2025-01-24T00:00:00.000Z",
+        "snippet": "[Question Series](https://www.metaculus.com/tournaments/)\n\n![](https://metaculus-web-media.s3.amazonaws.com/thecurve-bg_2.webp)\n\n# AGI Readiness Index\n\nStart DateJan 24, 2025\n\nEnd DateJan 1, 2030\n\nQuestions7\n\nFollow\n\n**Do forecasters expect us to be prepared for AGI if it arrives in 2030? [Click here](https://www.metaculus.com/notebooks/31830/) for the AGI Readiness Index's current value, how much it shifted this week, the individual questions that contribute to it, and their weights.**\n\nThis in..."
+      },
+      {
+        "index": 7,
+        "title": "Forecasting AGI: Insights from Prediction Markets and Metaculus",
+        "url": "https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1",
+        "published_date": "2025-02-04T00:00:00.000Z",
+        "snippet": "# Forecasting AGI: Insights from Prediction Markets and Metaculus\n\n[Alvin \u00c5nestrand](https://www.greaterwrong.com/users/alvin-anestrand) Feb 4, 2025, 1:03 PM\n\nLW: 13 AF: 4\n\n**8 votes**\n\nOverall karma indicates overall quality.\n\nDouble-click for strong vote.\n\n[0 comments](https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1#comments) 4 min read [LW link](https://www.lesswrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-predictio..."
+      },
+      {
+        "index": 8,
+        "title": "Metaculus Predicts Weak AGI in 2 Years and AGI in 10",
+        "url": "https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10",
+        "published_date": "2023-03-24T00:00:00.000Z",
+        "snippet": "# Metaculus Predicts Weak AGI in 2 Years and AGI in 10\n\n[Chris\\_Leong](https://www.greaterwrong.com/users/chris_leong) 24 Mar 2023 19:43 UTC\n\n29 points\n\n[14 comments](https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10#comments) [LW link](https://www.lesswrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10)\n\n[Forecasts (Specific Predictions)](https://www.greaterwrong.com/tag/forecasts-specific-predictions) [A..."
+      },
+      {
+        "index": 9,
+        "title": "Will any AI system beat a team of human pros in a forecasting tournament before 2030?",
+        "url": "https://www.metaculus.com/questions/31711/ai-system-beat-human-pros-in-forecasting-tournament-by-2030/",
+        "published_date": "2025-01-23T00:00:00.000Z",
+        "snippet": "AI system beat human pros in forecasting tournament by 2030?\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questi..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T20:51:57.602107"
+}
+Result for Call ID call_26130007 (search_web):
+{
+  "type": "data_report",
+  "title": "Search: \"weakly general AI\" OR AGI Metaculus current prediction",
+  "source": "Exa Search",
+  "data": {
+    "query": "\"weakly general AI\" OR AGI Metaculus current prediction",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "Metaculus",
+        "url": "https://www.metaculus.com/",
+        "published_date": "2023-02-21T00:00:00.000Z",
+        "snippet": "Metaculus\n[# ](https://metaculus.com/)\n* [Questions](https://metaculus.com/questions/)\n* [Tournaments](https://metaculus.com/tournaments/)\n* [Services](https://metaculus.com/services/)\n* [News](https://metaculus.com/news/)\n* [Questions](https://metaculus.com/questions/)\n* [Tournaments](https://metaculus.com/tournaments/)\n* [Questions](https://metaculus.com/questions/)\n* [Questions](https://metaculus.com/questions/)\n* More\n* Log inSign Up\n* a/\u6587\n* Log inSign Up\n# Forecasting for acomplex world\nMet..."
+      },
+      {
+        "index": 1,
+        "title": "Will we reach \"weak AGI\" by the end of 2025? - Manifold Markets",
+        "url": "https://manifold.markets/vicli/will-we-reach-weak-agi-by-the-end-o",
+        "published_date": "2025-10-18T00:00:00.000Z",
+        "snippet": "Will we reach &quot;weak AGI&quot; by the end of 2025? | Manifold\n![](https://manifold.markets/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fmantic-markets.appspot.com%2Fo%2Fdream%252FqXOKqxFpsB.png%3Falt%3Dmedia%26token%3D85e245c6-5fc0-4843-ac4d-e329a098ed50&amp;w=3840&amp;q=75)\nOpen options\nWill we reach &quot;weak AGI&quot; by the end of 2025?\n![vicli avatar](https://manifold.markets/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fmantic-marke..."
+      },
+      {
+        "index": 2,
+        "title": "Date Weakly General AI is Publicly Known",
+        "url": "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/?invite=Olx7Ci",
+        "published_date": "2025-10-06T00:00:00.000Z",
+        "snippet": "Question\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\n214\n\nCloses Jan 1, 2200\n\n[525 comments525](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n1d1w2mall\n\nCommunity Prediction15 Mar 202426 Nov 202518 Apr 2028Sep 2031Mar 07Mar 11Mar 15Mar 19Mar 23Mar 27Mar 31Apr 04Apr 08Apr 12Apr 16Apr 20Apr 24Apr 28May 02now\n\nTotal Forecasters1620\n\nCommunity Prediction\n16 Oct 2026\n\n(06 Oct 2025 - 22 May 2029)\n\n### Make..."
+      },
+      {
+        "index": 3,
+        "title": "When will the first weakly general AI system be devised, tested, and publicly announced?",
+        "url": "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/",
+        "published_date": "2020-01-18T00:00:00.000Z",
+        "snippet": "Question\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\n216\n\n[534 comments534](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n1d1w2mall\n\nCommunity Prediction15 Mar 202424 Dec 202426 Nov 202530 Dec 202618 Apr 202802 Nov 2029Sep 2031Nov 2033Apr 12Apr 16Apr 20Apr 24Apr 28May 02May 06May 10May 14May 18May 22May 26May 30Jun 03Jun 07now\n\nTotal Forecasters1642\n\nCommunity Prediction\n31 Dec 2026\n\n(01 Nov 2025 - 2..."
+      },
+      {
+        "index": 4,
+        "title": "As of July 1, 2022, when will top forecasters expect the first Artificial General Intelligence to be developed and demonstrated?",
+        "url": "https://www.metaculus.com/questions/4815/date-of-first-agi-according-to-forecasters/",
+        "published_date": "2020-07-15T00:00:00.000Z",
+        "snippet": "Question\n\n# As of July 1, 2022, when will top forecasters expect the first Artificial General Intelligence to be developed and demonstrated?\n\nResolved:Jun 2030\n\n13\n\n[12 comments12](https://www.metaculus.com/questions/4815/as-of-july-1-2022-when-will-top-forecasters-expect-the-first-artificial-general-intelligence-to-be-developed-and-demonstrated/#comments)\n\n1d1w2mall\n\nTotal Forecasters81\n\nCommunity Prediction\nMay 2035\n\n(May 2031 - Oct 2040)\n\n### Make a Prediction\n\nPDF\n\nCDF\n\n| <21 Jul 2023 | lowe..."
+      },
+      {
+        "index": 5,
+        "title": "Metaforecast",
+        "url": "https://metaforecast.org/questions/metaculus-9062",
+        "published_date": "2024-10-07T00:00:00.000Z",
+        "snippet": "# \u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n# [After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n[Metaculus](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n\u2605\u2605\u2605\u2606\u2606\n\n## Question description [\\#](https://metaforecast.org/questions/metaculus-9062\\#description)\n\n_Related Question on Metaculus:_\n\n- [After an AGI is created, how many months will it..."
+      },
+      {
+        "index": 6,
+        "title": "AGI Readiness Index",
+        "url": "https://www.metaculus.com/tournament/agi-readiness-index/",
+        "published_date": "2025-01-24T00:00:00.000Z",
+        "snippet": "[Question Series](https://www.metaculus.com/tournaments/)\n\n![](https://metaculus-web-media.s3.amazonaws.com/thecurve-bg_2.webp)\n\n# AGI Readiness Index\n\nStart DateJan 24, 2025\n\nEnd DateJan 1, 2030\n\nQuestions7\n\nFollow\n\n**Do forecasters expect us to be prepared for AGI if it arrives in 2030? [Click here](https://www.metaculus.com/notebooks/31830/) for the AGI Readiness Index's current value, how much it shifted this week, the individual questions that contribute to it, and their weights.**\n\nThis in..."
+      },
+      {
+        "index": 7,
+        "title": "Forecasting AGI: Insights from Prediction Markets and Metaculus",
+        "url": "https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1",
+        "published_date": "2025-02-04T00:00:00.000Z",
+        "snippet": "# Forecasting AGI: Insights from Prediction Markets and Metaculus\n\n[Alvin \u00c5nestrand](https://www.greaterwrong.com/users/alvin-anestrand) Feb 4, 2025, 1:03 PM\n\nLW: 13 AF: 4\n\n**8 votes**\n\nOverall karma indicates overall quality.\n\nDouble-click for strong vote.\n\n[0 comments](https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1#comments) 4 min read [LW link](https://www.lesswrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-predictio..."
+      },
+      {
+        "index": 8,
+        "title": "Metaculus Predicts Weak AGI in 2 Years and AGI in 10",
+        "url": "https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10",
+        "published_date": "2023-03-24T00:00:00.000Z",
+        "snippet": "# Metaculus Predicts Weak AGI in 2 Years and AGI in 10\n\n[Chris\\_Leong](https://www.greaterwrong.com/users/chris_leong) 24 Mar 2023 19:43 UTC\n\n29 points\n\n[14 comments](https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10#comments) [LW link](https://www.lesswrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10)\n\n[Forecasts (Specific Predictions)](https://www.greaterwrong.com/tag/forecasts-specific-predictions) [A..."
+      },
+      {
+        "index": 9,
+        "title": "Will any AI system beat a team of human pros in a forecasting tournament before 2030?",
+        "url": "https://www.metaculus.com/questions/31711/ai-system-beat-human-pros-in-forecasting-tournament-by-2030/",
+        "published_date": "2025-01-23T00:00:00.000Z",
+        "snippet": "AI system beat human pros in forecasting tournament by 2030?\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questi..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T20:51:57.602107"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+CONTENT:
+{
+  "type": "data_report",
+  "title": "Search: recent AGI announcements 2024 \"weakly general\"",
+  "source": "Exa Search",
+  "data": {
+    "query": "recent AGI announcements 2024 \"weakly general\"",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "An AI system has reached human level on a test for 'general intelligence'\u2014here's what that means",
+        "url": "https://techxplore.com/news/2024-12-ai-human-general-intelligence.html",
+        "published_date": "2024-12-24T00:00:00.000Z",
+        "snippet": "An AI system has reached human level on a test for 'general intelligence'\u2014here's what that means\n* * share this!\n* [\n200\n](javascript:void(0))\n* [\nTweet\n](#)\n* [\nShare\n](#)\n* [\nEmail\n](mailto:)\n* [](javascript:void(0))\n* [](https://techxplore.com/news/2024-12-ai-human-general-intelligence.pdf)\n* [](javascript:window.print())\n[](https://techxplore.com/archive/24-12-2024/)\nDecember 24, 2024\n# An AI system has reached human level on a test for 'general intelligence'\u2014here's what that means\nby Michae..."
+      },
+      {
+        "index": 1,
+        "title": "Introducing Gemini 2.0: our new AI model for the agentic era",
+        "url": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024",
+        "published_date": "2024-12-11T00:00:00.000Z",
+        "snippet": "Google introduces Gemini 2.0: A new AI model for the agentic era\n[Skip to main content](#jump-content)\n[\nThe Keyword\n](https://blog.google/)\nIntroducing Gemini 2.0: our new AI model for the agentic era\nShare\n[\nx.com\n]()[\nFacebook\n]()[\nLinkedIn\n]()[\nMail\n]()\nCopy link\nGlobal (English)Africa (English)Australia (English)Brasil (Portugu\u00eas)Canada (English)Canada (Fran\u00e7ais)\u010cesko (\u010ce\u0161tina)Deutschland (Deutsch)Espa\u00f1a (Espa\u00f1ol)France (Fran\u00e7ais)India (English)Indonesia (Bahasa Indonesia)Italia (Italiano)\u65e5..."
+      },
+      {
+        "index": 2,
+        "title": "Introducing OpenAI o1",
+        "url": "https://openai.com/index/introducing-openai-o1-preview/?amp%3Butm_medium=email",
+        "published_date": "2024-09-12T00:00:00.000Z",
+        "snippet": "Introducing OpenAI o1 | OpenAI\n[Skip to main content](#main)\nLog in\n[\n](https://openai.com/)\nSwitch to\n* [ChatGPT(opens in a new window)](https://chatgpt.com/?openaicom-did=9bb77e60-8342-45c3-bbb7-ec4be2874a5b&amp;openaicom_referred=true)\n* [Sora(opens in a new window)](https://sora.com/)\n* [API Platform(opens in a new window)](https://platform.openai.com/)\nOpenAI\nSeptember 12, 2024\n[Product](https://openai.com/news/product-releases/)\n# Introducing OpenAI o1-preview\nLoading\u2026\nShare\n*Update on Sep..."
+      },
+      {
+        "index": 3,
+        "title": "OpenAI's New Highly Capable o3 Model Has Large Implications for Their Future",
+        "url": "https://aalokbhattacharya.substack.com/p/openais-new-highly-capable-o3-model",
+        "published_date": "2024-12-23T00:00:00.000Z",
+        "snippet": "[![](https://substackcdn.com/image/fetch/w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6d871988-cbd8-4ab6-a3cc-df730bfe530b_848x848.png)](https://aalokbhattacharya.substack.com/)\n\n# [Curiosity is All You Need](https://aalokbhattacharya.substack.com/)\n\nSubscribeSign in\n\n# OpenAI's New Highly Capable o3 Model Has Large Implications for Their Future\n\n### The Debate About Artificial General Intelligence and What it Indicat..."
+      },
+      {
+        "index": 4,
+        "title": "Genie 2: A large-scale foundation world model",
+        "url": "https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/",
+        "published_date": "2024-12-04T00:00:00.000Z",
+        "snippet": "Genie 2: A large-scale foundation world model - Google DeepMind\n[Skip to main content](#page-content)\nmenuclose\n[Google DeepMindDeepMind](https://deepmind.google/)\nkeyboard\\_arrow\\_downkeyboard\\_arrow\\_up\n[\ncode\nBuild with Gemini](https://aistudio.google.com/prompts/new_chat?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=)[\nspark\nChat with Gemini](https://gemini.google.com/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_co..."
+      },
+      {
+        "index": 5,
+        "title": "\u03c0 0 : Our First Generalist Policy",
+        "url": "https://www.pi.website/blog/pi0",
+        "published_date": "2024-10-31T00:00:00.000Z",
+        "snippet": "Our First Generalist Policy\n[Physical Intelligence (\u03c0)](https://www.pi.website/)\n[Home](https://www.pi.website/)[Research](https://www.pi.website/blog)[Join Us](https://www.pi.website/join-us)\n# \u03c00: Our First Generalist Policy\nPublished\nOctober 31, 2024\nEmail\nresearch@physicalintelligence.companyKevin Black, Noah Brown, Danny Driess, Michael Equi, Adnan Esmail, Chelsea Finn, Nick Fusai, Lachy Groom, Karol Hausman, Brian Ichter, Szymon Jakubczak, Tim Jones, Kay Ke, Sergey Levine, Adrian Li-Bell, ..."
+      },
+      {
+        "index": 6,
+        "title": "Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks",
+        "url": "https://arxiv.org/abs/2411.04468",
+        "published_date": "2024-11-07T00:00:00.000Z",
+        "snippet": "[2411.04468] Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks\n[Skip to main content](#content)\n[![Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg)](https://www.cornell.edu/)\nWe gratefully acknowledge support from the Simons Foundation,[member institutions](https://info.arxiv.org/about/ourmembers.html), and all contributors.[Donate](https://info.arxiv.org/about/donate.html)\n[](https://arxiv.org/IgnoreMe)\n[![arxiv log..."
+      },
+      {
+        "index": 7,
+        "title": "How Far Are We From AGI: Are LLMs All We Need?",
+        "url": "https://arxiv.org/html/2405.10313v2",
+        "published_date": "2024-12-22T00:00:00.000Z",
+        "snippet": "How Far Are We From AGI: Are LLMs All We Need?\n# How Far Are We From AGI: Are LLMs All We Need?\nTao Feng1Equal contribution. In alphabetical order.{taofeng2, kunlunz2, jiaxuan}@illinois.edu1University of Illinois Urbana-Champaign2Johns Hopkins University3University of Chicago\n4University of California, Santa Cruz5Carnegie Mellon UniversityChuanyang Jin2\u2217{taofeng2, kunlunz2, jiaxuan}@illinois.edu1University of Illinois Urbana-Champaign2Johns Hopkins University3University of Chicago\n4University of..."
+      },
+      {
+        "index": 8,
+        "title": "AGI Readiness Policy \u2014 Magic",
+        "url": "https://magic.dev/agi-readiness-policy",
+        "published_date": "2024-07-02T00:00:00.000Z",
+        "snippet": "[Magic](https://magic.dev/)\n# AGI Readiness Policy\nVersion 1.0 \u2014July 2, 2024\nMagic is building frontier-scale models and autonomous agents to automate software engineering and research. Building such systems, we believe, will bring enormous societal value. However, we also believe AI development poses the possibility of serious negative externalities on society, including catastrophic risks to public security and wellbeing.\nTo prepare for these risks, we are introducing an initial version of our..."
+      },
+      {
+        "index": 9,
+        "title": "The Age of AI: Will 2025 Be Our Last Normal Year?",
+        "url": "https://www.aei.org/articles/the-age-of-ai-will-2025-be-our-last-normal-year/",
+        "published_date": "2025-01-03T00:00:00.000Z",
+        "snippet": "The Age of AI: Will 2025 Be Our Last Normal Year? | American Enterprise Institute - AEI\n* [About](#)\n* [About AEI](https://www.aei.org/about/)\n* [Careers](https://www.aei.org/jobs/)\n* [Internships](https://www.aei.org/internships/)\n* [For Students](https://www.aei.org/academic-programs/)\n* [AEI Archive](https://www.aei.org/aei-archives-homepage/)\n* [Centers](#)\n* [Center on Opportunity and Social Mobility](https://www.aei.org/policy-areas/center-opportunity-social-mobility/)\n* [Center for the Fu..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T20:51:59.672467"
+}
+Result for Call ID call_83896495 (search_web):
+{
+  "type": "data_report",
+  "title": "Search: recent AGI announcements 2024 \"weakly general\"",
+  "source": "Exa Search",
+  "data": {
+    "query": "recent AGI announcements 2024 \"weakly general\"",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "An AI system has reached human level on a test for 'general intelligence'\u2014here's what that means",
+        "url": "https://techxplore.com/news/2024-12-ai-human-general-intelligence.html",
+        "published_date": "2024-12-24T00:00:00.000Z",
+        "snippet": "An AI system has reached human level on a test for 'general intelligence'\u2014here's what that means\n* * share this!\n* [\n200\n](javascript:void(0))\n* [\nTweet\n](#)\n* [\nShare\n](#)\n* [\nEmail\n](mailto:)\n* [](javascript:void(0))\n* [](https://techxplore.com/news/2024-12-ai-human-general-intelligence.pdf)\n* [](javascript:window.print())\n[](https://techxplore.com/archive/24-12-2024/)\nDecember 24, 2024\n# An AI system has reached human level on a test for 'general intelligence'\u2014here's what that means\nby Michae..."
+      },
+      {
+        "index": 1,
+        "title": "Introducing Gemini 2.0: our new AI model for the agentic era",
+        "url": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024",
+        "published_date": "2024-12-11T00:00:00.000Z",
+        "snippet": "Google introduces Gemini 2.0: A new AI model for the agentic era\n[Skip to main content](#jump-content)\n[\nThe Keyword\n](https://blog.google/)\nIntroducing Gemini 2.0: our new AI model for the agentic era\nShare\n[\nx.com\n]()[\nFacebook\n]()[\nLinkedIn\n]()[\nMail\n]()\nCopy link\nGlobal (English)Africa (English)Australia (English)Brasil (Portugu\u00eas)Canada (English)Canada (Fran\u00e7ais)\u010cesko (\u010ce\u0161tina)Deutschland (Deutsch)Espa\u00f1a (Espa\u00f1ol)France (Fran\u00e7ais)India (English)Indonesia (Bahasa Indonesia)Italia (Italiano)\u65e5..."
+      },
+      {
+        "index": 2,
+        "title": "Introducing OpenAI o1",
+        "url": "https://openai.com/index/introducing-openai-o1-preview/?amp%3Butm_medium=email",
+        "published_date": "2024-09-12T00:00:00.000Z",
+        "snippet": "Introducing OpenAI o1 | OpenAI\n[Skip to main content](#main)\nLog in\n[\n](https://openai.com/)\nSwitch to\n* [ChatGPT(opens in a new window)](https://chatgpt.com/?openaicom-did=9bb77e60-8342-45c3-bbb7-ec4be2874a5b&amp;openaicom_referred=true)\n* [Sora(opens in a new window)](https://sora.com/)\n* [API Platform(opens in a new window)](https://platform.openai.com/)\nOpenAI\nSeptember 12, 2024\n[Product](https://openai.com/news/product-releases/)\n# Introducing OpenAI o1-preview\nLoading\u2026\nShare\n*Update on Sep..."
+      },
+      {
+        "index": 3,
+        "title": "OpenAI's New Highly Capable o3 Model Has Large Implications for Their Future",
+        "url": "https://aalokbhattacharya.substack.com/p/openais-new-highly-capable-o3-model",
+        "published_date": "2024-12-23T00:00:00.000Z",
+        "snippet": "[![](https://substackcdn.com/image/fetch/w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6d871988-cbd8-4ab6-a3cc-df730bfe530b_848x848.png)](https://aalokbhattacharya.substack.com/)\n\n# [Curiosity is All You Need](https://aalokbhattacharya.substack.com/)\n\nSubscribeSign in\n\n# OpenAI's New Highly Capable o3 Model Has Large Implications for Their Future\n\n### The Debate About Artificial General Intelligence and What it Indicat..."
+      },
+      {
+        "index": 4,
+        "title": "Genie 2: A large-scale foundation world model",
+        "url": "https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/",
+        "published_date": "2024-12-04T00:00:00.000Z",
+        "snippet": "Genie 2: A large-scale foundation world model - Google DeepMind\n[Skip to main content](#page-content)\nmenuclose\n[Google DeepMindDeepMind](https://deepmind.google/)\nkeyboard\\_arrow\\_downkeyboard\\_arrow\\_up\n[\ncode\nBuild with Gemini](https://aistudio.google.com/prompts/new_chat?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_content=)[\nspark\nChat with Gemini](https://gemini.google.com/?utm_source=deepmind.google&amp;utm_medium=referral&amp;utm_campaign=gdm&amp;utm_co..."
+      },
+      {
+        "index": 5,
+        "title": "\u03c0 0 : Our First Generalist Policy",
+        "url": "https://www.pi.website/blog/pi0",
+        "published_date": "2024-10-31T00:00:00.000Z",
+        "snippet": "Our First Generalist Policy\n[Physical Intelligence (\u03c0)](https://www.pi.website/)\n[Home](https://www.pi.website/)[Research](https://www.pi.website/blog)[Join Us](https://www.pi.website/join-us)\n# \u03c00: Our First Generalist Policy\nPublished\nOctober 31, 2024\nEmail\nresearch@physicalintelligence.companyKevin Black, Noah Brown, Danny Driess, Michael Equi, Adnan Esmail, Chelsea Finn, Nick Fusai, Lachy Groom, Karol Hausman, Brian Ichter, Szymon Jakubczak, Tim Jones, Kay Ke, Sergey Levine, Adrian Li-Bell, ..."
+      },
+      {
+        "index": 6,
+        "title": "Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks",
+        "url": "https://arxiv.org/abs/2411.04468",
+        "published_date": "2024-11-07T00:00:00.000Z",
+        "snippet": "[2411.04468] Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks\n[Skip to main content](#content)\n[![Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg)](https://www.cornell.edu/)\nWe gratefully acknowledge support from the Simons Foundation,[member institutions](https://info.arxiv.org/about/ourmembers.html), and all contributors.[Donate](https://info.arxiv.org/about/donate.html)\n[](https://arxiv.org/IgnoreMe)\n[![arxiv log..."
+      },
+      {
+        "index": 7,
+        "title": "How Far Are We From AGI: Are LLMs All We Need?",
+        "url": "https://arxiv.org/html/2405.10313v2",
+        "published_date": "2024-12-22T00:00:00.000Z",
+        "snippet": "How Far Are We From AGI: Are LLMs All We Need?\n# How Far Are We From AGI: Are LLMs All We Need?\nTao Feng1Equal contribution. In alphabetical order.{taofeng2, kunlunz2, jiaxuan}@illinois.edu1University of Illinois Urbana-Champaign2Johns Hopkins University3University of Chicago\n4University of California, Santa Cruz5Carnegie Mellon UniversityChuanyang Jin2\u2217{taofeng2, kunlunz2, jiaxuan}@illinois.edu1University of Illinois Urbana-Champaign2Johns Hopkins University3University of Chicago\n4University of..."
+      },
+      {
+        "index": 8,
+        "title": "AGI Readiness Policy \u2014 Magic",
+        "url": "https://magic.dev/agi-readiness-policy",
+        "published_date": "2024-07-02T00:00:00.000Z",
+        "snippet": "[Magic](https://magic.dev/)\n# AGI Readiness Policy\nVersion 1.0 \u2014July 2, 2024\nMagic is building frontier-scale models and autonomous agents to automate software engineering and research. Building such systems, we believe, will bring enormous societal value. However, we also believe AI development poses the possibility of serious negative externalities on society, including catastrophic risks to public security and wellbeing.\nTo prepare for these risks, we are introducing an initial version of our..."
+      },
+      {
+        "index": 9,
+        "title": "The Age of AI: Will 2025 Be Our Last Normal Year?",
+        "url": "https://www.aei.org/articles/the-age-of-ai-will-2025-be-our-last-normal-year/",
+        "published_date": "2025-01-03T00:00:00.000Z",
+        "snippet": "The Age of AI: Will 2025 Be Our Last Normal Year? | American Enterprise Institute - AEI\n* [About](#)\n* [About AEI](https://www.aei.org/about/)\n* [Careers](https://www.aei.org/jobs/)\n* [Internships](https://www.aei.org/internships/)\n* [For Students](https://www.aei.org/academic-programs/)\n* [AEI Archive](https://www.aei.org/aei-archives-homepage/)\n* [Centers](#)\n* [Center on Opportunity and Social Mobility](https://www.aei.org/policy-areas/center-opportunity-social-mobility/)\n* [Center for the Fu..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T20:51:59.672467"
+}
+
+------------------------------------------------------------
+

@@ -1,0 +1,1011 @@
+================================================================================
+RAW I/O LOG: What percent of US GDP will come from manufacturing in the first half of 2028?
+Timestamp: 20260108_000532
+Research Model: x-ai/grok-4.1-fast
+Forecast Model: google/gemini-3-flash-preview
+================================================================================
+
+################################################################################
+# GROK (RESEARCH MODEL) CALLS
+################################################################################
+
+--- GROK CALL 1 ---
+
+[INPUT TO GROK]
+----------------------------------------
+Question to forecast:
+What percent of US GDP will come from manufacturing in the first half of 2028?
+
+Initial search results:
+[Source 1]
+Title: Manufacturing as a Share of GDP by State - Visual Capitalist
+Date: 2025-07-14T00:00:00.000Z
+URL: https://www.visualcapitalist.com/sp/ter01-manufacturing-as-a-share-of-gdp-by-state/
+Content: Manufacturing as a Share of GDP by State 
+ 
+ Key Takeaways 
+ 
+ Manufacturing contributes the most to the economy in Indiana, where it makes up 26% of GDP. 
+ In Wyoming and D.C., the sector has the smallest impact. 
+ 
+ 
+ Tariffs are on the rise, a move by the U.S. intended to curb imports and boost A
+
+[Source 2]
+Title: Value Added by Industry: Manufacturing as a Percentage of GDP
+Date: None
+URL: https://fred.stlouisfed.org/series/VAPGDPMA
+Content: Value Added by Industry: Manufacturing as a Percentage of GDP (VAPGDPMA) | FRED | St. Louis Fed[Skip to main content](#content-container)
+# Federal Reserve Economic Data
+**
+# [](#)
+Value Added by Industry: Manufacturing as a Percentage of GDP(VAPGDPMA)
+Observations**
+Q2 2025:9.4|
+Percent, Not Season
+
+[Source 3]
+Title: CBO's Current View of the Economy From 2025 to 2028
+Date: 2025-09-12T00:00:00.000Z
+URL: https://www.cbo.gov/publication/61738
+Content: [Skip to main content](https://www.cbo.gov/www.cbo.gov#main-content)
+
+September 2025
+
+# CBO’s Current View of the Economy From 2025 to 2028
+
+[Report's Home Page](https://www.cbo.gov/publication/61236) [Data and Supplemental Information](https://www.cbo.gov/publication/61236#data)
+
+[Related Publicati
+
+[Source 4]
+Title: US Economic Forecast Q4 2025 | Deloitte Insights
+Date: 2025-12-19T00:00:00.000Z
+URL: https://www.deloitte.com/us/en/insights/topics/economy/us-economic-forecast/united-states-outlook-analysis.html
+Content: US Economic Forecast Q4 2025 | Deloitte Insights
+# United States Economic Forecast
+## Investment in artificial intelligence is supporting the economy, but questions remain about how long the momentum can last
+Article
+&bull;&bull;
+18-min read
+&bull;&bull;
+19 December 2025
+&bull;&bull;
+Deloitte Global
+
+[Source 5]
+Title: Economic Outlook U.S. Q1 2026: Steady As She Goes - S&P Global
+Date: 2025-11-24T00:00:00.000Z
+URL: https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550
+Content: Economic Outlook U.S. Q1 2026: Steady As She Goes | S&amp;P Global RatingsS&amp;P Global Ratings
+[![logo]()](https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550#)
+[](https://www.spglobal.com/ratings/en/regulatory/artic
+
+
+Based on these search results and your available tools:
+1. If you see an interesting link, use crawl_urls to get full content
+2. If you need financial data, use the data tools (yahoo, fred, options)
+3. If this is a market question, use forecast tools for distributions
+
+When done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.
+Focus on NUMBERS and FACTS that help forecasting.
+
+----------------------------------------
+
+[OUTPUT FROM GROK]
+----------------------------------------
+
+
+[TOOL CALLS MADE]
+  - get_fred_data({"series_id": "VAPGDPMA", "start_date": "2000-01-01", "include_changes": true}...)
+  - search_web({"query": "US manufacturing as percent of GDP forecast 2026 2027 2028", "num_results": 15}...)
+  - crawl_urls({"urls": ["https://www.deloitte.com/us/en/insights/topics/economy/us-economic-forecast/united-states-outlook-analysis.html", "https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us...)
+  - search_web({"query": "BEA forecast manufacturing value added GDP share 2028", "num_results": 10}...)
+----------------------------------------
+
+
+################################################################################
+# FULL RESEARCH MESSAGE HISTORY
+################################################################################
+
+[SYSTEM]
+You are a Research Agent with access to specialized tools for market data and forecasting.
+
+Your job is to gather information to help forecast the following question. You can use tools to:
+1. Get market forecast distributions (bonds, spreads, VIX) - these return percentile data
+2. Fetch financial data (Yahoo Finance, options, FRED economic data)
+3. Search the web for relevant news and context
+
+For MARKET FORECAST questions (bond yields, stock spreads, VIX levels), use the appropriate forecast tool FIRST.
+These tools run Monte Carlo simulations and return probability distributions.
+
+For GENERAL questions, use data tools and web search to gather context.
+
+After gathering data, write a SHORT REPORT synthesizing:
+- Key quantitative data from tool calls
+- Probability distributions (if from forecast tools)
+- Relevant context and factors
+
+Be concise. The forecaster will use your report to make predictions.
+
+------------------------------------------------------------
+
+[USER]
+Question to forecast:
+What percent of US GDP will come from manufacturing in the first half of 2028?
+
+Initial search results:
+[Source 1]
+Title: Manufacturing as a Share of GDP by State - Visual Capitalist
+Date: 2025-07-14T00:00:00.000Z
+URL: https://www.visualcapitalist.com/sp/ter01-manufacturing-as-a-share-of-gdp-by-state/
+Content: Manufacturing as a Share of GDP by State 
+ 
+ Key Takeaways 
+ 
+ Manufacturing contributes the most to the economy in Indiana, where it makes up 26% of GDP. 
+ In Wyoming and D.C., the sector has the smallest impact. 
+ 
+ 
+ Tariffs are on the rise, a move by the U.S. intended to curb imports and boost A
+
+[Source 2]
+Title: Value Added by Industry: Manufacturing as a Percentage of GDP
+Date: None
+URL: https://fred.stlouisfed.org/series/VAPGDPMA
+Content: Value Added by Industry: Manufacturing as a Percentage of GDP (VAPGDPMA) | FRED | St. Louis Fed[Skip to main content](#content-container)
+# Federal Reserve Economic Data
+**
+# [](#)
+Value Added by Industry: Manufacturing as a Percentage of GDP(VAPGDPMA)
+Observations**
+Q2 2025:9.4|
+Percent, Not Season
+
+[Source 3]
+Title: CBO's Current View of the Economy From 2025 to 2028
+Date: 2025-09-12T00:00:00.000Z
+URL: https://www.cbo.gov/publication/61738
+Content: [Skip to main content](https://www.cbo.gov/www.cbo.gov#main-content)
+
+September 2025
+
+# CBO’s Current View of the Economy From 2025 to 2028
+
+[Report's Home Page](https://www.cbo.gov/publication/61236) [Data and Supplemental Information](https://www.cbo.gov/publication/61236#data)
+
+[Related Publicati
+
+[Source 4]
+Title: US Economic Forecast Q4 2025 | Deloitte Insights
+Date: 2025-12-19T00:00:00.000Z
+URL: https://www.deloitte.com/us/en/insights/topics/economy/us-economic-forecast/united-states-outlook-analysis.html
+Content: US Economic Forecast Q4 2025 | Deloitte Insights
+# United States Economic Forecast
+## Investment in artificial intelligence is supporting the economy, but questions remain about how long the momentum can last
+Article
+&bull;&bull;
+18-min read
+&bull;&bull;
+19 December 2025
+&bull;&bull;
+Deloitte Global
+
+[Source 5]
+Title: Economic Outlook U.S. Q1 2026: Steady As She Goes - S&P Global
+Date: 2025-11-24T00:00:00.000Z
+URL: https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550
+Content: Economic Outlook U.S. Q1 2026: Steady As She Goes | S&amp;P Global RatingsS&amp;P Global Ratings
+[![logo]()](https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550#)
+[](https://www.spglobal.com/ratings/en/regulatory/artic
+
+
+Based on these search results and your available tools:
+1. If you see an interesting link, use crawl_urls to get full content
+2. If you need financial data, use the data tools (yahoo, fred, options)
+3. If this is a market question, use forecast tools for distributions
+
+When done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.
+Focus on NUMBERS and FACTS that help forecasting.
+
+
+------------------------------------------------------------
+
+[ASSISTANT]
+
+[TOOL CALLS]
+  - get_fred_data({"series_id": "VAPGDPMA", "start_date": "2000-01-01", "include_changes": true}...)
+  - search_web({"query": "US manufacturing as percent of GDP forecast 2026 2027 2028", "num_results": 15}...)
+  - crawl_urls({"urls": ["https://www.deloitte.com/us/en/insights/topics/economy/us-economic-forecast/united-states-outlook-analysis.html", "https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us...)
+  - search_web({"query": "BEA forecast manufacturing value added GDP share 2028", "num_results": 10}...)
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "FRED: Value Added by Industry: Manufacturing as a Percentage of GDP",
+  "source": "FRED (Federal Reserve Economic Data)",
+  "data": {
+    "series_id": "VAPGDPMA",
+    "title": "Value Added by Industry: Manufacturing as a Percentage of GDP",
+    "units": "Percent",
+    "frequency": "Quarterly",
+    "date_range": {
+      "start": "2005-01-01",
+      "end": "2025-04-01"
+    },
+    "data_points": 82,
+    "current_value": 9.4,
+    "current_date": "2025-04-01",
+    "statistics": {
+      "mean": 11.264634146341464,
+      "std": 1.0108512427004357,
+      "min": 9.4,
+      "max": 13.1,
+      "median": 11.4
+    },
+    "recent_values": [
+      {
+        "date": "2025-04-01",
+        "value": 9.4
+      },
+      {
+        "date": "2025-01-01",
+        "value": 9.4
+      },
+      {
+        "date": "2024-10-01",
+        "value": 9.7
+      },
+      {
+        "date": "2024-07-01",
+        "value": 9.8
+      },
+      {
+        "date": "2024-04-01",
+        "value": 9.9
+      }
+    ],
+    "changes": {
+      "last_change": 0.0,
+      "avg_daily_change": -0.045679012345679004,
+      "daily_change_std": 0.14057861031825702,
+      "annualized_volatility": 2.2316162553430003,
+      "largest_increase": 0.20000000000000107,
+      "largest_decrease": -0.5
+    },
+    "relative_changes": {
+      "last_pct_change": 0.0,
+      "avg_daily_pct_change": -0.40115881770123024,
+      "daily_pct_volatility": 1.2485121446977732,
+      "annualized_pct_volatility": 19.819515862285186
+    }
+  },
+  "fetched_at": "2026-01-08T00:05:44.152144"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: US manufacturing as percent of GDP forecast 2026 2027 2028",
+  "source": "Exa Search",
+  "data": {
+    "query": "US manufacturing as percent of GDP forecast 2026 2027 2028",
+    "num_results": 15,
+    "results": [
+      {
+        "index": 0,
+        "title": "United States Manufacturing Production",
+        "url": "https://tradingeconomics.com/united-states/manufacturing-production",
+        "published_date": "2025-09-16T00:00:00.000Z",
+        "snippet": "United States Manufacturing Production\n# United States Manufacturing Production\n* [Summary](#historical)\n* [Forecast](#forecast)\n* [Calendar](#calendar-table)\n* [Alerts](#alerts)\n* [Download]()\n## Manufacturing Production in the United States increased 1.5% year-on-year in September 2025, the biggest rise since April 2022, following a 1% gain in August. Manufacturing Production in the United States averaged 3.50 percent from 1920 until 2025, reaching an all time high of 67.90 percent in July of ..."
+      },
+      {
+        "index": 1,
+        "title": "How CBO's Latest Economic Projections Compare to Other ...",
+        "url": "https://www.americanactionforum.org/insight/how-cbos-latest-economic-projections-compare-to-other-forecasts/",
+        "published_date": "2025-09-23T16:59:19.000Z",
+        "snippet": "How CBO\u2019s Latest Economic Projections Compare to Other Forecasts - AAF\n[![](https://www.americanactionforum.org/wp-content/themes/aaf/images/logo.svg)](https://www.americanactionforum.org)\n[![](https://www.americanactionforum.org/wp-content/themes/aaf/images/aaf-facebook.png)](https://www.facebook.com/AmericanActionForum/)[![](https://www.americanactionforum.org/wp-content/themes/aaf/images/aaf-twitter.png)](https://twitter.com/AAF)[![](https://www.americanactionforum.org/wp-content/themes/aaf/i..."
+      },
+      {
+        "index": 2,
+        "title": "The U.S. Economic Outlook for 2025\u20132027",
+        "url": "https://lsa.umich.edu/content/dam/econ-assets/Econdocs/RSQE%20PDFs/RSQE_US_Forecast_August2025.pdf",
+        "published_date": "2025-08-21T00:00:00.000Z",
+        "snippet": "University of Michigan, Ann Arbor\nDepartment of Economics\n611 Tappan Avenue\nAnn Arbor, MI 48109-1120\nlsa.umich.edu/econ/rsqe\n734-764-2567\nFor Release: 08/21/2025\n\u201cThe Michigan Model\u201d\nGabriel M. Ehrlich, Director\nGeorge A. Fulton & Saul H. Hymans\nDirectors Emeriti\nThe U.S. Economic Outlook for 2025\u20132027\nJacob T. Burton, Gabriel M. Ehrlich, Daniil Manaenkov, Niaoniao You, and Yinuo Zhang\nUniversity of Michigan\nExecutive Summary \nShaky Growth, but Steadier Tariff Landscape \nSeesaw movements of inve..."
+      },
+      {
+        "index": 3,
+        "title": "CBO's Current View of the Economy From 2025 to 2028",
+        "url": "https://www.cbo.gov/publication/61738",
+        "published_date": "2025-09-12T12:00:00.000Z",
+        "snippet": "[Skip to main content](https://www.cbo.gov/www.cbo.gov#main-content)\n\nSeptember 2025\n\n# CBO\u2019s Current View of the Economy From 2025 to 2028\n\n[Report's Home Page](https://www.cbo.gov/publication/61236) [Data and Supplemental Information](https://www.cbo.gov/publication/61236#data)\n\n[Related Publications](https://www.cbo.gov/publication/61236#related_pub)\n\n[Download](https://www.cbo.gov/system/files/2025-09/61236-Economy.pdf)\n\nTable of Contents\n\nNotes\n\n## Notes\n\nAll years referred to in this repor..."
+      },
+      {
+        "index": 4,
+        "title": "Fourth Quarter 2025 Survey of Professional Forecasters",
+        "url": "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/spf-q4-2025",
+        "published_date": "2025-11-17T00:00:00.000Z",
+        "snippet": "Fourth Quarter 2025 Survey of Professional Forecasters\n[Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/)\n[skip to main content](#content)[skip to footer](#footer)\nSearch\nExpand Menu\n# Fourth Quarter 2025 Survey of Professional Forecasters\nFourth Quarter 2025 Survey of Professional Forecasters\n17 Nov \u201925\n[](https://www.philadelphiafed.org/-/media/FRBP/Assets/Surveys-And-Data/survey-of-professional-forecasters/2025/spfQ425.pdf)\n## Forecasters Predict Slightly Higher Growth i..."
+      },
+      {
+        "index": 5,
+        "title": "2026 US Economics Outlook: Emerging From Policy ...",
+        "url": "https://advisor.morganstanley.com/the-wolfslau-group/documents/field/w/wo/wolfslau-group/2026_US_Economics_Outlook.pdf",
+        "published_date": "2025-11-14T00:00:00.000Z",
+        "snippet": "2026 US Economics Outlook: Emerging From Policy Uncertainty\nNovember 2025\nFor important disclosures, refer to the Disclosure Section, located at the end of this report.\nAll information as of Nov 14, 2025, unless otherwise stated. \nMorgan Stanley & Co. LLC\nM O R G A N S T A N L E Y R E S E A R C H\nNorth America\nMichael Gapen\nChief US Economist\nMichael.Gapen@morganstanley.com\n+1 212 761-0571\nSam Coffin\nEconomist\nSam.Coffin@morganstanley.com\n+1 212 761-4630\nDiego Anzoategui\nEconomist\nDiego.Anzoateg..."
+      },
+      {
+        "index": 6,
+        "title": "Global economic outlook 2026 | Deloitte Insights",
+        "url": "https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook-2026.html",
+        "published_date": "2025-12-19T00:00:00.000Z",
+        "snippet": "Global economic outlook 2026 | Deloitte Insights\nArticle\n&bull;&bull;\n62-min read\n&bull;&bull;\n19 December 2025\n&bull;&bull;\nDeloitte Global Economics Research Center\n* [Share](javascript:void(0))\n* [**linkedin](#)\n* [**twitter](#)\n* [**facebook](#)\n* [**Print](javascript:window.print();)\n# Global economic outlook 2026\n## Deloitte economists discuss the trends shaping the 2026 trajectories of over 25 countries\n#### Ira Kalish\nUnited States\n### Ira Kalish\nChief Global Economist | Deloitte Touche ..."
+      },
+      {
+        "index": 7,
+        "title": "Economic Outlook U.S. Q1 2026: Steady As She Goes",
+        "url": "https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550",
+        "published_date": "2025-11-24T00:00:00.000Z",
+        "snippet": "Economic Outlook U.S. Q1 2026: Steady As She Goes | S&amp;P Global RatingsS&amp;P Global Ratings\n[![logo]()](https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550#)\n[](https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550#)****\n\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c### **Create a free account**to unlock the article..."
+      },
+      {
+        "index": 8,
+        "title": "FOMC Summary of Economic Projections for the Growth Rate ...",
+        "url": "https://fred.stlouisfed.org/series/GDPC1MD",
+        "published_date": null,
+        "snippet": "FOMC Summary of Economic Projections for the Growth Rate of Real Gross Domestic Product, Median (GDPC1MD) | FRED | St. Louis Fed[Skip to main content](#content-container)\n# Federal Reserve Economic Data\n**\n# [](#)\nFOMC Summary of Economic Projections for the Growth Rate of Real Gross Domestic Product, Median(GDPC1MD)\nObservations**\n2028:1.9|\nFourth Quarter to Fourth Quarter Percent Change, Not Seasonally Adjusted |Annual\nUpdated:Dec 10, 20252:09 PM CST\n[Next Release Date:Mar 18, 2026](https://fr..."
+      },
+      {
+        "index": 9,
+        "title": ".Logo_svg__cls-1{fill:#3f0}",
+        "url": "https://www.marketwatch.com/press-release/2026-economic-outlook-economic-expansion-expected-to-continue-but-balance-of-risk-tilts-modestly-downward-95bd7e89",
+        "published_date": "2025-12-17T00:00:00.000Z",
+        "snippet": "Site SearchClearSEARCH\n\n[Advanced Search](https://www.marketwatch.com/search?q=) \u2794\n\nSearch Results\n\nSymbols\n\nNo results found\n\n- All News\n- Articles\n- Video\n- Podcasts\n\n0 Results\n\nNo Results Found\n\nAuthors\n\nNo results found\n\nSections\n\nNo results found\n\nColumns\n\nNo results found\n\n## Press Release\n\n# 2026 Economic Outlook: Economic Expansion Expected to Continue, But Balance of Risk Tilts Modestly Downward\n\nPublished: Dec. 17, 2025 at 9:00\u202fa.m. ET\n\nShare\n\nResize\n\n_The MarketWatch News Department w..."
+      },
+      {
+        "index": 10,
+        "title": "The Global Economy Is Forecast to Post \u2018Sturdy\u2019 Growth of 2.8% in 2026",
+        "url": "https://www.goldmansachs.com/insights/articles/the-global-economy-forecast-to-post-sturdy-growth-in-2026",
+        "published_date": "2025-12-19T00:00:00.000Z",
+        "snippet": "The Global Economy Is Forecast to Post \u2018Sturdy\u2019 Growth of 2.8% in 2026 | Goldman Sachs\nclose\nsearch\nsearch\n[Client Login](https://www.goldmansachs.com/login)\n[Client Login](https://www.goldmansachs.com/login)\nsearch\nsearch\n[Client Login](https://www.goldmansachs.com/login)\n[Client Login](https://www.goldmansachs.com/login)\nsearch\nsearch\n[Client Login](https://www.goldmansachs.com/login)\n[Client Login](https://www.goldmansachs.com/login)\nsearch\nsearch\n[Client Login](https://www.goldmansachs.com/l..."
+      },
+      {
+        "index": 11,
+        "title": "Global Insight 2026 Outlook: United States",
+        "url": "https://www.rbcwealthmanagement.com/en-us/insights/global-insight-2026-outlook-united-states",
+        "published_date": "2025-12-02T00:00:00.000Z",
+        "snippet": "Global Insight 2026 Outlook: United States[Skip to Cookie Banner](#onetrust-banner-sdk)[Skip to content](#main)[Skip to footer](#footer)\n# Global Insight 2026 Outlook: United States\nAnalysis[\n**\nInsights](https://www.rbcwealthmanagement.com/en-us/insights)\nStock and bond market returns face high hurdles in 2026, but we think the former should be given the benefit of the doubt.\n## Share\n* [\n**\n]()\n* [\n]()\n* [\n**\n](https://www.linkedin.com/sharing/share-offsite/?url=https://www.rbcwealthmanagement..."
+      },
+      {
+        "index": 12,
+        "title": "The Conference Board Economic Forecast for the US Economy",
+        "url": "https://www.conference-board.org/research/us-forecast",
+        "published_date": "2025-12-12T00:00:00.000Z",
+        "snippet": "Economic Forecast for the US Economy\nOur[Privacy Policy](https://www.conference-board.org/Privacypolicy)has been updated! The Conference Board uses cookies to improve our website, enhance your experience, and deliver relevant messages and offers about our products. Detailed information on the use of cookies on this site is provided in our[cookie policy](https://www.conference-board.org/Cookiepolicy). For more information on how The Conference Board collects and uses personal data, please visit o..."
+      },
+      {
+        "index": 13,
+        "title": "ISM\u00ae REPORTS ECONOMIC IMPROVEMENT TO CONTINUE IN 2026",
+        "url": "https://www.prnewswire.com/news-releases/ism-reports-economic-improvement-to-continue-in-2026-302642703.html",
+        "published_date": "2025-12-16T00:00:00.000Z",
+        "snippet": "ISM\u00ae REPORTS ECONOMIC IMPROVEMENT TO CONTINUE IN 2026[Accessibility Statement](https://www.cision.com/about/accessibility/)[Skip Navigation](#main)\n# ISM\u00ae REPORTS ECONOMIC IMPROVEMENT TO CONTINUE IN 2026\n[![Institute for Supply Management logo. (PRNewsFoto/Institute for Supply Management) (PRNewsfoto/Institute for Supply Management)]( \"Institute for Supply Management logo. (PRNewsFoto/Institute for Supply Management) (PRNewsfoto/Institute for Supply Management)\")](#)\n## News provided by\n[**Insti..."
+      },
+      {
+        "index": 14,
+        "title": "US economic outlook November 2025",
+        "url": "https://www.ey.com/en_us/insights/strategy/macroeconomics/us-economic-outlook",
+        "published_date": "2025-10-16T00:00:00.000Z",
+        "snippet": "US economic outlook November 2025 | EY - US\n[EY - Parthenon](https://www.ey.com/en_us/services/strategy/parthenon)\nInsights\nRead moreRead less\nAsking the better questions that unlock new answers to the working world&#39;s most complex issues.\nRead moreRead less\n[Explore](https://www.ey.com/en_us/insights)\nTrending topics\nRead moreRead less\n* 1||##\n* 2||##\n* 3||##\n* 4||##\n* 5||##\n* 6||##\n* 7||##\n* 8||##\n* 9||##\nRead moreRead less\nInsights Spotlight\nRead moreRead less\n[Case studies](https://www.ey..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:05:45.605397"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Crawled 4 pages",
+  "source": "Exa Crawl",
+  "data": {
+    "pages": [
+      {
+        "url": "https://www.deloitte.com/us/en/insights/topics/economy/us-economic-forecast/united-states-outlook-analysis.html",
+        "title": "United States Economic Forecast",
+        "content": "US Economic Forecast Q4 2025 | Deloitte Insights\n# United States Economic Forecast\n## Investment in artificial intelligence is supporting the economy, but questions remain about how long the momentum can last\nArticle\n&bull;&bull;\n18-min read\n&bull;&bull;\n19 December 2025\n&bull;&bull;\nDeloitte Global Economics Research Center\n* [Share](javascript:void(0))\n* [**linkedin](#)\n* [**twitter](#)\n* [**facebook](#)\n* [**Print](javascript:window.print();)\n#### Michael Wolf\nUnited States\n### Michael Wolf\nGlobal economist | Senior manager | Deloitte\nUnited States\nMichael Wolf is a global economist at Deloitte Touche Tohmatsu Ltd. He provides written commentary and analysis on global economic issues that affect the firm and its clients. He has been quoted by various media outlets, including the Wall Street Journal and NPR. Wolf began his career as an economist at the US Labor Department and has since held economist positions at Moody\u2019s Analytics, Wells Fargo Securities, and PwC. He has two graduate degrees, one in economic policy from Columbia University, and the other in statistics from Baruch College. He also has a bachelor\u2019s degree in economics from the University of Maryland.\n[***miwolf&#64;deloitte.com*](mailto:miwolf@deloitte.com)\n[***+1 646 919 1561*]()\n**\n#### Rohini Sanyal\nIndia\n### Rohini Sanyal\nDeputy manager | Deloitte Services India Pvt. Ltd.\nIndia\nRohini Sanyal is an economist with the Research &amp; Insights team. She has over 10 years of experience in economic policy and research, specializing in macroeconomic surveillance, data modelling and econometric forecasting. Her interests lie in monetary policy, income and inequality, labor market, and financial conditions. Sanyal has a graduate degree in economics from the University of Warwick.\n[***rohsanyal&#64;deloitte.com*](mailto:rohsanyal@deloitte.com)\n**\n**\n![](https://www.deloitte.com/content/dam/insights/icons/svg/icon-alert.svg)\nSince our last forecast in September, we have continued to see a rapidly changing economic and policy environment. We recognize that conditions remain highly fluid, so the three forecast scenarios we present in this edition are not meant as precise estimates of where the US economy will end up. Instead, they are built on explicit assumptions to help guide thinking about where the economy might go from here. Our baseline forecast reflects our best assessment of how different economic policies will evolve. Our downside and upside scenarios reflect plausible alternatives for the US economy should our assumptions prove to be overly optimistic or pessimistic, respectively.[1](#endnote-1)\n![](https://www.deloitte.com/content/dam/insights/icons/svg/icon-alert.svg)\nThe main differences across our scenarios involve assumptions around investments in artificial intelligence, tariffs, and immigration. We model how the economy may evolve under different levels of artificial intelligence investment, including a sudden pullback in AI investment in our downside scenario. Tariff pol",
+        "content_length": 3000
+      },
+      {
+        "url": "https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550",
+        "title": "Economic Outlook U.S. Q1 2026: Steady As She Goes | S&amp;P Global Ratings",
+        "content": "Economic Outlook U.S. Q1 2026: Steady As She Goes | S&amp;P Global RatingsS&amp;P Global Ratings\n[![logo]()](https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550#)\n[](https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550#)****\n\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c### **Create a free account**to unlock the article.\nGain access to exclusive research, events and more.\nRegister\nAlready have an account?Sign in\n\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c\u200c",
+        "content_length": 605
+      },
+      {
+        "url": "https://www.cbo.gov/publication/61236",
+        "title": "",
+        "content": "[Skip to main content](https://cbo.gov/cbo.gov#main-content)\n\n# CBO's Current View of the Economy From 2025 to 2028\n\nSeptember 12, 2025\n\nReport\n\nCBO provides details about its latest economic projections through 2028, which reflect several substantial changes in federal policy and economic developments that have occurred this year.\n\n[View Document](https://cbo.gov/publication/61738)\n\n[View Document](https://cbo.gov/system/files/2025-09/61236-Economy.pdf)\n\n309.64 KB\n\nThe Congressional Budget Office periodically updates its economic forecast to reflect changes in laws that affect revenues and spending, recent economic developments, and updated demographic projections. This report explains recent changes that have affected CBO's projections and provides details about the agency's latest economic forecast\u2014namely, its projections of output, the labor market, inflation, interest rates, and trade flows through 2028. Those projections reflect tariffs implemented as of August 19, 2025; other administrative actions taken as of August 28, 2025; and economic developments and laws put in place as of September 2, 2025. They also reflect CBO's updated demographic projections, which are based on laws and policies in place as of July 31, 2025, and which do not incorporate the effects of subsequent administrative or judicial actions, including those affecting immigration.\n\nEarly next year, the agency will publish its economic projections for 2026 to 2036 as part of _The Budget and Economic Outlook_. That publication will also provide updated projections of federal outlays and revenues, which are not included in this report.\n\n- [Data Underlying Figure and Tables](https://cbo.gov/system/files/2025-09/61236-data.xlsx)\n\n\n[Economic Projections](https://cbo.gov/publication/51135)\n\n- [CBO's Current View of the Economy in 14 Slides](https://cbo.gov/publication/61700)\n\nSeptember 12, 2025\n\n- [An Update to the Demographic Outlook, 2025 to 2055](https://cbo.gov/publication/61390)\n\nSeptember 10, 2025\n\n- [An Update About CBO's Projections of the Budgetary Effects of Tariffs](https://cbo.gov/publication/61697)\n\nAugust 22, 2025\n\n- [Estimated Budgetary Effects of Public Law 119-21, to Provide for Reconciliation Pursuant to Title II of H. Con. Res. 14, Relative to CBO\u2019s January 2025 Baseline](https://cbo.gov/publication/61570)\n\nJuly 21, 2025\n\n- [H.R. 1, One Big Beautiful Bill Act (Dynamic Estimate)](https://cbo.gov/publication/61486)\n\nJune 17, 2025\n\n- [Budgetary and Economic Effects of Increases in Tariffs Implemented Between January 6 and May 13, 2025](https://cbo.gov/publication/61389)\n\nJune 4, 2025\n\n- [Additional Information About the Economic Outlook: 2025 to 2035](https://cbo.gov/publication/61135)\n\nJanuary 30, 2025\n\n- [The Budget and Economic Outlook: 2025 to 2035](https://cbo.gov/publication/60870)\n\nJanuary 17, 2025\n\n- [The Demographic Outlook: 2025 to 2055](https://cbo.gov/publication/60875)\n\nJanuary 13, 2025\n\n- [Effects of the Immigration Surge on the Federal Budget and th",
+        "content_length": 3000
+      },
+      {
+        "url": "https://fred.stlouisfed.org/series/VAPGDPMA",
+        "title": "Federal Reserve Economic Data",
+        "content": "Value Added by Industry: Manufacturing as a Percentage of GDP (VAPGDPMA) | FRED | St. Louis Fed[Skip to main content](#content-container)\n# Federal Reserve Economic Data\n**\n# [](#)\nValue Added by Industry: Manufacturing as a Percentage of GDP(VAPGDPMA)\nObservations**\nQ2 2025:9.4|\nPercent, Not Seasonally Adjusted |Quarterly\nUpdated:Sep 25, 20257:31 AM CDT\n[Next Release Date:Dec 19, 2025](https://fred.stlouisfed.org/releases/calendar?rid=331&y=2025)\nObservations**\nQ2 2025:9.4\nUpdated:Sep 25, 20257:31 AM CDT\n[Next Release Date:Dec 19, 2025](https://fred.stlouisfed.org/releases/calendar?rid=331&y=2025)\nQ2 2025:|9.4||\nQ1 2025:|9.4||\nQ4 2024:|9.7||\nQ3 2024:|9.8||\nQ2 2024:|9.9||\n[View All](https://fred.stlouisfed.org/data/VAPGDPMA.txt)|\nUnits:\nPercent,\nNot Seasonally Adjusted \nFrequency:\nQuarterly\nFullscreen**\n**Data in this graph are copyrighted. Please review the copyright information in the[series notes](#notes)before sharing.**\nShare Graph**\n* [**Custom Graph Link](#)\n* [**Embed in Website](#)\n* [**Graph Image Link](#)\nAccountTools **\n* * * [**Add to Data List](https://fredaccount.stlouisfed.org/datalists/addseries/VAPGDPMA)\n* [**Get Email Notification](https://fredaccount.stlouisfed.org/addemailnotification/259700)\n* [&nbsp](https://fred.stlouisfed.org/graph/share.php)[**](https://fred.stlouisfed.org/graph/share.php)[**](https://fred.stlouisfed.org/graph/share.php)[**](https://fred.stlouisfed.org/graph/share.php)\n## Notes\n**Source:**[U.S. Bureau of Economic Analysis**](http://www.bea.gov/)\n**Release:**[Gross Domestic Product by Industry**](https://www.bea.gov/data/gdp/gdp-industry)\n**Units:**Percent,Not Seasonally Adjusted\n**Frequency:**Quarterly\n#### Notes:\nValue added represents the sum of the costs-incurred and the incomes-earned in production, and consists of compensation of employees, taxes on production and imports, less subsidies, and gross operating surplus.\nThis product uses the Bureau of Economic Analysis (BEA) Data API but is not endorsed or certified by BEA.\n#### Suggested Citation:\nU.S. Bureau of Economic Analysis,\nValue Added by Industry: Manufacturing as a Percentage of GDP [VAPGDPMA],\nretrieved from FRED,\nFederal Reserve Bank of St. Louis;\nhttps://fred.stlouisfed.org/series/VAPGDPMA,.\n## Release Tables\nGross Domestic Product by Industry\n* [**Value Added by Industry as a Percentage of Gross Domestic Product](https://fred.stlouisfed.org/release/tables?rid=331&eid=211#snid=877)\n## Related Data and Content\n### Data Suggestions Based On Your Search\n[![](https://fred.stlouisfed.org/images/loading.svg)](https://fred.stlouisfed.org/series/USMANRQGSP)\n[**Real Gross Domestic Product: Manufacturing (31-33) in the United States**](https://fred.stlouisfed.org/series/USMANRQGSP)\n[![](https://fred.stlouisfed.org/images/loading.svg)](https://fred.stlouisfed.org/series/RVAMA)\n[**Real Value Added by Industry: Manufacturing**](https://fred.stlouisfed.org/series/RVAMA)\n[![](https://fred.stlouisfed.org/images/loading.svg)](https://fred.stlouisfed.org/se",
+        "content_length": 3000
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:05:45.975050"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: BEA forecast manufacturing value added GDP share 2028",
+  "source": "Exa Search",
+  "data": {
+    "query": "BEA forecast manufacturing value added GDP share 2028",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "GDP by Industry | U.S. Bureau of Economic Analysis (BEA)",
+        "url": "https://www.bea.gov/data/gdp/gdp-industry",
+        "published_date": null,
+        "snippet": "GDP by Industry | U.S. Bureau of Economic Analysis (BEA)[Skip to main content](#main-content)\n![U.S. flag](https://www.bea.gov/sites/default/files/favicon-57.png)\nAn official website of the United States government\n[](https://www.bea.gov/)Toggle navigation\n1. [Home](https://www.bea.gov/)\n2. [BEA Data](https://www.bea.gov/data)\n3. [GDP](https://www.bea.gov/data/gdp)\n4. GDP by Industry\n# GDP by Industry\nIn the second quarter of 2025 (April, May, and June), the increase in real gross domestic produ..."
+      },
+      {
+        "index": 1,
+        "title": "Value Added by Industry: Manufacturing as a Percentage of GDP",
+        "url": "https://fred.stlouisfed.org/series/VAPGDPMA",
+        "published_date": null,
+        "snippet": "Value Added by Industry: Manufacturing as a Percentage of GDP (VAPGDPMA) | FRED | St. Louis Fed[Skip to main content](#content-container)\n# Federal Reserve Economic Data\n**\n# [](#)\nValue Added by Industry: Manufacturing as a Percentage of GDP(VAPGDPMA)\nObservations**\nQ2 2025:9.4|\nPercent, Not Seasonally Adjusted |Quarterly\nUpdated:Sep 25, 20257:31 AM CDT\n[Next Release Date:Dec 19, 2025](https://fred.stlouisfed.org/releases/calendar?rid=331&y=2025)\nObservations**\nQ2 2025:9.4\nUpdated:Sep 25, 20257..."
+      },
+      {
+        "index": 2,
+        "title": "United States - Manufacturing, Value Added (% Of GDP)",
+        "url": "https://tradingeconomics.com/united-states/manufacturing-value-added-percent-of-gdp-wb-data.html",
+        "published_date": null,
+        "snippet": "# United States - Manufacturing, Value Added (% Of GDP)2025 Data 2026 Forecast 1997-2024 Historical\n\n## Manufacturing, value added (% of GDP) in United States was reported at 9.9816 % in 2024, according to the World Bank collection of development indicators, compiled from officially recognized sources. United States - Manufacturing, value added (% of GDP) - actual values, historical data, forecasts and projections were sourced from the [World Bank](https://data.worldbank.org/) on September of 20..."
+      },
+      {
+        "index": 3,
+        "title": "US Economic Forecast Q4 2025 | Deloitte Insights",
+        "url": "https://www.deloitte.com/us/en/insights/topics/economy/us-economic-forecast/united-states-outlook-analysis.html",
+        "published_date": "2025-12-19T00:00:00.000Z",
+        "snippet": "US Economic Forecast Q4 2025 | Deloitte Insights\n# United States Economic Forecast\n## Investment in artificial intelligence is supporting the economy, but questions remain about how long the momentum can last\nArticle\n&bull;&bull;\n18-min read\n&bull;&bull;\n19 December 2025\n&bull;&bull;\nDeloitte Global Economics Research Center\n* [Share](javascript:void(0))\n* [**linkedin](#)\n* [**twitter](#)\n* [**facebook](#)\n* [**Print](javascript:window.print();)\n#### Michael Wolf\nUnited States\n### Michael Wolf\nG..."
+      },
+      {
+        "index": 4,
+        "title": "[PDF] The U.S. Economic Outlook for 2025\u20132027 - University of Michigan",
+        "url": "https://lsa.umich.edu/content/dam/econ-assets/Econdocs/RSQE%20PDFs/RSQE_US_Forecast_August2025.pdf",
+        "published_date": "2025-08-21T00:00:00.000Z",
+        "snippet": "University of Michigan, Ann Arbor\nDepartment of Economics\n611 Tappan Avenue\nAnn Arbor, MI 48109-1120\nlsa.umich.edu/econ/rsqe\n734-764-2567\nFor Release: 08/21/2025\n\u201cThe Michigan Model\u201d\nGabriel M. Ehrlich, Director\nGeorge A. Fulton & Saul H. Hymans\nDirectors Emeriti\nThe U.S. Economic Outlook for 2025\u20132027\nJacob T. Burton, Gabriel M. Ehrlich, Daniil Manaenkov, Niaoniao You, and Yinuo Zhang\nUniversity of Michigan\nExecutive Summary \nShaky Growth, but Steadier Tariff Landscape \nSeesaw movements of inve..."
+      },
+      {
+        "index": 5,
+        "title": "The Conference Board Economic Forecast for the US Economy",
+        "url": "https://www.conference-board.org/research/us-forecast",
+        "published_date": "2025-12-12T00:00:00.000Z",
+        "snippet": "Economic Forecast for the US Economy\nOur[Privacy Policy](https://www.conference-board.org/Privacypolicy)has been updated! The Conference Board uses cookies to improve our website, enhance your experience, and deliver relevant messages and offers about our products. Detailed information on the use of cookies on this site is provided in our[cookie policy](https://www.conference-board.org/Cookiepolicy). For more information on how The Conference Board collects and uses personal data, please visit o..."
+      },
+      {
+        "index": 6,
+        "title": "GDPNow: A model for GDP \"nowcasting\"",
+        "url": "https://www.econstor.eu/bitstream/10419/101002/1/wp1407.pdf",
+        "published_date": "2026-01-07T00:00:00.000Z",
+        "snippet": "Higgins, Patrick\nWorking Paper\nGDPNow: A model for GDP \"nowcasting\"\nWorking Paper, No. 2014-7\nProvided in Cooperation with:\nFederal Reserve Bank of Atlanta\nSuggested Citation: Higgins, Patrick (2014) : GDPNow: A model for GDP \"nowcasting\", Working\nPaper, No. 2014-7, Federal Reserve Bank of Atlanta, Atlanta, GA\nThis Version is available at:\nhttps://hdl.handle.net/10419/101002\nStandard-Nutzungsbedingungen:\nDie Dokumente auf EconStor d\u00fcrfen zu eigenen wissenschaftlichen\nZwecken und zum Privatgebrau..."
+      },
+      {
+        "index": 7,
+        "title": "World Economic Outlook",
+        "url": "https://www.imf.org/en/publications/weo/issues/2025/10/14/world-economic-outlook-october-2025",
+        "published_date": "2025-10-03T00:00:00.000Z",
+        "snippet": "World Economic Outlook, October 2025: Global Economy in Flux, Prospects Remain Dim\n* [](http://www.twitter.com/imfnews)\n* [](https://www.facebook.com/International-Monetary-Fund-152292984850728/)\n* [](http://www.linkedin.com/company/international-monetary-fund)\n* [](https://www.instagram.com/the_imf/)\n* [](https://www.threads.net/@the_imf/)\n* [](http://www.youtube.com/imf)\n* [](https://www.imf.org/en/news/podcasts)\n* [](https://www.imf.org/en/email-subscription/index)\n* [](https://www.imf.org/ex..."
+      },
+      {
+        "index": 8,
+        "title": "World Economic Outlook, October 2025; Global Economy in Flux, Prospects Remain Dim; October 14, 2025",
+        "url": "https://www.imf.org/-/media/files/publications/weo/2025/october/english/foreword.pdf",
+        "published_date": "2025-10-09T00:00:00.000Z",
+        "snippet": "xii International Monetary Fund | October 2025\nAn Unchanged Outlook Masks Complex \nForces as the Policy Landscape Shifts\nIn April of this year, the United States announced \nthe imposition of sizable tariffs against most of its trad\u0002ing partners, in a major departure from trade policy \nrules and norms. Given the complexity and fluidity \nof the moment, as well as the lack of certainty about \nannounced policies, the April 2025 World Economic \nOutlook (WEO) offered a range of estimates of the \ndownw..."
+      },
+      {
+        "index": 9,
+        "title": "[PDF] The Budget and Economic Outlook: 2018 to 2028",
+        "url": "https://www.cbo.gov/system/files/2019-04/53651-outlook-2.pdf",
+        "published_date": "2019-04-12T00:00:00.000Z",
+        "snippet": "Actual Current-Law\n Projection\n-4\n-2\n0\n2\n4\n6\n2003 2008 2013 2018 2023 2028\n0\n20\n40\n60\n80\n100\n2003 2008 2013 2018 2023 2028\nOutlays\nRevenues\n0\n15\n20\n25\n30\n2003 2008 2013 2018 2023 2028\n10\nPercentage of GDP\nPercent\nPercentage of GDP\nActual Current-Law\n Projection\nActual Current-Law\n Projection\nOver the next decade, the gap between \noutlays and revenues is projected to be \npersistently large.\nThe growth of real GDP is projected to \nbe relatively strong this year and next and \nthen to moderate.\nThat..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:05:47.264845"
+}
+
+------------------------------------------------------------
+
+
+################################################################################
+# OPUS (FORECASTING MODEL) CALLS
+################################################################################
+
+--- OPUS CALL 1 ---
+
+[INPUT TO OPUS (PROMPT)]
+----------------------------------------
+
+You are a professional forecaster. Your specific strength is the ability to take complex information and piece it together in an integrated way to form accurate probabilistic distributions.
+
+=== FORECASTING PHILOSOPHY ===
+
+**Tournament Context**: These questions come from a pre-set list. The actual situation on the ground may differ significantly from what the question implies. Don't assume the question framing matches reality.
+
+**Calibration Principles**:
+- NEVER assign less than 1% probability to any outcome
+- If there is ANY doubt, stay between 3% and 97%
+- The world changes slowly most of the time - weight status quo outcomes heavily
+- But also: be "based" - when evidence clearly points one direction, don't overthink it
+
+**Scoring Awareness** (Log Scoring):
+- If you predict 1% and outcome happens at that value, you're catastrophically penalized
+- Every doubling helps: 2% is almost twice as good as 1%, 4% even better
+- Your density at the resolution value is what matters - get as close as possible while acknowledging uncertainty
+
+**Two-Fold Uncertainty Model**:
+1. WORLD UNCERTAINTY: Irreducible randomness in reality that even perfect forecasters can't eliminate
+2. MODEL UNCERTAINTY: You likely lack critical data that human forecasters have access to. Account for information gaps.
+
+**Distribution Thinking**:
+- **Unimodal Model**: Start by assuming a single dominant trend. What are its mean and variance?
+- **Multimodal Exceptions**: How "unimodal" is this really? Are there secondary scenarios (e.g. "it either happens or it doesn't") that create a separate peak?
+- **World Model & Base Rates**: What is the historical base rate for this kind of event? 
+- **Tails**: Set wide tails for the 1% and 99% - unexpected outcomes are more common than they seem.
+- **Information Gaps**: You are given limited research. Explicitly consider what is MISSING and how it pulls you toward a conservative prior.
+
+=== YOUR QUESTION ===
+
+What percent of US GDP will come from manufacturing in the first half of 2028?
+
+Background:
+One of the most fundamental patterns in economic development is the progression from agriculture and resource extraction to industry to services. In this [three-stage model](https://en.wikipedia.org/wiki/Three-sector_model), countries typically begin relying on primary activities, such as agriculture, mining, forestry, and fishing, then transition toward manufacturing and industrial production as productivity gains free up labor. In the final stage, mature economies pivot toward services. In the original model by Fisher, Clark, and Fourastié, these services were thought of as the transport, distribution and sale of goods, but later reconceptualisations of the model expanded the definition to include finance, healthcare, education, and entertainment.
+
+This trend has become a particular concern for some US policymakers, with the GDP share of manufacturing dropping by more than a third from 1997 (16.1%) to 2021 (10.5%). At the same time the GDP share of manufacturing in the world dropped by less than 15 percent (from 19.0% to 16.5%).
+
+<iframe src="https://data.worldbank.org/share/widget?indicators=NV.IND.MANF.ZS&amp;locations=US-1W" width="600" height="450" frameborder="0" scrolling="no"></iframe> &nbsp;
+Declining manufacturing will likely have a negative impact on the US economy with [13 million workers](https://www.nist.gov/blogs/manufacturing-innovation-blog/manufacturing-america-contributing-our-economy-employment-and) employed in manufacturing jobs, and a large part of research and innovation being spearheaded by manufacturing companies. Indeed, some states would be [disproportionately affected](https://www.epi.org/publication/the-manufacturing-footprint-and-the-importance-of-u-s-manufacturing-jobs/#epi-toc-9) by manufacturing losses. Weak manufacturing would also lead to greater reliance on other countries and is thus often viewed as a [national security issue](https://www.cnas.org/publications/commentary/its-time-for-a-true-industrial-strategy-for-american-national-security); although [not everyone agrees](https://www.cato.org/publications/policy-analysis/manufactured-crisis-deindustrialization-free-markets-national-security#).
+
+For these reasons, Trump [pledged](https://www.nytimes.com/2024/09/24/us/politics/trump-economic-policy.html) during his campaign that he would implement policies to increase the manufacturing capacity of the US. These included the early 2025 tariffs, but also other actions, such as the [removal of regulatory barriers](https://www.whitehouse.gov/fact-sheets/2025/05/fact-sheet-president-donald-j-trump-announces-actions-to-reduce-regulatory-barriers-to-domestic-pharmaceutical-manufacturing/) and [trade agrements with other nations](https://www.whitehouse.gov/fact-sheets/2025/05/fact-sheet-president-donald-j-trump-secures-historic-1-2-trillion-economic-commitment-in-qatar/). However, [many](https://edition.cnn.com/2025/04/10/business/manufacturing-us-jobs-trump-tariffs) [are skeptical](https://www.wsj.com/economy/jobs/will-anyone-take-the-factory-jobs-trump-wants-to-bring-back-to-america-f6cd377b) [that](https://www.npr.org/2025/05/09/nx-s1-5375146/trump-tariffs-factory-jobs-nostalgia) such policies will strengthen the US's manufacturing sector.
+
+This question will resolve as the average manufacturing share of GDP for Q1 and Q2, 2028, reported in the FRED series [Value Added by Industry: Manufacturing as a Percentage of GDP](https://fred.stlouisfed.org/series/VAPGDPMA) (VAPGDPMA).
+
+This question will resolve after both values have been published by FRED and when they are first accessed by Metaculus. Later revisions will not impact resolution.
+
+Your research assistant says:
+=== RESEARCH SYNTHESIS ===
+**US Manufacturing Share of GDP (VAPGDPMA, BEA via FRED):**
+
+Current level: 9.4% (Q2 2025, unchanged from Q1 2025). Recent quarters: Q4 2024: 9.7%; Q3 2024: 9.8%; Q2 2024: 9.9%. Downward trend from 11.4% median (2005-2025), mean 11.3%, range 9.4-13.1%. Annualized volatility ~2.2%; avg quarterly decline -0.05 ppt.
+
+**Forecast Context (No Direct Projections Found):**
+No explicit 2028 forecasts from CBO, Deloitte, S&P, UMich RSQE, Philly Fed SPF, or others searched. Trading Economics/World Bank reports 9.98% for 2024 (annual); BEA quarterly data stable ~9.5-10% recently. Tariffs (CBO notes Aug 2025 implementations) may support reshoring, countering secular decline from services growth/AI investment (Deloitte Q4 2025). Steady GDP growth projected (CBO/FOMC ~1.9% 2028).
+
+**Synthesis for H1 2028 Forecast:**
+Trend suggests mild decline to 8.9-9.4% absent policy boosts; tariffs/reshoring could stabilize at 9.2-9.7%. Key risks: immigration/tariff escalation (CBO downside), AI capex shift to services. Baseline ~9.3% (extrapolating -0.15 ppt/yr recent pace).
+
+=== SEARCH RESULTS ===
+[Source 1]
+Title: Manufacturing as a Share of GDP by State - Visual Capitalist
+Date: 2025-07-14T00:00:00.000Z
+URL: https://www.visualcapitalist.com/sp/ter01-manufacturing-as-a-share-of-gdp-by-state/
+Content: Manufacturing as a Share of GDP by State 
+ 
+ Key Takeaways 
+ 
+ Manufacturing contributes the most to the economy in Indiana, where it makes up 26% of GDP. 
+ In Wyoming and D.C., the sector has the smallest impact. 
+ 
+ 
+ Tariffs are on the rise, a move by the U.S. intended to curb imports and boost A
+
+[Source 2]
+Title: Value Added by Industry: Manufacturing as a Percentage of GDP
+Date: None
+URL: https://fred.stlouisfed.org/series/VAPGDPMA
+Content: Value Added by Industry: Manufacturing as a Percentage of GDP (VAPGDPMA) | FRED | St. Louis Fed[Skip to main content](#content-container)
+# Federal Reserve Economic Data
+**
+# [](#)
+Value Added by Industry: Manufacturing as a Percentage of GDP(VAPGDPMA)
+Observations**
+Q2 2025:9.4|
+Percent, Not Season
+
+[Source 3]
+Title: CBO's Current View of the Economy From 2025 to 2028
+Date: 2025-09-12T00:00:00.000Z
+URL: https://www.cbo.gov/publication/61738
+Content: [Skip to main content](https://www.cbo.gov/www.cbo.gov#main-content)
+
+September 2025
+
+# CBO’s Current View of the Economy From 2025 to 2028
+
+[Report's Home Page](https://www.cbo.gov/publication/61236) [Data and Supplemental Information](https://www.cbo.gov/publication/61236#data)
+
+[Related Publicati
+
+[Source 4]
+Title: US Economic Forecast Q4 2025 | Deloitte Insights
+Date: 2025-12-19T00:00:00.000Z
+URL: https://www.deloitte.com/us/en/insights/topics/economy/us-economic-forecast/united-states-outlook-analysis.html
+Content: US Economic Forecast Q4 2025 | Deloitte Insights
+# United States Economic Forecast
+## Investment in artificial intelligence is supporting the economy, but questions remain about how long the momentum can last
+Article
+&bull;&bull;
+18-min read
+&bull;&bull;
+19 December 2025
+&bull;&bull;
+Deloitte Global
+
+[Source 5]
+Title: Economic Outlook U.S. Q1 2026: Steady As She Goes - S&P Global
+Date: 2025-11-24T00:00:00.000Z
+URL: https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550
+Content: Economic Outlook U.S. Q1 2026: Steady As She Goes | S&amp;P Global RatingsS&amp;P Global Ratings
+[![logo]()](https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550#)
+[](https://www.spglobal.com/ratings/en/regulatory/artic
+
+
+=== FRED: VALUE ADDED BY INDUSTRY: MANUFACTURING AS A PERCENTAGE OF GDP ===
+series_id: VAPGDPMA
+title: Value Added by Industry: Manufacturing as a Percentage of GDP
+units: Percent
+frequency: Quarterly
+date_range:
+  start: 2005-01-01
+  end: 2025-04-01
+data_points: 82
+current_value: 9.4000
+current_date: 2025-04-01
+statistics:
+  mean: 11.2646
+  std: 1.0109
+  min: 9.4000
+  max: 13.1000
+  median: 11.4000
+recent_values: [{'date': '2025-04-01', 'value': 9.4}, {'date': '2025-01-01', 'value': 9.4}, {'date': '2024-10-01', 'value': 9.7}, {'date': '2024-07-01', 'value': 9.8}, {'date': '2024-04-01', 'value': 9.9}]...
+changes:
+  last_change: 0.0000
+  avg_daily_change: -0.0457
+  daily_change_std: 0.1406
+  annualized_volatility: 2.2316
+  largest_increase: 0.2000
+  largest_decrease: -0.5000
+relative_changes:
+  last_pct_change: 0.0000
+  avg_daily_pct_change: -0.4012
+  daily_pct_volatility: 1.2485
+  annualized_pct_volatility: 19.8195
+
+=== SEARCH_WEB RESULTS ===
+
+[United States Manufacturing Production]
+Date: 2025-09-16T00:00:00.000Z
+URL: https://tradingeconomics.com/united-states/manufacturing-production
+Content: United States Manufacturing Production
+# United States Manufacturing Production
+* [Summary](#historical)
+* [Forecast](#forecast)
+* [Calendar](#calendar-table)
+* [Alerts](#alerts)
+* [Download]()
+## Manufacturing Production in the United States increased 1.5% year-on-year in September 2025, the bigges
+
+[How CBO's Latest Economic Projections Compare to Other ...]
+Date: 2025-09-23T16:59:19.000Z
+URL: https://www.americanactionforum.org/insight/how-cbos-latest-economic-projections-compare-to-other-forecasts/
+Content: How CBO’s Latest Economic Projections Compare to Other Forecasts - AAF
+[![](https://www.americanactionforum.org/wp-content/themes/aaf/images/logo.svg)](https://www.americanactionforum.org)
+[![](https://www.americanactionforum.org/wp-content/themes/aaf/images/aaf-facebook.png)](https://www.facebook.c
+
+[The U.S. Economic Outlook for 2025–2027]
+Date: 2025-08-21T00:00:00.000Z
+URL: https://lsa.umich.edu/content/dam/econ-assets/Econdocs/RSQE%20PDFs/RSQE_US_Forecast_August2025.pdf
+Content: University of Michigan, Ann Arbor
+Department of Economics
+611 Tappan Avenue
+Ann Arbor, MI 48109-1120
+lsa.umich.edu/econ/rsqe
+734-764-2567
+For Release: 08/21/2025
+“The Michigan Model”
+Gabriel M. Ehrlich, Director
+George A. Fulton & Saul H. Hymans
+Directors Emeriti
+The U.S. Economic Outlook for 2025–2
+
+[CBO's Current View of the Economy From 2025 to 2028]
+Date: 2025-09-12T12:00:00.000Z
+URL: https://www.cbo.gov/publication/61738
+Content: [Skip to main content](https://www.cbo.gov/www.cbo.gov#main-content)
+
+September 2025
+
+# CBO’s Current View of the Economy From 2025 to 2028
+
+[Report's Home Page](https://www.cbo.gov/publication/61236) [Data and Supplemental Information](https://www.cbo.gov/publication/61236#data)
+
+[Related Publicati
+
+[Fourth Quarter 2025 Survey of Professional Forecasters]
+Date: 2025-11-17T00:00:00.000Z
+URL: https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/spf-q4-2025
+Content: Fourth Quarter 2025 Survey of Professional Forecasters
+[Federal Reserve Bank of Philadelphia](https://www.philadelphiafed.org/)
+[skip to main content](#content)[skip to footer](#footer)
+Search
+Expand Menu
+# Fourth Quarter 2025 Survey of Professional Forecasters
+Fourth Quarter 2025 Survey of Professi
+
+=== CRAWL_URLS RESULTS ===
+
+[United States Economic Forecast]
+URL: https://www.deloitte.com/us/en/insights/topics/economy/us-economic-forecast/united-states-outlook-analysis.html
+Content: US Economic Forecast Q4 2025 | Deloitte Insights
+# United States Economic Forecast
+## Investment in artificial intelligence is supporting the economy, but questions remain about how long the momentum can last
+Article
+&bull;&bull;
+18-min read
+&bull;&bull;
+19 December 2025
+&bull;&bull;
+Deloitte Global Economics Research Center
+* [Share](javascript:void(0))
+* [**linkedin](#)
+* [**twitter](#)
+* [**facebook](#)
+* [**Print](javascript:window.print();)
+#### Michael Wolf
+United States
+### Michael Wolf
+G
+
+[Economic Outlook U.S. Q1 2026: Steady As She Goes | S&amp;P Global Ratings]
+URL: https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550
+Content: Economic Outlook U.S. Q1 2026: Steady As She Goes | S&amp;P Global RatingsS&amp;P Global Ratings
+[![logo]()](https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550#)
+[](https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-us-q1-2026-steady-as-she-goes-but-on-a-narrow-path-s101658550#)****
+‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌### **Create a free account**to unlock the article
+
+=== SEARCH_WEB RESULTS ===
+
+[GDP by Industry | U.S. Bureau of Economic Analysis (BEA)]
+Date: None
+URL: https://www.bea.gov/data/gdp/gdp-industry
+Content: GDP by Industry | U.S. Bureau of Economic Analysis (BEA)[Skip to main content](#main-content)
+![U.S. flag](https://www.bea.gov/sites/default/files/favicon-57.png)
+An official website of the United States government
+[](https://www.bea.gov/)Toggle navigation
+1. [Home](https://www.bea.gov/)
+2. [BEA Dat
+
+[Value Added by Industry: Manufacturing as a Percentage of GDP]
+Date: None
+URL: https://fred.stlouisfed.org/series/VAPGDPMA
+Content: Value Added by Industry: Manufacturing as a Percentage of GDP (VAPGDPMA) | FRED | St. Louis Fed[Skip to main content](#content-container)
+# Federal Reserve Economic Data
+**
+# [](#)
+Value Added by Industry: Manufacturing as a Percentage of GDP(VAPGDPMA)
+Observations**
+Q2 2025:9.4|
+Percent, Not Season
+
+[United States - Manufacturing, Value Added (% Of GDP)]
+Date: None
+URL: https://tradingeconomics.com/united-states/manufacturing-value-added-percent-of-gdp-wb-data.html
+Content: # United States - Manufacturing, Value Added (% Of GDP)2025 Data 2026 Forecast 1997-2024 Historical
+
+## Manufacturing, value added (% of GDP) in United States was reported at 9.9816 % in 2024, according to the World Bank collection of development indicators, compiled from officially recognized sourc
+
+[US Economic Forecast Q4 2025 | Deloitte Insights]
+Date: 2025-12-19T00:00:00.000Z
+URL: https://www.deloitte.com/us/en/insights/topics/economy/us-economic-forecast/united-states-outlook-analysis.html
+Content: US Economic Forecast Q4 2025 | Deloitte Insights
+# United States Economic Forecast
+## Investment in artificial intelligence is supporting the economy, but questions remain about how long the momentum can last
+Article
+&bull;&bull;
+18-min read
+&bull;&bull;
+19 December 2025
+&bull;&bull;
+Deloitte Global
+
+[[PDF] The U.S. Economic Outlook for 2025–2027 - University of Michigan]
+Date: 2025-08-21T00:00:00.000Z
+URL: https://lsa.umich.edu/content/dam/econ-assets/Econdocs/RSQE%20PDFs/RSQE_US_Forecast_August2025.pdf
+Content: University of Michigan, Ann Arbor
+Department of Economics
+611 Tappan Avenue
+Ann Arbor, MI 48109-1120
+lsa.umich.edu/econ/rsqe
+734-764-2567
+For Release: 08/21/2025
+“The Michigan Model”
+Gabriel M. Ehrlich, Director
+George A. Fulton & Saul H. Hymans
+Directors Emeriti
+The U.S. Economic Outlook for 2025–2
+
+Today is 2026-01-08.
+
+
+
+
+=== INTEGRATIVE REASONING ===
+
+Your research assistant has done the preliminary research for you. Your task is NOT to re-summarize the data, but to **coalesce your own thoughts** and use your specialized ability to **piece together the information in an integrated way**. 
+
+Avoid rambling. Focus on the final synthesis of the probability density:
+(a) How do these specific facts shift the mean or widen the variance?
+(b) What is the most likely "integrated" outcome distribution?
+(c) What is your final, calibrated judgment?
+
+=== ANALYSIS FRAMEWORK ===
+
+Before answering, work through:
+(a) Time remaining until resolution - does this affect uncertainty?
+(b) Status quo outcome if nothing changes
+(c) Outcome if current trends continue
+(d) What do prediction markets, experts, or Metaculus community suggest?
+(e) **Mean & Variance**: What is the center and spread of the most likely scenario?
+(f) **Multimodality**: Are there any "black swan" or "binary" scenarios that create separate probability peaks?
+(g) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
+(h) **Simulate Others**: What would the Metaculus pro-forecaster community likely converge on?
+(i) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
+
+=== TOOL USAGE ===
+You have access to `get_parametric_cdf(mean, std, skew)`.
+1. First, estimate the Mean and Standard Deviation of the target distribution.
+2. Estimate Skewness (0 for symmetric, positive for right-tail, negative for left-tail).
+3. CALL THE TOOL.
+4. The tool will give you a perfect set of percentiles.
+5. Use these percentiles in your final answer (you can adjust them slightly if necessary, but prefer the tool's smooth output).
+
+Formatting Instructions:
+- Match the units in the question (e.g. 1,000,000 vs 1m)
+- Never use scientific notation
+- Values must be strictly increasing from Percentile 1 to Percentile 99
+
+=== YOUR FORECAST ===
+
+The last thing you write is your final answer with these 25 percentiles:
+"
+Percentile 1: XX
+Percentile 2: XX
+Percentile 5: XX
+Percentile 10: XX
+Percentile 15: XX
+Percentile 20: XX
+Percentile 25: XX
+Percentile 30: XX
+Percentile 35: XX
+Percentile 40: XX
+Percentile 45: XX
+Percentile 50: XX
+Percentile 55: XX
+Percentile 60: XX
+Percentile 65: XX
+Percentile 70: XX
+Percentile 75: XX
+Percentile 80: XX
+Percentile 85: XX
+Percentile 90: XX
+Percentile 95: XX
+Percentile 96: XX
+Percentile 97: XX
+Percentile 98: XX
+Percentile 99: XX
+"
+
+----------------------------------------
+
+[OUTPUT FROM OPUS (RESPONSE)]
+----------------------------------------
+To forecast the US manufacturing share of GDP in H1 2028, I have integrated the following factors:
+
+1.  **Trend Analysis & Mean Reversion**: The FRED series (VAPGDPMA) is at its historical low since 2005 (9.4% in Q2 2025). While the secular trend toward services is powerful, the aggressive downward move from 9.9% in early 2024 suggests either a cyclical low or a structural acceleration. However, record lows are often followed by stabilization or volatile shifts, especially when policy intervention is high.
+2.  **Policy Impacts**: The 2025 policy landscape—dominated by tariffs, regulatory rollbacks, and industrial strategy (CHIPS, etc.)—is designed to decouple the US from global manufacturing and increase domestic value added. Since this metric measures nominal value added as a share of GDP, tariffs often provide a mechanical boost by raising the domestic price of manufactured goods relative to imported intermediates and services.
+3.  **The "AI Denominator" Effect**: Conversely, the rapid growth in AI-related investment and software services (which fall outside the manufacturing category) exerts downward pressure on manufacturing’s *share* of total GDP, even if manufacturing output grows in absolute terms.
+4.  **Causal Repercussions**: 
+    *   **Tariffs**: High relevance; pushes share up via domestic capture and price effects.
+    *   **Reshoring Momentum**: Medium relevance; slow gestation period (factories take years to build).
+    *   **Energy Prices**: Medium relevance; low US energy costs maintain a manufacturing floor.
+    *   **Services Dominance**: High relevance; continues to outpace manufacturing in the long run.
+
+**Forecasting Distribution**:
+I assume a mean of approximately **9.15%**. This accounts for a slight continued decline from the current 9.4% due to service-sector momentum, but assumes that the targeted industrial policies prevent a total collapse. The variance is set reasonably wide (SD ≈ 0.65) to reflect the possibility that either 1) the tariff regime causes a significant domestic manufacturing "renaissance" (pushing the share back toward 10+%), or 2) the secular transition to a services-and-AI economy accelerates the decline toward 8%.
+
+**Parametric Model**:
+- **Mean**: 9.15
+- **Standard Deviation**: 0.65
+- **Skewness**: 0.3 (accounting for a right-tail potential if massive tariffs significantly inflate the nominal value of domestic manufacturing).
+
+Using these parameters, I have generated the following probability distribution:
+
+Percentile 1: 7.64
+Percentile 2: 7.85
+Percentile 5: 8.13
+Percentile 10: 8.36
+Percentile 15: 8.51
+Percentile 20: 8.63
+Percentile 25: 8.73
+Percentile 30: 8.82
+Percentile 35: 8.90
+Percentile 40: 8.98
+Percentile 45: 9.06
+Percentile 50: 9.13
+Percentile 55: 9.21
+Percentile 60: 9.29
+Percentile 65: 9.37
+Percentile 70: 9.46
+Percentile 75: 9.56
+Percentile 80: 9.68
+Percentile 85: 9.81
+Percentile 90: 10.00
+Percentile 95: 10.29
+Percentile 96: 10.37
+Percentile 97: 10.47
+Percentile 98: 10.61
+Percentile 99: 10.84
+----------------------------------------
+
+
+################################################################################
+# FINAL RESULT
+################################################################################
+
+Type: numeric
+Success: True
+Submitted: False
+Forecast (CDF): [0.0010, ..., 0.9990] (201 points)
+
+################################################################################
+# COST SUMMARY
+################################################################################
+
+Research Phase:
+  - Tokens: 0
+  - Cost: $0.000000
+
+Forecast Phase:
+  - Tokens: 9,285
+  - Cost: $0.012675
+
+Exa API:
+  - Cost: $0.015000
+
+TOTAL:
+  - Total Tokens: 9,285
+  - Total Cost: $0.027675
+
+################################################################################
+# TOOL USAGE
+################################################################################
+
+  crawl_urls: 1 call(s)
+  get_fred_data: 1 call(s)
+  search_web: 2 call(s)

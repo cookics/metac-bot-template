@@ -12,10 +12,10 @@ import json
 from typing import Any
 
 
-def format_search_results_full(results: list[dict], max_results: int = 10) -> str:
+def format_search_results_full(results: list[dict], max_results: int = 5) -> str:
     """
     Format search results for the forecaster.
-    Gives full snippets (not truncated) for relevant articles.
+    Truncates snippets to save tokens.
     """
     if not results:
         return "[No search results]"
@@ -25,7 +25,8 @@ def format_search_results_full(results: list[dict], max_results: int = 10) -> st
         title = r.get("title", "Untitled")
         date = r.get("published_date", "Unknown")
         url = r.get("url", "")
-        text = r.get("text", "")[:800]  # Reasonable snippet, not 200 chars
+        # Reduced from 800 to 300 to save tokens
+        text = r.get("text", "")[:300]
         
         lines.append(f"""[Source {i+1}]
 Title: {title}
@@ -176,7 +177,7 @@ def _format_data_full(tool_name: str, result: Any) -> str:
 
 
 def _format_search_crawl_full(tool_name: str, result: Any) -> str:
-    """Format search/crawl results."""
+    """Format search/crawl results with strict token limits."""
     if not isinstance(result, dict):
         return ""
     
@@ -185,18 +186,22 @@ def _format_search_crawl_full(tool_name: str, result: Any) -> str:
     lines = [f"=== {tool_name.upper()} RESULTS ==="]
     
     if "results" in data:
-        for r in data["results"][:8]:
+        # Reduced from 8 to 5
+        for r in data["results"][:5]:
             lines.append(f"\n[{r.get('title', 'Untitled')}]")
             lines.append(f"Date: {r.get('published_date', 'Unknown')}")
             lines.append(f"URL: {r.get('url', '')}")
-            snippet = r.get("snippet", r.get("content", ""))[:600]
+            # Reduced from 600 to 300
+            snippet = r.get("snippet", r.get("content", ""))[:300]
             lines.append(f"Content: {snippet}")
     
     if "pages" in data:
-        for p in data["pages"]:
+        # Limit to 2 pages max in the report to save tokens
+        for p in data["pages"][:2]:
             lines.append(f"\n[{p.get('title', 'Page')}]")
             lines.append(f"URL: {p.get('url', '')}")
-            content = p.get("content", "")[:1500]
+            # Reduced from 1500 to 500
+            content = p.get("content", "")[:500]
             lines.append(f"Content: {content}")
     
     return "\n".join(lines)

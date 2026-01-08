@@ -13,6 +13,7 @@ from .executor import run_tool_calling_loop, call_llm_with_tools
 # Import tool classes
 from .market import BondsForecastTool, SpreadsForecastTool, VIXForecastTool
 from .data import YahooDataTool, OptionsDataTool, FREDDataTool
+from .forecast_tools import GetParametricDistributionCDF
 from .helpers import DistributionGeneratorTool
 from .search_tool import SearchTool
 from .crawl_tool import CrawlTool
@@ -32,6 +33,8 @@ TOOL_REGISTRY = {
     # Search and crawl tools
     "search_web": SearchTool,
     "crawl_urls": CrawlTool,
+    # Forecast distribution tool (parametric)
+    "get_parametric_cdf": GetParametricDistributionCDF,
 }
 
 

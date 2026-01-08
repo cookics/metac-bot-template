@@ -29,16 +29,11 @@ LLM_PROVIDER = "openrouter"
 
 # ========================= MODE SELECTION =========================
 #Toggle between EXPENSIVE (high quality) and CHEAP (cost-effective) mode
-EXPENSIVE_MODE = True  # Set to True for premium models, False for budget models
+EXPENSIVE_MODE = False  # Set to True for premium models, False for budget models
 
 # ========================= MODEL PRESETS =========================
-# EXPENSIVE MODE:
+# ALL MODES:
 #   - Research: x-ai/grok-4.1-fast      (ALWAYS THINKS on OpenRouter)
-#   - Forecast: anthropic/claude-opus-4.5 (Extended thinking available)
-#
-# CHEAP MODE:
-#   - Research: google/gemini-2.0-flash-001  (No thinking)
-#   - Forecast: google/gemini-3-flash-preview (Thinking ENABLED)
 
 # Global reasoning effort for models with thinking modes (Gemini 3, Grok, Claude 4.5)
 REASONING_EFFORT = "medium" # Options: low, medium, high
@@ -52,21 +47,21 @@ CLAUDE_OPUS_THINKING_ENABLED = False
 if EXPENSIVE_MODE:
     # --- EXPENSIVE MODE MODELS ---
     # Grok 4.1 Fast: Excellent for tool-calling, fast context processing.
-    # Thinking: ALWAYS ENABLED by OpenRouter for this model variant.
+    # Thinking: DISABLED for cost efficiency (set RESEARCH_THINKING = False)
     RESEARCH_MODEL = "x-ai/grok-4.1-fast"
     RESEARCH_TEMP = 0.6
-    RESEARCH_THINKING = True # Mark as True because it returns reasoning anyway
+    RESEARCH_THINKING = False  # Disabled to reduce token usage
     
     # Claude 4.5 Opus: Frontier reasoning model.
-    # Thinking: Only enabled if 'CLAUDE_OPUS_THINKING_ENABLED' is wired to True below.
+    # Thinking: DISABLED for cost efficiency (CLAUDE_OPUS_THINKING_ENABLED = False)
     FORECAST_MODEL = "anthropic/claude-opus-4.5"
-    FORECAST_TEMP = 1.0 # Preferred for the new Claude models
-    FORECAST_THINKING = CLAUDE_OPUS_THINKING_ENABLED 
+    FORECAST_TEMP = 1.0  # Preferred for the new Claude models
+    FORECAST_THINKING = False  # Explicitly disabled
 else:
     # --- CHEAP MODE MODELS ---
-    # Gemini 2.0 Flash: Standard fast research
-    RESEARCH_MODEL = "google/gemini-2.0-flash-001"
-    RESEARCH_TEMP = 0.75
+    # Grok 4.1 Fast: Standard fast research (Replacing Gemini 2.0)
+    RESEARCH_MODEL = "x-ai/grok-4.1-fast"
+    RESEARCH_TEMP = 0.6
     RESEARCH_THINKING = False
     
     # Gemini 3 Flash Preview: Reasoning-enabled forecaster

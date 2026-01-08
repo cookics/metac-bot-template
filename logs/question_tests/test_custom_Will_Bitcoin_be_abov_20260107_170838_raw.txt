@@ -1,0 +1,674 @@
+=== RAW RESEARCH LOG: Will Bitcoin be above  tomorrow? ===
+Timestamp: 20260107_170838
+================================================================================
+
+[SYSTEM]
+CONTENT:
+You are a Research Agent with access to specialized tools for market data and forecasting.
+
+Your job is to gather information to help forecast the following question. You can use tools to:
+1. Get market forecast distributions (bonds, spreads, VIX) - these return percentile data
+2. Fetch financial data (Yahoo Finance, options, FRED economic data)
+3. Search the web for relevant news and context
+
+For MARKET FORECAST questions (bond yields, stock spreads, VIX levels), use the appropriate forecast tool FIRST.
+These tools run Monte Carlo simulations and return probability distributions.
+
+For GENERAL questions, use data tools and web search to gather context.
+
+After gathering data, write a SHORT REPORT synthesizing:
+- Key quantitative data from tool calls
+- Probability distributions (if from forecast tools)
+- Relevant context and factors
+
+Be concise. The forecaster will use your report to make predictions.
+
+------------------------------------------------------------
+
+[USER]
+CONTENT:
+Question to forecast:
+Will Bitcoin be above  tomorrow?
+
+Initial search results:
+[Source 1]
+Title: Bitcoin Price Prediction | Forecast BTC price in 2026, 2027 ... - Kraken
+Date: None
+URL: https://www.kraken.com/price-prediction/bitcoin
+Content: Bitcoin Price Prediction | Forecast BTC price in 2026, 2027, 2030 &amp; beyond
+[Home](https://www.kraken.com/)/[Crypto prices](https://www.kraken.com/prices)/[Bitcoin](https://www.kraken.com/prices/bitcoin)/ Price prediction
+# Bitcoin price prediction
+How much will Bitcoin be worth in 2026, 2030 and beyond? Use our price prediction tool to forecast the price of Bitcoin and see how much your investment could be worth.
+Price in 5 years with 5% predicted growth
+BTC
+![BTC icon](https://assets.kraken.com/marketing/web/icons-uni-webp/s_btc.webp?i=kds)
+**+27.63%**increase.
+USD
+USD
+Current price
+$93,546
+Price in 5 years\*
+$119,391.04
+Price in 10 years\*
+$152,376.58
+Price in 15 years\*
+$194,475.42
+Price in 20 years\*
+$248,205.39
+[Sign up](https://app.kraken.com/JDNW/54x2kumy)
+[Sign up](https://www.
+
+[Source 2]
+Title: Bitcoin Price prediction, Short/Long Forecast - CoinLore
+Date: None
+URL: https://www.coinlore.com/coin/bitcoin/forecast/price-prediction
+Content: Bitcoin Price prediction, Short/Long Forecast - CoinLore
+##### Select Language
+&times;
+[English US✔](https://www.coinlore.com/coin/bitcoin/forecast/price-prediction)
+[Русский RU](https://www.coinlore.com/ru/coin/bitcoin/forecast/price-prediction)
+[Türkçe TR](https://www.coinlore.com/tr/coin/bitcoin/forecast/price-prediction)
+[Español ES](https://www.coinlore.com/es/coin/bitcoin/forecast/price-prediction)
+[Deutsch DE](https://www.coinlore.com/de/coin/bitcoin/forecast/price-prediction)
+* [Prediction](https://www.coinlore.com/coin/bitcoin/forecast/price-prediction)
+* [**Overview / Price](https://www.coinlore.com/coin/bitcoin)
+* [**Exchanges](https://www.coinlore.com/coin/bitcoin/exchanges)
+* [**Historical Prices](https://www.coinlore.com/coin/bitcoin/historical-data)
+* [**Rich list](https://w
+
+[Source 3]
+Title: Bitcoin (BTC) Price Prediction 2026-2031 - Binance
+Date: None
+URL: https://www.binance.com/en/price-prediction/bitcoin
+Content: [Home](https://www.binance.com/en)
+
+[Price Prediction](https://www.binance.com/en/price-prediction)
+
+Bitcoin Price Prediction
+
+# Bitcoin (BTC) Price Prediction
+
+How much will Bitcoin (BTC) be worth in 2025, 2026, 2027, 2028, up to 2030? Check out other opinions on price targets and project confidence levels — known as a Consensus Rating — when deciding on your own price targets. Data displayed are based on user input and not Binance's opinion.
+
+Ready to buy BTC? Binance accepts a wide range of currencies, making it easy for you to buy crypto using USD, EUR, CNY, AUD, INR, and other fiat currencies. Here are the [buying guides for all available tokens on Binance](https://www.binance.com/en/how-to-buy).
+
+[Buy Bitcoin](https://accounts.binance.com/en/register?return_to=&registerChannel=SEO_pa
+
+[Source 4]
+Title: Bitcoin (BTC) Price Prediction 2025 2026 2027 - 2030 - Changelly
+Date: None
+URL: https://changelly.com/blog/bitcoin-price-prediction/
+Content: Bitcoin (BTC) Price Prediction 2025 2026 2027 - 2030
+## Get expert-selected crypto trends &amp; updates sent directly to your inbox.[**Click to subscribe now.**](https://changelly.com/blog/subscription-trends/?utm_source=blog_topBanner)
+[![](https://changelly.com/blog/wp-content/themes/changelly_besyat/assets/img/svg/header-logo.svg)](https://changelly.com/blog/)
+Win Prizes
+[](https://changelly.onelink.me/Jqqm/7gf0m2um)
+![English](https://changelly.com/blog/wp-content/uploads/flags/us.svg)
+English
+[
+![Español](https://changelly.com/blog/wp-content/plugins/sitepress-multilingual-cms/res/flags/es.svg)
+Español
+](https://changelly.com/blog/es/)
+[
+![Deutsch](https://changelly.com/blog/wp-content/plugins/sitepress-multilingual-cms/res/flags/de.svg)
+Deutsch
+](https://changelly.com/blog/de/)
+[
+![P
+
+[Source 5]
+Title: Bitcoin (BTC) Price Prediction 2026, 2027-2030 | CoinCodex
+Date: None
+URL: https://coincodex.com/crypto/bitcoin/price-prediction/
+Content: Bitcoin (BTC) Price Prediction 2026, 2027-2030 | CoinCodex
+**[![CoinCodex - Crypto Prices, Charts, and Cryptocurrency Market Cap](https://coincodex.com/images/coincodex-light.svg?v=1)![CoinCodex - Crypto Prices, Charts, and Cryptocurrency Market Cap](https://coincodex.com/images/coincodex-dark.svg?v=1)](https://coincodex.com/)**
+* [Total Market Cap:M. Cap:$ 3.12T(-2.10%)](https://coincodex.com/market-cap/)
+* [BTC Dominance:BTC Dom:58.46%(0.06%)](https://coincodex.com/bitcoin-dominance/)
+* [24h Volume:24h Vol.:$ 159.00B(-11.31%)](https://coincodex.com/trading-volume/)
+* [BTC Price:BTC:$ 91,301(-1.54%)](https://coincodex.com/crypto/bitcoin/)
+* [S&amp;P 500:6,951.21(0.49%)](https://coincodex.com/stocks/)
+* [Gold:$ 4,459.47(-0.57%)](https://coincodex.com/precious-metal/gold/)
+* [USD/EUR€ 0.86(
+
+
+Based on these search results and your available tools:
+1. If you see an interesting link, use crawl_urls to get full content
+2. If you need financial data, use the data tools (yahoo, fred, options)
+3. If this is a market question, use forecast tools for distributions
+
+When done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.
+Focus on NUMBERS and FACTS that help forecasting.
+
+
+------------------------------------------------------------
+
+[ASSISTANT]
+
+[TOOL CALLS]
+  - get_yahoo_data({"ticker": "BTC-USD", "data_type": "price"})
+  - get_yahoo_data({"ticker": "BTC-USD", "data_type": "history", "period": "1mo"})
+  - get_yahoo_data({"ticker": "BTC-USD", "data_type": "returns", "period": "1mo"})
+  - get_options_data({"ticker": "BTC-USD", "data_type": "atm_iv"})
+  - search_web({"query": "Bitcoin BTC price prediction tomorrow short term forecast", "num_results": 10, "days_back": 3})
+  - search_web({"query": "current Bitcoin price volatility implied vol tomorrow forecast", "num_results": 10, "days_back": 7})
+
+------------------------------------------------------------
+
+[TOOL]
+CONTENT:
+{
+  "type": "data_report",
+  "title": "BTC-USD - Price",
+  "source": "Yahoo Finance",
+  "data": {
+    "ticker": "BTC-USD",
+    "price": 90829.54,
+    "previous_close": 93707.15,
+    "change": -2877.6100000000006,
+    "change_percent": -3.0708542517833495,
+    "day_high": 93707.15,
+    "day_low": 90714.0,
+    "volume": 43830734848,
+    "market_cap": 1814124822528,
+    "currency": "USD",
+    "exchange": "CCC",
+    "quote_type": "CRYPTOCURRENCY"
+  },
+  "fetched_at": "2026-01-07T17:08:59.247574"
+}
+Result for Call ID call_68155721 (get_yahoo_data):
+{
+  "type": "data_report",
+  "title": "BTC-USD - Price",
+  "source": "Yahoo Finance",
+  "data": {
+    "ticker": "BTC-USD",
+    "price": 90829.54,
+    "previous_close": 93707.15,
+    "change": -2877.6100000000006,
+    "change_percent": -3.0708542517833495,
+    "day_high": 93707.15,
+    "day_low": 90714.0,
+    "volume": 43830734848,
+    "market_cap": 1814124822528,
+    "currency": "USD",
+    "exchange": "CCC",
+    "quote_type": "CRYPTOCURRENCY"
+  },
+  "fetched_at": "2026-01-07T17:08:59.247574"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+CONTENT:
+{
+  "type": "data_report",
+  "title": "BTC-USD - History",
+  "source": "Yahoo Finance",
+  "data": {
+    "ticker": "BTC-USD",
+    "period": "1mo",
+    "data_points": 32,
+    "date_range": {
+      "start": "2025-12-07",
+      "end": "2026-01-07"
+    },
+    "latest": {
+      "date": "2026-01-07",
+      "open": 93707.1484375,
+      "high": 93707.1484375,
+      "low": 90714.0,
+      "close": 90829.5390625,
+      "volume": 43830734848
+    },
+    "statistics": {
+      "high_period": 94762.0703125,
+      "low_period": 84436.3125,
+      "avg_close": 89182.9697265625,
+      "avg_volume": 41888428889.84375
+    },
+    "recent_closes": [
+      90603.1875,
+      91413.4921875,
+      93882.5546875,
+      93729.03125,
+      90829.5390625
+    ]
+  },
+  "fetched_at": "2026-01-07T17:08:59.404784"
+}
+Result for Call ID call_18709616 (get_yahoo_data):
+{
+  "type": "data_report",
+  "title": "BTC-USD - History",
+  "source": "Yahoo Finance",
+  "data": {
+    "ticker": "BTC-USD",
+    "period": "1mo",
+    "data_points": 32,
+    "date_range": {
+      "start": "2025-12-07",
+      "end": "2026-01-07"
+    },
+    "latest": {
+      "date": "2026-01-07",
+      "open": 93707.1484375,
+      "high": 93707.1484375,
+      "low": 90714.0,
+      "close": 90829.5390625,
+      "volume": 43830734848
+    },
+    "statistics": {
+      "high_period": 94762.0703125,
+      "low_period": 84436.3125,
+      "avg_close": 89182.9697265625,
+      "avg_volume": 41888428889.84375
+    },
+    "recent_closes": [
+      90603.1875,
+      91413.4921875,
+      93882.5546875,
+      93729.03125,
+      90829.5390625
+    ]
+  },
+  "fetched_at": "2026-01-07T17:08:59.404784"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+CONTENT:
+{
+  "type": "data_report",
+  "title": "BTC-USD - Returns",
+  "source": "Yahoo Finance",
+  "data": {
+    "ticker": "BTC-USD",
+    "period": "1mo",
+    "trading_days": 31,
+    "total_return_pct": 0.4688849440913856,
+    "daily_volatility": 0.01485335744903253,
+    "annualized_volatility": 0.23578973966693292,
+    "best_day_pct": 3.090097713717843,
+    "worst_day_pct": -3.093483575826461,
+    "positive_days": 18,
+    "negative_days": 13,
+    "start_price": 90405.640625,
+    "end_price": 90829.5390625
+  },
+  "fetched_at": "2026-01-07T17:08:59.451998"
+}
+Result for Call ID call_39533790 (get_yahoo_data):
+{
+  "type": "data_report",
+  "title": "BTC-USD - Returns",
+  "source": "Yahoo Finance",
+  "data": {
+    "ticker": "BTC-USD",
+    "period": "1mo",
+    "trading_days": 31,
+    "total_return_pct": 0.4688849440913856,
+    "daily_volatility": 0.01485335744903253,
+    "annualized_volatility": 0.23578973966693292,
+    "best_day_pct": 3.090097713717843,
+    "worst_day_pct": -3.093483575826461,
+    "positive_days": 18,
+    "negative_days": 13,
+    "start_price": 90405.640625,
+    "end_price": 90829.5390625
+  },
+  "fetched_at": "2026-01-07T17:08:59.451998"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+CONTENT:
+Tool execution failed: No options available for BTC-USD
+Result for Call ID call_72159780 (get_options_data):
+Tool execution failed: No options available for BTC-USD
+
+------------------------------------------------------------
+
+[TOOL]
+CONTENT:
+{
+  "type": "data_report",
+  "title": "Search: Bitcoin BTC price prediction tomorrow short term forecast",
+  "source": "Exa Search",
+  "data": {
+    "query": "Bitcoin BTC price prediction tomorrow short term forecast",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "BITCOIN NEXT 24 HOURS PREDICTION: TODAY, TOMORROW, MONTH",
+        "url": "https://pricefore.com/bitcoin",
+        "published_date": "2025-06-08T00:00:00.000Z",
+        "snippet": "BITCOIN NEXT 24 HOURS PREDICTION: TODAY, TOMORROW, MONTH\n[![Pricefore](https://pricefore.com/images/pricefore.png)](https://pricefore.com)\n# BITCOIN NEXT 24 HOURS PREDICTION: TODAY, TOMORROW, MONTH\n**Updated:Loading...**\nnext autoupdate in.\n![Bitcoin](https://pricefore.com/images/bitcoin.png)\n**Bitcoin BTC**$93563\n1h\n+0.21%\n3h\n+0.23%\n8h\n-0.02%\n## Bitcoin Price Performance\nBitcoin price stood at $93563. Over the last hour, the price has increased by 0.21%. Three hours ago Bitcoin was worth $93351..."
+      },
+      {
+        "index": 1,
+        "title": "Bitcoin price prediction - Future BTC Forecast - CoinCheckup",
+        "url": "https://coincheckup.com/coins/bitcoin/predictions",
+        "published_date": "2025-09-04T00:00:00.000Z",
+        "snippet": "Bitcoin Price Prediction 2025-2030: Future BTC Forecast\n* [\nM. Cap:$3.14T(2.12%)\n](https://coincheckup.com/en/global)\n* [\nBTC Dom:58.80%(0.14%)\n](https://coincheckup.com/en/global)\n* [\n24H Vol:$217.98B(-19.34%)\n](https://coincheckup.com/en/global)\n* [\nBTC:$92,417(2.45%)\n](https://coincheckup.com/en/coins/bitcoin)\n* S&amp;P500:$6,901.00(0.21%)\n* [\nGold:$4,326.09(2.62%)\n](https://coincheckup.com/en/coins/tether-gold)\n* [\nEUR/USD:$1.17(0.21%)\n](https://coincheckup.com/en/convert/eur/usd)\n[\nAdvertis..."
+      },
+      {
+        "index": 2,
+        "title": "BTC USD \u2014 Bitcoin Price and Chart - TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "published_date": "2025-12-30T22:08:58.821Z",
+        "snippet": "BTC USD \u2014Bitcoin Price and Chart \u2014TradingView\n[](https://www.tradingview.com/)\nSearch\nEN![]()**\n[Get started](https://www.tradingview.com/pricing/?source=header_go_pro_button&amp;feature=start_free_trial)\n![Bitcoin](https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC--big.svg)![Bitcoin](https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC--big.svg)![Bitcoin](https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC--big.svg)\n[#1](https://www.tradingview.com/markets/cryptocurrencies/prices-all/)[#..."
+      },
+      {
+        "index": 3,
+        "title": "Today's Bitcoin (BTC) USD Forecast, Trade & Technical Analysis",
+        "url": "https://www.bitrates.com/coin/BTC/analysis/USD",
+        "published_date": "2025-05-06T00:00:00.000Z",
+        "snippet": "Cryptocurrencies Live Prices, Historical Charts, Crypto News | Bitrates.com\n[![logo](https://www.bitrates.com/wp-content/themes/bitrates/images/bitrates-logo.svg)](https://www.bitrates.com/)\n![](https://www.bitrates.com/wp-content/uploads/2026/01/Bitcoinss.jpeg)[latest news](https://www.bitrates.com/news)\n[Industry](https://www.bitrates.com/news/c/industry/)Jan 02, 2026\n[Top 3 Prop Trading Firms for Crypto Traders in 2026The proprietary trading landscape has expanded significantly, yet finding p..."
+      },
+      {
+        "index": 4,
+        "title": "Bitcoin (BTC) Price Prediction & Forecast for 2025, 2026, 2030, 2040",
+        "url": "https://www.bitmex.com/price-prediction/bitcoin",
+        "published_date": "2024-04-20T00:00:00.000Z",
+        "snippet": "Bitcoin (BTC) Price Prediction &amp; Forecast for 2026, 2030, 2040\n[XBTUSD](https://www.bitmex.com/app/trade/XBTUSD)92,837.6-0.54%[ETHUSD](https://www.bitmex.com/app/trade/ETHUSD)3,259.98+1.19%[XBTUSDT](https://www.bitmex.com/app/trade/XBTUSDT)92,901.2-0.48%[SUIUSDT](https://www.bitmex.com/app/trade/SUIUSDT)1.94-1.77%[SOLUSDT](https://www.bitmex.com/app/trade/SOLUSDT)139.54+1.23%[ETHUSDT](https://www.bitmex.com/app/trade/ETHUSDT)3,257.8+1.09%[DOGEUSDT](https://www.bitmex.com/app/trade/DOGEUSDT)0..."
+      },
+      {
+        "index": 5,
+        "title": "Bitcoin (BTC) Price Prediction for 2025 to 2030 | Bybit",
+        "url": "https://www.bybit.com/en/price/bitcoin/prediction",
+        "published_date": "2025-10-23T00:00:00.000Z",
+        "snippet": "Bitcoin (BTC) Price Prediction for 2026 to 2031 | Bybit\n![Bitcoin](https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png?1696501400 \"Bitcoin\")\n# Bitcoin (BTC) Price Prediction\nBybit AI predicts the price of Bitcoin (BTC) will trend across 2026 to 2031 based on user-driven Consensus Ratings and historical patterns. Get detailed forecasts for 2026, 2027, 2028, 2029, 2030, and 2031 below. You can buy BTC on Bybit using major fiat currencies such as USD, EUR, RUB, and INR. Register with..."
+      },
+      {
+        "index": 6,
+        "title": "Bitcoin (BTC) Price Prediction & Forecast 2025, 2026, 2027 - 2030",
+        "url": "https://www.okx.com/en-us/price-prediction/bitcoin-btc",
+        "published_date": "2024-12-09T00:00:00.000Z",
+        "snippet": "Bitcoin (BTC) Price Prediction &amp; Forecast 2026, 2027, 2028 - 2032 | OKX United States\nSkip to main content\n[](https://www.okx.com/en-us)\n# BTCBitcoinprice prediction\nBitcoin (BTC) has seen significant shifts lately, from maintaining low volatility to entering notable price swings and reaching new all-time highs. So, how much could Bitcoin (BTC) be worth tomorrow, by the end of 2026, in 2027, 2028, 2030, or 2040? Explore tools that can help you get a glimpse of Bitcoin\u2019s potential, whether in..."
+      },
+      {
+        "index": 7,
+        "title": "Bitcoin Price Prediction: up to $139348! - BTC to USD Forecast 2025, Long-Term & Short-Term Price Prognosis",
+        "url": "https://walletinvestor.com/forecast/bitcoin-prediction",
+        "published_date": "2025-05-13T00:00:00.000Z",
+        "snippet": "Bitcoin Price Prediction: up to $127756! - BTC to USD Forecast 2026, Long-Term &amp; Short-Term Price Prognosis\n* [**Markets**](https://walletinvestor.com/markets)\n* [**Forecast********](#)\n* * [Crypto Forecasts](https://walletinvestor.com/forecast)\n* Top 5 Crypto forecasts\n* [Tether Usdt forecast](https://walletinvestor.com/forecast/tether-usdt-prediction)\n* [Bitcoin forecast](https://walletinvestor.com/forecast/bitcoin-prediction)\n* [Ethereum forecast](https://walletinvestor.com/forecast/ether..."
+      },
+      {
+        "index": 8,
+        "title": "Bitcoin (BTC) Price Prediction 2025, 2026-2030 | CoinCodex",
+        "url": "https://coincodex.com/crypto/bitcoin/price-prediction/",
+        "published_date": "2022-01-02T00:00:00.000Z",
+        "snippet": "Bitcoin (BTC) Price Prediction 2026, 2027-2030 | CoinCodex\n**[![CoinCodex - Crypto Prices, Charts, and Cryptocurrency Market Cap](https://coincodex.com/images/coincodex-light.svg?v=1)![CoinCodex - Crypto Prices, Charts, and Cryptocurrency Market Cap](https://coincodex.com/images/coincodex-dark.svg?v=1)](https://coincodex.com/)**\n* [Total Market Cap:M. Cap:$\u202f3.12T(-2.10%)](https://coincodex.com/market-cap/)\n* [BTC Dominance:BTC Dom:58.46%(0.06%)](https://coincodex.com/bitcoin-dominance/)\n* [24h V..."
+      },
+      {
+        "index": 9,
+        "title": "Bitcoin Price Prediction: Next 24 Hours, Tomorrow, Week (BTC/USD)",
+        "url": "https://tradersunion.com/currencies/forecast/btc-usd/daily-and-weekly/",
+        "published_date": "2022-04-27T00:00:00.000Z",
+        "snippet": "[Advertiser Disclosure](https://tradersunion.com/advertiser-disclosure/) Disclaimer\n\n# Bitcoin (BTC) Price Prediction\n\n24H Prediction +0.02%$119,945.16\n\n48H Prediction +1.19%$121,349.6\n\n7-Day Prediction +3.88%$124,578.45\n\n1-Month Prediction +1.58%$121,820.27\n\n3-Month Prediction +3.11%$123,656.73\n\n6-Month Prediction +4.67%$125,520.87\n\n12-Month Prediction +7.85%$129,333.88\n\nCurrent price:$119,921.5651.740.55%\n\nReal-time Data19:38\n\nDaily change**119335.56** **119921.5**\n\n0.49%\n\nWeekly change**11929..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T17:09:01.210660"
+}
+Result for Call ID call_27762297 (search_web):
+{
+  "type": "data_report",
+  "title": "Search: Bitcoin BTC price prediction tomorrow short term forecast",
+  "source": "Exa Search",
+  "data": {
+    "query": "Bitcoin BTC price prediction tomorrow short term forecast",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "BITCOIN NEXT 24 HOURS PREDICTION: TODAY, TOMORROW, MONTH",
+        "url": "https://pricefore.com/bitcoin",
+        "published_date": "2025-06-08T00:00:00.000Z",
+        "snippet": "BITCOIN NEXT 24 HOURS PREDICTION: TODAY, TOMORROW, MONTH\n[![Pricefore](https://pricefore.com/images/pricefore.png)](https://pricefore.com)\n# BITCOIN NEXT 24 HOURS PREDICTION: TODAY, TOMORROW, MONTH\n**Updated:Loading...**\nnext autoupdate in.\n![Bitcoin](https://pricefore.com/images/bitcoin.png)\n**Bitcoin BTC**$93563\n1h\n+0.21%\n3h\n+0.23%\n8h\n-0.02%\n## Bitcoin Price Performance\nBitcoin price stood at $93563. Over the last hour, the price has increased by 0.21%. Three hours ago Bitcoin was worth $93351..."
+      },
+      {
+        "index": 1,
+        "title": "Bitcoin price prediction - Future BTC Forecast - CoinCheckup",
+        "url": "https://coincheckup.com/coins/bitcoin/predictions",
+        "published_date": "2025-09-04T00:00:00.000Z",
+        "snippet": "Bitcoin Price Prediction 2025-2030: Future BTC Forecast\n* [\nM. Cap:$3.14T(2.12%)\n](https://coincheckup.com/en/global)\n* [\nBTC Dom:58.80%(0.14%)\n](https://coincheckup.com/en/global)\n* [\n24H Vol:$217.98B(-19.34%)\n](https://coincheckup.com/en/global)\n* [\nBTC:$92,417(2.45%)\n](https://coincheckup.com/en/coins/bitcoin)\n* S&amp;P500:$6,901.00(0.21%)\n* [\nGold:$4,326.09(2.62%)\n](https://coincheckup.com/en/coins/tether-gold)\n* [\nEUR/USD:$1.17(0.21%)\n](https://coincheckup.com/en/convert/eur/usd)\n[\nAdvertis..."
+      },
+      {
+        "index": 2,
+        "title": "BTC USD \u2014 Bitcoin Price and Chart - TradingView",
+        "url": "https://www.tradingview.com/symbols/BTCUSD/",
+        "published_date": "2025-12-30T22:08:58.821Z",
+        "snippet": "BTC USD \u2014Bitcoin Price and Chart \u2014TradingView\n[](https://www.tradingview.com/)\nSearch\nEN![]()**\n[Get started](https://www.tradingview.com/pricing/?source=header_go_pro_button&amp;feature=start_free_trial)\n![Bitcoin](https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC--big.svg)![Bitcoin](https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC--big.svg)![Bitcoin](https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC--big.svg)\n[#1](https://www.tradingview.com/markets/cryptocurrencies/prices-all/)[#..."
+      },
+      {
+        "index": 3,
+        "title": "Today's Bitcoin (BTC) USD Forecast, Trade & Technical Analysis",
+        "url": "https://www.bitrates.com/coin/BTC/analysis/USD",
+        "published_date": "2025-05-06T00:00:00.000Z",
+        "snippet": "Cryptocurrencies Live Prices, Historical Charts, Crypto News | Bitrates.com\n[![logo](https://www.bitrates.com/wp-content/themes/bitrates/images/bitrates-logo.svg)](https://www.bitrates.com/)\n![](https://www.bitrates.com/wp-content/uploads/2026/01/Bitcoinss.jpeg)[latest news](https://www.bitrates.com/news)\n[Industry](https://www.bitrates.com/news/c/industry/)Jan 02, 2026\n[Top 3 Prop Trading Firms for Crypto Traders in 2026The proprietary trading landscape has expanded significantly, yet finding p..."
+      },
+      {
+        "index": 4,
+        "title": "Bitcoin (BTC) Price Prediction & Forecast for 2025, 2026, 2030, 2040",
+        "url": "https://www.bitmex.com/price-prediction/bitcoin",
+        "published_date": "2024-04-20T00:00:00.000Z",
+        "snippet": "Bitcoin (BTC) Price Prediction &amp; Forecast for 2026, 2030, 2040\n[XBTUSD](https://www.bitmex.com/app/trade/XBTUSD)92,837.6-0.54%[ETHUSD](https://www.bitmex.com/app/trade/ETHUSD)3,259.98+1.19%[XBTUSDT](https://www.bitmex.com/app/trade/XBTUSDT)92,901.2-0.48%[SUIUSDT](https://www.bitmex.com/app/trade/SUIUSDT)1.94-1.77%[SOLUSDT](https://www.bitmex.com/app/trade/SOLUSDT)139.54+1.23%[ETHUSDT](https://www.bitmex.com/app/trade/ETHUSDT)3,257.8+1.09%[DOGEUSDT](https://www.bitmex.com/app/trade/DOGEUSDT)0..."
+      },
+      {
+        "index": 5,
+        "title": "Bitcoin (BTC) Price Prediction for 2025 to 2030 | Bybit",
+        "url": "https://www.bybit.com/en/price/bitcoin/prediction",
+        "published_date": "2025-10-23T00:00:00.000Z",
+        "snippet": "Bitcoin (BTC) Price Prediction for 2026 to 2031 | Bybit\n![Bitcoin](https://coin-images.coingecko.com/coins/images/1/small/bitcoin.png?1696501400 \"Bitcoin\")\n# Bitcoin (BTC) Price Prediction\nBybit AI predicts the price of Bitcoin (BTC) will trend across 2026 to 2031 based on user-driven Consensus Ratings and historical patterns. Get detailed forecasts for 2026, 2027, 2028, 2029, 2030, and 2031 below. You can buy BTC on Bybit using major fiat currencies such as USD, EUR, RUB, and INR. Register with..."
+      },
+      {
+        "index": 6,
+        "title": "Bitcoin (BTC) Price Prediction & Forecast 2025, 2026, 2027 - 2030",
+        "url": "https://www.okx.com/en-us/price-prediction/bitcoin-btc",
+        "published_date": "2024-12-09T00:00:00.000Z",
+        "snippet": "Bitcoin (BTC) Price Prediction &amp; Forecast 2026, 2027, 2028 - 2032 | OKX United States\nSkip to main content\n[](https://www.okx.com/en-us)\n# BTCBitcoinprice prediction\nBitcoin (BTC) has seen significant shifts lately, from maintaining low volatility to entering notable price swings and reaching new all-time highs. So, how much could Bitcoin (BTC) be worth tomorrow, by the end of 2026, in 2027, 2028, 2030, or 2040? Explore tools that can help you get a glimpse of Bitcoin\u2019s potential, whether in..."
+      },
+      {
+        "index": 7,
+        "title": "Bitcoin Price Prediction: up to $139348! - BTC to USD Forecast 2025, Long-Term & Short-Term Price Prognosis",
+        "url": "https://walletinvestor.com/forecast/bitcoin-prediction",
+        "published_date": "2025-05-13T00:00:00.000Z",
+        "snippet": "Bitcoin Price Prediction: up to $127756! - BTC to USD Forecast 2026, Long-Term &amp; Short-Term Price Prognosis\n* [**Markets**](https://walletinvestor.com/markets)\n* [**Forecast********](#)\n* * [Crypto Forecasts](https://walletinvestor.com/forecast)\n* Top 5 Crypto forecasts\n* [Tether Usdt forecast](https://walletinvestor.com/forecast/tether-usdt-prediction)\n* [Bitcoin forecast](https://walletinvestor.com/forecast/bitcoin-prediction)\n* [Ethereum forecast](https://walletinvestor.com/forecast/ether..."
+      },
+      {
+        "index": 8,
+        "title": "Bitcoin (BTC) Price Prediction 2025, 2026-2030 | CoinCodex",
+        "url": "https://coincodex.com/crypto/bitcoin/price-prediction/",
+        "published_date": "2022-01-02T00:00:00.000Z",
+        "snippet": "Bitcoin (BTC) Price Prediction 2026, 2027-2030 | CoinCodex\n**[![CoinCodex - Crypto Prices, Charts, and Cryptocurrency Market Cap](https://coincodex.com/images/coincodex-light.svg?v=1)![CoinCodex - Crypto Prices, Charts, and Cryptocurrency Market Cap](https://coincodex.com/images/coincodex-dark.svg?v=1)](https://coincodex.com/)**\n* [Total Market Cap:M. Cap:$\u202f3.12T(-2.10%)](https://coincodex.com/market-cap/)\n* [BTC Dominance:BTC Dom:58.46%(0.06%)](https://coincodex.com/bitcoin-dominance/)\n* [24h V..."
+      },
+      {
+        "index": 9,
+        "title": "Bitcoin Price Prediction: Next 24 Hours, Tomorrow, Week (BTC/USD)",
+        "url": "https://tradersunion.com/currencies/forecast/btc-usd/daily-and-weekly/",
+        "published_date": "2022-04-27T00:00:00.000Z",
+        "snippet": "[Advertiser Disclosure](https://tradersunion.com/advertiser-disclosure/) Disclaimer\n\n# Bitcoin (BTC) Price Prediction\n\n24H Prediction +0.02%$119,945.16\n\n48H Prediction +1.19%$121,349.6\n\n7-Day Prediction +3.88%$124,578.45\n\n1-Month Prediction +1.58%$121,820.27\n\n3-Month Prediction +3.11%$123,656.73\n\n6-Month Prediction +4.67%$125,520.87\n\n12-Month Prediction +7.85%$129,333.88\n\nCurrent price:$119,921.5651.740.55%\n\nReal-time Data19:38\n\nDaily change**119335.56** **119921.5**\n\n0.49%\n\nWeekly change**11929..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T17:09:01.210660"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+CONTENT:
+{
+  "type": "data_report",
+  "title": "Search: current Bitcoin price volatility implied vol tomorrow forecast",
+  "source": "Exa Search",
+  "data": {
+    "query": "current Bitcoin price volatility implied vol tomorrow forecast",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "BTC set for a volatility shift from the $85k to $90k range as options ...",
+        "url": "https://www.coindesk.com/markets/2025/12/24/bitcoin-nears-breakout-from-the-usd85-000-usd90-000-range-as-options-expiry-looms",
+        "published_date": "2025-12-24T00:00:00.000Z",
+        "snippet": "BTC set for a volatility shift from the $85k to $90k range as options expiry looms\nSearch\n/\n[![Logo](https://www.coindesk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcoindesk-logo-new.38240150.svg&amp;w=384&amp;q=75&amp;dpl=dpl_AjaP7ZQkC9zGn77sz5REGQiuSGGN)](https://www.coindesk.com/)\n* News\n* Video\n* [Prices](https://www.coindesk.com/price)\n* [Research](https://www.coindesk.com/research)\n* Consensus 2026\n* Data &amp; Indices\n* [Sponsored](https://www.coindesk.com/sponsored-content)\nSearch\n/..."
+      },
+      {
+        "index": 1,
+        "title": "BTC Options Volatility \u2014 AMEX:BTC \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/AMEX-BTC/options-volatility/",
+        "published_date": "2025-11-21T00:00:00.000Z",
+        "snippet": "Search\n\nEN\n\n[Black FridayUp to 80% OFF](https://www.tradingview.com/black-friday/)\n\n## Grayscale Bitcoin Mini Trust ETF\n\nBTCNYSE American\n\nBTCNYSE American\n\nBTCNYSE American\n\nBTCNYSE American\n\nMarket closedMarket closed\n\nNo trades\n\n[See on Supercharts](https://www.tradingview.com/chart/?symbol=AMEX%3ABTC)\n\n[Overview](https://www.tradingview.com/symbols/AMEX-BTC/) [Analysis](https://www.tradingview.com/symbols/AMEX-BTC/analysis/) [News](https://www.tradingview.com/symbols/AMEX-BTC/news/) [Minds](..."
+      },
+      {
+        "index": 2,
+        "title": "BTC ATM Implied Volatility",
+        "url": "https://www.theblock.co/data/crypto-markets/options/btc-atm-implied-volatility",
+        "published_date": "2024-07-03T00:00:00.000Z",
+        "snippet": "[The Block announces Emergence: join us in Prague December 5-6, 2024. Learn More](https://www.emergence.xyz)\n\n\u2715\n\n![websights](https://ws.zoominfo.com/pixel/6250998d6fd5f6001a75d44e)\n\nIt looks like you may be low on tokens. To gain staking access, you will need 20,442 more ACS tokens.\n\nThere is a 0% ACS protocol fee.\nIn addition to a 50 ACS account creation fee\n\nBuy ACS now via\n\n![](https://www.theblock.co/_nuxt/img/coinbase.8c59239.png)\n\nOR\n\n[Pay with Credit Card](https://www.coinbase.com/price/..."
+      },
+      {
+        "index": 3,
+        "title": "MBT1! Options Volatility \u2014 CME:MBT1! \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/CME-MBT1!/options-volatility/",
+        "published_date": "2025-10-23T00:00:00.000Z",
+        "snippet": "# Just one more step\n\nComplete the test below to access the page"
+      },
+      {
+        "index": 4,
+        "title": "Beyond the Skew: A Structured Approach to Implied Volatility Data",
+        "url": "https://insights.glassnode.com/new-implied-volatility-metrics/",
+        "published_date": "2025-12-04T00:00:00.000Z",
+        "snippet": "Beyond the Skew: A Structured Approach to Implied Volatility\nMenu\n* [Market Pulse](https://insights.glassnode.com/tag/market-pulse/)\n* [Week On-chain](https://insights.glassnode.com/tag/newsletter/)\n* [Market Vectors](https://insights.glassnode.com/tag/market-vectors/)\n* [Partner Reports](https://insights.glassnode.com/tag/partner-reports/)\n* [Research](https://insights.glassnode.com/tag/product/)\n* [Subscribe](https://insights.glassnode.com/pricing/)\n* [Log In](https://insights.glassnode.com/lo..."
+      },
+      {
+        "index": 5,
+        "title": "BVIV Index Charts and Quotes \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/BVIV/",
+        "published_date": "2024-10-07T00:00:00.000Z",
+        "snippet": "Search\n\nEN\n\n[Get started](https://www.tradingview.com/pricing/?source=header_go_pro_button&feature=start_free_trial)\n\n![Bitcoin Volmex Implied Volatility 30 Day Index](https://s3-symbol-logo.tradingview.com/indices/volmex-bviv--big.svg)![Bitcoin Volmex Implied Volatility 30 Day Index](https://s3-symbol-logo.tradingview.com/indices/volmex-bviv--big.svg)![Bitcoin Volmex Implied Volatility 30 Day Index](https://s3-symbol-logo.tradingview.com/indices/volmex-bviv--big.svg)\n\n# Bitcoin Volmex Implied V..."
+      },
+      {
+        "index": 6,
+        "title": "Block Scholes x Bybit Crypto Derivatives May 28 2025",
+        "url": "https://www.blockscholes.com/research/block-scholes-x-bybit-crypto-derivatives-may-28-2025",
+        "published_date": "2025-05-30T00:00:00.000Z",
+        "snippet": "Block Scholes has regulatory permissions to conduct specific regulated activities in the UK.\u00a0\u00a0\u00a0[Learn more \u2192](https://www.blockscholes.com/communications/block-scholes-now-officially-authorised-by-the-fca)\n\n## Key insights\n\nBTC\u2019s march to a new all-time high on May 22, 2025 has been followed by a period notable largely for its lack of volatility. Realized volatility has fallen across cryptocurrencies, causing a corresponding drop in short-dated implied volatility. For ETH, that\u2019s resulted in a f..."
+      },
+      {
+        "index": 7,
+        "title": "Block Scholes x Bybit Crypto Derivatives April 6 2025",
+        "url": "https://www.blockscholes.com/research/block-scholes-x-bybit-crypto-derivatives-april-6-2025",
+        "published_date": "2025-04-06T00:00:00.000Z",
+        "snippet": "blockscholes\nBlock Scholes has regulatory permissions to conduct specific regulated activities in the UK.[Learn more \u2192](https://www.blockscholes.com/communications/block-scholes-now-officially-authorised-by-the-fca)\n[\n](#)\n[![BlockScholes Logo](https://cdn.prod.website-files.com/65a9ccfe30b897f06c585e1a/65afa930e29d0d3daf63f41a_Logo.svg)](https://www.blockscholes.com/old-home)\n[\nBack to Research\n](https://www.blockscholes.com/research#grid)\nLast Updated:\nApril 6, 2025\n\u20228 min read\n# Block Scholes..."
+      },
+      {
+        "index": 8,
+        "title": "Implied Volatility in Crypto Options",
+        "url": "https://blog.premia.blue/p/implied-volatility-in-crypto-options",
+        "published_date": "2023-11-09T00:00:00.000Z",
+        "snippet": "0\n\n0\n\n- [Blue Streak by Premia](https://blog.premia.blue/)\n- Posts\n- Implied Volatility in Crypto Options\n\n# Implied Volatility in Crypto Options\n\n## Why understanding volatility is essential to become a profitable crypto options trader.\n\n![Author](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/user/profile_picture/3ff41fd9-209b-46b9-9ba4-8965f7263c5a/thumb_6c46734786d116e1bab32cdde0919b78.png)\n\n[Weka](https://blog.premia.blue/authors/3ff41..."
+      },
+      {
+        "index": 9,
+        "title": "Volatility in Review: November 2023",
+        "url": "https://insights.deribit.com/industry/volatility-in-review-november-2023/",
+        "published_date": "2023-12-05T00:00:00.000Z",
+        "snippet": "Volatility in Review: November 2023 - Deribit Insights[Skip to content](#content)\n[![Deribit Insights Logo](https://insights.deribit.com/wp-content/uploads/2025/08/ins-logx1-2.png)](https://insights.deribit.com/)\n* Categories**\n* [Deribit Live](https://insights.deribit.com/deribit-live)\n* [Industry](https://insights.deribit.com/industry/)\n* [Option Flows](https://insights.deribit.com/option-flows)\n* [Exchange Updates](https://insights.deribit.com/exchange-updates)\n* [Market Research](https://ins..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T17:09:02.936065"
+}
+Result for Call ID call_41905648 (search_web):
+{
+  "type": "data_report",
+  "title": "Search: current Bitcoin price volatility implied vol tomorrow forecast",
+  "source": "Exa Search",
+  "data": {
+    "query": "current Bitcoin price volatility implied vol tomorrow forecast",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "BTC set for a volatility shift from the $85k to $90k range as options ...",
+        "url": "https://www.coindesk.com/markets/2025/12/24/bitcoin-nears-breakout-from-the-usd85-000-usd90-000-range-as-options-expiry-looms",
+        "published_date": "2025-12-24T00:00:00.000Z",
+        "snippet": "BTC set for a volatility shift from the $85k to $90k range as options expiry looms\nSearch\n/\n[![Logo](https://www.coindesk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcoindesk-logo-new.38240150.svg&amp;w=384&amp;q=75&amp;dpl=dpl_AjaP7ZQkC9zGn77sz5REGQiuSGGN)](https://www.coindesk.com/)\n* News\n* Video\n* [Prices](https://www.coindesk.com/price)\n* [Research](https://www.coindesk.com/research)\n* Consensus 2026\n* Data &amp; Indices\n* [Sponsored](https://www.coindesk.com/sponsored-content)\nSearch\n/..."
+      },
+      {
+        "index": 1,
+        "title": "BTC Options Volatility \u2014 AMEX:BTC \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/AMEX-BTC/options-volatility/",
+        "published_date": "2025-11-21T00:00:00.000Z",
+        "snippet": "Search\n\nEN\n\n[Black FridayUp to 80% OFF](https://www.tradingview.com/black-friday/)\n\n## Grayscale Bitcoin Mini Trust ETF\n\nBTCNYSE American\n\nBTCNYSE American\n\nBTCNYSE American\n\nBTCNYSE American\n\nMarket closedMarket closed\n\nNo trades\n\n[See on Supercharts](https://www.tradingview.com/chart/?symbol=AMEX%3ABTC)\n\n[Overview](https://www.tradingview.com/symbols/AMEX-BTC/) [Analysis](https://www.tradingview.com/symbols/AMEX-BTC/analysis/) [News](https://www.tradingview.com/symbols/AMEX-BTC/news/) [Minds](..."
+      },
+      {
+        "index": 2,
+        "title": "BTC ATM Implied Volatility",
+        "url": "https://www.theblock.co/data/crypto-markets/options/btc-atm-implied-volatility",
+        "published_date": "2024-07-03T00:00:00.000Z",
+        "snippet": "[The Block announces Emergence: join us in Prague December 5-6, 2024. Learn More](https://www.emergence.xyz)\n\n\u2715\n\n![websights](https://ws.zoominfo.com/pixel/6250998d6fd5f6001a75d44e)\n\nIt looks like you may be low on tokens. To gain staking access, you will need 20,442 more ACS tokens.\n\nThere is a 0% ACS protocol fee.\nIn addition to a 50 ACS account creation fee\n\nBuy ACS now via\n\n![](https://www.theblock.co/_nuxt/img/coinbase.8c59239.png)\n\nOR\n\n[Pay with Credit Card](https://www.coinbase.com/price/..."
+      },
+      {
+        "index": 3,
+        "title": "MBT1! Options Volatility \u2014 CME:MBT1! \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/CME-MBT1!/options-volatility/",
+        "published_date": "2025-10-23T00:00:00.000Z",
+        "snippet": "# Just one more step\n\nComplete the test below to access the page"
+      },
+      {
+        "index": 4,
+        "title": "Beyond the Skew: A Structured Approach to Implied Volatility Data",
+        "url": "https://insights.glassnode.com/new-implied-volatility-metrics/",
+        "published_date": "2025-12-04T00:00:00.000Z",
+        "snippet": "Beyond the Skew: A Structured Approach to Implied Volatility\nMenu\n* [Market Pulse](https://insights.glassnode.com/tag/market-pulse/)\n* [Week On-chain](https://insights.glassnode.com/tag/newsletter/)\n* [Market Vectors](https://insights.glassnode.com/tag/market-vectors/)\n* [Partner Reports](https://insights.glassnode.com/tag/partner-reports/)\n* [Research](https://insights.glassnode.com/tag/product/)\n* [Subscribe](https://insights.glassnode.com/pricing/)\n* [Log In](https://insights.glassnode.com/lo..."
+      },
+      {
+        "index": 5,
+        "title": "BVIV Index Charts and Quotes \u2014 TradingView",
+        "url": "https://www.tradingview.com/symbols/BVIV/",
+        "published_date": "2024-10-07T00:00:00.000Z",
+        "snippet": "Search\n\nEN\n\n[Get started](https://www.tradingview.com/pricing/?source=header_go_pro_button&feature=start_free_trial)\n\n![Bitcoin Volmex Implied Volatility 30 Day Index](https://s3-symbol-logo.tradingview.com/indices/volmex-bviv--big.svg)![Bitcoin Volmex Implied Volatility 30 Day Index](https://s3-symbol-logo.tradingview.com/indices/volmex-bviv--big.svg)![Bitcoin Volmex Implied Volatility 30 Day Index](https://s3-symbol-logo.tradingview.com/indices/volmex-bviv--big.svg)\n\n# Bitcoin Volmex Implied V..."
+      },
+      {
+        "index": 6,
+        "title": "Block Scholes x Bybit Crypto Derivatives May 28 2025",
+        "url": "https://www.blockscholes.com/research/block-scholes-x-bybit-crypto-derivatives-may-28-2025",
+        "published_date": "2025-05-30T00:00:00.000Z",
+        "snippet": "Block Scholes has regulatory permissions to conduct specific regulated activities in the UK.\u00a0\u00a0\u00a0[Learn more \u2192](https://www.blockscholes.com/communications/block-scholes-now-officially-authorised-by-the-fca)\n\n## Key insights\n\nBTC\u2019s march to a new all-time high on May 22, 2025 has been followed by a period notable largely for its lack of volatility. Realized volatility has fallen across cryptocurrencies, causing a corresponding drop in short-dated implied volatility. For ETH, that\u2019s resulted in a f..."
+      },
+      {
+        "index": 7,
+        "title": "Block Scholes x Bybit Crypto Derivatives April 6 2025",
+        "url": "https://www.blockscholes.com/research/block-scholes-x-bybit-crypto-derivatives-april-6-2025",
+        "published_date": "2025-04-06T00:00:00.000Z",
+        "snippet": "blockscholes\nBlock Scholes has regulatory permissions to conduct specific regulated activities in the UK.[Learn more \u2192](https://www.blockscholes.com/communications/block-scholes-now-officially-authorised-by-the-fca)\n[\n](#)\n[![BlockScholes Logo](https://cdn.prod.website-files.com/65a9ccfe30b897f06c585e1a/65afa930e29d0d3daf63f41a_Logo.svg)](https://www.blockscholes.com/old-home)\n[\nBack to Research\n](https://www.blockscholes.com/research#grid)\nLast Updated:\nApril 6, 2025\n\u20228 min read\n# Block Scholes..."
+      },
+      {
+        "index": 8,
+        "title": "Implied Volatility in Crypto Options",
+        "url": "https://blog.premia.blue/p/implied-volatility-in-crypto-options",
+        "published_date": "2023-11-09T00:00:00.000Z",
+        "snippet": "0\n\n0\n\n- [Blue Streak by Premia](https://blog.premia.blue/)\n- Posts\n- Implied Volatility in Crypto Options\n\n# Implied Volatility in Crypto Options\n\n## Why understanding volatility is essential to become a profitable crypto options trader.\n\n![Author](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/user/profile_picture/3ff41fd9-209b-46b9-9ba4-8965f7263c5a/thumb_6c46734786d116e1bab32cdde0919b78.png)\n\n[Weka](https://blog.premia.blue/authors/3ff41..."
+      },
+      {
+        "index": 9,
+        "title": "Volatility in Review: November 2023",
+        "url": "https://insights.deribit.com/industry/volatility-in-review-november-2023/",
+        "published_date": "2023-12-05T00:00:00.000Z",
+        "snippet": "Volatility in Review: November 2023 - Deribit Insights[Skip to content](#content)\n[![Deribit Insights Logo](https://insights.deribit.com/wp-content/uploads/2025/08/ins-logx1-2.png)](https://insights.deribit.com/)\n* Categories**\n* [Deribit Live](https://insights.deribit.com/deribit-live)\n* [Industry](https://insights.deribit.com/industry/)\n* [Option Flows](https://insights.deribit.com/option-flows)\n* [Exchange Updates](https://insights.deribit.com/exchange-updates)\n* [Market Research](https://ins..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T17:09:02.936065"
+}
+
+------------------------------------------------------------
+

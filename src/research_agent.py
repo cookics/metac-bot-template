@@ -297,7 +297,7 @@ After tool calls, synthesize your findings into a clear research report.
 """
     
     # Run the tool calling loop
-    final_response, tool_calls = await run_tool_calling_loop(
+    final_response, tool_calls, messages = await run_tool_calling_loop(
         initial_prompt=research_prompt,
         tools=tools,
         model=RESEARCH_MODEL,
@@ -326,7 +326,7 @@ After tool calls, synthesize your findings into a clear research report.
     report += "SYNTHESIS:\n"
     report += final_response
     
-    return report, tool_calls
+    return report, tool_calls, messages
 
 
 def format_tool_results_for_forecast(tool_calls: list[dict]) -> str:
@@ -392,7 +392,7 @@ def run_research(question: str, use_tools: bool = False) -> str:
         use_tools: If True, use tool-calling research agent
     """
     if use_tools and TOOLS_AVAILABLE:
-        report, tool_calls = asyncio.run(run_research_with_tools(question))
+        report, tool_calls, messages = asyncio.run(run_research_with_tools(question))
         
         # If we got forecast distributions, append the formatted version
         if tool_calls:
@@ -440,18 +440,26 @@ async def run_research_pipeline(
             "tool_calls": [],
             "search_results": results,
             "percentiles": None,
-            "formatted_for_forecaster": format_results_for_forecaster(results, summary)
+            "formatted_for_forecaster": format_results_for_forecaster(results, summary),
+            "messages": []
         }
     
     print(f"[Research Pipeline] Starting for: {question[:60]}...")
     
-    # Step 1: Initial web search
+    # Step 1: Initial web search (with cost tracking)
     search_results = []
+    exa_cost = 0.0
     if question_type != "market":
         # For general questions, always search first
         print("[Research Pipeline] Step 1: Web search")
-        search_results = exa_search_raw(question, num_results=10)
-        print(f"[Research Pipeline] Found {len(search_results)} search results")
+        search_result = exa_search_raw(question, num_results=10, return_cost=True)
+        if isinstance(search_result, tuple):
+            search_results, cost_info = search_result
+            exa_cost += cost_info.get("total", 0.0)
+            print(f"[Research Pipeline] Found {len(search_results)} search results (Exa cost: ${exa_cost:.4f})")
+        else:
+            search_results = search_result
+            print(f"[Research Pipeline] Found {len(search_results)} search results")
     
     # Step 2: Select tools based on question type
     if question_type == "market":
@@ -495,16 +503,22 @@ When done, write a SHORT SYNTHESIS with:
 """
     
     # Run tool calling loop
-    final_response, tool_calls = await run_tool_calling_loop(
+    final_response, tool_calls, messages = await run_tool_calling_loop(
         initial_prompt=research_prompt,
         tools=tools,
         model=RESEARCH_MODEL,
         temperature=RESEARCH_TEMP,
-        max_iterations=5,
+        max_iterations=2,  # Reduced from 5 - model should get data in 1-2 rounds
         system_prompt=TOOL_RESEARCH_SYSTEM_PROMPT
     )
     
     print(f"[Research Pipeline] Step 3: Made {len(tool_calls)} tool calls")
+    
+    # Count tool usage
+    tool_usage = {}
+    for tc in tool_calls:
+        name = tc.get("tool_name", "unknown")
+        tool_usage[name] = tool_usage.get(name, 0) + 1
     
     # Step 3: Extract percentiles if available (for direct CDF use)
     percentiles = extract_percentiles_from_tool(tool_calls) if TOOLS_AVAILABLE else None
@@ -523,7 +537,10 @@ When done, write a SHORT SYNTHESIS with:
         "tool_calls": tool_calls,
         "search_results": search_results,
         "percentiles": percentiles,
-        "formatted_for_forecaster": formatted
+        "messages": messages,
+        "formatted_for_forecaster": formatted,
+        "exa_cost": exa_cost,
+        "tool_usage": tool_usage
     }
 
 

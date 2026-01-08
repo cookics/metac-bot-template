@@ -1,0 +1,2159 @@
+================================================================================
+RAW I/O LOG: After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+Timestamp: 20260107_223418
+Research Model: x-ai/grok-4.1-fast
+Forecast Model: anthropic/claude-opus-4.5
+================================================================================
+
+################################################################################
+# GROK (RESEARCH MODEL) CALLS
+################################################################################
+
+--- GROK CALL 1 ---
+
+[INPUT TO GROK]
+----------------------------------------
+Question to forecast:
+After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+
+Initial search results:
+[Source 1]
+Title: How Soon After AGI Will Superintelligence Emerge? - Metaculus
+Date: 2021-12-30T23:00:00.000Z
+URL: https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/
+Content: [**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)
+
+**336** forecasters
+
+# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+
+Current estimate
+
+32.6 months
+
+Share
+
+Predict
+
+CommentsTimelineIn the NewsKey FactorsQuestion Info
+
+Timeline
+
+1d1w2mall
+
+Resolution Criteria
+
+Key Factors
+
+No key factors yetAdd some that might influence this forecast.Add key factor
+
+Background Info
+
+Followembed
+
+Authors:
+
+[casens](https://www.metaculus.com/accounts/profile/104161/)
+
+Opened:Dec 30, 2021
+
+Closes:Jan 1, 2150
+
+Scheduled resolution:Jan 1, 2200
+
+Spot Scoring Time:Dec 31, 2021
+
+[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)
+
+[AGI Outcomes](https:
+
+[Source 2]
+Title: The Most Important Time in History Is Now - by Tomas Pueyo
+Date: 2025-01-29T00:00:00.000Z
+URL: https://unchartedterritories.tomaspueyo.com/p/the-most-important-time-in-history-agi-asi
+Content: The Most Important Time in History Is Now - by Tomas Pueyo
+[
+![Uncharted Territories](https://substackcdn.com/image/fetch/$s_!4QUy!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc92decb6-7c5c-4053-bc05-651e5548e9b3_1280x1280.png)
+](https://unchartedterritories.tomaspueyo.com/)
+# [Uncharted Territories](https://unchartedterritories.tomaspueyo.com/)
+SubscribeSign in
+# The Most Important Time in History Is Now
+### AGI Is Coming Sooner Due to o3, DeepSeek, and Other Cutting-Edge AI Developments
+[
+![Tomas Pueyo's avatar](https://substackcdn.com/image/fetch/$s_!am3l!,w_36,h_36,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be7798
+
+[Source 3]
+Title: Is Artificial 'Super' Intelligence Coming Soon? - AEI
+Date: 2023-07-06T00:00:00.000Z
+URL: https://www.aei.org/articles/is-artificial-super-intelligence-coming-soon/
+Content: [iframe](https://fasterplease.substack.com/embed)
+
+## Quote of the Issue
+
+“In the limit, if capital can replace labor entirely, growth rates could explode, with incomes becoming infinite in finite time.” – John G. Fernald and Charles I. Jones, “ [The Future of Economic Growth](https://www.frbsf.org/economic-research/wp-content/uploads/sites/4/wp2014-02.pdf)”
+
+## The Essay
+
+[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59d3c16c-caaa-4f71-9661-0db4213c028e_616x468.jpeg)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59d3c16c-caaa-4f71-9661-0db4213c028e_616x468.jpeg)
+
+### 🦉 
+
+[Source 4]
+Title: The case for AGI by 2030 | 80,000 Hours
+Date: None
+URL: https://80000hours.org/agi/guide/when-will-agi-arrive/
+Content: The case for AGI by 2030 | 80,000 Hours
+Toggle navigation
+Search for:
+**
+[](https://80000hours.org/)
+Search for:
+**
+# The case for AGI by2030
+By[Benjamin Todd](https://80000hours.org/author/benjamin-todd/)&middot;Published March 2025 &middot;**
+## On this page:
+* [Introduction](#top)
+* [1I. What's driven recent AI progress? And will it continue?](#i-whats-driven-recent-ai-progress-and-will-it-continue)
+* [1.1The deep learning era](#the-deep-learning-era)
+* [1.2What's coming up](#whats-coming-up)
+* [1.31. Scaling pretraining to create base models with basic intelligence](#1-scaling-pretraining-to-create-base-models-with-basic-intelligence)
+* [1.42. Post training of reasoning models with reinforcement learning](#2-post-training-of-reasoning-models-with-reinforcement-learning)
+* [1.53. Increa
+
+[Source 5]
+Title: Date Weakly General AI is Publicly Known
+Date: 2025-10-06T00:00:00.000Z
+URL: https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/?invite=Olx7Ci
+Content: Question
+
+# When will the first weakly general AI system be devised, tested, and publicly announced?
+
+214
+
+Closes Jan 1, 2200
+
+[525 comments525](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)
+
+1d1w2mall
+
+Community Prediction15 Mar 202426 Nov 202518 Apr 2028Sep 2031Mar 07Mar 11Mar 15Mar 19Mar 23Mar 27Mar 31Apr 04Apr 08Apr 12Apr 16Apr 20Apr 24Apr 28May 02now
+
+Total Forecasters1620
+
+Community Prediction
+16 Oct 2026
+
+(06 Oct 2025 - 22 May 2029)
+
+### Make a Prediction
+
+SliderTable
+
+PDF
+
+CDF
+
+20202021202520522200
+
+Sign Up to Predict
+
+| 2200 |
+| --- | --- | --- | --- | --- |
+| communit
+----------------------------------------
+
+[OUTPUT FROM GROK]
+----------------------------------------
+
+
+[TOOL CALLS MADE]
+  - crawl_urls({"urls": ["https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/", "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-d...)
+  - search_web({"query": "time from AGI to ASI forecasts OR predictions OR Metaculus", "num_results": 15}...)
+  - search_web({"query": "\"months from AGI to superintelligence\" OR \"timeline AGI to ASI\"", "num_results": 10}...)
+----------------------------------------
+
+
+################################################################################
+# FULL RESEARCH MESSAGE HISTORY
+################################################################################
+
+[SYSTEM]
+You are a Research Agent with access to specialized tools for market data and forecasting.
+
+Your job is to gather information to help forecast the following question. You can use tools to:
+1. Get market forecast distributions (bonds, spreads, VIX) - these return percentile data
+2. Fetch financial data (Yahoo Finance, options, FRED economic data)
+3. Search the web for relevant news and context
+
+For MARKET FORECAST questions (bond yields, stock spreads, VIX levels), use the appropriate forecast tool FIRST.
+These tools run Monte Carlo simulations and return probability distributions.
+
+For GENERAL questions, use data tools and web search to gather context.
+
+After gathering data, write a SHORT REPORT synthesizing:
+- Key quantitative data from tool calls
+- Probability distributions (if from forecast tools)
+- Relevant context and factors
+
+Be concise. The forecaster will use your report to make predictions.
+
+------------------------------------------------------------
+
+[USER]
+Question to forecast:
+After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+
+Initial search results:
+[Source 1]
+Title: How Soon After AGI Will Superintelligence Emerge? - Metaculus
+Date: 2021-12-30T23:00:00.000Z
+URL: https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/
+Content: [**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)
+
+**336** forecasters
+
+# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+
+Current estimate
+
+32.6 months
+
+Share
+
+Predict
+
+CommentsTimelineIn the NewsKey FactorsQuestion Info
+
+Timeline
+
+1d1w2mall
+
+Resolution Criteria
+
+Key Factors
+
+No key factors yetAdd some that might influence this forecast.Add key factor
+
+Background Info
+
+Followembed
+
+Authors:
+
+[casens](https://www.metaculus.com/accounts/profile/104161/)
+
+Opened:Dec 30, 2021
+
+Closes:Jan 1, 2150
+
+Scheduled resolution:Jan 1, 2200
+
+Spot Scoring Time:Dec 31, 2021
+
+[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)
+
+[AGI Outcomes](https:
+
+[Source 2]
+Title: The Most Important Time in History Is Now - by Tomas Pueyo
+Date: 2025-01-29T00:00:00.000Z
+URL: https://unchartedterritories.tomaspueyo.com/p/the-most-important-time-in-history-agi-asi
+Content: The Most Important Time in History Is Now - by Tomas Pueyo
+[
+![Uncharted Territories](https://substackcdn.com/image/fetch/$s_!4QUy!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc92decb6-7c5c-4053-bc05-651e5548e9b3_1280x1280.png)
+](https://unchartedterritories.tomaspueyo.com/)
+# [Uncharted Territories](https://unchartedterritories.tomaspueyo.com/)
+SubscribeSign in
+# The Most Important Time in History Is Now
+### AGI Is Coming Sooner Due to o3, DeepSeek, and Other Cutting-Edge AI Developments
+[
+![Tomas Pueyo's avatar](https://substackcdn.com/image/fetch/$s_!am3l!,w_36,h_36,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be7798
+
+[Source 3]
+Title: Is Artificial 'Super' Intelligence Coming Soon? - AEI
+Date: 2023-07-06T00:00:00.000Z
+URL: https://www.aei.org/articles/is-artificial-super-intelligence-coming-soon/
+Content: [iframe](https://fasterplease.substack.com/embed)
+
+## Quote of the Issue
+
+“In the limit, if capital can replace labor entirely, growth rates could explode, with incomes becoming infinite in finite time.” – John G. Fernald and Charles I. Jones, “ [The Future of Economic Growth](https://www.frbsf.org/economic-research/wp-content/uploads/sites/4/wp2014-02.pdf)”
+
+## The Essay
+
+[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59d3c16c-caaa-4f71-9661-0db4213c028e_616x468.jpeg)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59d3c16c-caaa-4f71-9661-0db4213c028e_616x468.jpeg)
+
+### 🦉 
+
+[Source 4]
+Title: The case for AGI by 2030 | 80,000 Hours
+Date: None
+URL: https://80000hours.org/agi/guide/when-will-agi-arrive/
+Content: The case for AGI by 2030 | 80,000 Hours
+Toggle navigation
+Search for:
+**
+[](https://80000hours.org/)
+Search for:
+**
+# The case for AGI by2030
+By[Benjamin Todd](https://80000hours.org/author/benjamin-todd/)&middot;Published March 2025 &middot;**
+## On this page:
+* [Introduction](#top)
+* [1I. What's driven recent AI progress? And will it continue?](#i-whats-driven-recent-ai-progress-and-will-it-continue)
+* [1.1The deep learning era](#the-deep-learning-era)
+* [1.2What's coming up](#whats-coming-up)
+* [1.31. Scaling pretraining to create base models with basic intelligence](#1-scaling-pretraining-to-create-base-models-with-basic-intelligence)
+* [1.42. Post training of reasoning models with reinforcement learning](#2-post-training-of-reasoning-models-with-reinforcement-learning)
+* [1.53. Increa
+
+[Source 5]
+Title: Date Weakly General AI is Publicly Known
+Date: 2025-10-06T00:00:00.000Z
+URL: https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/?invite=Olx7Ci
+Content: Question
+
+# When will the first weakly general AI system be devised, tested, and publicly announced?
+
+214
+
+Closes Jan 1, 2200
+
+[525 comments525](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)
+
+1d1w2mall
+
+Community Prediction15 Mar 202426 Nov 202518 Apr 2028Sep 2031Mar 07Mar 11Mar 15Mar 19Mar 23Mar 27Mar 31Apr 04Apr 08Apr 12Apr 16Apr 20Apr 24Apr 28May 02now
+
+Total Forecasters1620
+
+Community Prediction
+16 Oct 2026
+
+(06 Oct 2025 - 22 May 2029)
+
+### Make a Prediction
+
+SliderTable
+
+PDF
+
+CDF
+
+20202021202520522200
+
+Sign Up to Predict
+
+| 2200 |
+| --- | --- | --- | --- | --- |
+| community | 0.2% | 06 Oct 2025 | 16 Oct 2026 | 22 May 2029 | 2.8% |
+| My Prediction | — | — | — | — | — |
+
+| Lower bound | community | My Prediction |
+| --- | --- | --- |
+| 2200
+
+
+Based on these search results and your available tools:
+1. If you see an interesting link, use crawl_urls to get full content
+2. If you need financial data, use the data tools (yahoo, fred, options)
+3. If this is a market question, use forecast tools for distributions
+
+When done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.
+Focus on NUMBERS and FACTS that help forecasting.
+
+
+------------------------------------------------------------
+
+[ASSISTANT]
+
+[TOOL CALLS]
+  - crawl_urls({"urls": ["https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/", "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-d...)
+  - search_web({"query": "time from AGI to ASI forecasts OR predictions OR Metaculus", "num_results": 15}...)
+  - search_web({"query": "\"months from AGI to superintelligence\" OR \"timeline AGI to ASI\"", "num_results": 10}...)
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Crawled 2 pages",
+  "source": "Exa Crawl",
+  "data": {
+    "pages": [
+      {
+        "url": "https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/",
+        "title": "How Soon After AGI Will Superintelligence Emerge?",
+        "content": "[**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)\n\n**336** forecasters\n\n# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?\n\nCurrent estimate\n\n32.6 months\n\nShare\n\nPredict\n\nCommentsTimelineIn the NewsKey FactorsQuestion Info\n\nTimeline\n\n1d1w2mall\n\nResolution Criteria\n\nKey Factors\n\nNo key factors yetAdd some that might influence this forecast.Add key factor\n\nBackground Info\n\nFollowembed\n\nAuthors:\n\n[casens](https://www.metaculus.com/accounts/profile/104161/)\n\nOpened:Dec 30, 2021\n\nCloses:Jan 1, 2150\n\nScheduled resolution:Jan 1, 2200\n\nSpot Scoring Time:Dec 31, 2021\n\n[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)\n\n[AGI Outcomes](https://www.metaculus.com/tournament/agi-horizons/)\n\n[Forecasting AI Futures](https://www.metaculus.com/c/forecasting-ai-futures/)\n\n[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&for_main_feed=false)\n\n[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&for_main_feed=false)\n\nNews Match\n\n[Every AI Breakthrough Shifts the Goalposts of Artificial General Intelligence\\\n\\\nScientific American\u2022Nov 20, 2025](https://www.scientificamerican.com/article/every-ai-breakthrough-shifts-the-goalposts-of-artificial-general/)\n\n[Databricks CEO says AGI is already here \u2014 and Silicon Valley just keeps moving the goalposts\\\n\\\nBusiness Insider\u2022Nov 19, 2025](https://businessinsider.com/databricks-ceo-agi-superintelligence-ali-ghodsi-ai-enterprise-2025-11)\n\n[Learn more](https://www.metaculus.com/faq/#related-news) about Metaculus NewsMatch\n\nSimilar Questions\n\n[**After a weak AGI is created, how many months will it be before the first superintelligent oracle?** \\\n\\\n22.4 months\\\n\\\n(5.02 - 159)\\\n\\\n22.4 months\\\n\\\n(5.02 - 159)\\\n\\\n**240** forecasters](https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/) [**When will the first weakly general AI system be devised, tested, and publicly announced?** \\\n\\\n18 Nov 2027\\\n\\\n(25 May 2026 - Mar 2031)\\\n\\\n18 Nov 2027\\\n\\\n(25 May 2026 - Mar 2031)\\\n\\\n**1.7k** forecasters](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/) [**How does the level of existential risk posed by AGI depend on its arrival time?** \\\n\\\n2022-10-10 to 2024-12-31\\\n\\\n53%\\\n\\\n2025-01-01 to 2029-12-31\\\n\\\n40%\\\n\\\n2030-01-01 to 2039-12-31\\\n\\\n29%\\\n\\\n2 others\\\n\\\n**104** forecasters](https://www.metaculus.com/questions/12840/existential-risk-from-agi-vs-agi-timelines/)\n\nShow More Questions",
+        "content_length": 2621
+      },
+      {
+        "url": "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/",
+        "title": "When Will Weakly General AI Arrive?",
+        "content": "Question\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\n216\n\n[534 comments534](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n1d1w2mall\n\nCommunity Prediction15 Mar 202424 Dec 202426 Nov 202530 Dec 202618 Apr 202802 Nov 2029Sep 2031Nov 2033Apr 12Apr 16Apr 20Apr 24Apr 28May 02May 06May 10May 14May 18May 22May 26May 30Jun 03Jun 07now\n\nTotal Forecasters1642\n\nCommunity Prediction\n31 Dec 2026\n\n(01 Nov 2025 - 27 Oct 2029)\n\n### Make a Prediction\n\nSliderTable\n\nPDF\n\nCDF\n\n20202020202020212022202520312043206521102200\n\nSign Up to Predict\n\n| 2200 |\n| --- | --- | --- | --- | --- |\n| community | 0.2% | 01 Nov 2025 | 31 Dec 2026 | 27 Oct 2029 | 1.8% |\n| My Prediction | \u2014 | \u2014 | \u2014 | \u2014 | \u2014 |\n\n| Lower bound | community | My Prediction |\n| --- | --- | --- |\n| 2200 | 1.8% | \u2014 |\n\nResolution Criteria\n\nKey Factors\n\nChina starts a war with the land of Taiwan BEFORE said weakly general AI\n\nIncreases likelihoodDecreases likelihood\n\nAI become student of arts university in Vienna\n\nIncreases likelihoodDecreases likelihood\n\nBackground Info\n\nAuthors:\n\n[Anthony](https://www.metaculus.com/accounts/profile/8/)\n\nOpened:Jan 18, 2020\n\nCloses:Jan 1, 2200\n\nScheduled resolution:Jan 1, 2200\n\nSpot Scoring Time:Jan 20, 2020\n\n[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)\n\n[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&for_main_feed=false)\n\n[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&for_main_feed=false)\n\n[Turing test](https://www.metaculus.com/questions/?tags=turing-test&for_main_feed=false)\n\n[Machine learning](https://www.metaculus.com/questions/?tags=machine-learning&for_main_feed=false)\n\n[Philosophy](https://www.metaculus.com/questions/?tags=philosophy&for_main_feed=false)\n\n[Linguistics](https://www.metaculus.com/questions/?tags=linguistics&for_main_feed=false)\n\n[Data analysis](https://www.metaculus.com/questions/?tags=data-analysis&for_main_feed=false)\n\nSubmit Tags Feedback\n\n## Comments\n\nLog in\n\n534 comments\n\nrecent\n\n[**nickmoes**](https://www.metaculus.com/accounts/profile/273690/)\u00b7 [Jun 10, 2025](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/#comment-361188)\n\n3\n\nChanged my mind (0)Reply\n\n[**hold\\_my\\_fish**](https://www.metaculus.com/accounts/profile/127280/)\u00b7 [May 28, 2025](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/#comment-352294)\n\n11\n\nChanged my mind (1)Reply\n\nhide 2 replies\n\n[**Sourian**](https://www.metaculus.com/accounts/profile/121058/)\u00b7 [Jun 8, 2025](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/#comment-360662)\n\n4\n\nChanged my mind (0)Reply\n\n[**Order**](https://www.m",
+        "content_length": 3000
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T22:34:28.994242"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: time from AGI to ASI forecasts OR predictions OR Metaculus",
+  "source": "Exa Search",
+  "data": {
+    "query": "time from AGI to ASI forecasts OR predictions OR Metaculus",
+    "num_results": 15,
+    "results": [
+      {
+        "index": 0,
+        "title": "Time between weak AGI and oracle ASI",
+        "url": "https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/",
+        "published_date": null,
+        "snippet": "Time between weak AGI and oracle ASI\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questions/)\n* More\n* Log inSig..."
+      },
+      {
+        "index": 1,
+        "title": "How Soon After AGI Will Superintelligence Emerge?",
+        "url": "https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/",
+        "published_date": null,
+        "snippet": "[**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)\n\n**336** forecasters\n\n# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?\n\nCurrent estimate\n\n32.6 months\n\nShare\n\nPredict\n\nCommentsTimelineIn the NewsKey FactorsQuestion Info\n\nTimeline\n\n1d1w2mall\n\nResolution Criteria\n\nKey Factors\n\nNo key factors yetAdd some that might influence this forecast.Add key factor\n\nBackground Info\n\nFollowem..."
+      },
+      {
+        "index": 2,
+        "title": "AI safety and timelines",
+        "url": "https://www.metaculus.com/notebooks/10438/ai-safety-and-timelines/",
+        "published_date": "2022-04-10T00:00:00.000Z",
+        "snippet": "by [Sergio](https://www.metaculus.com/accounts/profile/115725/)\u2022Oct 2, 2022\u2022Edited on Aug 4, 2024\u202214 min read\n\n8"
+      },
+      {
+        "index": 3,
+        "title": "When Will AGI/Singularity Happen? 8590 Predictions ...",
+        "url": "https://research.aimultiple.com/artificial-general-intelligence-singularity-timing/",
+        "published_date": "2025-12-05T00:00:00.000Z",
+        "snippet": "When Will AGI/Singularity Happen? 8,590 Predictions Analyzed\n[![AIMultiple](https://research.aimultiple.com/images/logo-2025.svg)![AIMultiple](https://research.aimultiple.com/images/logo-2025-white.svg)](https://aimultiple.com/)\n[Contact Us](https://research.aimultiple.com/contact-us/)\nAI\nAgentic AI\nCybersecurity\nData\nEnterprise Software\nBack\nNo results found.\n[](https://aimultiple.com/)[AI](https://research.aimultiple.com/category/ai/)[AI Foundations](https://research.aimultiple.com/category/ai..."
+      },
+      {
+        "index": 4,
+        "title": "Shortening AGI timelines: a review of expert forecasts",
+        "url": "https://benjamintodd.substack.com/p/shortening-agi-timelines-a-review",
+        "published_date": "2025-04-08T03:34:29.930Z",
+        "snippet": "Shortening AGI timelines: a review of expert forecasts\n[\n![Benjamin Todd](https://substackcdn.com/image/fetch/$s_!bm4z!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F24fb7c14-4fc6-4886-992a-aa8177348931_438x438.png)\n](https://benjamintodd.substack.com/)\n# [Benjamin Todd](https://benjamintodd.substack.com/)\nSubscribeSign in\n# Shortening AGI timelines: a review of expert forecasts\n[\n![Benjamin Todd's avatar](h..."
+      },
+      {
+        "index": 5,
+        "title": "Date of Artificial General Intelligence",
+        "url": "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/&quot/",
+        "published_date": "2025-05-14T00:00:00.000Z",
+        "snippet": "Question\n\n# When will the first general AI system be devised, tested, and publicly announced?\n\n194\n\nCloses Dec 24, 2199\n\n[550 comments550](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/#comments)\n\n1d1w2mall\n\nCommunity Prediction25 Aug 202013 Aug 2029Aug 2038Jul 2047Jul 2056Mar 16Mar 20Mar 24Mar 28Apr 01Apr 05Apr 09Apr 13Apr 17Apr 21Apr 25Apr 29May 03May 07May 11now\n\nTotal Forecasters1648\n\nCommunity Prediction\nSep 2033\n\n(29 Jun 2028 - Nov 2045)\n\n### Make a Predi..."
+      },
+      {
+        "index": 6,
+        "title": "Metaforecast",
+        "url": "https://metaforecast.org/questions/metaculus-9062",
+        "published_date": "2024-10-07T00:00:00.000Z",
+        "snippet": "# \u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n# [After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n[Metaculus](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n\u2605\u2605\u2605\u2606\u2606\n\n## Question description [\\#](https://metaforecast.org/questions/metaculus-9062\\#description)\n\n_Related Question on Metaculus:_\n\n- [After an AGI is created, how many months will it..."
+      },
+      {
+        "index": 7,
+        "title": "When Will the First General AI Be Announced?",
+        "url": "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/",
+        "published_date": "",
+        "snippet": "[](/)\n * [Questions](/questions/) \n * [Tournaments](/tournaments/) \n * [Services](/services/) \n * [News](/news/) \n * [Questions](/questions/) \n * [Tournaments](/tournaments/) \n * [Questions](/questions/) \n * [Questions](/questions/) \n * More\n * Log in Sign Up\n * a / \u6587\n * \nLog in Sign Up\n[632 comments](/questions/5121/date-of-artificial-general-intelligence/#comments) \n1.8k forecasters\nWhen will the first general AI system be devised, tested, and publicly announced?\nCurrent estimate\nJul 2033\nShar..."
+      },
+      {
+        "index": 8,
+        "title": "Date Weakly General AI is Publicly Known",
+        "url": "https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/?invite=Olx7Ci",
+        "published_date": "2025-10-06T00:00:00.000Z",
+        "snippet": "Question\n\n# When will the first weakly general AI system be devised, tested, and publicly announced?\n\n214\n\nCloses Jan 1, 2200\n\n[525 comments525](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)\n\n1d1w2mall\n\nCommunity Prediction15 Mar 202426 Nov 202518 Apr 2028Sep 2031Mar 07Mar 11Mar 15Mar 19Mar 23Mar 27Mar 31Apr 04Apr 08Apr 12Apr 16Apr 20Apr 24Apr 28May 02now\n\nTotal Forecasters1620\n\nCommunity Prediction\n16 Oct 2026\n\n(06 Oct 2025 - 22 May 2029)\n\n### Make..."
+      },
+      {
+        "index": 9,
+        "title": "The case for AGI by 2030",
+        "url": "https://80000hours.org/agi/guide/when-will-agi-arrive",
+        "published_date": "2025-08-28T00:00:00.000Z",
+        "snippet": "The case for AGI by 2030 | 80,000 Hours\nToggle navigation\nSearch for:\n**\n[](https://80000hours.org/)\nSearch for:\n**\n# The case for AGI by2030\nBy[Benjamin Todd](https://80000hours.org/author/benjamin-todd/)&middot;Published March 2025 &middot;**\n## On this page:\n* [Introduction](#top)\n* [1I. What's driven recent AI progress? And will it continue?](#i-whats-driven-recent-ai-progress-and-will-it-continue)\n* [1.1The deep learning era](#the-deep-learning-era)\n* [1.2What's coming up](#whats-coming-up)..."
+      },
+      {
+        "index": 10,
+        "title": "Update to Samotsvety AGI   timelines",
+        "url": "https://forum.effectivealtruism.org/posts/ByBBqwRXWqX5m9erL/update-to-samotsvety-agi-timelines",
+        "published_date": "2023-01-24T00:00:00.000Z",
+        "snippet": "Update to Samotsvety AGI timelines \u2014EA Forum\n## [\n![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 \"Effective Altruism Forum\")\nEffective Altruism Forum](https://forum.effectivealtruism.org/)\n[\n![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 \"Effective Altru..."
+      },
+      {
+        "index": 11,
+        "title": "Shrinking AGI timelines: a review of expert\u00a0forecasts",
+        "url": "https://80000hours.org/2025/03/when-do-experts-expect-agi-to-arrive/",
+        "published_date": "2025-03-21T00:00:00.000Z",
+        "snippet": "Shrinking AGI timelines: a review of expert forecasts | 80,000 Hours\nToggle navigation\nSearch for:\n**\n[](https://80000hours.org/)\nSearch for:\n**\n# Shrinking AGI timelines: a review of expertforecasts\nBy[Benjamin Todd](https://80000hours.org/author/benjamin-todd/)&middot;Published March 21st, 2025 &middot;**\n## On this page:\n* [1AI experts](#ai-experts)\n* [1.11. Leaders of AI companies](#1-leaders-of-ai-companies)\n* [1.22. AI researchers in general](#2-ai-researchers-in-general)\n* [2Expert foreca..."
+      },
+      {
+        "index": 12,
+        "title": "Orienting to 3 year AGI timelines",
+        "url": "https://forum.effectivealtruism.org/posts/tdfDfFyqbvBF9DdeY/orienting-to-3-year-agi-timelines",
+        "published_date": "2024-12-22T23:07:16.000Z",
+        "snippet": "Orienting to 3 year AGI timelines \u2014EA Forum\n## [\n![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 \"Effective Altruism Forum\")\nEffective Altruism Forum](https://forum.effectivealtruism.org/)\n[\n![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 \"Effective Altrui..."
+      },
+      {
+        "index": 13,
+        "title": "Literature review of transformative artificial intelligence timelines",
+        "url": "https://epoch.ai/blog/literature-review-of-transformative-artificial-intelligence-timelines",
+        "published_date": "2023-01-17T00:00:00.000Z",
+        "snippet": "Literature review of transformative artificial intelligence timelines | Epoch AI\n[\n![Epoch AI's logo](https://epoch.ai/assets/images/epoch-full-standard.svg)![Epoch AI's logo](https://epoch.ai/assets/images/epoch-full-white.svg)\n](https://epoch.ai/)\n[Latest](https://epoch.ai/latest)\n[Publications & Commentary](#)\n[Papers & Reports](https://epoch.ai/blog)[Newsletter](https://epoch.ai/gradient-updates)[Podcast](https://epoch.ai/epoch-after-hours)\n[Data & Resources](#)\nDatasets\n[Overview](https://e..."
+      },
+      {
+        "index": 14,
+        "title": "When Will the First General AI Be Announced?",
+        "url": "https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/",
+        "published_date": null,
+        "snippet": "When Will the First General AI Be Announced?\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questions/)\n* More\n* L..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T22:34:30.322992"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: \"months from AGI to superintelligence\" OR \"timeline AGI to ASI\"",
+  "source": "Exa Search",
+  "data": {
+    "query": "\"months from AGI to superintelligence\" OR \"timeline AGI to ASI\"",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "AI Risk timelines: 10% chance (by year X) should be the headline (and deadline), not 50%. And 10% is _this   year_!",
+        "url": "https://forum.effectivealtruism.org/posts/nBYeZGPtbnNWSNAau/ai-risk-timelines-10-chance-by-year-x-should-be-the-headline",
+        "published_date": "2026-01-05T00:00:00.000Z",
+        "snippet": "AI Risk timelines: 10% chance (by year X) should be the headline (and deadline), not 50%. And 10% is \\_this year\\_! \u2014EA Forum\n## [\n![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 \"Effective Altruism Forum\")\nEffective Altruism Forum](https://forum.effectivealtruism.org/)\n[\n![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205..."
+      },
+      {
+        "index": 1,
+        "title": "The Most Important Time in History Is Now",
+        "url": "https://unchartedterritories.tomaspueyo.com/p/the-most-important-time-in-history-agi-asi",
+        "published_date": "2025-01-29T00:00:00.000Z",
+        "snippet": "The Most Important Time in History Is Now - by Tomas Pueyo\n[\n![Uncharted Territories](https://substackcdn.com/image/fetch/$s_!4QUy!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc92decb6-7c5c-4053-bc05-651e5548e9b3_1280x1280.png)\n](https://unchartedterritories.tomaspueyo.com/)\n# [Uncharted Territories](https://unchartedterritories.tomaspueyo.com/)\nSubscribeSign in\n# The Most Import..."
+      },
+      {
+        "index": 2,
+        "title": "Alan\u2019s conservative countdown to AGI",
+        "url": "https://lifearchitect.ai/agi/",
+        "published_date": "2022-06-08T00:00:00.000Z",
+        "snippet": "Alan\u2019s conservative countdown to AGI &#8211; Dr Alan D. Thompson \u2013LifeArchitect.ai\n[Skip to content](#content)\n \n# Alan\u2019s conservative countdown to AGI\n%\nLast update: Jan/2026\nAlan\u2019s work guides official AI docs for the G7, DOE, Microsoft, Apple, & MIT...[\u2020](https://lifearchitect.ai/memo/#informing)\nGet[*The Memo*](https://lifearchitect.ai/memo/).\nThis page: Milestones \u00b7[Levels](#levels)\u00b7[Where?](#where)\u00b7[AGI expert critique](#agi-expert)\u00b7[Further reading](#reading)\n## [AGI definition etc.](#)\n1..."
+      },
+      {
+        "index": 3,
+        "title": "Semi-Informative Priors Over AI Timelines | Open Philanthropy",
+        "url": "https://www.openphilanthropy.org/research/semi-informative-priors-over-ai-timelines/",
+        "published_date": "2024-08-13T00:00:00.000Z",
+        "snippet": "Semi-Informative Priors Over AI Timelines | Coefficient Giving[Skip to Content](#content)\n[Coefficient Giving](https://coefficientgiving.org)\n[Coefficient Giving](https://coefficientgiving.org)\n![](https://coefficientgiving.org/wp-content/themes/coefficient-giving/public/assets/search-white.svg)![close](https://coefficientgiving.org/wp-content/themes/coefficient-giving/public/assets/close.svg)\n## Coefficient is a philanthropic funder and advisor.\n* [Funds](https://coefficientgiving.org/funds/)![..."
+      },
+      {
+        "index": 4,
+        "title": "Report on Semi-Informative Priors | Open Philanthropy",
+        "url": "https://www.openphilanthropy.org/blog/report-semi-informative-priors",
+        "published_date": "2024-02-17T00:00:00.000Z",
+        "snippet": "Report on Semi-Informative Priors | Coefficient Giving[Skip to Content](#content)\n[Coefficient Giving](https://coefficientgiving.org)\n[Coefficient Giving](https://coefficientgiving.org)\n![](https://coefficientgiving.org/wp-content/themes/coefficient-giving/public/assets/search-white.svg)![close](https://coefficientgiving.org/wp-content/themes/coefficient-giving/public/assets/close.svg)\n## Coefficient is a philanthropic funder and advisor.\n* [Funds](https://coefficientgiving.org/funds/)![more](ht..."
+      },
+      {
+        "index": 5,
+        "title": "",
+        "url": "https://www.forethought.org/research/preparing-for-the-intelligence-explosion.pdf",
+        "published_date": "2025-05-23T00:00:00.000Z",
+        "snippet": "Preparing for the\nIntelligence\nExplosion\nWilliam MacAskill & Fin Moorhouse\nMarch 2025\n1\nContents\nPreparing for the Intelligence Explosion\nAbstract 4\n1. Introduction 4\n2. A century in a decade 6\nThe last century, compressed 6\nAsymmetric acceleration 8\nThe accelerated decade 8\n3. The intelligence explosion and beyond 9\nProgress in AI capabilities 10\nAI-human cognitive parity 18\nThe technology explosion 22\nThe industrial explosion 26\n4. Grand challenges 29\nAI takeover 30\nHighly destructive technolo..."
+      },
+      {
+        "index": 6,
+        "title": "Situational Awareness",
+        "url": "https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf",
+        "published_date": "2024-06-06T00:00:00.000Z",
+        "snippet": "Leopold Aschenbrenner\nS I T U AT I O N A L AWA R E N E S S\nThe Decade Ahead\nJ U NE 2024\n2\nDedicated to Ilya Sutskever.\nWhile I used to work at OpenAI, all of this is based on publicly\u0002available information, my own ideas, general field-knowledge, or\nSF-gossip.\nThank you to Collin Burns, Avital Balwit, Carl Shulman, Jan Leike,\nIlya Sutskever, Holden Karnofsky, Sholto Douglas, James Bradbury,\nDwarkesh Patel, and many others for formative discussions. Thank\nyou to many friends for feedback on earlie..."
+      },
+      {
+        "index": 7,
+        "title": "Transformative AGI by 2043 is <1% likely",
+        "url": "https://arxiv.org/abs/2306.02519",
+        "published_date": "2023-06-05T00:00:00.000Z",
+        "snippet": "[2306.02519] Transformative AGI by 2043 is &lt;1% likely\n[Skip to main content](#content)\n[![Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg)](https://www.cornell.edu/)\nWe gratefully acknowledge support from the Simons Foundation,[member institutions](https://info.arxiv.org/about/ourmembers.html), and all contributors.[Donate](https://info.arxiv.org/about/donate.html)\n[](https://arxiv.org/IgnoreMe)\n[![arxiv logo](https://arxiv.org/static/..."
+      },
+      {
+        "index": 8,
+        "title": "Orienting to 3 year AGI timelines",
+        "url": "https://forum.effectivealtruism.org/posts/tdfDfFyqbvBF9DdeY/orienting-to-3-year-agi-timelines",
+        "published_date": "2024-12-22T23:07:16.000Z",
+        "snippet": "Orienting to 3 year AGI timelines \u2014EA Forum\n## [\n![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 \"Effective Altruism Forum\")\nEffective Altruism Forum](https://forum.effectivealtruism.org/)\n[\n![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 \"Effective Altrui..."
+      },
+      {
+        "index": 9,
+        "title": "AI Timelines",
+        "url": "https://lesswrong.com/posts/K2D45BNxnZjdpSX2j/ai-timelines",
+        "published_date": "2023-11-10T00:00:00.000Z",
+        "snippet": "x\n## [LESSWRONG](https://lesswrong.com/)\n[is fundraising!](https://lesswrong.com/posts/eKGdCNdKjvTBG9i6y)\n[LW](https://lesswrong.com/)\nLogin\nAI Timelines \u2014LessWrong\n![Background Image](https://res.cloudinary.com/lesswrong-2-0/image/upload/a_hflip/f_auto,q_auto/v1/mirroredImages/AI_Timelines_a_large_hourglass_with_digital_p_0.2169969436158985/eygfylbfkdcweow0dowy)\n[Best of LessWrong2023](https://lesswrong.com/bestoflesswrong?year=2023&amp;category=all)\n[AI Timelines](https://lesswrong.com/w/ai-ti..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T22:34:31.779090"
+}
+
+------------------------------------------------------------
+
+[ASSISTANT]
+
+[TOOL CALLS]
+  - crawl_urls({"urls": ["https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/", "https://metaforecast.org/questions/metaculus-9062", "https://www.metaculus.com/questions/5121/date-of-artif...)
+  - crawl_urls({"urls": ["https://unchartedterritories.tomaspueyo.com/p/the-most-important-time-in-history-agi-asi", "https://80000hours.org/agi/guide/when-will-agi-arrive/"], "max_content_length": 3000}...)
+  - search_web({"query": "Metaculus AGI to ASI timeline prediction distribution OR median"}...)
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Crawled 3 pages",
+  "source": "Exa Crawl",
+  "data": {
+    "pages": [
+      {
+        "url": "https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/",
+        "title": "After a weak AGI is created, how many months will it be before the first superintelligent oracle?",
+        "content": "Time between weak AGI and oracle ASI\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questions/)\n* More\n* Log inSign Up\n* a/\u6587\n* Log inSign Up\n[**36**comments](https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/#comments)\n**241**forecasters\n# After a weak AGI is created, how many months will it be before the first superintelligent oracle?\nCurrent estimate\n24.2 months\nShare\nPredict\nCommentsTimelineIn the NewsKey FactorsQuestion Info\nTimeline\n1d1w2mall\nResolution Criteria\nKey Factors\nNo key factors yetAdd some that might influence this forecast.Add key factor\nBackground Info\nFollowembed\nAuthors:\n[Matthew\\_Barnett](https://www.metaculus.com/accounts/profile/108770/)\nOpened:May 5, 2020\nCloses:Jan 1, 2200\nScheduled resolution:Jan 1, 2300\nSpot Scoring Time:May 7, 2020\n[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)\n[AGI Outcomes](https://www.metaculus.com/tournament/agi-horizons/)\n[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&amp;for_main_feed=false)\n[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&amp;for_main_feed=false)\nNews Match\n[![Business Insider logo](https://www.metaculus.com/newsmatch/favicon?url=https%3A%2F%2Fwww.businessinsider.com%2Fpublic%2Fassets%2FBI%2FUS%2Ffavicons%2Ffavicon.ico)\nOpenAI's head of Codex says the bottleneck to AGI is humanity's inability to type fast enough\nBusiness Insider\u2022Dec 15, 2025\n](https://www.businessinsider.com/openai-artificial-general-intelligence-bottleneck-human-typing-speed-2025-12)\n[![Atlantic logo](https://www.metaculus.com/newsmatch/favicon?url=https%3A%2F%2Fcdn.theatlantic.com%2Fassets%2Fstatic%2Fa%2Ftheatlantic%2Fimg%2Flacroix%2Ffavicon.fb04af6390eb.ico)\nThe View From Inside the AI Bubble\nAtlantic\u2022Dec 14, 2025\n](https://www.theatlantic.com/technology/2025/12/neurips-ai-bubble-agi/685250/)\n[![OpEdNews logo](https://www.metaculus.com/newsmatch/favicon?url=https%3A%2F%2Fwww.opednews.com%2Ffavicon.ico)\nHow Will AI Treat Humanity When It Surpasses Us In 20-40 years\nOpEdNews\u2022Dec 10, 2025\n](https://www.opednews.com/articles/How-Will-AI-Treat-Humanity-Artificial-Intelligence_Artificial-Intelligence_Corporatism-Corp-Personhood_Personhood-251205-18.html)\nShow More News\n[Learn more](https://www.metaculus.com/faq/#related-news)about Metaculus NewsMatch\nSimilar Questions\n[\n#### After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?\n36.9 months\n(9.16 - 141)\n36.9 months\n(9.16 - 141)\n**337**forecasters\n](https://www.metaculus.com",
+        "content_length": 3000
+      },
+      {
+        "url": "https://metaforecast.org/questions/metaculus-9062",
+        "title": "Metaforecast",
+        "content": "# \u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n# [After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n[Metaculus](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n\u2605\u2605\u2605\u2606\u2606\n\n## Question description [\\#](https://metaforecast.org/questions/metaculus-9062\\#description)\n\n_Related Question on Metaculus:_\n\n- [After an AGI is created, how many months will it be before the first superintelligence?](https://www.metaculus.com/questions/4123/after-an-agi-is-created-how-many-months-will-it-be-before-the-first-superintelligence/) (alternative resolution criteria)\n\n_(background text by @ [Matthew\\_Barnett](https://www.metaculus.com/accounts/profile/108770/))_\n\nFuturists have long speculated that upon the arrival of [artificial general intelligence](https://en.wikipedia.org/wiki/Artificial_general_intelligence), the first [superintelligent AI](https://en.wikipedia.org/wiki/Superintelligence) will quickly follow. From I. J. Good, [writing in 1965](https://www.sciencedirect.com/science/article/pii/S0065245808604180),\n\n> Let an ultraintelligent machine be defined as a machine that can far surpass all the intellectual activities of any man however clever. Since the design of machines is one of these intellectual activities, an ultraintelligent machine could design even better machines; there would then unquestionably be an \u2018intelligence explosion,\u2019 and the intelligence of man would be left far behind. Thus the first ultraintelligent machine is the last invention that man need ever make, provided that the machine is docile enough to tell us how to keep it under control.\n\nNick Bostrom wrote in his book _Superintelligence_ (2014),\n\n> Note that one could think that it will take quite a long time until machines reach the human baseline, or one might be agnostic about how long that will take, and yet have a strong view that once this happens, the further ascent into strong superintelligence will be very rapid.\n\nand categorized takeoff durations into three types:\n\n- \"A slow takeoff is one that occurs over some long temporal interval, such as decades or centuries.\"\n\n- \"A fast takeoff occurs over some short temporal interval, such as minutes, hours, or days.\"\n\n- \"A moderate takeoff is one that occurs over some intermediary temporal interval, such as months or years.\"\n\n\nWhile it seems that most prominent thinkers are convinced that rapid technological and economic progress will follow the development of AGI (See [Paul Christiano](https://sideways-view.com/2018/02/24/takeoff-speeds/), [Robin Hanson](http://mason.gmu.edu/~rhanson/aigrow.pdf), [Eliezer Yudkowsky](https://intelligence.org/files/IEM.pdf), [Ben Goertzel](http://multiverseaccordingtoben.blogspot.com/2011/01/hard-takeoff-hypothesis.html)), most AI researchers surveyed are not convinced. In 2016, AI Impacts [asked](https://aiimpacts.org/2016-expert-survey-on-progress-in-ai",
+        "content_length": 3000
+      },
+      {
+        "url": "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/",
+        "title": "When Will the First General AI Be Announced?",
+        "content": "[](/)\n * [Questions](/questions/) \n * [Tournaments](/tournaments/) \n * [Services](/services/) \n * [News](/news/) \n * [Questions](/questions/) \n * [Tournaments](/tournaments/) \n * [Questions](/questions/) \n * [Questions](/questions/) \n * More\n * Log in Sign Up\n * a / \u6587\n * \nLog in Sign Up\n[632 comments](/questions/5121/date-of-artificial-general-intelligence/#comments) \n1.8k forecasters\nWhen will the first general AI system be devised, tested, and publicly announced?\nCurrent estimate\nJul 2033\nShare\nPredict\nTop Key Factors\nView all (9)\n\u2191 reliable >50-step agent chains with published evals\nImpact\nlater\nStrength\n4 votes\nAI companies dont get funding (due to AI bubble bursting)\nImpact\nEarlier\nStrength\n6 votes\nSomeone solves the alignment problem (I'd hope timelines are longer without this & shorter with it)\nImpact\nlater\nStrength\n5 votes\n\u2193 grid/permit delays & export controls on HBM/nodes\nImpact\nEarlier\nStrength\n3 votes\nStrong regulation of AI companies by US government\nImpact\nEarlier\nStrength\n47 votes\nChina starts a war with Taiwan\nImpact\nEarlier\nStrength\n78 votes\n\u2191 multi-year compute/colo contracts confirmed via filings\nImpact\nlater\nStrength\n5 votes\nGenuinely good US government policy on AI safety (something like SB 1047)\nImpact\nlater\nStrength\n4 votes\nComments Timeline In the News Key Factors Question Info\nTimeline\n1d 1w 2m all\nResolution Criteria\nKey Factors\nBackground Info\nFollow embed\nAuthors :\n[Matthew_Barnett](/accounts/profile/108770/)\nOpened :Aug 23, 2020\nCloses :Dec 24, 2199\nScheduled resolution :Dec 24, 2199\nSpot Scoring Time :Aug 25, 2020\n[AI Progress Essay Contest](/tournament/ai-fortified-essay-contest/)\n[AGI Outcomes](/tournament/agi-horizons/)\n[Computing and Math](/questions/?categories=computing-and-math&for_main_feed=false)\n[Artificial Intelligence](/questions/?categories=artificial-intelligence&for_main_feed=false)\nNews Match\n[![Scientific American logo](/newsmatch/favicon?url=https%3A%2F%2Fwww.scientificamerican.com%2Fpublic%2Fresources%2Ffavicons%2Ffavicon-196-f10395ba7ecf07756e4b5a82c4795b61.png)[![Scientific American logo](/newsmatch/favicon?url=https%3A%2F%2Fwww.scientificamerican.com%2Fpublic%2Fresources%2Ffavicons%2Ffavicon-196-f10395ba7ecf07756e4b5a82c4795b61.png)\nEvery AI Breakthrough Shifts the Goalposts of Artificial General Intelligence\nScientific American \u2022 Nov 20, 2025](https://www.scientificamerican.com/article/every-ai-breakthrough-shifts-the-goalposts-of-artificial-general/)\n\n[![Newsweek logo](/newsmatch/favicon?url=https%3A%2F%2Fg.newsweek.com%2Fthemes%2Fnewsweek%2Ffavicons%2Ffavicon-32x32.png)[![Newsweek logo](/newsmatch/favicon?url=https%3A%2F%2Fg.newsweek.com%2Fthemes%2Fnewsweek%2Ffavicons%2Ffavicon-32x32.png)\nGoogle Boss Issues Warning Ahead of Gemini 3.0 Launch\nNewsweek \u2022 Nov 19, 2025](https://www.newsweek.com/google-boss-issues-warning-gemini-3-0-launch-11065006)\n\n[![Business Insider logo](/newsmatch/favicon?url=https%3A%2F%2Fwww.businessinsider.com%2Fpublic%2Fassets%2FBI%2FUS%2Ffavicons%2Ffavicon.ico)[![Busine",
+        "content_length": 3000
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T22:34:38.814159"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Crawled 2 pages",
+  "source": "Exa Crawl",
+  "data": {
+    "pages": [
+      {
+        "url": "https://unchartedterritories.tomaspueyo.com/p/the-most-important-time-in-history-agi-asi",
+        "title": "Uncharted Territories",
+        "content": "The Most Important Time in History Is Now - by Tomas Pueyo\n[\n![Uncharted Territories](https://substackcdn.com/image/fetch/$s_!4QUy!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc92decb6-7c5c-4053-bc05-651e5548e9b3_1280x1280.png)\n](https://unchartedterritories.tomaspueyo.com/)\n# [Uncharted Territories](https://unchartedterritories.tomaspueyo.com/)\nSubscribeSign in\n# The Most Important Time in History Is Now\n### AGI Is Coming Sooner Due to o3, DeepSeek, and Other Cutting-Edge AI Developments\n[\n![Tomas Pueyo's avatar](https://substackcdn.com/image/fetch/$s_!am3l!,w_36,h_36,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F32cecf91-f0da-4d20-b82f-c9e8ae5e0d89_1600x1600.png)\n](https://substack.com/@tomaspueyo)\n[Tomas Pueyo](https://substack.com/@tomaspueyo)\nJan 29, 2025\n441\n80\n43\nShare\nAI is progressing so fast that its researchers are freaking out. It is now routinely more intelligent than humans, and its speed of development is*accelerating*. New developments from the last few weeks have accelerated it even more. Now, it looks like AIs can be more intelligent than humans in 1-5 years, and intelligent like gods soon after. We\u2019re at the precipice, and we\u2019re about to jump off the cliff of AI superintelligence[1](https://unchartedterritories.tomaspueyo.com/p/the-most-important-time-in-history-agi-asi#footnote-1-156002579), whether we want to or not.\nWhen are we jumping?\nWhat\u2019s at the bottom?\nDo we have a parachute?\n[\n![](https://substackcdn.com/image/fetch/$s_!FdJH!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe2dbb838-bdbd-4b49-9f38-f0c99e75723b_1600x1205.png)\n](https://substackcdn.com/image/fetch/$s_!FdJH!,f_auto,q_auto:good,fl_progressive:steep/https://substack-post-media.s3.amazonaws.com/public/images/e2dbb838-bdbd-4b49-9f38-f0c99e75723b_1600x1205.png)\n# Market Predictions\nSix months ago, I wrote*[What Would You Do If You Had 8 Years Left to Live?](https://unchartedterritories.tomaspueyo.com/p/what-would-you-do-if-you-had-8-years)*, where I explained that the market predicted Artificial General Intelligence (AGI, an AI capable of doing what most humans can do) eight years later, by 2032. Since then, that date has been*pulled forward*. It\u2019s now predicted to arrive in just[six years](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/), so six months were enough to pull the date forward by one year. Odds now looks like this:\n[\n![](https://substackcdn.com/image/fetch/$s_!7RP4!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59199e38-c6f2-484e-bfcf-7f93a4fc9150_1600x769.png)\n](https://substackcdn.com/image/fetch/$s_!7RP4!,f_auto,q_auto:good,fl_progressive:stee",
+        "content_length": 3000
+      },
+      {
+        "url": "https://80000hours.org/agi/guide/when-will-agi-arrive/",
+        "title": "The case for AGI by\u00a02030",
+        "content": "The case for AGI by 2030 | 80,000 Hours\nToggle navigation\nSearch for:\n**\n[](https://80000hours.org/)\nSearch for:\n**\n# The case for AGI by2030\nBy[Benjamin Todd](https://80000hours.org/author/benjamin-todd/)&middot;Published March 2025 &middot;**\n## On this page:\n* [Introduction](#top)\n* [1I. What's driven recent AI progress? And will it continue?](#i-whats-driven-recent-ai-progress-and-will-it-continue)\n* [1.1The deep learning era](#the-deep-learning-era)\n* [1.2What's coming up](#whats-coming-up)\n* [1.31. Scaling pretraining to create base models with basic intelligence](#1-scaling-pretraining-to-create-base-models-with-basic-intelligence)\n* [1.42. Post training of reasoning models with reinforcement learning](#2-post-training-of-reasoning-models-with-reinforcement-learning)\n* [1.53. Increasing how long models think](#3-increasing-how-long-models-think)\n* [1.64. The next stage: building better agents](#4-the-next-stage-building-better-agents)\n* [2II. How good will AI become by 2030?](#ii-how-good-will-ai-become-by-2030)\n* [2.1The four drivers projected forwards](#the-four-drivers-projected-forwards)\n* [2.2Trend extrapolation of AI capabilities](#trend-extrapolation-of-ai-capabilities)\n* [2.3What jobs would these systems be able to help with?](#what-jobs-would-these-systems-be-able-to-help-with)\n* [2.4What's the case against impressive AI progress by 2030?](#whats-the-case-against-impressive-ai-progress-by-2030)\n* [2.5When do the 'experts' expect AGI to arrive?](#when-do-the-experts-expect-agi-to-arrive)\n* [3III. Why the next 5 years are crucial](#iii-why-the-next-5-years-are-crucial)\n* [3.1Bottlenecks around 2030](#bottlenecks-around-2030)\n* [3.2Two potential futures for AI](#two-potential-futures-for-ai)\n* [3.3Conclusion](#conclusion)\n* [4Further reading](#further-reading)\nIn recent months, the CEOs of leading AI companies have grown increasingly confident about rapid progress:\n* **OpenAI&#8217;s Sam Altman:**Shifted from[saying in November](https://indianexpress.com/article/technology/artificial-intelligence/sam-altman-on-artificial-superintelligence-there-is-a-lot-of-compounding-left-to-do-9661302)&#8220;the rate of progress continues&#8221; to[declaring in January](https://blog.samaltman.com/reflections)&#8220;we are now confident we know how to build AGI&#8221;[1](#fn-1)\n* **Anthropic&#8217;s Dario Amodei:**[Stated in January](https://www.youtube.com/watch?v=7LNyUbii0zw)&#8220;I&#8217;m more confident than I&#8217;ve ever been that we&#8217;re close to powerful capabilities&#8230; in the next 2-3 years&#8221;\n* **Google DeepMind&#8217;s Demis Hassabis**: Changed[from](https://www.reddit.com/r/singularity/comments/1g5zu0i/demis_hassabis_says_agi_artificial_general/)&#8220;as soon as 10 years&#8221; in autumn to &#8220;probably three to five years away&#8221;[by January](https://www.bigtechnology.com/p/google-deepmind-ceo-demis-hassabis).\nIs it just hype? What explains the shift? And could we really have Artificial General Intelligence (AGI)[2]",
+        "content_length": 3000
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T22:34:39.220492"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: Metaculus AGI to ASI timeline prediction distribution OR median",
+  "source": "Exa Search",
+  "data": {
+    "query": "Metaculus AGI to ASI timeline prediction distribution OR median",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "How Soon After AGI Will Superintelligence Emerge? - Metaculus",
+        "url": "https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/",
+        "published_date": null,
+        "snippet": "[**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)\n\n**336** forecasters\n\n# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?\n\nCurrent estimate\n\n32.6 months\n\nShare\n\nPredict\n\nCommentsTimelineIn the NewsKey FactorsQuestion Info\n\nTimeline\n\n1d1w2mall\n\nResolution Criteria\n\nKey Factors\n\nNo key factors yetAdd some that might influence this forecast.Add key factor\n\nBackground Info\n\nFollowem..."
+      },
+      {
+        "index": 1,
+        "title": "Time between weak AGI and oracle ASI - Metaculus",
+        "url": "https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/",
+        "published_date": null,
+        "snippet": "Time between weak AGI and oracle ASI\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questions/)\n* More\n* Log inSig..."
+      },
+      {
+        "index": 2,
+        "title": "AI safety and timelines - Metaculus",
+        "url": "https://www.metaculus.com/notebooks/10438/ai-safety-and-timelines/",
+        "published_date": "2022-04-10T00:00:00.000Z",
+        "snippet": "by [Sergio](https://www.metaculus.com/accounts/profile/115725/)\u2022Oct 2, 2022\u2022Edited on Aug 4, 2024\u202214 min read\n\n8"
+      },
+      {
+        "index": 3,
+        "title": "When Will AGI/Singularity Happen? 8,590 Predictions Analyzed",
+        "url": "https://research.aimultiple.com/artificial-general-intelligence-singularity-timing/",
+        "published_date": "2025-12-05T00:00:00.000Z",
+        "snippet": "When Will AGI/Singularity Happen? 8,590 Predictions Analyzed\n[![AIMultiple](https://research.aimultiple.com/images/logo-2025.svg)![AIMultiple](https://research.aimultiple.com/images/logo-2025-white.svg)](https://aimultiple.com/)\n[Contact Us](https://research.aimultiple.com/contact-us/)\nAI\nAgentic AI\nCybersecurity\nData\nEnterprise Software\nBack\nNo results found.\n[](https://aimultiple.com/)[AI](https://research.aimultiple.com/category/ai/)[AI Foundations](https://research.aimultiple.com/category/ai..."
+      },
+      {
+        "index": 4,
+        "title": "Metaforecast",
+        "url": "https://metaforecast.org/questions/metaculus-9062",
+        "published_date": "2024-10-07T00:00:00.000Z",
+        "snippet": "# \u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n# [After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n[Metaculus](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n\u2605\u2605\u2605\u2606\u2606\n\n## Question description [\\#](https://metaforecast.org/questions/metaculus-9062\\#description)\n\n_Related Question on Metaculus:_\n\n- [After an AGI is created, how many months will it..."
+      },
+      {
+        "index": 5,
+        "title": "Forecasting AGI: Insights from Prediction Markets and Metaculus",
+        "url": "https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1",
+        "published_date": "2025-02-04T00:00:00.000Z",
+        "snippet": "# Forecasting AGI: Insights from Prediction Markets and Metaculus\n\n[Alvin \u00c5nestrand](https://www.greaterwrong.com/users/alvin-anestrand) Feb 4, 2025, 1:03 PM\n\nLW: 13 AF: 4\n\n**8 votes**\n\nOverall karma indicates overall quality.\n\nDouble-click for strong vote.\n\n[0 comments](https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1#comments) 4 min read [LW link](https://www.lesswrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-predictio..."
+      },
+      {
+        "index": 6,
+        "title": "Metaculus Predicts Weak AGI in 2 Years and AGI in 10",
+        "url": "https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10",
+        "published_date": "2023-03-24T00:00:00.000Z",
+        "snippet": "# Metaculus Predicts Weak AGI in 2 Years and AGI in 10\n\n[Chris\\_Leong](https://www.greaterwrong.com/users/chris_leong) 24 Mar 2023 19:43 UTC\n\n29 points\n\n[14 comments](https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10#comments) [LW link](https://www.lesswrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10)\n\n[Forecasts (Specific Predictions)](https://www.greaterwrong.com/tag/forecasts-specific-predictions) [A..."
+      },
+      {
+        "index": 7,
+        "title": "When Will the First General AI Be Announced? - Metaculus",
+        "url": "https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/",
+        "published_date": null,
+        "snippet": "When Will the First General AI Be Announced?\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questions/)\n* More\n* L..."
+      },
+      {
+        "index": 8,
+        "title": "AI Futures Timelines and Takeoff Model: Dec 2025 Update",
+        "url": "https://www.lesswrong.com/posts/YABG5JmztGGPwNFq2/ai-futures-timelines-and-takeoff-model-dec-2025-update",
+        "published_date": "2025-12-31T03:34:40.138Z",
+        "snippet": "x\n## [LESSWRONG](https://www.lesswrong.com/)\n[is fundraising!](https://www.lesswrong.com/posts/eKGdCNdKjvTBG9i6y)\n[LW](https://www.lesswrong.com/)\nLogin\nAI Futures Timelines and Takeoff Model: Dec 2025 Update \u2014LessWrong\n[MATS Program](https://www.lesswrong.com/w/mats-program)[AI](https://www.lesswrong.com/w/ai)[\nFrontpage\n](https://www.lesswrong.com/posts/5conQhfa4rgb4SaWx/site-guide-personal-blogposts-vs-frontpage-posts)\n[2025Top Fifty:14%](https://manifold.markets/LessWrong/will-ai-futures-tim..."
+      },
+      {
+        "index": 9,
+        "title": "Date of Artificial General Intelligence",
+        "url": "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/&quot/",
+        "published_date": "2025-05-14T00:00:00.000Z",
+        "snippet": "Question\n\n# When will the first general AI system be devised, tested, and publicly announced?\n\n201\n\n[613 comments613](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/#comments)\n\n1d1w2mall\n\nTotal Forecasters1741\n\nCommunity Prediction\nSep 2032\n\n(20 Feb 2028 - Mar 2041)\n\n### Make a Prediction\n\nSliderTable\n\nPDF\n\nCDF\n\nSign Up to Predict\n\n| lower 25% | median | upper 75% | >2199 |\n| --- | --- | --- | --- |\n| community | 20 Feb 2028 | Sep 2032 | Mar 2041 | 1.3% |\n| My P..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T22:34:40.595906"
+}
+
+------------------------------------------------------------
+
+
+################################################################################
+# OPUS (FORECASTING MODEL) CALLS
+################################################################################
+
+--- OPUS CALL 1 ---
+
+[INPUT TO OPUS (PROMPT)]
+----------------------------------------
+
+You are a professional forecaster. Your specific strength is the ability to take complex information and piece it together in an integrated way to form accurate probabilistic distributions.
+
+=== FORECASTING PHILOSOPHY ===
+
+**Tournament Context**: These questions come from a pre-set list. The actual situation on the ground may differ significantly from what the question implies. Don't assume the question framing matches reality.
+
+**Calibration Principles**:
+- NEVER assign less than 1% probability to any outcome
+- If there is ANY doubt, stay between 3% and 97%
+- The world changes slowly most of the time - weight status quo outcomes heavily
+- But also: be "based" - when evidence clearly points one direction, don't overthink it
+
+**Scoring Awareness** (Log Scoring):
+- If you predict 1% and outcome happens at that value, you're catastrophically penalized
+- Every doubling helps: 2% is almost twice as good as 1%, 4% even better
+- Your density at the resolution value is what matters - get as close as possible while acknowledging uncertainty
+
+**Two-Fold Uncertainty Model**:
+1. WORLD UNCERTAINTY: Irreducible randomness in reality that even perfect forecasters can't eliminate
+2. MODEL UNCERTAINTY: You likely lack critical data that human forecasters have access to. Account for information gaps.
+
+**Distribution Thinking**:
+- **Unimodal Model**: Start by assuming a single dominant trend. What are its mean and variance?
+- **Multimodal Exceptions**: How "unimodal" is this really? Are there secondary scenarios (e.g. "it either happens or it doesn't") that create a separate peak?
+- **World Model & Base Rates**: What is the historical base rate for this kind of event? 
+- **Tails**: Set wide tails for the 1% and 99% - unexpected outcomes are more common than they seem.
+- **Information Gaps**: You are given limited research. Explicitly consider what is MISSING and how it pulls you toward a conservative prior.
+
+=== YOUR QUESTION ===
+
+After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+
+Background:
+*Related Question on Metaculus:*
+
+* [After an AGI is created, how many months will it be before the first superintelligence?](https://www.metaculus.com/questions/4123/after-an-agi-is-created-how-many-months-will-it-be-before-the-first-superintelligence/) (alternative resolution criteria)
+
+----
+
+*(background text by @[Matthew_Barnett](https://www.metaculus.com/accounts/profile/108770/))*
+
+Futurists have long speculated that upon the arrival of [artificial general intelligence](https://en.wikipedia.org/wiki/Artificial_general_intelligence), the first [superintelligent AI](https://en.wikipedia.org/wiki/Superintelligence) will quickly follow. From I. J. Good, [writing in 1965](https://www.sciencedirect.com/science/article/pii/S0065245808604180),
+
+> Let an ultraintelligent machine be defined as a machine that can far surpass all the intellectual activities of any man however clever. Since the design of machines is one of these intellectual activities, an ultraintelligent machine could design even better machines; there would then unquestionably be an ‘intelligence explosion,’ and the intelligence of man would be left far behind. Thus the first ultraintelligent machine is the last invention that man need ever make, provided that the machine is docile enough to tell us how to keep it under control.
+
+Nick Bostrom wrote in his book *Superintelligence* (2014),
+
+> Note that one could think that it will take quite a long time until machines reach the human baseline, or one might be agnostic about how long that will take, and yet have a strong view that once this happens, the further ascent into strong superintelligence will be very rapid.
+
+and categorized takeoff durations into three types:
+
+* "A slow takeoff is one that occurs over some long temporal interval, such as decades or centuries."
+
+* "A fast takeoff occurs over some short temporal interval, such as minutes, hours, or days."
+
+* "A moderate takeoff is one that occurs over some intermediary temporal interval, such as months or years."
+
+While it seems that most prominent thinkers are convinced that rapid technological and economic progress will follow the development of AGI (See [Paul Christiano](https://sideways-view.com/2018/02/24/takeoff-speeds/), [Robin Hanson](http://mason.gmu.edu/~rhanson/aigrow.pdf), [Eliezer Yudkowsky](https://intelligence.org/files/IEM.pdf), [Ben Goertzel](http://multiverseaccordingtoben.blogspot.com/2011/01/hard-takeoff-hypothesis.html)), most AI researchers surveyed are not convinced. In 2016, AI Impacts [asked](https://aiimpacts.org/2016-expert-survey-on-progress-in-ai/) AI researchers,
+
+> Assume that HLMI will exist at some point. How likely do you then think it is that the rate of global technological improvement will dramatically increase (e.g. by a factor of ten) as a result of machine intelligence:
+
+> Within two years of that point?       ___% chance
+
+> Within thirty years of that point?    ___% chance
+
+The median answer was 20% for the two year estimate and 80% for the thirty year estimate.
+
+This question will resolve as the number of months between the first development of a (weak) Artificial General Intelligence and a Superintelligent Artificial Intelligence, according to widespread media and historical consensus.  If an AGI is not created before January 1, 2150, this question will resolve ambiguously.
+
+"Artificial General Intelligence" (AGI) is defined for the purposes of this question based on [another Metaculus question](https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/), the full (updated) definition of which is in the fine print.
+
+"Superintelligent Artificial Intelligence" (SAI) is defined for the purposes of this question as an AI which can perform any task humans can perform in 2021, as well or superior to the best humans in their domain.  The SAI may be able to perform these tasks themselves, or be capable of designing sub-agents with these capabilities (for instance the SAI may design [robots capable of beating professional football players](www.robocup.org/objective) which are not successful brain surgeons, and design top brain surgeons which are not football players).  Tasks include (but are not limited to): performing in top ranks among professional e-sports leagues, performing in top ranks among physical sports, preparing and serving food, providing emotional and psychotherapeutic support, discovering scientific insights which could win [2021 Nobel prizes](https://en.wikipedia.org/wiki/Nobel_Prize), creating original art and entertainment, and having professional-level software design and AI design capabilities.
+
+As an AI improves in capacity, it may not be clear at which point the SAI has become able to perform any task as well as top humans.  It will be defined that the AI is superintelligent if, in less than 7 days in a non-externally-constrained environment, the AI already has or can learn/invent the capacity to do any given task.  A "non-externally-constrained environment" here means, for instance, access to the internet and compute and resources similar to contemporaneous AIs.
+
+"an artificial general intelligence" is defined as a single unified software system that can satisfy the following criteria, all easily completable by a typical college-educated human:
+
+- Able to reliably pass a text-only Turing test of the type that would win the [Loebner Silver Prize](https://en.wikipedia.org/wiki/Turing_test) or [Longbets Kurzweil/Kapor Bet](https://longbets.org/1/), in which human judges cannot reliably distinguish normal human chat participants from AI.
+
+- Able to score 90% or more on a robust version of the [Winograd Schema Challenge](https://www.metaculus.com/questions/644/what-will-be-the-best-score-in-the-20192020-winograd-schema-ai-challenge/), e.g. the ["Winogrande" challenge](https://arxiv.org/abs/1907.10641) or comparable data set for which human performance is at 90+%
+
+- Be able to score 75th percentile (as compared to the corresponding year's human students; this was a score of 600 in 2016) on all the full mathematics section of a circa-2015-2020 standard SAT exam, using just images of the exam pages and having less than ten SAT exams as part of the training data. (Training on other corpuses of math problems is fair game as long as they are arguably distinct from SAT exams.)
+
+- Be able to learn the classic Atari game "Montezuma's revenge" (based on just visual inputs and standard controls) and explore all 24 rooms based on the equivalent of less than 100 hours of real-time play (see [closely-related question](https://www.metaculus.com/questions/486/when-will-an-ai-achieve-competency-in-the-atari-classic-montezumas-revenge/).) 
+
+By "unified" we mean that the system is integrated enough that it can, for example, explain its reasoning on an SAT problem or Winograd schema question, or verbally report its progress and identify objects during videogame play. (This is not really meant to be an additional capability of "introspection" so much as a provision that the system *not* simply be cobbled together as a set of sub-systems specialized to tasks like the above, but rather a single system applicable to many problems.)
+
+Your research assistant says:
+=== RESEARCH SYNTHESIS ===
+{
+  "type": "data_report",
+  "title": "Search: Metaculus AGI to ASI timeline prediction distribution OR median",
+  "source": "Exa Search",
+  "data": {
+    "query": "Metaculus AGI to ASI timeline prediction distribution OR median",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "How Soon After AGI Will Superintelligence Emerge? - Metaculus",
+        "url": "https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/",
+        "published_date": null,
+        "snippet": "[**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)\n\n**336** forecasters\n\n# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?\n\nCurrent estimate\n\n32.6 months\n\nShare\n\nPredict\n\nCommentsTimelineIn the NewsKey FactorsQuestion Info\n\nTimeline\n\n1d1w2mall\n\nResolution Criteria\n\nKey Factors\n\nNo key factors yetAdd some that might influence this forecast.Add key factor\n\nBackground Info\n\nFollowem..."
+      },
+      {
+        "index": 1,
+        "title": "Time between weak AGI and oracle ASI - Metaculus",
+        "url": "https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/",
+        "published_date": null,
+        "snippet": "Time between weak AGI and oracle ASI\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questions/)\n* More\n* Log inSig..."
+      },
+      {
+        "index": 2,
+        "title": "AI safety and timelines - Metaculus",
+        "url": "https://www.metaculus.com/notebooks/10438/ai-safety-and-timelines/",
+        "published_date": "2022-04-10T00:00:00.000Z",
+        "snippet": "by [Sergio](https://www.metaculus.com/accounts/profile/115725/)\u2022Oct 2, 2022\u2022Edited on Aug 4, 2024\u202214 min read\n\n8"
+      },
+      {
+        "index": 3,
+        "title": "When Will AGI/Singularity Happen? 8,590 Predictions Analyzed",
+        "url": "https://research.aimultiple.com/artificial-general-intelligence-singularity-timing/",
+        "published_date": "2025-12-05T00:00:00.000Z",
+        "snippet": "When Will AGI/Singularity Happen? 8,590 Predictions Analyzed\n[![AIMultiple](https://research.aimultiple.com/images/logo-2025.svg)![AIMultiple](https://research.aimultiple.com/images/logo-2025-white.svg)](https://aimultiple.com/)\n[Contact Us](https://research.aimultiple.com/contact-us/)\nAI\nAgentic AI\nCybersecurity\nData\nEnterprise Software\nBack\nNo results found.\n[](https://aimultiple.com/)[AI](https://research.aimultiple.com/category/ai/)[AI Foundations](https://research.aimultiple.com/category/ai..."
+      },
+      {
+        "index": 4,
+        "title": "Metaforecast",
+        "url": "https://metaforecast.org/questions/metaculus-9062",
+        "published_date": "2024-10-07T00:00:00.000Z",
+        "snippet": "# \u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n\u200c\n\n# [After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n[Metaculus](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)\n\n\u2605\u2605\u2605\u2606\u2606\n\n## Question description [\\#](https://metaforecast.org/questions/metaculus-9062\\#description)\n\n_Related Question on Metaculus:_\n\n- [After an AGI is created, how many months will it..."
+      },
+      {
+        "index": 5,
+        "title": "Forecasting AGI: Insights from Prediction Markets and Metaculus",
+        "url": "https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1",
+        "published_date": "2025-02-04T00:00:00.000Z",
+        "snippet": "# Forecasting AGI: Insights from Prediction Markets and Metaculus\n\n[Alvin \u00c5nestrand](https://www.greaterwrong.com/users/alvin-anestrand) Feb 4, 2025, 1:03 PM\n\nLW: 13 AF: 4\n\n**8 votes**\n\nOverall karma indicates overall quality.\n\nDouble-click for strong vote.\n\n[0 comments](https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1#comments) 4 min read [LW link](https://www.lesswrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-predictio..."
+      },
+      {
+        "index": 6,
+        "title": "Metaculus Predicts Weak AGI in 2 Years and AGI in 10",
+        "url": "https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10",
+        "published_date": "2023-03-24T00:00:00.000Z",
+        "snippet": "# Metaculus Predicts Weak AGI in 2 Years and AGI in 10\n\n[Chris\\_Leong](https://www.greaterwrong.com/users/chris_leong) 24 Mar 2023 19:43 UTC\n\n29 points\n\n[14 comments](https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10#comments) [LW link](https://www.lesswrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10)\n\n[Forecasts (Specific Predictions)](https://www.greaterwrong.com/tag/forecasts-specific-predictions) [A..."
+      },
+      {
+        "index": 7,
+        "title": "When Will the First General AI Be Announced? - Metaculus",
+        "url": "https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/",
+        "published_date": null,
+        "snippet": "When Will the First General AI Be Announced?\n[# ](https://www.metaculus.com/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Services](https://www.metaculus.com/services/)\n* [News](https://www.metaculus.com/news/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Tournaments](https://www.metaculus.com/tournaments/)\n* [Questions](https://www.metaculus.com/questions/)\n* [Questions](https://www.metaculus.com/questions/)\n* More\n* L..."
+      },
+      {
+        "index": 8,
+        "title": "AI Futures Timelines and Takeoff Model: Dec 2025 Update",
+        "url": "https://www.lesswrong.com/posts/YABG5JmztGGPwNFq2/ai-futures-timelines-and-takeoff-model-dec-2025-update",
+        "published_date": "2025-12-31T03:34:40.138Z",
+        "snippet": "x\n## [LESSWRONG](https://www.lesswrong.com/)\n[is fundraising!](https://www.lesswrong.com/posts/eKGdCNdKjvTBG9i6y)\n[LW](https://www.lesswrong.com/)\nLogin\nAI Futures Timelines and Takeoff Model: Dec 2025 Update \u2014LessWrong\n[MATS Program](https://www.lesswrong.com/w/mats-program)[AI](https://www.lesswrong.com/w/ai)[\nFrontpage\n](https://www.lesswrong.com/posts/5conQhfa4rgb4SaWx/site-guide-personal-blogposts-vs-frontpage-posts)\n[2025Top Fifty:14%](https://manifold.markets/LessWrong/will-ai-futures-tim..."
+      },
+      {
+        "index": 9,
+        "title": "Date of Artificial General Intelligence",
+        "url": "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/&quot/",
+        "published_date": "2025-05-14T00:00:00.000Z",
+        "snippet": "Question\n\n# When will the first general AI system be devised, tested, and publicly announced?\n\n201\n\n[613 comments613](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/#comments)\n\n1d1w2mall\n\nTotal Forecasters1741\n\nCommunity Prediction\nSep 2032\n\n(20 Feb 2028 - Mar 2041)\n\n### Make a Prediction\n\nSliderTable\n\nPDF\n\nCDF\n\nSign Up to Predict\n\n| lower 25% | median | upper 75% | >2199 |\n| --- | --- | --- | --- |\n| community | 20 Feb 2028 | Sep 2032 | Mar 2041 | 1.3% |\n| My P..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-07T22:34:40.595906"
+}
+
+=== SEARCH RESULTS ===
+[Source 1]
+Title: How Soon After AGI Will Superintelligence Emerge? - Metaculus
+Date: 2021-12-30T23:00:00.000Z
+URL: https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/
+Content: [**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)
+
+**336** forecasters
+
+# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+
+Current estimate
+
+32.6 months
+
+Share
+
+Predict
+
+CommentsTimelineIn the NewsKey FactorsQuestion Info
+
+Timeline
+
+1d1w2mall
+
+Resolution Criteria
+
+Key Factors
+
+No key factors yetAdd some that might influence this forecast.Add key factor
+
+Background Info
+
+Followembed
+
+Authors:
+
+[casens](https://www.metaculus.com/accounts/profile/104161/)
+
+Opened:Dec 30, 2021
+
+Closes:Jan 1, 2150
+
+Scheduled resolution:Jan 1, 2200
+
+Spot Scoring Time:Dec 31, 2021
+
+[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)
+
+[AGI Outcomes](https:
+
+[Source 2]
+Title: The Most Important Time in History Is Now - by Tomas Pueyo
+Date: 2025-01-29T00:00:00.000Z
+URL: https://unchartedterritories.tomaspueyo.com/p/the-most-important-time-in-history-agi-asi
+Content: The Most Important Time in History Is Now - by Tomas Pueyo
+[
+![Uncharted Territories](https://substackcdn.com/image/fetch/$s_!4QUy!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc92decb6-7c5c-4053-bc05-651e5548e9b3_1280x1280.png)
+](https://unchartedterritories.tomaspueyo.com/)
+# [Uncharted Territories](https://unchartedterritories.tomaspueyo.com/)
+SubscribeSign in
+# The Most Important Time in History Is Now
+### AGI Is Coming Sooner Due to o3, DeepSeek, and Other Cutting-Edge AI Developments
+[
+![Tomas Pueyo's avatar](https://substackcdn.com/image/fetch/$s_!am3l!,w_36,h_36,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be7798
+
+[Source 3]
+Title: Is Artificial 'Super' Intelligence Coming Soon? - AEI
+Date: 2023-07-06T00:00:00.000Z
+URL: https://www.aei.org/articles/is-artificial-super-intelligence-coming-soon/
+Content: [iframe](https://fasterplease.substack.com/embed)
+
+## Quote of the Issue
+
+“In the limit, if capital can replace labor entirely, growth rates could explode, with incomes becoming infinite in finite time.” – John G. Fernald and Charles I. Jones, “ [The Future of Economic Growth](https://www.frbsf.org/economic-research/wp-content/uploads/sites/4/wp2014-02.pdf)”
+
+## The Essay
+
+[![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59d3c16c-caaa-4f71-9661-0db4213c028e_616x468.jpeg)](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F59d3c16c-caaa-4f71-9661-0db4213c028e_616x468.jpeg)
+
+### 🦉 
+
+[Source 4]
+Title: The case for AGI by 2030 | 80,000 Hours
+Date: None
+URL: https://80000hours.org/agi/guide/when-will-agi-arrive/
+Content: The case for AGI by 2030 | 80,000 Hours
+Toggle navigation
+Search for:
+**
+[](https://80000hours.org/)
+Search for:
+**
+# The case for AGI by2030
+By[Benjamin Todd](https://80000hours.org/author/benjamin-todd/)&middot;Published March 2025 &middot;**
+## On this page:
+* [Introduction](#top)
+* [1I. What's driven recent AI progress? And will it continue?](#i-whats-driven-recent-ai-progress-and-will-it-continue)
+* [1.1The deep learning era](#the-deep-learning-era)
+* [1.2What's coming up](#whats-coming-up)
+* [1.31. Scaling pretraining to create base models with basic intelligence](#1-scaling-pretraining-to-create-base-models-with-basic-intelligence)
+* [1.42. Post training of reasoning models with reinforcement learning](#2-post-training-of-reasoning-models-with-reinforcement-learning)
+* [1.53. Increa
+
+[Source 5]
+Title: Date Weakly General AI is Publicly Known
+Date: 2025-10-06T00:00:00.000Z
+URL: https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/?invite=Olx7Ci
+Content: Question
+
+# When will the first weakly general AI system be devised, tested, and publicly announced?
+
+214
+
+Closes Jan 1, 2200
+
+[525 comments525](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)
+
+1d1w2mall
+
+Community Prediction15 Mar 202426 Nov 202518 Apr 2028Sep 2031Mar 07Mar 11Mar 15Mar 19Mar 23Mar 27Mar 31Apr 04Apr 08Apr 12Apr 16Apr 20Apr 24Apr 28May 02now
+
+Total Forecasters1620
+
+Community Prediction
+16 Oct 2026
+
+(06 Oct 2025 - 22 May 2029)
+
+### Make a Prediction
+
+SliderTable
+
+PDF
+
+CDF
+
+20202021202520522200
+
+Sign Up to Predict
+
+| 2200 |
+| --- | --- | --- | --- | --- |
+| community | 0.2% | 06 Oct 2025 | 16 Oct 2026 | 22 May 2029 | 2.8% |
+| My Prediction | — | — | — | — | — |
+
+| Lower bound | community | My Prediction |
+| --- | --- | --- |
+| 2200
+
+[Source 6]
+Title: When Will Weakly General AI Arrive?
+Date: 2020-01-18T00:00:00.000Z
+URL: https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/
+Content: [**565** comments](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)
+
+**1.7k** forecasters
+
+# When will the first weakly general AI system be devised, tested, and publicly announced?
+
+Current estimate
+
+08 Oct 2027
+
+Share
+
+Predict
+
+Top Key Factors
+
+[China starts a war with the land of Taiwan BEFORE said weakly general AI\
+\
+Impact\
+\
+Earlier\
+\
+Strength\
+\
+27 votes](https://www.metaculus.com/www.metaculus.com#comment-326406)
+
+[↑ reliable >50-step agent chains with published evals\
+\
+Impact\
+\
+later\
+\
+Strength\
+\
+1 vote](https://www.metaculus.com/www.metaculus.com#comment-463617)
+
+[AI become student of arts university in Vienna\
+\
+Impact\
+\
+later\
+\
+Strength\
+\
+22 votes](https://www.metaculus.com/www.metaculus.com#comment-324928)
+
+[↓ grid/permit de
+
+[Source 7]
+Title: Timelines to AGI - Pause AI
+Date: None
+URL: https://pauseai.info/timelines
+Content: ## (Top)
+
+# Timelines to AGI
+
+How long do people expect it will take for AGI or superintelligent AI to be developed?
+
+- [**Metaculus Weak AGI estimate**](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/): It predicts a 50% chance of a weak AGI being publicly known by **2027**.
+- **Yoshua Bengio** (Turing award winner): [2028 to 2043, 90% confidence interval](https://yoshuabengio.org/2023/08/12/personal-and-psychological-dimensions-of-ai-researchers-confronting-ai-catastrophic-risks/). Also asks himself: “And what if it was, indeed, just a few years? ”
+- **Geoffrey Hinton** (Turing award winner): [2028 to 2053](https://twitter.com/geoffreyhinton/status/1653687894534504451?lang=en)(he first thought it would take “at least” till 2070)
+
+## Our take
+
+Prediction
+
+[Source 8]
+Title: Orienting to 3 year AGI timelines
+Date: 2024-12-22T00:00:00.000Z
+URL: https://forum.effectivealtruism.org/posts/tdfDfFyqbvBF9DdeY/orienting-to-3-year-agi-timelines
+Content: Orienting to 3 year AGI timelines —EA Forum
+## [
+![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 "Effective Altruism Forum")
+Effective Altruism Forum](https://forum.effectivealtruism.org/)
+[
+![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 "Effective Altruism Forum")
+EA Forum](https://forum.effectivealtruism.org/)
+LoginSign up
+Hidetable of contents
+# [Orienting to 3 year AGItimelines](https://forum.effectivealtruism.org/posts/tdfDfFyqbvBF9DdeY/orienting-to-3-year-agi-timelines)
+by[Nikola](https://forum.effectivealtruism.org/users/nikola?from=post_head
+
+[Source 9]
+Title: Timelines Forecast — AI 2027
+Date: 2025-02-06T00:00:00.000Z
+URL: https://ai-2027.com/research/timelines-forecast
+Content: Timelines Forecast —AI 2027
+# Timelines Forecast
+#### Forecasting time to automated superhuman coders
+### *Eli Lifland, Nikola Jurkovic, FutureSearch| April 2025*
+![](https://ai-2027.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcombined-headline.4c72f6dd.png&amp;w=3840&amp;q=75)ai-2027.com*Forecast for the arrival of superhuman coders assuming no large-scale catastrophes happen (e.g., a solar flare, a pandemic, nuclear war), no government or self-imposed slowdown, and no significant supply chain disruptions. All forecasts give a substantial chance of superhuman coding arriving by and in 2027.*
+## Summary
+*2025 Dec 31 update: We&#x27;ve published a revamped timelines and takeoff model at[aifuturesmodel.com](https://www.aifuturesmodel.com/).*
+*2025 May 7 update: Eli has, based on feedback
+
+[Source 10]
+Title: How long from AGI to Superintelligence? Not years but minutes.
+Date: 2023-12-21T00:00:00.000Z
+URL: https://michaelaraki.medium.com/how-long-from-agi-to-superintelligence-not-years-but-minutes-016a475ce6ba
+Content: [Sitemap](https://michaelaraki.medium.com/sitemap/sitemap.xml)
+
+[Open in app](https://rsci.app.link/?%24canonical_url=https%3A%2F%2Fmedium.com%2Fp%2F016a475ce6ba&%7Efeature=LoOpenInAppButton&%7Echannel=ShowPostUnderUser&%7Estage=mobileNavBar&source=post_page---top_nav_layout_nav-----------------------------------------)
+
+Sign up
+
+[Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fmichaelaraki.medium.com%2Fhow-long-from-agi-to-superintelligence-not-years-but-minutes-016a475ce6ba&source=post_page---top_nav_layout_nav-----------------------global_nav------------------)
+
+[Medium Logo](https://medium.com/?source=post_page---top_nav_layout_nav-----------------------------------------)
+
+[Write](https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fmedium.
+
+
+=== CRAWL_URLS RESULTS ===
+
+[How Soon After AGI Will Superintelligence Emerge?]
+URL: https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/
+Content: [**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)
+
+**336** forecasters
+
+# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+
+Current estimate
+
+32.6 months
+
+Share
+
+Predict
+
+CommentsTimelineIn the NewsKey FactorsQuestion Info
+
+Timeline
+
+1d1w2mall
+
+Resolution Criteria
+
+Key Factors
+
+No key factors yetAdd some that might influence this forecast.Add key factor
+
+Background Info
+
+Followembed
+
+Authors:
+
+[casens](https://www.metaculus.com/accounts/profile/104161/)
+
+Opened:Dec 30, 2021
+
+Closes:Jan 1, 2150
+
+Scheduled resolution:Jan 1, 2200
+
+Spot Scoring Time:Dec 31, 2021
+
+[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)
+
+[AGI Outcomes](https://www.metaculus.com/tournament/agi-horizons/)
+
+[Forecasting AI Futures](https://www.metaculus.com/c/forecasting-ai-futures/)
+
+[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&for_main_feed=false)
+
+[Artificial Intelligence](https://www.metaculus.com/questions/?categories=artificial-intelligence&for_main_feed=false)
+
+News Match
+
+[Every AI Breakthrough Shifts the Goalposts of Artificial General Intelligence\
+\
+Scientific American•Nov 20, 2025](https://www.scientificamerican.com/article/every-ai-breakthrough-shifts-the-goalposts-of-artificial-general/)
+
+[Databricks CEO says AGI is already here — and Silicon Valley just keeps moving the goalposts\
+\
+Business
+
+[When Will Weakly General AI Arrive?]
+URL: https://www.metaculus.com/questions/3479/when-will-the-first-artificial-general-intelligence-system-be-devised-tested-and-publicly-known-of/
+Content: Question
+
+# When will the first weakly general AI system be devised, tested, and publicly announced?
+
+216
+
+[534 comments534](https://www.metaculus.com/questions/3479/date-weakly-general-ai-is-publicly-known/#comments)
+
+1d1w2mall
+
+Community Prediction15 Mar 202424 Dec 202426 Nov 202530 Dec 202618 Apr 202802 Nov 2029Sep 2031Nov 2033Apr 12Apr 16Apr 20Apr 24Apr 28May 02May 06May 10May 14May 18May 22May 26May 30Jun 03Jun 07now
+
+Total Forecasters1642
+
+Community Prediction
+31 Dec 2026
+
+(01 Nov 2025 - 27 Oct 2029)
+
+### Make a Prediction
+
+SliderTable
+
+PDF
+
+CDF
+
+20202020202020212022202520312043206521102200
+
+Sign Up to Predict
+
+| 2200 |
+| --- | --- | --- | --- | --- |
+| community | 0.2% | 01 Nov 2025 | 31 Dec 2026 | 27 Oct 2029 | 1.8% |
+| My Prediction | — | — | — | — | — |
+
+| Lower bound | community | My Prediction |
+| --- | --- | --- |
+| 2200 | 1.8% | — |
+
+Resolution Criteria
+
+Key Factors
+
+China starts a war with the land of Taiwan BEFORE said weakly general AI
+
+Increases likelihoodDecreases likelihood
+
+AI become student of arts university in Vienna
+
+Increases likelihoodDecreases likelihood
+
+Background Info
+
+Authors:
+
+[Anthony](https://www.metaculus.com/accounts/profile/8/)
+
+Opened:Jan 18, 2020
+
+Closes:Jan 1, 2200
+
+Scheduled resolution:Jan 1, 2200
+
+Spot Scoring Time:Jan 20, 2020
+
+[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)
+
+[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&for_main_feed=false)
+
+[Ar
+
+=== SEARCH_WEB RESULTS ===
+
+[Time between weak AGI and oracle ASI]
+Date: None
+URL: https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/
+Content: Time between weak AGI and oracle ASI
+[# ](https://www.metaculus.com/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Services](https://www.metaculus.com/services/)
+* [News](https://www.metaculus.com/news/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Questions](https://www.metaculus.com/questions/)
+* More
+* Log inSig...
+
+[How Soon After AGI Will Superintelligence Emerge?]
+Date: None
+URL: https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/
+Content: [**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)
+
+**336** forecasters
+
+# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+
+Current estimate
+
+32.6 months
+
+Share
+
+Predict
+
+CommentsTimelineIn the NewsKey FactorsQuestion Info
+
+Timeline
+
+1d1w2mall
+
+Resolution Criteria
+
+Key Factors
+
+No key factors yetAdd some that might influence this forecast.Add key factor
+
+Background Info
+
+Followem...
+
+[AI safety and timelines]
+Date: 2022-04-10T00:00:00.000Z
+URL: https://www.metaculus.com/notebooks/10438/ai-safety-and-timelines/
+Content: by [Sergio](https://www.metaculus.com/accounts/profile/115725/)•Oct 2, 2022•Edited on Aug 4, 2024•14 min read
+
+8
+
+[When Will AGI/Singularity Happen? 8590 Predictions ...]
+Date: 2025-12-05T00:00:00.000Z
+URL: https://research.aimultiple.com/artificial-general-intelligence-singularity-timing/
+Content: When Will AGI/Singularity Happen? 8,590 Predictions Analyzed
+[![AIMultiple](https://research.aimultiple.com/images/logo-2025.svg)![AIMultiple](https://research.aimultiple.com/images/logo-2025-white.svg)](https://aimultiple.com/)
+[Contact Us](https://research.aimultiple.com/contact-us/)
+AI
+Agentic AI
+Cybersecurity
+Data
+Enterprise Software
+Back
+No results found.
+[](https://aimultiple.com/)[AI](https://research.aimultiple.com/category/ai/)[AI Foundations](https://research.aimultiple.com/category/ai...
+
+[Shortening AGI timelines: a review of expert forecasts]
+Date: 2025-04-08T03:34:29.930Z
+URL: https://benjamintodd.substack.com/p/shortening-agi-timelines-a-review
+Content: Shortening AGI timelines: a review of expert forecasts
+[
+![Benjamin Todd](https://substackcdn.com/image/fetch/$s_!bm4z!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F24fb7c14-4fc6-4886-992a-aa8177348931_438x438.png)
+](https://benjamintodd.substack.com/)
+# [Benjamin Todd](https://benjamintodd.substack.com/)
+SubscribeSign in
+# Shortening AGI timelines: a review of expert forecasts
+[
+![Benjamin Todd's avatar](h...
+
+[Date of Artificial General Intelligence]
+Date: 2025-05-14T00:00:00.000Z
+URL: https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/&quot/
+Content: Question
+
+# When will the first general AI system be devised, tested, and publicly announced?
+
+194
+
+Closes Dec 24, 2199
+
+[550 comments550](https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/#comments)
+
+1d1w2mall
+
+Community Prediction25 Aug 202013 Aug 2029Aug 2038Jul 2047Jul 2056Mar 16Mar 20Mar 24Mar 28Apr 01Apr 05Apr 09Apr 13Apr 17Apr 21Apr 25Apr 29May 03May 07May 11now
+
+Total Forecasters1648
+
+Community Prediction
+Sep 2033
+
+(29 Jun 2028 - Nov 2045)
+
+### Make a Predi...
+
+[Metaforecast]
+Date: 2024-10-07T00:00:00.000Z
+URL: https://metaforecast.org/questions/metaculus-9062
+Content: # ‌
+
+‌
+
+‌
+
+‌
+
+‌
+
+‌
+
+‌
+
+# [After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)
+
+[Metaculus](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)
+
+★★★☆☆
+
+## Question description [\#](https://metaforecast.org/questions/metaculus-9062\#description)
+
+_Related Question on Metaculus:_
+
+- [After an AGI is created, how many months will it...
+
+[When Will the First General AI Be Announced?]
+Date: 
+URL: https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/
+Content: [](/)
+ * [Questions](/questions/) 
+ * [Tournaments](/tournaments/) 
+ * [Services](/services/) 
+ * [News](/news/) 
+ * [Questions](/questions/) 
+ * [Tournaments](/tournaments/) 
+ * [Questions](/questions/) 
+ * [Questions](/questions/) 
+ * More
+ * Log in Sign Up
+ * a / 文
+ * 
+Log in Sign Up
+[632 comments](/questions/5121/date-of-artificial-general-intelligence/#comments) 
+1.8k forecasters
+When will the first general AI system be devised, tested, and publicly announced?
+Current estimate
+Jul 2033
+Shar...
+
+=== SEARCH_WEB RESULTS ===
+
+[AI Risk timelines: 10% chance (by year X) should be the headline (and deadline), not 50%. And 10% is _this   year_!]
+Date: 2026-01-05T00:00:00.000Z
+URL: https://forum.effectivealtruism.org/posts/nBYeZGPtbnNWSNAau/ai-risk-timelines-10-chance-by-year-x-should-be-the-headline
+Content: AI Risk timelines: 10% chance (by year X) should be the headline (and deadline), not 50%. And 10% is \_this year\_! —EA Forum
+## [
+![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205261bb8cff47501a0ada0f2268/ea-logo-square-1200x1200__1_.png?h=100 "Effective Altruism Forum")
+Effective Altruism Forum](https://forum.effectivealtruism.org/)
+[
+![Effective Altruism Forum Logo](https://images.ctfassets.net/ohf186sfn6di/7J4cBC9SXCWMoqqCIqI0GI/affe205...
+
+[The Most Important Time in History Is Now]
+Date: 2025-01-29T00:00:00.000Z
+URL: https://unchartedterritories.tomaspueyo.com/p/the-most-important-time-in-history-agi-asi
+Content: The Most Important Time in History Is Now - by Tomas Pueyo
+[
+![Uncharted Territories](https://substackcdn.com/image/fetch/$s_!4QUy!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc92decb6-7c5c-4053-bc05-651e5548e9b3_1280x1280.png)
+](https://unchartedterritories.tomaspueyo.com/)
+# [Uncharted Territories](https://unchartedterritories.tomaspueyo.com/)
+SubscribeSign in
+# The Most Import...
+
+[Alan’s conservative countdown to AGI]
+Date: 2022-06-08T00:00:00.000Z
+URL: https://lifearchitect.ai/agi/
+Content: Alan’s conservative countdown to AGI &#8211; Dr Alan D. Thompson –LifeArchitect.ai
+[Skip to content](#content)
+ 
+# Alan’s conservative countdown to AGI
+%
+Last update: Jan/2026
+Alan’s work guides official AI docs for the G7, DOE, Microsoft, Apple, & MIT...[†](https://lifearchitect.ai/memo/#informing)
+Get[*The Memo*](https://lifearchitect.ai/memo/).
+This page: Milestones ·[Levels](#levels)·[Where?](#where)·[AGI expert critique](#agi-expert)·[Further reading](#reading)
+## [AGI definition etc.](#)
+1...
+
+[Semi-Informative Priors Over AI Timelines | Open Philanthropy]
+Date: 2024-08-13T00:00:00.000Z
+URL: https://www.openphilanthropy.org/research/semi-informative-priors-over-ai-timelines/
+Content: Semi-Informative Priors Over AI Timelines | Coefficient Giving[Skip to Content](#content)
+[Coefficient Giving](https://coefficientgiving.org)
+[Coefficient Giving](https://coefficientgiving.org)
+![](https://coefficientgiving.org/wp-content/themes/coefficient-giving/public/assets/search-white.svg)![close](https://coefficientgiving.org/wp-content/themes/coefficient-giving/public/assets/close.svg)
+## Coefficient is a philanthropic funder and advisor.
+* [Funds](https://coefficientgiving.org/funds/)![...
+
+[Report on Semi-Informative Priors | Open Philanthropy]
+Date: 2024-02-17T00:00:00.000Z
+URL: https://www.openphilanthropy.org/blog/report-semi-informative-priors
+Content: Report on Semi-Informative Priors | Coefficient Giving[Skip to Content](#content)
+[Coefficient Giving](https://coefficientgiving.org)
+[Coefficient Giving](https://coefficientgiving.org)
+![](https://coefficientgiving.org/wp-content/themes/coefficient-giving/public/assets/search-white.svg)![close](https://coefficientgiving.org/wp-content/themes/coefficient-giving/public/assets/close.svg)
+## Coefficient is a philanthropic funder and advisor.
+* [Funds](https://coefficientgiving.org/funds/)![more](ht...
+
+[]
+Date: 2025-05-23T00:00:00.000Z
+URL: https://www.forethought.org/research/preparing-for-the-intelligence-explosion.pdf
+Content: Preparing for the
+Intelligence
+Explosion
+William MacAskill & Fin Moorhouse
+March 2025
+1
+Contents
+Preparing for the Intelligence Explosion
+Abstract 4
+1. Introduction 4
+2. A century in a decade 6
+The last century, compressed 6
+Asymmetric acceleration 8
+The accelerated decade 8
+3. The intelligence explosion and beyond 9
+Progress in AI capabilities 10
+AI-human cognitive parity 18
+The technology explosion 22
+The industrial explosion 26
+4. Grand challenges 29
+AI takeover 30
+Highly destructive technolo...
+
+[Situational Awareness]
+Date: 2024-06-06T00:00:00.000Z
+URL: https://situational-awareness.ai/wp-content/uploads/2024/06/situationalawareness.pdf
+Content: Leopold Aschenbrenner
+S I T U AT I O N A L AWA R E N E S S
+The Decade Ahead
+J U NE 2024
+2
+Dedicated to Ilya Sutskever.
+While I used to work at OpenAI, all of this is based on publiclyavailable information, my own ideas, general field-knowledge, or
+SF-gossip.
+Thank you to Collin Burns, Avital Balwit, Carl Shulman, Jan Leike,
+Ilya Sutskever, Holden Karnofsky, Sholto Douglas, James Bradbury,
+Dwarkesh Patel, and many others for formative discussions. Thank
+you to many friends for feedback on earlie...
+
+[Transformative AGI by 2043 is <1% likely]
+Date: 2023-06-05T00:00:00.000Z
+URL: https://arxiv.org/abs/2306.02519
+Content: [2306.02519] Transformative AGI by 2043 is &lt;1% likely
+[Skip to main content](#content)
+[![Cornell University](https://arxiv.org/static/browse/0.3.4/images/icons/cu/cornell-reduced-white-SMALL.svg)](https://www.cornell.edu/)
+We gratefully acknowledge support from the Simons Foundation,[member institutions](https://info.arxiv.org/about/ourmembers.html), and all contributors.[Donate](https://info.arxiv.org/about/donate.html)
+[](https://arxiv.org/IgnoreMe)
+[![arxiv logo](https://arxiv.org/static/...
+
+=== CRAWL_URLS RESULTS ===
+
+[After a weak AGI is created, how many months will it be before the first superintelligent oracle?]
+URL: https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/
+Content: Time between weak AGI and oracle ASI
+[# ](https://www.metaculus.com/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Services](https://www.metaculus.com/services/)
+* [News](https://www.metaculus.com/news/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Questions](https://www.metaculus.com/questions/)
+* More
+* Log inSign Up
+* a/文
+* Log inSign Up
+[**36**comments](https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/#comments)
+**241**forecasters
+# After a weak AGI is created, how many months will it be before the first superintelligent oracle?
+Current estimate
+24.2 months
+Share
+Predict
+CommentsTimelineIn the NewsKey FactorsQuestion Info
+Timeline
+1d1w2mall
+Resolution Criteria
+Key Factors
+No key factors yetAdd some that might influence this forecast.Add key factor
+Background Info
+Followembed
+Authors:
+[Matthew\_Barnett](https://www.metaculus.com/accounts/profile/108770/)
+Opened:May 5, 2020
+Closes:Jan 1, 2200
+Scheduled resolution:Jan 1, 2300
+Spot Scoring Time:May 7, 2020
+[AI Progress Essay Contest](https://www.metaculus.com/tournament/ai-fortified-essay-contest/)
+[AGI Outcomes](https://www.metaculus.com/tournament/agi-horizons/)
+[Computing and Math](https://www.metaculus.com/questions/?categories=computing-and-math&amp;for_main_feed=false)
+[Artificial Intelligence](https://www.meta
+
+[Metaforecast]
+URL: https://metaforecast.org/questions/metaculus-9062
+Content: # ‌
+
+‌
+
+‌
+
+‌
+
+‌
+
+‌
+
+‌
+
+# [After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)
+
+[Metaculus](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)
+
+★★★☆☆
+
+## Question description [\#](https://metaforecast.org/questions/metaculus-9062\#description)
+
+_Related Question on Metaculus:_
+
+- [After an AGI is created, how many months will it be before the first superintelligence?](https://www.metaculus.com/questions/4123/after-an-agi-is-created-how-many-months-will-it-be-before-the-first-superintelligence/) (alternative resolution criteria)
+
+_(background text by @ [Matthew\_Barnett](https://www.metaculus.com/accounts/profile/108770/))_
+
+Futurists have long speculated that upon the arrival of [artificial general intelligence](https://en.wikipedia.org/wiki/Artificial_general_intelligence), the first [superintelligent AI](https://en.wikipedia.org/wiki/Superintelligence) will quickly follow. From I. J. Good, [writing in 1965](https://www.sciencedirect.com/science/article/pii/S0065245808604180),
+
+> Let an ultraintelligent machine be defined as a machine that can far surpass all the intellectual activities of any man however clever. Since the design of machines is one of these intellectual activities, an ultraintelligent machine could design even better machines; there would then unquestionably be an ‘intelligence explosion,’ a
+
+[When Will the First General AI Be Announced?]
+URL: https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/
+Content: [](/)
+ * [Questions](/questions/) 
+ * [Tournaments](/tournaments/) 
+ * [Services](/services/) 
+ * [News](/news/) 
+ * [Questions](/questions/) 
+ * [Tournaments](/tournaments/) 
+ * [Questions](/questions/) 
+ * [Questions](/questions/) 
+ * More
+ * Log in Sign Up
+ * a / 文
+ * 
+Log in Sign Up
+[632 comments](/questions/5121/date-of-artificial-general-intelligence/#comments) 
+1.8k forecasters
+When will the first general AI system be devised, tested, and publicly announced?
+Current estimate
+Jul 2033
+Share
+Predict
+Top Key Factors
+View all (9)
+↑ reliable >50-step agent chains with published evals
+Impact
+later
+Strength
+4 votes
+AI companies dont get funding (due to AI bubble bursting)
+Impact
+Earlier
+Strength
+6 votes
+Someone solves the alignment problem (I'd hope timelines are longer without this & shorter with it)
+Impact
+later
+Strength
+5 votes
+↓ grid/permit delays & export controls on HBM/nodes
+Impact
+Earlier
+Strength
+3 votes
+Strong regulation of AI companies by US government
+Impact
+Earlier
+Strength
+47 votes
+China starts a war with Taiwan
+Impact
+Earlier
+Strength
+78 votes
+↑ multi-year compute/colo contracts confirmed via filings
+Impact
+later
+Strength
+5 votes
+Genuinely good US government policy on AI safety (something like SB 1047)
+Impact
+later
+Strength
+4 votes
+Comments Timeline In the News Key Factors Question Info
+Timeline
+1d 1w 2m all
+Resolution Criteria
+Key Factors
+Background Info
+Follow embed
+Authors :
+[Matthew_Barnett](/accounts/profile/108770/)
+Opened :Aug 23, 2020
+Closes :Dec 24, 21
+
+=== CRAWL_URLS RESULTS ===
+
+[Uncharted Territories]
+URL: https://unchartedterritories.tomaspueyo.com/p/the-most-important-time-in-history-agi-asi
+Content: The Most Important Time in History Is Now - by Tomas Pueyo
+[
+![Uncharted Territories](https://substackcdn.com/image/fetch/$s_!4QUy!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fc92decb6-7c5c-4053-bc05-651e5548e9b3_1280x1280.png)
+](https://unchartedterritories.tomaspueyo.com/)
+# [Uncharted Territories](https://unchartedterritories.tomaspueyo.com/)
+SubscribeSign in
+# The Most Important Time in History Is Now
+### AGI Is Coming Sooner Due to o3, DeepSeek, and Other Cutting-Edge AI Developments
+[
+![Tomas Pueyo's avatar](https://substackcdn.com/image/fetch/$s_!am3l!,w_36,h_36,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F32cecf91-f0da-4d20-b82f-c9e8ae5e0d89_1600x1600.png)
+](https://substack.com/@tomaspueyo)
+[Tomas Pueyo](https://substack.com/@tomaspueyo)
+Jan 29, 2025
+441
+80
+43
+Share
+AI is progressing so fast that its researchers are freaking out. It is now routinely more intelligent than humans, and its speed of development is*accelerating*. New developments from the last few weeks have accelerated it even more. Now, it looks like AIs can be more intelligent than humans in 1-5 years, and intelligent like gods soon after. We’re at the precipice, and we’re about to jump off the cliff of AI superintelligence[1](https://unchartedterritories.tomaspueyo.com/p/the-most-importa
+
+[The case for AGI by 2030]
+URL: https://80000hours.org/agi/guide/when-will-agi-arrive/
+Content: The case for AGI by 2030 | 80,000 Hours
+Toggle navigation
+Search for:
+**
+[](https://80000hours.org/)
+Search for:
+**
+# The case for AGI by2030
+By[Benjamin Todd](https://80000hours.org/author/benjamin-todd/)&middot;Published March 2025 &middot;**
+## On this page:
+* [Introduction](#top)
+* [1I. What's driven recent AI progress? And will it continue?](#i-whats-driven-recent-ai-progress-and-will-it-continue)
+* [1.1The deep learning era](#the-deep-learning-era)
+* [1.2What's coming up](#whats-coming-up)
+* [1.31. Scaling pretraining to create base models with basic intelligence](#1-scaling-pretraining-to-create-base-models-with-basic-intelligence)
+* [1.42. Post training of reasoning models with reinforcement learning](#2-post-training-of-reasoning-models-with-reinforcement-learning)
+* [1.53. Increasing how long models think](#3-increasing-how-long-models-think)
+* [1.64. The next stage: building better agents](#4-the-next-stage-building-better-agents)
+* [2II. How good will AI become by 2030?](#ii-how-good-will-ai-become-by-2030)
+* [2.1The four drivers projected forwards](#the-four-drivers-projected-forwards)
+* [2.2Trend extrapolation of AI capabilities](#trend-extrapolation-of-ai-capabilities)
+* [2.3What jobs would these systems be able to help with?](#what-jobs-would-these-systems-be-able-to-help-with)
+* [2.4What's the case against impressive AI progress by 2030?](#whats-the-case-against-impressive-ai-progress-by-2030)
+* [2.5When do the 'experts' expect AGI to arrive?](#when-do-the-ex
+
+=== SEARCH_WEB RESULTS ===
+
+[How Soon After AGI Will Superintelligence Emerge? - Metaculus]
+Date: None
+URL: https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/
+Content: [**50** comments](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/#comments)
+
+**336** forecasters
+
+# After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?
+
+Current estimate
+
+32.6 months
+
+Share
+
+Predict
+
+CommentsTimelineIn the NewsKey FactorsQuestion Info
+
+Timeline
+
+1d1w2mall
+
+Resolution Criteria
+
+Key Factors
+
+No key factors yetAdd some that might influence this forecast.Add key factor
+
+Background Info
+
+Followem...
+
+[Time between weak AGI and oracle ASI - Metaculus]
+Date: None
+URL: https://www.metaculus.com/questions/4123/time-between-weak-agi-and-oracle-asi/
+Content: Time between weak AGI and oracle ASI
+[# ](https://www.metaculus.com/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Services](https://www.metaculus.com/services/)
+* [News](https://www.metaculus.com/news/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Questions](https://www.metaculus.com/questions/)
+* More
+* Log inSig...
+
+[AI safety and timelines - Metaculus]
+Date: 2022-04-10T00:00:00.000Z
+URL: https://www.metaculus.com/notebooks/10438/ai-safety-and-timelines/
+Content: by [Sergio](https://www.metaculus.com/accounts/profile/115725/)•Oct 2, 2022•Edited on Aug 4, 2024•14 min read
+
+8
+
+[When Will AGI/Singularity Happen? 8,590 Predictions Analyzed]
+Date: 2025-12-05T00:00:00.000Z
+URL: https://research.aimultiple.com/artificial-general-intelligence-singularity-timing/
+Content: When Will AGI/Singularity Happen? 8,590 Predictions Analyzed
+[![AIMultiple](https://research.aimultiple.com/images/logo-2025.svg)![AIMultiple](https://research.aimultiple.com/images/logo-2025-white.svg)](https://aimultiple.com/)
+[Contact Us](https://research.aimultiple.com/contact-us/)
+AI
+Agentic AI
+Cybersecurity
+Data
+Enterprise Software
+Back
+No results found.
+[](https://aimultiple.com/)[AI](https://research.aimultiple.com/category/ai/)[AI Foundations](https://research.aimultiple.com/category/ai...
+
+[Metaforecast]
+Date: 2024-10-07T00:00:00.000Z
+URL: https://metaforecast.org/questions/metaculus-9062
+Content: # ‌
+
+‌
+
+‌
+
+‌
+
+‌
+
+‌
+
+‌
+
+# [After a (weak) AGI is created, how many months will it be before the first superintelligent AI is created?](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)
+
+[Metaculus](https://www.metaculus.com/questions/9062/time-from-weak-agi-to-superintelligence/)
+
+★★★☆☆
+
+## Question description [\#](https://metaforecast.org/questions/metaculus-9062\#description)
+
+_Related Question on Metaculus:_
+
+- [After an AGI is created, how many months will it...
+
+[Forecasting AGI: Insights from Prediction Markets and Metaculus]
+Date: 2025-02-04T00:00:00.000Z
+URL: https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1
+Content: # Forecasting AGI: Insights from Prediction Markets and Metaculus
+
+[Alvin Ånestrand](https://www.greaterwrong.com/users/alvin-anestrand) Feb 4, 2025, 1:03 PM
+
+LW: 13 AF: 4
+
+**8 votes**
+
+Overall karma indicates overall quality.
+
+Double-click for strong vote.
+
+[0 comments](https://www.greaterwrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1#comments) 4 min read [LW link](https://www.lesswrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-predictio...
+
+[Metaculus Predicts Weak AGI in 2 Years and AGI in 10]
+Date: 2023-03-24T00:00:00.000Z
+URL: https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10
+Content: # Metaculus Predicts Weak AGI in 2 Years and AGI in 10
+
+[Chris\_Leong](https://www.greaterwrong.com/users/chris_leong) 24 Mar 2023 19:43 UTC
+
+29 points
+
+[14 comments](https://www.greaterwrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10#comments) [LW link](https://www.lesswrong.com/posts/CiYSFaQvtwj98csqG/metaculus-predicts-weak-agi-in-2-years-and-agi-in-10)
+
+[Forecasts (Specific Predictions)](https://www.greaterwrong.com/tag/forecasts-specific-predictions) [A...
+
+[When Will the First General AI Be Announced? - Metaculus]
+Date: None
+URL: https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/
+Content: When Will the First General AI Be Announced?
+[# ](https://www.metaculus.com/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Services](https://www.metaculus.com/services/)
+* [News](https://www.metaculus.com/news/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Tournaments](https://www.metaculus.com/tournaments/)
+* [Questions](https://www.metaculus.com/questions/)
+* [Questions](https://www.metaculus.com/questions/)
+* More
+* L...
+
+Today is 2026-01-07.
+
+
+
+
+=== INTEGRATIVE REASONING ===
+
+Your research assistant has done the preliminary research for you. Your task is NOT to re-summarize the data, but to **coalesce your own thoughts** and use your specialized ability to **piece together the information in an integrated way**. 
+
+Avoid rambling. Focus on the final synthesis of the probability density:
+(a) How do these specific facts shift the mean or widen the variance?
+(b) What is the most likely "integrated" outcome distribution?
+(c) What is your final, calibrated judgment?
+
+=== ANALYSIS FRAMEWORK ===
+
+Before answering, work through:
+(a) Time remaining until resolution - does this affect uncertainty?
+(b) Status quo outcome if nothing changes
+(c) Outcome if current trends continue
+(d) What do prediction markets, experts, or Metaculus community suggest?
+(e) **Mean & Variance**: What is the center and spread of the most likely scenario?
+(f) **Multimodality**: Are there any "black swan" or "binary" scenarios that create separate probability peaks?
+(g) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
+(h) **Simulate Others**: What would the Metaculus pro-forecaster community likely converge on?
+(i) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
+
+Formatting Instructions:
+- Match the units in the question (e.g. 1,000,000 vs 1m)
+- Never use scientific notation
+- Values must be strictly increasing from Percentile 1 to Percentile 99
+
+=== YOUR FORECAST ===
+
+The last thing you write is your final answer with these 25 percentiles:
+"
+Percentile 1: XX
+Percentile 2: XX
+Percentile 5: XX
+Percentile 10: XX
+Percentile 15: XX
+Percentile 20: XX
+Percentile 25: XX
+Percentile 30: XX
+Percentile 35: XX
+Percentile 40: XX
+Percentile 45: XX
+Percentile 50: XX
+Percentile 55: XX
+Percentile 60: XX
+Percentile 65: XX
+Percentile 70: XX
+Percentile 75: XX
+Percentile 80: XX
+Percentile 85: XX
+Percentile 90: XX
+Percentile 95: XX
+Percentile 96: XX
+Percentile 97: XX
+Percentile 98: XX
+Percentile 99: XX
+"
+
+----------------------------------------
+
+[OUTPUT FROM OPUS (RESPONSE)]
+----------------------------------------
+I'll analyze this question about the time between weak AGI and superintelligent AI systematically.
+
+## Key Information Integration
+
+**Current Metaculus Community Estimate**: 32.6 months (approximately 2.7 years) from weak AGI to SAI. Related question on oracle ASI estimates 24.2 months.
+
+**Timeline Context**:
+- Weak AGI median estimate: December 2026 (per Metaculus)
+- Full AGI estimate: July 2033
+- This question resolves on "widespread media and historical consensus"
+
+**Expert Views on Takeoff Speed**:
+- Nick Bostrom's taxonomy: fast (days), moderate (months-years), slow (decades)
+- 2016 AI survey: 20% median for dramatic acceleration within 2 years of HLMI; 80% within 30 years
+- Most prominent thinkers (Christiano, Hanson, Yudkowsky, Goertzel) expect rapid progress post-AGI
+
+## Causal Analysis
+
+1. **Recursive self-improvement potential** - High relevance: Once AGI exists, it may accelerate AI R&D, shortening the gap significantly
+2. **Hardware/compute scaling** - Medium relevance: Physical constraints on chip production could create bottlenecks
+3. **Regulatory response** - Medium relevance: Post-AGI regulation could slow or accelerate development
+4. **Definition clarity** - High relevance: The SAI definition is comprehensive (sports, science, art, surgery), requiring broad capabilities
+5. **Economic incentives** - High relevance: Massive financial motivation to reach SAI quickly
+
+## Distribution Reasoning
+
+**Mean/Center**: The Metaculus estimate of ~33 months seems reasonable as a central estimate, anchored by moderate takeoff scenarios.
+
+**Variance Considerations**:
+- FAST TAKEOFF (left tail): Intelligence explosion scenarios suggest days-weeks possible
+- SLOW TAKEOFF (right tail): Multiple bottlenecks, safety constraints, or fundamental limitations could extend to decades
+- The SAI definition requires superhuman performance across ALL domains, which is demanding
+
+**Multimodality**: 
+- Peak 1: Very fast takeoff (1-6 months) - recursive improvement works rapidly
+- Peak 2: Moderate takeoff (12-60 months) - most probable based on consensus
+- Peak 3: Slow/extended (5+ years) - significant barriers
+
+**Missing Information**:
+- No concrete data on actual AGI-to-SAI transitions (none have occurred)
+- Uncertainty about whether "weak AGI" will meaningfully accelerate research
+- Unknown regulatory landscape post-AGI
+
+**Pro-forecaster Convergence**: Would likely cluster around 24-48 months with heavy right tail, slightly more conservative than the aggressive fast-takeoff proponents but not as slow as skeptics.
+
+## Final Calibration
+
+I'm anchoring on the Metaculus median of ~33 months but widening the distribution significantly:
+- Left tail: Fast takeoff scenarios (weeks to a few months)
+- Right tail: Extended delays (many years to decades)
+- The demanding SAI definition pushes slightly right of oracle ASI estimates
+
+Percentile 1: 0.5
+Percentile 2: 1
+Percentile 5: 2
+Percentile 10: 4
+Percentile 15: 6
+Percentile 20: 9
+Percentile 25: 12
+Percentile 30: 15
+Percentile 35: 18
+Percentile 40: 22
+Percentile 45: 26
+Percentile 50: 32
+Percentile 55: 38
+Percentile 60: 46
+Percentile 65: 55
+Percentile 70: 68
+Percentile 75: 84
+Percentile 80: 108
+Percentile 85: 144
+Percentile 90: 200
+Percentile 95: 360
+Percentile 96: 420
+Percentile 97: 540
+Percentile 98: 720
+Percentile 99: 1200
+----------------------------------------
+
+
+################################################################################
+# FINAL RESULT
+################################################################################
+
+Type: numeric
+Success: True
+Submitted: False
+Forecast (CDF): [0.0010, ..., 0.9990] (201 points)
+
+################################################################################
+# COST SUMMARY
+################################################################################
+
+Research Phase:
+  - Tokens: 0
+  - Cost: $0.000000
+
+Forecast Phase:
+  - Tokens: 20,155
+  - Cost: $0.119755
+
+Exa API:
+  - Cost: $0.015000
+
+TOTAL:
+  - Total Tokens: 20,155
+  - Total Cost: $0.134755
+
+################################################################################
+# TOOL USAGE
+################################################################################
+
+  crawl_urls: 3 call(s)
+  search_web: 3 call(s)

@@ -1,0 +1,283 @@
+{
+  "identifier": "custom_Will_the_S_P_500_clo",
+  "start_time": "2026-01-07T14:38:47.106764",
+  "config": {
+    "research_model": "x-ai/grok-4.1-fast",
+    "forecast_model": "anthropic/claude-opus-4.5",
+    "use_tools": true
+  },
+  "question": {
+    "title": "Will the S&P 500 close above 6000 today?",
+    "type": "binary",
+    "description": "Custom test question",
+    "resolution_criteria": "N/A",
+    "fine_print": "N/A"
+  },
+  "research": {
+    "synthesis": "**S&P 500 (^GSPC) Status (Jan 7, 2026, intraday ~2:40 PM ET):**  \nCurrent price: 6945.74 (+0.92, +0.013% from prev close 6944.82). Day range: 6936.58-6965.69. Volume: ~1.96B shares. SPY ETF: 691.96 (+0.02%). VIX: 14.99 (+1.63%), indicating low volatility.\n\n**Context from Prior Day (Jan 6):** Barron's/CNBC reports confirm S&P hit record close, Dow >49k. No major negative catalysts; small-caps surged, oil volatile on Venezuela news, but equities resilient.\n\n**Forecast Insight:** Already ~15.8% above 6000 threshold mid-session with minimal volatility (VIX <15). Afternoon drop to <6000 (~13-14% plunge) highly improbable absent crash event. Implied prob >99%.",
+    "tool_calls": [
+      {
+        "tool_call_id": "call_91090486",
+        "tool_name": "get_yahoo_data",
+        "arguments": {
+          "ticker": "^GSPC",
+          "data_type": "price"
+        },
+        "result": {
+          "type": "data_report",
+          "title": "^GSPC - Price",
+          "source": "Yahoo Finance",
+          "data": {
+            "ticker": "^GSPC",
+            "price": 6945.74,
+            "previous_close": 6944.82,
+            "change": 0.9200000000000728,
+            "change_percent": 0.013247283586904668,
+            "day_high": 6965.69,
+            "day_low": 6936.58,
+            "volume": 1959655000,
+            "market_cap": null,
+            "currency": "USD",
+            "exchange": "SNP",
+            "quote_type": "INDEX"
+          },
+          "fetched_at": "2026-01-07T14:39:03.691766"
+        },
+        "error": null
+      },
+      {
+        "tool_call_id": "call_91016586",
+        "tool_name": "get_yahoo_data",
+        "arguments": {
+          "ticker": "^GSPC",
+          "data_type": "history",
+          "period": "1d"
+        },
+        "result": {
+          "type": "data_report",
+          "title": "^GSPC - History",
+          "source": "Yahoo Finance",
+          "data": {
+            "ticker": "^GSPC",
+            "period": "1d",
+            "data_points": 1,
+            "date_range": {
+              "start": "2026-01-07",
+              "end": "2026-01-07"
+            },
+            "latest": {
+              "date": "2026-01-07",
+              "open": 6945.06982421875,
+              "high": 6965.68994140625,
+              "low": 6936.580078125,
+              "close": 6945.7998046875,
+              "volume": 1959888000
+            },
+            "statistics": {
+              "high_period": 6965.68994140625,
+              "low_period": 6936.580078125,
+              "avg_close": 6945.7998046875,
+              "avg_volume": 1959888000.0
+            },
+            "recent_closes": [
+              6945.7998046875
+            ]
+          },
+          "fetched_at": "2026-01-07T14:39:06.509809"
+        },
+        "error": null
+      },
+      {
+        "tool_call_id": "call_72879623",
+        "tool_name": "get_yahoo_data",
+        "arguments": {
+          "ticker": "^VIX",
+          "data_type": "price"
+        },
+        "result": {
+          "type": "data_report",
+          "title": "^VIX - Price",
+          "source": "Yahoo Finance",
+          "data": {
+            "ticker": "^VIX",
+            "price": 14.99,
+            "previous_close": 14.75,
+            "change": 0.2400000000000002,
+            "change_percent": 1.627118644067798,
+            "day_high": 15.28,
+            "day_low": 14.83,
+            "volume": 0,
+            "market_cap": null,
+            "currency": "USD",
+            "exchange": "CXI",
+            "quote_type": "INDEX"
+          },
+          "fetched_at": "2026-01-07T14:39:06.700829"
+        },
+        "error": null
+      },
+      {
+        "tool_call_id": "call_98212635",
+        "tool_name": "crawl_urls",
+        "arguments": {
+          "urls": [
+            "https://www.barrons.com/livecoverage/stock-market-news-today-010626",
+            "https://www.cnbc.com/2026/01/05/stock-market-today-live-updates.html"
+          ]
+        },
+        "result": {
+          "type": "data_report",
+          "title": "Crawled 2 pages",
+          "source": "Exa Crawl",
+          "data": {
+            "pages": [
+              {
+                "url": "https://www.barrons.com/livecoverage/stock-market-news-today-010626",
+                "title": "Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000",
+                "content": "Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000; S&amp;P 500 Record; Nasdaq Rises; Nvidia, Chevron, Intel, Palantir, Tesla, More Movers\nSearch News &amp; Quotes\n## [](https://www.barrons.com?mod=BOL_LOGO)\nCONCLUDED\n# Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\n## The S&amp;P 500 also hit a record. The Nasdaq was higher.\nLast Updated:\nJan. 6, 2026 at 7:56 PM ET\n## Key Events\n4 hours ago\n[#### Small-Caps Surge to Start 2026\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/small-caps-surge-to-start-2026-ucqmBgMp0v2rcxUWLWGo?mod=livecoverage_timeline)\n4 hours ago\n[#### Oil Futures Give Back Post-Venezuela Incursion Gains\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/oil-futures-give-back-post-venezuela-incursion-gains-6e4rQCvzUnmELbifVPej?mod=livecoverage_timeline)\n4 hours ago\n[#### Why the Dow Is Beating the S&amp;P and Nasdaq So Far This Year\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/why-the-dow-is-beating-the-s-p-and-nasdaq-so-far-this-year-QTAMNbQBlNOXdefu7pEG?mod=livecoverage_timeline)\n8 hours ago\n[#### Stocks Pull Back Early Gains. S&amp;P 500 Slips Below Record Level.\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/stocks-pull-back-early-gains-s-p-500-slips-below-record-level--g8fZyvsjIPnMfqMHNBrA?mod=livecoverage_timeline)\n9 hours ago\n[#### Stock Gains Pick Up Pace. The S&amp;P 500 Is on Track for a Record.\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/stock-gains-pick-up-pace-the-s-p-500-is-nearing-a-record--lcllY2UlW3wM6eHnxIH2?mod=livecoverage_timeline)\n9 hours ago\n[#### Oil Rises as Venezuela Uncertainty Dominates Sentiment\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/oil-slips-as-traders-navigate-venezuela-uncertainty-OJ8pMl4fAeZg9Kcmvth5?mod=livecoverage_timeline)\n10 hours ago\n[#### Stocks Are Inching Higher\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/dow-pauses-at-the-open-s-p-500-nasdaq-inch-higher--dHvrDEv7NpwnAdZ4LMiF?mod=livecoverage_timeline)\n10 hours ago\n[#### Treasury Yields Rise; Repo Funding Threat Subsides\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/treasury-yields-rise-repo-funding-threat-subsides-mvXRETrs1xHEU8X85MCz?mod=livecoverage_timeline)\n13 hours ago\n[#### U.S. Treasury Yields Rise, Focus Shifts to Data\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/u-s-treasury-yields-rise-focus-shifts-to-data-A0GIdUrI0LpejpK8v65W?mod=livecoverage_timeline)\n13 hours ago\n[#### Markets Fall as Risk Rally Fades. Dow Futures Slide After Record High.\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/markets-slip-as-risk-rally-fades-stock-futures-falling--HdYTLAkfZbc1qC3oyPEZ?mod=livecoverage_timeline)\n## Pinned Post\n3 hours ago\n[### Dow Finally Closes Above 49,000. S&amp;P 500 Also Hits Record.\n](https://www.barrons.com/livec",
+                "content_length": 3000
+              },
+              {
+                "url": "https://www.cnbc.com/2026/01/05/stock-market-today-live-updates.html",
+                "title": "S&P 500 notches fresh record, Dow adds nearly 500 points for first close above 49,000: Live updates",
+                "content": "Stock market news for Jan. 6, 2026\n[Skip Navigation](#MainContent)\n[![CNBC](https://static-redesign.cnbcfm.com/dist/d6085c9e81f4d7365c8d.svg)](https://www.cnbc.com/world/)\n[Markets](https://www.cnbc.com/markets/)\n* [Pre-Markets](https://www.cnbc.com/pre-markets/)\n* [U.S. Markets](https://www.cnbc.com/us-markets/)\n* [Europe Markets](https://www.cnbc.com/markets-europe/)\n* [China Markets](https://www.cnbc.com/china-markets/)\n* [Asia Markets](https://www.cnbc.com/markets-asia-pacific/)\n* [World Markets](https://www.cnbc.com/world-markets/)\n* [Currencies](https://www.cnbc.com/currencies/)\n* [Cryptocurrency](https://www.cnbc.com/cryptocurrency/)\n* [Futures &amp; Commodities](https://www.cnbc.com/futures-and-commodities/)\n* [Bonds](https://www.cnbc.com/bonds/)\n* [Funds &amp; ETFs](https://www.cnbc.com/funds-and-etfs/)\n[Business](https://www.cnbc.com/business/)\n* [Economy](https://www.cnbc.com/economy/)\n* [Finance](https://www.cnbc.com/finance/)\n* [Health &amp; Science](https://www.cnbc.com/health-and-science/)\n* [Media](https://www.cnbc.com/media/)\n* [Real Estate](https://www.cnbc.com/real-estate/)\n* [Energy](https://www.cnbc.com/energy/)\n* [Climate](https://www.cnbc.com/climate/)\n* [Transportation](https://www.cnbc.com/transportation/)\n* [Investigations](https://www.cnbc.com/cnbc-investigations/)\n* [Industrials](https://www.cnbc.com/industrials/)\n* [Retail](https://www.cnbc.com/retail/)\n* [Wealth](https://www.cnbc.com/wealth/)\n* [Sports](https://www.cnbc.com/sports/)\n* [Life](https://www.cnbc.com/life/)\n* [Small Business](https://www.cnbc.com/small-business/)\n[Investing](https://www.cnbc.com/investing/)\n* [Personal Finance](https://www.cnbc.com/personal-finance/)\n* [Fintech](https://www.cnbc.com/fintech/)\n* [Financial Advisors](https://www.cnbc.com/financial-advisors/)\n* [Options Action](https://www.cnbc.com/options-action/)\n* [ETF Street](https://www.cnbc.com/etf-street/)\n* [Buffett Archive](https://buffett.cnbc.com)\n* [Earnings](https://www.cnbc.com/earnings/)\n* [Trader Talk](https://www.cnbc.com/trader-talk/)\n[Tech](https://www.cnbc.com/technology/)\n* [Cybersecurity](https://www.cnbc.com/cybersecurity/)\n* [AI](https://www.cnbc.com/ai-artificial-intelligence/)\n* [Enterprise](https://www.cnbc.com/enterprise/)\n* [Internet](https://www.cnbc.com/internet/)\n* [Media](https://www.cnbc.com/media/)\n* [Mobile](https://www.cnbc.com/mobile/)\n* [Social Media](https://www.cnbc.com/social-media/)\n* [CNBC Disruptor 50](https://www.cnbc.com/cnbc-disruptors/)\n* [Tech Guide](https://www.cnbc.com/tech-guide/)\n[Politics](https://www.cnbc.com/politics/)\n* [White House](https://www.cnbc.com/white-house/)\n* [Policy](https://www.cnbc.com/policy/)\n* [Defense](https://www.cnbc.com/defense/)\n* [Congress](https://www.cnbc.com/congress/)\n* [Expanding Opportunity](https://www.cnbc.com/expanding-opportunity/)\n* [Europe Politics](https://www.cnbc.com/europe-politics/)\n* [China Politics](https://www.cnbc.com/china-politics/)\n* [Asia Politics](https://www.cnbc.com/asia-politics/)\n* ",
+                "content_length": 3000
+              }
+            ]
+          },
+          "fetched_at": "2026-01-07T14:39:07.279515"
+        },
+        "error": null
+      },
+      {
+        "tool_call_id": "call_44661362",
+        "tool_name": "get_yahoo_data",
+        "arguments": {
+          "ticker": "SPY",
+          "data_type": "price"
+        },
+        "result": {
+          "type": "data_report",
+          "title": "SPY - Price",
+          "source": "Yahoo Finance",
+          "data": {
+            "ticker": "SPY",
+            "price": 691.96,
+            "previous_close": 691.81,
+            "change": 0.15000000000009095,
+            "change_percent": 0.021682253798021273,
+            "day_high": 693.96,
+            "day_low": 690.97,
+            "volume": 46763358,
+            "market_cap": 635068481536,
+            "currency": "USD",
+            "exchange": "PCX",
+            "quote_type": "ETF"
+          },
+          "fetched_at": "2026-01-07T14:39:07.473191"
+        },
+        "error": null
+      }
+    ],
+    "search_results": [
+      {
+        "index": 0,
+        "title": "Mid-year market outlook 2025 | J.P. Morgan Research",
+        "url": "https://www.jpmorgan.com/insights/global-research/outlook/mid-year-outlook",
+        "score": null,
+        "published_date": "2025-07-01T00:00:00.000Z",
+        "text": "Mid-year market outlook 2025 | J.P. Morgan Research[Skip to main content](#main)\nBack to menu\nFor Companies and Institutions\nFor Companies and Institutions\n* [Commercial Banking](https://www.jpmorgan.com/commercial-banking)\nWe provide credit, financing, treasury and payment solutions to help your business succeed. We also offer best-in-class commercial real estate services for investors and developers.\n* [Global Corporate Banking](https://www.jpmorgan.com/global-corporate-banking)\nWe help clients achieve their long-term strategic goals through financing, liquidity, payments, risk management and investment banking solutions.\n* [Investment Banking](https://www.jpmorgan.com/investment-banking)\nProviding investment banking solutions, including M&amp;A, capital raising and risk management, for a broad range of corporations, institutions and governments.\n* [Institutional Investing](https://www.jpmorgan.com/institutional-investing)\nWe support the entire investment cycle with market-leading re",
+        "highlights": []
+      },
+      {
+        "index": 1,
+        "title": "Stock Market Today: Dow Tops 49,000",
+        "url": "https://www.barrons.com/livecoverage/stock-market-news-today-010626",
+        "score": null,
+        "published_date": "2026-01-06T00:00:00.000Z",
+        "text": "Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000; S&amp;P 500 Record; Nasdaq Rises; Nvidia, Chevron, Intel, Palantir, Tesla, More Movers\nSearch News &amp; Quotes\n## [](https://www.barrons.com?mod=BOL_LOGO)\nCONCLUDED\n# Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\n## The S&amp;P 500 also hit a record. The Nasdaq was higher.\nLast Updated:\nJan. 6, 2026 at 7:56 PM ET\n## Key Events\n4 hours ago\n[#### Small-Caps Surge to Start 2026\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/small-caps-surge-to-start-2026-ucqmBgMp0v2rcxUWLWGo?mod=livecoverage_timeline)\n4 hours ago\n[#### Oil Futures Give Back Post-Venezuela Incursion Gains\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/oil-futures-give-back-post-venezuela-incursion-gains-6e4rQCvzUnmELbifVPej?mod=livecoverage_timeline)\n4 hours ago\n[#### Why the Dow Is Beating the S&amp;P and Nasdaq So Far This Year\n](https://www.barrons.com/livecoverage/stock-market-news-today",
+        "highlights": []
+      },
+      {
+        "index": 2,
+        "title": "Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000",
+        "url": "https://www.barrons.com/livecoverage/stock-market-news-today-010626?gaa_at=eafs&gaa_n=AWEtsqdvCe4ZMu6UtC-jdoqwv4_CRNSQEdZqdyOs3126xi0m6fAZJKRD16CA&gaa_ts=695d7474&gaa_sig=9QbpxacrQhHkXWuAZks17cx9xtUcI_-T27MxLc-YOa2uCrfU5iAqe6slLHruL5sGgnkZQXVpKbix7Idd8qC0mA==",
+        "score": null,
+        "published_date": "2026-01-06T00:00:00.000Z",
+        "text": "Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000; S&amp;P 500 Record; Nasdaq Rises; Nvidia, Chevron, Intel, Palantir, Tesla, More Movers\nSearch News &amp; Quotes\n## [](https://www.barrons.com?mod=BOL_LOGO)\nCONCLUDED\n# Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\n## The S&amp;P 500 also hit a record. The Nasdaq was higher.\nLast Updated:\nJan. 6, 2026 at 7:56 PM ET\n## Key Events\n4 hours ago\n[#### Small-Caps Surge to Start 2026\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/small-caps-surge-to-start-2026-ucqmBgMp0v2rcxUWLWGo?mod=livecoverage_timeline)\n4 hours ago\n[#### Oil Futures Give Back Post-Venezuela Incursion Gains\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/oil-futures-give-back-post-venezuela-incursion-gains-6e4rQCvzUnmELbifVPej?mod=livecoverage_timeline)\n4 hours ago\n[#### Why the Dow Is Beating the S&amp;P and Nasdaq So Far This Year\n](https://www.barrons.com/livecoverage/stock-market-news-today",
+        "highlights": []
+      },
+      {
+        "index": 3,
+        "title": "Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000",
+        "url": "https://www.barrons.com/livecoverage/stock-market-news-today-010626?gaa_at=eafs&gaa_n=AWEtsqfOrwzXbQ7p6o312f1TKFk7AMRoY56vJs2xIVFR99ef5rgqVKezFAhv&gaa_ts=695d53be&gaa_sig=2V21lQjtMgFPWBqDUokG4TrH8_AKDnk3saO_8w0u6TVBC3jiqWZP0w3eeZaP1UFVmbu2GH3JxgPu2mv7QlN4xQ==",
+        "score": null,
+        "published_date": "2026-01-06T00:00:00.000Z",
+        "text": "Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000; S&amp;P 500 Record; Nasdaq Rises; Nvidia, Chevron, Intel, Palantir, Tesla, More Movers\nSearch News &amp; Quotes\n## [](https://www.barrons.com?mod=BOL_LOGO)\nCONCLUDED\n# Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\n## The S&amp;P 500 also hit a record. The Nasdaq was higher.\nLast Updated:\nJan. 6, 2026 at 7:56 PM ET\n## Key Events\n4 hours ago\n[#### Small-Caps Surge to Start 2026\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/small-caps-surge-to-start-2026-ucqmBgMp0v2rcxUWLWGo?mod=livecoverage_timeline)\n4 hours ago\n[#### Oil Futures Give Back Post-Venezuela Incursion Gains\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/oil-futures-give-back-post-venezuela-incursion-gains-6e4rQCvzUnmELbifVPej?mod=livecoverage_timeline)\n4 hours ago\n[#### Why the Dow Is Beating the S&amp;P and Nasdaq So Far This Year\n](https://www.barrons.com/livecoverage/stock-market-news-today",
+        "highlights": []
+      },
+      {
+        "index": 4,
+        "title": "S&P 500 hits fresh all-time high, Dow heads for first close over 49,000: Live updates",
+        "url": "https://www.cnbc.com/2026/01/05/stock-market-today-live-updates.html",
+        "score": null,
+        "published_date": "2026-01-05T00:00:00.000Z",
+        "text": "Stock market news for Jan. 6, 2026\n[Skip Navigation](#MainContent)\n[![CNBC](https://static-redesign.cnbcfm.com/dist/d6085c9e81f4d7365c8d.svg)](https://www.cnbc.com/world/)\n[Markets](https://www.cnbc.com/markets/)\n* [Pre-Markets](https://www.cnbc.com/pre-markets/)\n* [U.S. Markets](https://www.cnbc.com/us-markets/)\n* [Europe Markets](https://www.cnbc.com/markets-europe/)\n* [China Markets](https://www.cnbc.com/china-markets/)\n* [Asia Markets](https://www.cnbc.com/markets-asia-pacific/)\n* [World Markets](https://www.cnbc.com/world-markets/)\n* [Currencies](https://www.cnbc.com/currencies/)\n* [Cryptocurrency](https://www.cnbc.com/cryptocurrency/)\n* [Futures &amp; Commodities](https://www.cnbc.com/futures-and-commodities/)\n* [Bonds](https://www.cnbc.com/bonds/)\n* [Funds &amp; ETFs](https://www.cnbc.com/funds-and-etfs/)\n[Business](https://www.cnbc.com/business/)\n* [Economy](https://www.cnbc.com/economy/)\n* [Finance](https://www.cnbc.com/finance/)\n* [Health &amp; Science](https://www.cnbc.com/h",
+        "highlights": []
+      },
+      {
+        "index": 5,
+        "title": "S&P 500 Wavers, Sitting Just Below Its Record Close",
+        "url": "https://www.barrons.com/livecoverage/stock-market-news-today-120825/card/s-p-500-inches-higher-sitting-just-below-its-record-close-rgpKvcwhRfvtEdNT6wcI",
+        "score": null,
+        "published_date": "2025-12-08T00:00:00.000Z",
+        "text": "S&amp;P 500 Wavers, Sitting Just Below Its Record Close\nSearch News &amp; Quotes\n## [![Barron&#x27;s](data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%20%3F%3E%3Csvg%20width%3D%22320%22%20height%3D%2265%22%20viewBox%3D%220%200%20320%2065%22%20fill%3D%22black%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20%20%20%20fill-rule%3D%22evenodd%22%20%20%20%20clip-rule%3D%22evenodd%22%20%20%20%20d%3D%22M8.59828%2042.1558C7.81281%2049.0599%205.98324%2048.8688%203.76306%2049.4339C1.75255%2049.9438%202.51993%2051.1272%203.82692%2050.9402C4.31225%2050.8707%207.90541%2050.5018%2010.3619%2050.5018C13.8028%2050.5018%2016.9256%2050.8135%2018.6093%2050.8135C19.3118%2050.8135%2020.2324%2049.8754%2018.5316%2049.4339C16.5647%2048.926%2011.7391%2049.4339%2011.2783%2041.1513C10.943%2035.0914%2011.5018%2014.3711%2011.5018%2014.3711C11.5018%2012.9241%2011.7136%2012.7054%2011.9935%2012.7054C12.482%2012.7054%2012.995%2013.5219%2013.4697%2014.",
+        "highlights": []
+      },
+      {
+        "index": 6,
+        "title": "S&P 500 (^GSPC) Historical Data - Yahoo Finance",
+        "url": "https://finance.yahoo.com/quote/%5EGSPC/history/",
+        "score": null,
+        "published_date": null,
+        "text": "S&amp;P 500 (^GSPC) Historical Data - Yahoo Finance\nOops, something went wrong\n[Skip to navigation](#ybar-navigation)[Skip to main content](#nimbus-app)[Skip to right column](#right-rail)\n### [News](https://www.yahoo.com/)\n* [Today's news](https://www.yahoo.com/news/)\n* [US](https://www.yahoo.com/news/us/)\n* [Politics](https://www.yahoo.com/news/politics/)\n* [2025 Election](https://www.yahoo.com/events/elections/)\n* [World](https://www.yahoo.com/news/world/)\n* [Weather](https://www.yahoo.com/news/weather/)\n* [Climate change](https://www.yahoo.com/issues/climate-change/)\n* [Health](https://health.yahoo.com/)\n* * [Wellness](https://health.yahoo.com/wellness/)\n* * [Mental health](https://health.yahoo.com/wellness/mental-health/)\n* [Sexual health](https://health.yahoo.com/wellness/sexual-health/)\n* [Dermatology](https://health.yahoo.com/wellness/dermatology/)\n* [Oral health](https://health.yahoo.com/wellness/oral-health/)\n* [Hair loss](https://health.yahoo.com/wellness/hair-loss/)\n* [Foot ",
+        "highlights": []
+      },
+      {
+        "index": 7,
+        "title": "S&P 500\u00ae | S&P Dow Jones Indices - S&P Global",
+        "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
+        "score": null,
+        "published_date": null,
+        "text": "S&amp;P 500&reg; | S&P Dow Jones Indices\n[![logo](https://www.spglobal.com/spdji/en/app/images/sandp.png)](https://www.spglobal.com/en)\n![](https://www.spglobal.com/spdji/en/app/images/grid-2.svg)\nExplore S&amp;P Global\n![](https://www.spglobal.com/spdji/en/app/images/magnifying-glass.svg)\nSearch\n![](https://www.spglobal.com/spdji/en/app/images/globe.svg)\nEnglish\n* [Espa\u00f1ol (Spanish)](https://www.spglobal.com/spdji/es/)\n* [Portugu\u00eas (Portuguese)](https://www.spglobal.com/spdji/pt/)\n* [\ud55c\uad6d\uc5b4 (Korean)](https://www.spglobal.com/spdji/kr/)\n* [\u7b80\u4f53\u4e2d\u6587 (Simplified Chinese)](https://www.spglobal.com/spdji/zh/)\n* [\u7e41\u9ad4\u4e2d\u6587 (Traditional Chinese)](https://www.spglobal.com/spdji/tc/)\n* [\u65e5\u672c\u8a9e (Japanese)](https://www.spglobal.com/spdji/jp/)\n[\n![](https://www.spglobal.com/spdji/en/app/images/message-question.svg)\nContact Us](https://www.spglobal.com/spdji/en/contact-us/)[\n![](https://www.spglobal.com/spdji/en/app/images/circle-user.svg)\nRegister / Login](#)\n* ![](https://www.spglobal.com/spdji/en/app/images/c",
+        "highlights": []
+      },
+      {
+        "index": 8,
+        "title": "The S&P 500 Just Crossed 6,000. What's Next? - YCharts",
+        "url": "https://get.ycharts.com/resources/blog/sp-500-crossed-5000/",
+        "score": null,
+        "published_date": "2024-12-06T00:00:00.000Z",
+        "text": "[Skip to content](https://get.ycharts.com/get.ycharts.com#main)",
+        "highlights": []
+      },
+      {
+        "index": 9,
+        "title": "Closing milestones of the S&P 500 - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Closing_milestones_of_the_S%26P_500",
+        "score": null,
+        "published_date": null,
+        "text": "Closing milestones of the S&amp;P 500 - Wikipedia\n[Jump to content](#bodyContent)\n[![](https://en.wikipedia.org/static/images/icons/wikipedia.png)![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg)![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en.svg)](https://en.wikipedia.org/wiki/Main_Page)\n[Search](https://en.wikipedia.org/wiki/Special:Search)\nSearch\n# Closing milestones of the S&amp;P 500\nAdd languages\n[Add links](https://www.wikidata.org/wiki/Special:EntityPage/Q16933734#sitelinks-wikipedia)\nFrom Wikipedia, the free encyclopedia\n![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ambox_current_red_Americas.svg/60px-Ambox_current_red_Americas.svg.png)\n|\nParts of this article (those related to documentation) need to be**updated**.Please help update this article to reflect recent events or newly available information.*(March 2021)*\n|\nThis article is a summary of the**closing mile",
+        "highlights": []
+      }
+    ],
+    "percentiles": null,
+    "formatted_for_forecaster": "=== RESEARCH SYNTHESIS ===\n**S&P 500 (^GSPC) Status (Jan 7, 2026, intraday ~2:40 PM ET):**  \nCurrent price: 6945.74 (+0.92, +0.013% from prev close 6944.82). Day range: 6936.58-6965.69. Volume: ~1.96B shares. SPY ETF: 691.96 (+0.02%). VIX: 14.99 (+1.63%), indicating low volatility.\n\n**Context from Prior Day (Jan 6):** Barron's/CNBC reports confirm S&P hit record close, Dow >49k. No major negative catalysts; small-caps surged, oil volatile on Venezuela news, but equities resilient.\n\n**Forecast Insight:** Already ~15.8% above 6000 threshold mid-session with minimal volatility (VIX <15). Afternoon drop to <6000 (~13-14% plunge) highly improbable absent crash event. Implied prob >99%.\n\n=== SEARCH RESULTS ===\n[Source 1]\nTitle: Mid-year market outlook 2025 | J.P. Morgan Research\nDate: 2025-07-01T00:00:00.000Z\nURL: https://www.jpmorgan.com/insights/global-research/outlook/mid-year-outlook\nContent: Mid-year market outlook 2025 | J.P. Morgan Research[Skip to main content](#main)\nBack to menu\nFor Companies and Institutions\nFor Companies and Institutions\n* [Commercial Banking](https://www.jpmorgan.com/commercial-banking)\nWe provide credit, financing, treasury and payment solutions to help your business succeed. We also offer best-in-class commercial real estate services for investors and developers.\n* [Global Corporate Banking](https://www.jpmorgan.com/global-corporate-banking)\nWe help clients achieve their long-term strategic goals through financing, liquidity, payments, risk management and investment banking solutions.\n* [Investment Banking](https://www.jpmorgan.com/investment-banking)\nProviding investment banking solutions, including M&amp;A, capital raising and risk management, for \n\n[Source 2]\nTitle: Stock Market Today: Dow Tops 49,000\nDate: 2026-01-06T00:00:00.000Z\nURL: https://www.barrons.com/livecoverage/stock-market-news-today-010626\nContent: Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000; S&amp;P 500 Record; Nasdaq Rises; Nvidia, Chevron, Intel, Palantir, Tesla, More Movers\nSearch News &amp; Quotes\n## [](https://www.barrons.com?mod=BOL_LOGO)\nCONCLUDED\n# Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\n## The S&amp;P 500 also hit a record. The Nasdaq was higher.\nLast Updated:\nJan. 6, 2026 at 7:56 PM ET\n## Key Events\n4 hours ago\n[#### Small-Caps Surge to Start 2026\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/small-caps-surge-to-start-2026-ucqmBgMp0v2rcxUWLWGo?mod=livecoverage_timeline)\n4 hours ago\n[#### Oil Futures Give Back Post-Venezuela Incursion Gains\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/oil-futures-give-back-post-venezuela-incursi\n\n[Source 3]\nTitle: Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\nDate: 2026-01-06T00:00:00.000Z\nURL: https://www.barrons.com/livecoverage/stock-market-news-today-010626?gaa_at=eafs&gaa_n=AWEtsqdvCe4ZMu6UtC-jdoqwv4_CRNSQEdZqdyOs3126xi0m6fAZJKRD16CA&gaa_ts=695d7474&gaa_sig=9QbpxacrQhHkXWuAZks17cx9xtUcI_-T27MxLc-YOa2uCrfU5iAqe6slLHruL5sGgnkZQXVpKbix7Idd8qC0mA==\nContent: Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000; S&amp;P 500 Record; Nasdaq Rises; Nvidia, Chevron, Intel, Palantir, Tesla, More Movers\nSearch News &amp; Quotes\n## [](https://www.barrons.com?mod=BOL_LOGO)\nCONCLUDED\n# Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\n## The S&amp;P 500 also hit a record. The Nasdaq was higher.\nLast Updated:\nJan. 6, 2026 at 7:56 PM ET\n## Key Events\n4 hours ago\n[#### Small-Caps Surge to Start 2026\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/small-caps-surge-to-start-2026-ucqmBgMp0v2rcxUWLWGo?mod=livecoverage_timeline)\n4 hours ago\n[#### Oil Futures Give Back Post-Venezuela Incursion Gains\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/oil-futures-give-back-post-venezuela-incursi\n\n[Source 4]\nTitle: Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\nDate: 2026-01-06T00:00:00.000Z\nURL: https://www.barrons.com/livecoverage/stock-market-news-today-010626?gaa_at=eafs&gaa_n=AWEtsqfOrwzXbQ7p6o312f1TKFk7AMRoY56vJs2xIVFR99ef5rgqVKezFAhv&gaa_ts=695d53be&gaa_sig=2V21lQjtMgFPWBqDUokG4TrH8_AKDnk3saO_8w0u6TVBC3jiqWZP0w3eeZaP1UFVmbu2GH3JxgPu2mv7QlN4xQ==\nContent: Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000; S&amp;P 500 Record; Nasdaq Rises; Nvidia, Chevron, Intel, Palantir, Tesla, More Movers\nSearch News &amp; Quotes\n## [](https://www.barrons.com?mod=BOL_LOGO)\nCONCLUDED\n# Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\n## The S&amp;P 500 also hit a record. The Nasdaq was higher.\nLast Updated:\nJan. 6, 2026 at 7:56 PM ET\n## Key Events\n4 hours ago\n[#### Small-Caps Surge to Start 2026\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/small-caps-surge-to-start-2026-ucqmBgMp0v2rcxUWLWGo?mod=livecoverage_timeline)\n4 hours ago\n[#### Oil Futures Give Back Post-Venezuela Incursion Gains\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/oil-futures-give-back-post-venezuela-incursi\n\n[Source 5]\nTitle: S&P 500 hits fresh all-time high, Dow heads for first close over 49,000: Live updates\nDate: 2026-01-05T00:00:00.000Z\nURL: https://www.cnbc.com/2026/01/05/stock-market-today-live-updates.html\nContent: Stock market news for Jan. 6, 2026\n[Skip Navigation](#MainContent)\n[![CNBC](https://static-redesign.cnbcfm.com/dist/d6085c9e81f4d7365c8d.svg)](https://www.cnbc.com/world/)\n[Markets](https://www.cnbc.com/markets/)\n* [Pre-Markets](https://www.cnbc.com/pre-markets/)\n* [U.S. Markets](https://www.cnbc.com/us-markets/)\n* [Europe Markets](https://www.cnbc.com/markets-europe/)\n* [China Markets](https://www.cnbc.com/china-markets/)\n* [Asia Markets](https://www.cnbc.com/markets-asia-pacific/)\n* [World Markets](https://www.cnbc.com/world-markets/)\n* [Currencies](https://www.cnbc.com/currencies/)\n* [Cryptocurrency](https://www.cnbc.com/cryptocurrency/)\n* [Futures &amp; Commodities](https://www.cnbc.com/futures-and-commodities/)\n* [Bonds](https://www.cnbc.com/bonds/)\n* [Funds &amp; ETFs](https://www.cn\n\n[Source 6]\nTitle: S&P 500 Wavers, Sitting Just Below Its Record Close\nDate: 2025-12-08T00:00:00.000Z\nURL: https://www.barrons.com/livecoverage/stock-market-news-today-120825/card/s-p-500-inches-higher-sitting-just-below-its-record-close-rgpKvcwhRfvtEdNT6wcI\nContent: S&amp;P 500 Wavers, Sitting Just Below Its Record Close\nSearch News &amp; Quotes\n## [![Barron&#x27;s](data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%20%3F%3E%3Csvg%20width%3D%22320%22%20height%3D%2265%22%20viewBox%3D%220%200%20320%2065%22%20fill%3D%22black%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20%20%20%20fill-rule%3D%22evenodd%22%20%20%20%20clip-rule%3D%22evenodd%22%20%20%20%20d%3D%22M8.59828%2042.1558C7.81281%2049.0599%205.98324%2048.8688%203.76306%2049.4339C1.75255%2049.9438%202.51993%2051.1272%203.82692%2050.9402C4.31225%2050.8707%207.90541%2050.5018%2010.3619%2050.5018C13.8028%2050.5018%2016.9256%2050.8135%2018.6093%2050.8135C19.3118%2050.8135%2020.2324%2049.8754%2018.5316%2049.4339C16.5647%2048.926%2011.7\n\n[Source 7]\nTitle: S&P 500 (^GSPC) Historical Data - Yahoo Finance\nDate: None\nURL: https://finance.yahoo.com/quote/%5EGSPC/history/\nContent: S&amp;P 500 (^GSPC) Historical Data - Yahoo Finance\nOops, something went wrong\n[Skip to navigation](#ybar-navigation)[Skip to main content](#nimbus-app)[Skip to right column](#right-rail)\n### [News](https://www.yahoo.com/)\n* [Today's news](https://www.yahoo.com/news/)\n* [US](https://www.yahoo.com/news/us/)\n* [Politics](https://www.yahoo.com/news/politics/)\n* [2025 Election](https://www.yahoo.com/events/elections/)\n* [World](https://www.yahoo.com/news/world/)\n* [Weather](https://www.yahoo.com/news/weather/)\n* [Climate change](https://www.yahoo.com/issues/climate-change/)\n* [Health](https://health.yahoo.com/)\n* * [Wellness](https://health.yahoo.com/wellness/)\n* * [Mental health](https://health.yahoo.com/wellness/mental-health/)\n* [Sexual health](https://health.yahoo.com/wellness/sexual-healt\n\n[Source 8]\nTitle: S&P 500\u00ae | S&P Dow Jones Indices - S&P Global\nDate: None\nURL: https://www.spglobal.com/spdji/en/indices/equity/sp-500/\nContent: S&amp;P 500&reg; | S&P Dow Jones Indices\n[![logo](https://www.spglobal.com/spdji/en/app/images/sandp.png)](https://www.spglobal.com/en)\n![](https://www.spglobal.com/spdji/en/app/images/grid-2.svg)\nExplore S&amp;P Global\n![](https://www.spglobal.com/spdji/en/app/images/magnifying-glass.svg)\nSearch\n![](https://www.spglobal.com/spdji/en/app/images/globe.svg)\nEnglish\n* [Espa\u00f1ol (Spanish)](https://www.spglobal.com/spdji/es/)\n* [Portugu\u00eas (Portuguese)](https://www.spglobal.com/spdji/pt/)\n* [\ud55c\uad6d\uc5b4 (Korean)](https://www.spglobal.com/spdji/kr/)\n* [\u7b80\u4f53\u4e2d\u6587 (Simplified Chinese)](https://www.spglobal.com/spdji/zh/)\n* [\u7e41\u9ad4\u4e2d\u6587 (Traditional Chinese)](https://www.spglobal.com/spdji/tc/)\n* [\u65e5\u672c\u8a9e (Japanese)](https://www.spglobal.com/spdji/jp/)\n[\n![](https://www.spglobal.com/spdji/en/app/images/message-question.svg)\n\n[Source 9]\nTitle: The S&P 500 Just Crossed 6,000. What's Next? - YCharts\nDate: 2024-12-06T00:00:00.000Z\nURL: https://get.ycharts.com/resources/blog/sp-500-crossed-5000/\nContent: [Skip to content](https://get.ycharts.com/get.ycharts.com#main)\n\n[Source 10]\nTitle: Closing milestones of the S&P 500 - Wikipedia\nDate: None\nURL: https://en.wikipedia.org/wiki/Closing_milestones_of_the_S%26P_500\nContent: Closing milestones of the S&amp;P 500 - Wikipedia\n[Jump to content](#bodyContent)\n[![](https://en.wikipedia.org/static/images/icons/wikipedia.png)![Wikipedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg)![The Free Encyclopedia](https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en.svg)](https://en.wikipedia.org/wiki/Main_Page)\n[Search](https://en.wikipedia.org/wiki/Special:Search)\nSearch\n# Closing milestones of the S&amp;P 500\nAdd languages\n[Add links](https://www.wikidata.org/wiki/Special:EntityPage/Q16933734#sitelinks-wikipedia)\nFrom Wikipedia, the free encyclopedia\n![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ambox_current_red_Americas.svg/60px-Ambox_current_red_Americas.svg.png)\n|\nParts of this article (those\n\n\n=== ^GSPC - PRICE ===\nticker: ^GSPC\nprice: 6945.7400\nprevious_close: 6944.8200\nchange: 0.9200\nchange_percent: 0.0132\nday_high: 6965.6900\nday_low: 6936.5800\nvolume: 1959655000\nmarket_cap: None\ncurrency: USD\nexchange: SNP\nquote_type: INDEX\n\n=== ^GSPC - HISTORY ===\nticker: ^GSPC\nperiod: 1d\ndata_points: 1\ndate_range:\n  start: 2026-01-07\n  end: 2026-01-07\nlatest:\n  date: 2026-01-07\n  open: 6945.0698\n  high: 6965.6899\n  low: 6936.5801\n  close: 6945.7998\n  volume: 1959888000\nstatistics:\n  high_period: 6965.6899\n  low_period: 6936.5801\n  avg_close: 6945.7998\n  avg_volume: 1959888000.0000\nrecent_closes: [6945.7998046875]...\n\n=== ^VIX - PRICE ===\nticker: ^VIX\nprice: 14.9900\nprevious_close: 14.7500\nchange: 0.2400\nchange_percent: 1.6271\nday_high: 15.2800\nday_low: 14.8300\nvolume: 0\nmarket_cap: None\ncurrency: USD\nexchange: CXI\nquote_type: INDEX\n\n=== CRAWL_URLS RESULTS ===\n\n[Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000]\nURL: https://www.barrons.com/livecoverage/stock-market-news-today-010626\nContent: Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000; S&amp;P 500 Record; Nasdaq Rises; Nvidia, Chevron, Intel, Palantir, Tesla, More Movers\nSearch News &amp; Quotes\n## [](https://www.barrons.com?mod=BOL_LOGO)\nCONCLUDED\n# Stock Market News From Jan. 6, 2026: Dow Closes Above 49,000\n## The S&amp;P 500 also hit a record. The Nasdaq was higher.\nLast Updated:\nJan. 6, 2026 at 7:56 PM ET\n## Key Events\n4 hours ago\n[#### Small-Caps Surge to Start 2026\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/small-caps-surge-to-start-2026-ucqmBgMp0v2rcxUWLWGo?mod=livecoverage_timeline)\n4 hours ago\n[#### Oil Futures Give Back Post-Venezuela Incursion Gains\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/oil-futures-give-back-post-venezuela-incursion-gains-6e4rQCvzUnmELbifVPej?mod=livecoverage_timeline)\n4 hours ago\n[#### Why the Dow Is Beating the S&amp;P and Nasdaq So Far This Year\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/why-the-dow-is-beating-the-s-p-and-nasdaq-so-far-this-year-QTAMNbQBlNOXdefu7pEG?mod=livecoverage_timeline)\n8 hours ago\n[#### Stocks Pull Back Early Gains. S&amp;P 500 Slips Below Record Level.\n](https://www.barrons.com/livecoverage/stock-market-news-today-010626/card/stocks-pull-back-early-gains-s-p-500-slips-below-record-level--g8fZyvsjIPnMfqMHNBrA?mod=livecoverage_timeline)\n9 hours ago\n[#### Stock Gains Pick Up Pace. The S&amp;P 500 Is on Track for a Record.\n](https://www.barrons.\n\n[S&P 500 notches fresh record, Dow adds nearly 500 points for first close above 49,000: Live updates]\nURL: https://www.cnbc.com/2026/01/05/stock-market-today-live-updates.html\nContent: Stock market news for Jan. 6, 2026\n[Skip Navigation](#MainContent)\n[![CNBC](https://static-redesign.cnbcfm.com/dist/d6085c9e81f4d7365c8d.svg)](https://www.cnbc.com/world/)\n[Markets](https://www.cnbc.com/markets/)\n* [Pre-Markets](https://www.cnbc.com/pre-markets/)\n* [U.S. Markets](https://www.cnbc.com/us-markets/)\n* [Europe Markets](https://www.cnbc.com/markets-europe/)\n* [China Markets](https://www.cnbc.com/china-markets/)\n* [Asia Markets](https://www.cnbc.com/markets-asia-pacific/)\n* [World Markets](https://www.cnbc.com/world-markets/)\n* [Currencies](https://www.cnbc.com/currencies/)\n* [Cryptocurrency](https://www.cnbc.com/cryptocurrency/)\n* [Futures &amp; Commodities](https://www.cnbc.com/futures-and-commodities/)\n* [Bonds](https://www.cnbc.com/bonds/)\n* [Funds &amp; ETFs](https://www.cnbc.com/funds-and-etfs/)\n[Business](https://www.cnbc.com/business/)\n* [Economy](https://www.cnbc.com/economy/)\n* [Finance](https://www.cnbc.com/finance/)\n* [Health &amp; Science](https://www.cnbc.com/health-and-science/)\n* [Media](https://www.cnbc.com/media/)\n* [Real Estate](https://www.cnbc.com/real-estate/)\n* [Energy](https://www.cnbc.com/energy/)\n* [Climate](https://www.cnbc.com/climate/)\n* [Transportation](https://www.cnbc.com/transportation/)\n* [Investigations](https://www.cnbc.com/cnbc-investigations/)\n* [Industrials](https://www.cnbc.com/industrials/)\n* [Retail](https://www.cnbc.com/retail/)\n* [Wealth](https://www.cnbc.com/wealth/)\n* [Sports](https://www.cnbc.com/sports/)\n* [Life](http\n\n=== SPY - PRICE ===\nticker: SPY\nprice: 691.9600\nprevious_close: 691.8100\nchange: 0.1500\nchange_percent: 0.0217\nday_high: 693.9600\nday_low: 690.9700\nvolume: 46763358\nmarket_cap: 635068481536\ncurrency: USD\nexchange: PCX\nquote_type: ETF"
+  },
+  "forecasting": {
+    "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 64000 tokens, but can only afford 11441. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+  },
+  "final_result": {},
+  "end_time": "2026-01-07T14:39:33.170449",
+  "duration_seconds": 46.063695
+}

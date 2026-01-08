@@ -1,0 +1,337 @@
+{
+  "identifier": "custom_What_is_the_current_",
+  "start_time": "2026-01-07T14:52:26.758478",
+  "config": {
+    "research_model": "x-ai/grok-4.1-fast",
+    "forecast_model": "anthropic/claude-opus-4.5",
+    "use_tools": true
+  },
+  "question": {
+    "title": "What is the current price of Bitcoin?",
+    "type": "binary",
+    "description": "Custom test question",
+    "resolution_criteria": "N/A",
+    "fine_print": "N/A"
+  },
+  "research": {
+    "synthesis": "**Bitcoin Current Price (BTC-USD, Yahoo Finance, fetched 2026-01-07):** $91,044.16 USD (down 2.84% or -$2,662.99 from previous close of $93,707.15). Day range: $90,714 low to $93,707 high. 24h volume: 47.56B USD. Market cap: $1.818T USD.\n\n**Key Metrics:** 52-week range $74,436.68\u2013$126,198.07. 50-day MA: $89,243.98. 200-day MA: $106,601.45. Recent search snippets (CoinDesk): ~$91,482 (minor timing variance).\n\n**Context for Forecasting:** BTC trading below key MAs amid high volume, signaling potential volatility. No forecast distributions available; price reflects intra-day pullback from recent highs.",
+    "tool_calls": [
+      {
+        "tool_call_id": "call_78728408",
+        "tool_name": "get_yahoo_data",
+        "arguments": {
+          "ticker": "BTC-USD",
+          "data_type": "price"
+        },
+        "result": {
+          "type": "data_report",
+          "title": "BTC-USD - Price",
+          "source": "Yahoo Finance",
+          "data": {
+            "ticker": "BTC-USD",
+            "price": 91044.164,
+            "previous_close": 93707.15,
+            "change": -2662.98599999999,
+            "change_percent": -2.841817299960558,
+            "day_high": 93707.15,
+            "day_low": 90714.0,
+            "volume": 47561969664,
+            "market_cap": 1818406813696,
+            "currency": "USD",
+            "exchange": "CCC",
+            "quote_type": "CRYPTOCURRENCY"
+          },
+          "fetched_at": "2026-01-07T14:52:33.060012"
+        },
+        "error": null
+      },
+      {
+        "tool_call_id": "call_11541149",
+        "tool_name": "get_yahoo_data",
+        "arguments": {
+          "ticker": "BTC-USD",
+          "data_type": "info"
+        },
+        "result": {
+          "type": "data_report",
+          "title": "BTC-USD - Info",
+          "source": "Yahoo Finance",
+          "data": {
+            "ticker": "BTC-USD",
+            "name": "Bitcoin USD",
+            "quote_type": "CRYPTOCURRENCY",
+            "sector": null,
+            "industry": null,
+            "country": null,
+            "currency": "USD",
+            "exchange": "CCC",
+            "market_cap": 1818406813696,
+            "enterprise_value": null,
+            "trailing_pe": null,
+            "forward_pe": null,
+            "dividend_yield": null,
+            "52_week_high": 126198.07,
+            "52_week_low": 74436.68,
+            "50_day_avg": 89243.984,
+            "200_day_avg": 106601.45,
+            "beta": null
+          },
+          "fetched_at": "2026-01-07T14:52:33.107503"
+        },
+        "error": null
+      },
+      {
+        "tool_call_id": "call_18614371",
+        "tool_name": "get_yahoo_data",
+        "arguments": {
+          "ticker": "BTC-USD",
+          "data_type": "history",
+          "period": "1d"
+        },
+        "result": {
+          "type": "data_report",
+          "title": "BTC-USD - History",
+          "source": "Yahoo Finance",
+          "data": {
+            "ticker": "BTC-USD",
+            "period": "1d",
+            "data_points": 1,
+            "date_range": {
+              "start": "2026-01-07",
+              "end": "2026-01-07"
+            },
+            "latest": {
+              "date": "2026-01-07",
+              "open": 93707.1484375,
+              "high": 93707.1484375,
+              "low": 90714.0,
+              "close": 91044.1640625,
+              "volume": 47561969664
+            },
+            "statistics": {
+              "high_period": 93707.1484375,
+              "low_period": 90714.0,
+              "avg_close": 91044.1640625,
+              "avg_volume": 47561969664.0
+            },
+            "recent_closes": [
+              91044.1640625
+            ]
+          },
+          "fetched_at": "2026-01-07T14:52:33.175643"
+        },
+        "error": null
+      }
+    ],
+    "search_results": [
+      {
+        "index": 0,
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart",
+        "url": "https://coinmarketcap.com/currencies/bitcoin/",
+        "score": null,
+        "published_date": null,
+        "text": "Bitcoin price today, BTC to USD live price, marketcap and chart | CoinMarketCap\n[](https://coinmarketcap.com/)\n[\nCryptocurrencies\n](https://coinmarketcap.com/)\nCryptocurrencies\n[![]()Ranking](https://coinmarketcap.com/)[![]()Categories](https://coinmarketcap.com/cryptocurrency-category/)[![]()Historical Snapshots](https://coinmarketcap.com/historical/)[![]()Token unlocks](https://coinmarketcap.com/token-unlocks/)[![]()Yield](https://coinmarketcap.com/yield/)[![]()Real-World Assets](https://coinmarketcap.com/real-world-assets/)\nLeaderboards\n[![]()Trending](https://coinmarketcap.com/trending-cryptocurrencies/)[![]()Upcoming](https://coinmarketcap.com/upcoming/)[![]()Recently Added](https://coinmarketcap.com/new/)[![]()Gainers &amp; Losers](https://coinmarketcap.com/gainers-losers/)[![]()Most Visited](https://coinmarketcap.com/most-viewed-pages/)[![]()Community Sentiment](https://coinmarketcap.com/sentiment/)[![]()Chain Ranking](https://coinmarketcap.com/chain-ranking/)\nNFT\n[![]()Overall ",
+        "highlights": []
+      },
+      {
+        "index": 1,
+        "title": "Bitcoin price today, BTC to USD live price, marketcap and chart",
+        "url": "https://www.coindesk.com/price/bitcoin",
+        "score": null,
+        "published_date": null,
+        "text": "Bitcoin price today, BTC to USD live price, marketcap and chart | CoinDesk\nSearch\n/\n[![Logo](https://www.coindesk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcoindesk-logo-new.38240150.svg&amp;w=384&amp;q=75&amp;dpl=dpl_CYPUXuNuYYaBo3LXRo6uUF9bjkHq)](https://www.coindesk.com/)\n* News\n* Video\n* [Prices](https://www.coindesk.com/price)\n* [Research](https://www.coindesk.com/research)\n* Consensus 2026\n* Data &amp; Indices\n* [Sponsored](https://www.coindesk.com/sponsored-content)\nSearch\n/\nen\n[\n![BTC logo](https://www.coindesk.com/_next/image?url=https%3A%2F%2Fresources.cryptocompare.com%2Fasset-management%2F1%2F1756822117897.png&amp;w=32&amp;q=75)\nBTC\n$91,482.28\n1.21%\n](https://www.coindesk.com/price/bitcoin)\n[\n![ETH logo](https://www.coindesk.com/_next/image?url=https%3A%2F%2Fresources.cryptocompare.com%2Fasset-management%2F2%2F1724756690647.png&amp;w=32&amp;q=75)\nETH\n$3,167.90\n2.47%\n](https://www.coindesk.com/price/ethereum)\n[\n![XRP logo](https://www.coindesk.com/_next/image?url=https",
+        "highlights": []
+      },
+      {
+        "index": 2,
+        "title": "Buy Bitcoin - BTC Price Today, Live Charts and News - Robinhood",
+        "url": "https://robinhood.com/us/en/crypto/BTC/",
+        "score": null,
+        "published_date": null,
+        "text": "Buy Bitcoin - BTC Price Today, Live Charts and News\n# Bitcoin\n\u200c\u200c\u200cLIVE\n1D\n1W\n1M\n3M\n1Y\n5Y\n## Related Lists\n[\n![Tradable Crypto](https://cdn.robinhood.com/app_assets/list_illustrations/crypto/portrait_48/1x.png)\nTradable Crypto\n](https://robinhood.com/lists/robinhood/97b746a5-bc2f-4c64-a828-1af0fc399bf9)\nDisclaimer: Prices displayed are for informational purposes only. Actual price quotes may differ.\n![](https://cdn.robinhood.com/assets/generated_assets/brand/_next/static/images/crypto-spaceship-up__ea14ae538e34e0aa158bb8ee337eedf8c440418e52d52d4d2c8da72cf4f645b8.svg)\n#### Why Robinhood?\nYou can buy or sell Bitcoin and other crypto 24/7!\n[Sign up](https://robinhood.com/signup)\n## Bitcoin News\n[\nSeeking Alpha15m\nYieldMax Bitcoin Option Income Strategy ETF declares $0.3054 dividend\nTo ensure this doesn\u2019t happen in the future, please enable Javascript and cookies in your browser.\nIf you have an ad-blocker enabled you may be blocked from pr...\n![YieldMax Bitcoin Option Income Strategy ETF dec",
+        "highlights": []
+      },
+      {
+        "index": 3,
+        "title": "Bitcoin Price, BTC Price, Live Charts, and Marketcap - Coinbase",
+        "url": "https://www.coinbase.com/price/bitcoin",
+        "score": null,
+        "published_date": null,
+        "text": "Bitcoin Price, BTC Price, Live Charts, and Marketcap: bitcoin price, bitcoin price usd, btc price\n[Skip to content](#skip-nav-content)[Skip to site index](#footer-site-index)\n[![Coinbase Logo](https://static-assets.coinbase.com/ui-infra/illustration/v1/pictogram/svg/light/coinbaseLogoNavigation-4.svg)](https://www.coinbase.com/)\n\udb81\udf4a\udb81\udcb0## Language and region\n\udb81\udf48Espa\u00f1ol\nUnited States\nEnglish\nUnited States\n\udb80\ude1aDeutsch\nGermany\nEnglish\nGermany\nEnglish\nUnited Kingdom\nEnglish\nFrance\nFran\u00e7ais\nFrance\nEnglish\nCanada\nFran\u00e7ais\nCanada\nEspa\u00f1ol\nSpain\nEnglish\nSpain\nPortugu\u00eas\nBrazil\nEnglish\nBrazil\nPortugu\u00eas\nPortugal\nEnglish\nPortugal\nEnglish\nAustralia\nEnglish\nSingapore\n\u4e2d\u6587Singapore\nItaliano\nItaly\nEnglish\nItaly\nNederlands\nNetherlands\nEnglish\nNetherlands\nEspa\u00f1ol\nArgentina\nEnglish\nArgentina\nEnglish\nIndia\nEspa\u00f1ol\nMexico\nEnglish\nMexico\nEnglish\nGlobal\nEspa\u00f1ol - Am\u00e9rica Latina\nGlobal\nFran\u00e7ais\nGlobal\nPolski\nGlobal\nP\u0443\u0441\u0441\u043a\u0438\u0439\nGlobal\n\u0e44\u0e17\u0e22Global\n\u7b80\u4f53\u4e2d\u6587Global\n\u7e41\u9ad4\u4e2d\u6587Global\n[Sign in](https://www.coinbase.com/login?locale=en)\n[Sign up]",
+        "highlights": []
+      },
+      {
+        "index": 4,
+        "title": "Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History",
+        "url": "https://finance.yahoo.com/quote/BTC-USD/",
+        "score": null,
+        "published_date": null,
+        "text": "Yahoo ist Teil der Yahoo-Markenfamilie.\n# guce\n[![](https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage.png)![](https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_w_bestfit_frontpage.png)guce](https://de.yahoo.com/)\nYahoo ist Teil derYahoo Markenfamilie![](../static/images/close.svg)Die Websites und Apps, die uns geh\u00f6ren und die wir betreiben, einschlie\u00dflich Yahoo, AOL, Engadget, In The Know und MAKERS.YahooMarkenfamilie.\nBei der Nutzung unserer Websites und Apps verwenden wirCookies![](../static/images/close.svg)Mithilfe von Cookies (einschlie\u00dflich \u00e4hnlicher Technologien wie der Webspeicherung) k\u00f6nnen die Betreiber von Websites und Apps Informationen auf Ihrem Ger\u00e4t speichern und ablesen. Weitere Informationen finden Sie in unserer[Cookie-Richtlinie](https://consent.yahoo.com/redirect?to=https://legal.yahoo.com/ie/de/yahoo/privacy/cookies/index.html&amp;brandDomain=&amp;brandId=yahoo&amp;tos=eu&amp;step=&amp;sessionId=3_cc-session_86940e5b-0664-4879-be68-5618b6d3cba3&",
+        "highlights": []
+      },
+      {
+        "index": 5,
+        "title": "Bitcoin price today - BTC price chart & live trends - Kraken",
+        "url": "https://www.kraken.com/prices/bitcoin",
+        "score": null,
+        "published_date": null,
+        "text": "Bitcoin price today - BTC price chart &amp; live trends\n[Home](https://www.kraken.com/)[Crypto Prices](https://www.kraken.com/prices)Bitcoin\n$93,431.00\npast\n[Buy BTC](https://app.kraken.com/JDNW)\n# Bitcoin price\n$93,431.00\npast\nBTC\n![BTC icon](https://assets.kraken.com/marketing/web/icons-uni-webp/s_btc.webp?i=kds)\n# Bitcoin price\nBTC\n![BTC icon](https://assets.kraken.com/marketing/web/icons-uni-webp/s_btc.webp?i=kds)\nBTC\n![BTC icon](https://assets.kraken.com/marketing/web/icons-uni-webp/s_btc.webp?i=kds)\n$93,431.00\n+2.24% past 24 hours\n+2.24% past 24 hours\n1H\n24H\n1W\n1M\n1Y\n5Y\nUSD\n1H\n24H\n1W\n1M\n1Y\n5Y\n#### Market stats\nLast updated\nMarket cap\n$1.86T\nCirculating supply\n20M\nVolume\n$49.89B\nMarket rank\n#1\n24H High\n$93,955.17\n24H Low\n$90,925.36\n24H Change\n$2,046.51\nAll-time high\n$126,080.00\n[Buy Bitcoin](https://www.kraken.com/sign-up)\n## Bitcoin price today\nBitcoin price today is**$93,431.00**.\nIn the last 24 hours Bitcoin's price moved+2.24%. The current[BTC to USD](https://www.kraken.com/co",
+        "highlights": []
+      },
+      {
+        "index": 6,
+        "title": "Bitbo: Live Bitcoin Price & Chart",
+        "url": "https://bitbo.io/",
+        "score": null,
+        "published_date": "",
+        "text": "# Bitcoin Live Price (USD)\n\n$\n\n89,537.68\n\n+\n\n0\n\n(\n\n0\n\n%\n\n)\n\n### 24h High\n\n90,296.32\n\n### 24h Low\n\n88,932.00\n\n### 24h Vol (BTC)\n\n155,800.12\n\n### 24h Vol (USD)\n\n13.94\n\nB\n\n### ATH (USD)\n\n126,277.05\n\n### Market Cap\n\n1.78\n\nT\n\n### Sats per USD\n\n1,117\n\n[100+ free Bitcoin charts and indicators.\\\n\\\ncharts.bitbo.io](https://charts.bitbo.io/index/)\n\n[1H](https://bitbo.io/) [1D](https://bitbo.io/) [7D](https://bitbo.io/) [1M](https://bitbo.io/) [YTD](https://bitbo.io/) [1Y](https://bitbo.io/) [5Y](https://bitbo.io/) [ALL](https://bitbo.io/)\n\nLOG\n\nLoading...\n\n[100+ free Bitcoin charts and indicators.\\\n\\\ncharts.bitbo.io](https://charts.bitbo.io/index/)\n\n## Latest Articles\n\n[100+ free Bitcoin charts and indicators.\\\n\\\ncharts.bitbo.io](https://charts.bitbo.io/index/)\n\n## Bitcoin Market Stats\n\n### 24hr Range\n\n$\n88,932.00\n-$\n90,296.32\n\n### 24h Vol (BTC)\n\n155,800\n\n### 24h Vol (USD)\n\n$\n13.94\nB\n\n### ATH (USD)\n\n$\n126,277.05\n\n### Market Cap\n\n$\n1.78\nT\n\n### Sats per USD\n\n1,117\n\n## Latest Articles\n\n## [Blockcha",
+        "highlights": []
+      },
+      {
+        "index": 7,
+        "title": "Bitcoin Price (BTC), Market Cap, Price Today & Chart History",
+        "url": "https://blockworks.co/price/btc",
+        "score": null,
+        "published_date": null,
+        "text": "Bitcoin Price (BTC), Market Cap, Price Today &amp; Chart History - Blockworks\nOpen menu\nBrands\n[newsletters](https://blockworks.co/newsletter)\n[podcasts](https://blockworks.co/podcasts)\n[events](https://blockworks.co/events)\n[roundtables](https://blockworks.co/roundtables)\n[](https://blockworks.co/)\n[token transparency](https://blockworks.co/token-transparency)\n[etf tracker](https://blockworks.co/analytics/bitcoin-etf/tracker)\n[prices](https://blockworks.co/prices)\n[research](https://blockworksresearch.com/?ref=blockworks.co)\n[analytics](https://blockworks.co/analytics)\n[](https://blockworks.co/search)\n![btc](https://blockworks.co/_next/image?url=https%3A%2F%2Fblockworks-assets.imgix.net%2F1%2Flarge%2Fbitcoin.png%3F1696501400&amp;w=1920&amp;q=75)\n# BitcoinBTC\nLiveBitcoinprice updates and the latestBitcoinnews.\nprice\nsponsored by\n[Blockworks Research](https://www.blockworksresearch.com)\n$91,499\n$0\n(0%)\n24h low\n$91,036.00\n24h high\n$93,667.00\nTradingView Chart\nThe liveBitcoinprice today i",
+        "highlights": []
+      },
+      {
+        "index": 8,
+        "title": "Bitcoin Price: BTC Live Price Chart, Market Cap & News Today | CoinGecko",
+        "url": "https://www.coingecko.com/en/coins/bitcoin",
+        "score": null,
+        "published_date": "2025-12-04T21:15:08.000Z",
+        "text": "Portfolios\n\nAdd to New Portfolio\n\nTrack\non the go\n\nGet real-time updates via push notifications on the app.\n\n[Open App](https://coingecko.app.link/yaxgIjInuLb)\n\nBTC$92,268.90\n\n1.3%\n\nBuy\n\nSponsored\n\nAdd\n\n# Bitcoin BTC Price\n\n#1\n\n$92,268.90\n\n1.3%\n\nHow is the price of Bitcoin (BTC) calculated?\n\nThe price of Bitcoin (BTC) is calculated in real-time by aggregating the latest data across 204 exchanges and 2814 markets, using a global volume-weighted average formula. Learn more about [how crypto prices are calculated](https://www.coingecko.com/en/methodology) on CoinGecko.\n\n1.0000 BTC0.0%\n\n$91,029.39\n24h Range\n$94,000.85\n\nAdd to Portfolio\n\u2022\n2,275,592 added\n\nGet BTC Alerts within the CoinGecko app\n\nGet BTC Alerts within the CoinGecko app\n\n## Bitcoin Price Chart (BTC)\n\n24H\n\n7D\n\n1M\n\n3M\n\n1Y\n\nMax\n\\|\nLOG\n\nPrice\n\nMarket Cap\n\nTradingView\n\nDownload as PNG\nDownload as SVG\nDownload as JPEG\nDownload as PDF\n\nCompare with:\n\nBTC\n\nETH\n\nNeed more data?\n[Explore our API](https://www.coingecko.com/en/api)\n\nChar",
+        "highlights": []
+      },
+      {
+        "index": 9,
+        "title": "Bitcoin Price Today | BTC to USD Live Price, Market Cap & Chart",
+        "url": "https://www.binance.com/en/price/bitcoin",
+        "score": null,
+        "published_date": "2021-09-08T00:00:00.000Z",
+        "text": "[Home](https://www.binance.com/en)\n\n[Crypto prices](https://www.binance.com/en/price)\n\nBitcoin Price (BTC)\n\nShare\n\n# Bitcoin Price (BTC)\n\nHOT\n\nCurrency:USD-$\n\n[AED-\u062f.\u0625](https://www.binance.com/en-US/price/bitcoin/AED)\n\n[ARS-ARS$](https://www.binance.com/en-US/price/bitcoin/ARS)\n\n[AUD-A$](https://www.binance.com/en-US/price/bitcoin/AUD)\n\n[BDT-\u09f3](https://www.binance.com/en-US/price/bitcoin/BDT)\n\n[BGN-\u043b\u0432](https://www.binance.com/en-US/price/bitcoin/BGN)\n\n[BHD-.\u062f.\u0628](https://www.binance.com/en-US/price/bitcoin/BHD)\n\n[BOB-$b](https://www.binance.com/en-US/price/bitcoin/BOB)\n\n[BRL-R$](https://www.binance.com/en-US/price/bitcoin/BRL)\n\n[CAD-C$](https://www.binance.com/en-US/price/bitcoin/CAD)\n\n[CHF-CHF](https://www.binance.com/en-US/price/bitcoin/CHF)\n\n[CNY-\u00a5](https://www.binance.com/en-US/price/bitcoin/CNY)\n\n[COP-COL$](https://www.binance.com/en-US/price/bitcoin/COP)\n\n[CZK-K\u010d](https://www.binance.com/en-US/price/bitcoin/CZK)\n\n[DKK-KR](https://www.binance.com/en-US/price/bitcoin/DKK)\n\n[EGP-E\u00a3](",
+        "highlights": []
+      }
+    ],
+    "percentiles": null,
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a Research Agent with access to specialized tools for market data and forecasting.\n\nYour job is to gather information to help forecast the following question. You can use tools to:\n1. Get market forecast distributions (bonds, spreads, VIX) - these return percentile data\n2. Fetch financial data (Yahoo Finance, options, FRED economic data)\n3. Search the web for relevant news and context\n\nFor MARKET FORECAST questions (bond yields, stock spreads, VIX levels), use the appropriate forecast tool FIRST.\nThese tools run Monte Carlo simulations and return probability distributions.\n\nFor GENERAL questions, use data tools and web search to gather context.\n\nAfter gathering data, write a SHORT REPORT synthesizing:\n- Key quantitative data from tool calls\n- Probability distributions (if from forecast tools)\n- Relevant context and factors\n\nBe concise. The forecaster will use your report to make predictions."
+      },
+      {
+        "role": "user",
+        "content": "Question to forecast:\nWhat is the current price of Bitcoin?\n\nInitial search results:\n[Source 1]\nTitle: Bitcoin price today, BTC to USD live price, marketcap and chart\nDate: None\nURL: https://coinmarketcap.com/currencies/bitcoin/\nContent: Bitcoin price today, BTC to USD live price, marketcap and chart | CoinMarketCap\n[](https://coinmarketcap.com/)\n[\nCryptocurrencies\n](https://coinmarketcap.com/)\nCryptocurrencies\n[![]()Ranking](https://coinmarketcap.com/)[![]()Categories](https://coinmarketcap.com/cryptocurrency-category/)[![]()Historical Snapshots](https://coinmarketcap.com/historical/)[![]()Token unlocks](https://coinmarketcap.com/token-unlocks/)[![]()Yield](https://coinmarketcap.com/yield/)[![]()Real-World Assets](https://coinmarketcap.com/real-world-assets/)\nLeaderboards\n[![]()Trending](https://coinmarketcap.com/trending-cryptocurrencies/)[![]()Upcoming](https://coinmarketcap.com/upcoming/)[![]()Recently Added](https://coinmarketcap.com/new/)[![]()Gainers &amp; Losers](https://coinmarketcap.com/gainers-losers/)[![]()Most\n\n[Source 2]\nTitle: Bitcoin price today, BTC to USD live price, marketcap and chart\nDate: None\nURL: https://www.coindesk.com/price/bitcoin\nContent: Bitcoin price today, BTC to USD live price, marketcap and chart | CoinDesk\nSearch\n/\n[![Logo](https://www.coindesk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcoindesk-logo-new.38240150.svg&amp;w=384&amp;q=75&amp;dpl=dpl_CYPUXuNuYYaBo3LXRo6uUF9bjkHq)](https://www.coindesk.com/)\n* News\n* Video\n* [Prices](https://www.coindesk.com/price)\n* [Research](https://www.coindesk.com/research)\n* Consensus 2026\n* Data &amp; Indices\n* [Sponsored](https://www.coindesk.com/sponsored-content)\nSearch\n/\nen\n[\n![BTC logo](https://www.coindesk.com/_next/image?url=https%3A%2F%2Fresources.cryptocompare.com%2Fasset-management%2F1%2F1756822117897.png&amp;w=32&amp;q=75)\nBTC\n$91,482.28\n1.21%\n](https://www.coindesk.com/price/bitcoin)\n[\n![ETH logo](https://www.coindesk.com/_next/image?url=https%3A%2F%2Fresources.cry\n\n[Source 3]\nTitle: Buy Bitcoin - BTC Price Today, Live Charts and News - Robinhood\nDate: None\nURL: https://robinhood.com/us/en/crypto/BTC/\nContent: Buy Bitcoin - BTC Price Today, Live Charts and News\n# Bitcoin\n\u200c\u200c\u200cLIVE\n1D\n1W\n1M\n3M\n1Y\n5Y\n## Related Lists\n[\n![Tradable Crypto](https://cdn.robinhood.com/app_assets/list_illustrations/crypto/portrait_48/1x.png)\nTradable Crypto\n](https://robinhood.com/lists/robinhood/97b746a5-bc2f-4c64-a828-1af0fc399bf9)\nDisclaimer: Prices displayed are for informational purposes only. Actual price quotes may differ.\n![](https://cdn.robinhood.com/assets/generated_assets/brand/_next/static/images/crypto-spaceship-up__ea14ae538e34e0aa158bb8ee337eedf8c440418e52d52d4d2c8da72cf4f645b8.svg)\n#### Why Robinhood?\nYou can buy or sell Bitcoin and other crypto 24/7!\n[Sign up](https://robinhood.com/signup)\n## Bitcoin News\n[\nSeeking Alpha15m\nYieldMax Bitcoin Option Income Strategy ETF declares $0.3054 dividend\nTo ensure th\n\n[Source 4]\nTitle: Bitcoin Price, BTC Price, Live Charts, and Marketcap - Coinbase\nDate: None\nURL: https://www.coinbase.com/price/bitcoin\nContent: Bitcoin Price, BTC Price, Live Charts, and Marketcap: bitcoin price, bitcoin price usd, btc price\n[Skip to content](#skip-nav-content)[Skip to site index](#footer-site-index)\n[![Coinbase Logo](https://static-assets.coinbase.com/ui-infra/illustration/v1/pictogram/svg/light/coinbaseLogoNavigation-4.svg)](https://www.coinbase.com/)\n\udb81\udf4a\udb81\udcb0## Language and region\n\udb81\udf48Espa\u00f1ol\nUnited States\nEnglish\nUnited States\n\udb80\ude1aDeutsch\nGermany\nEnglish\nGermany\nEnglish\nUnited Kingdom\nEnglish\nFrance\nFran\u00e7ais\nFrance\nEnglish\nCanada\nFran\u00e7ais\nCanada\nEspa\u00f1ol\nSpain\nEnglish\nSpain\nPortugu\u00eas\nBrazil\nEnglish\nBrazil\nPortugu\u00eas\nPortugal\nEnglish\nPortugal\nEnglish\nAustralia\nEnglish\nSingapore\n\u4e2d\u6587Singapore\nItaliano\nItaly\nEnglish\nItaly\nNederlands\nNetherlands\nEnglish\nNetherlands\nEspa\u00f1ol\nArgentina\nEnglish\nArgentina\nEnglish\nIndia\nEspa\u00f1ol\nMexico\n\n\n[Source 5]\nTitle: Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History\nDate: None\nURL: https://finance.yahoo.com/quote/BTC-USD/\nContent: Yahoo ist Teil der Yahoo-Markenfamilie.\n# guce\n[![](https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage.png)![](https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_w_bestfit_frontpage.png)guce](https://de.yahoo.com/)\nYahoo ist Teil derYahoo Markenfamilie![](../static/images/close.svg)Die Websites und Apps, die uns geh\u00f6ren und die wir betreiben, einschlie\u00dflich Yahoo, AOL, Engadget, In The Know und MAKERS.YahooMarkenfamilie.\nBei der Nutzung unserer Websites und Apps verwenden wirCookies![](../static/images/close.svg)Mithilfe von Cookies (einschlie\u00dflich \u00e4hnlicher Technologien wie der Webspeicherung) k\u00f6nnen die Betreiber von Websites und Apps Informationen auf Ihrem Ger\u00e4t speichern und ablesen. Weitere Informationen finden Sie in unserer[Cookie-Richtlinie](https://consent.yahoo\n\n\nBased on these search results and your available tools:\n1. If you see an interesting link, use crawl_urls to get full content\n2. If you need financial data, use the data tools (yahoo, fred, options)\n3. If this is a market question, use forecast tools for distributions\n\nWhen done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.\nFocus on NUMBERS and FACTS that help forecasting.\n"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_78728408",
+            "type": "function",
+            "function": {
+              "name": "get_yahoo_data",
+              "arguments": "{\"ticker\": \"BTC-USD\", \"data_type\": \"price\"}"
+            }
+          },
+          {
+            "id": "call_11541149",
+            "type": "function",
+            "function": {
+              "name": "get_yahoo_data",
+              "arguments": "{\"ticker\": \"BTC-USD\", \"data_type\": \"info\"}"
+            }
+          },
+          {
+            "id": "call_18614371",
+            "type": "function",
+            "function": {
+              "name": "get_yahoo_data",
+              "arguments": "{\"ticker\": \"BTC-USD\", \"data_type\": \"history\", \"period\": \"1d\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_78728408",
+        "content": "{\n  \"type\": \"data_report\",\n  \"title\": \"BTC-USD - Price\",\n  \"source\": \"Yahoo Finance\",\n  \"data\": {\n    \"ticker\": \"BTC-USD\",\n    \"price\": 91044.164,\n    \"previous_close\": 93707.15,\n    \"change\": -2662.98599999999,\n    \"change_percent\": -2.841817299960558,\n    \"day_high\": 93707.15,\n    \"day_low\": 90714.0,\n    \"volume\": 47561969664,\n    \"market_cap\": 1818406813696,\n    \"currency\": \"USD\",\n    \"exchange\": \"CCC\",\n    \"quote_type\": \"CRYPTOCURRENCY\"\n  },\n  \"fetched_at\": \"2026-01-07T14:52:33.060012\"\n}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_11541149",
+        "content": "{\n  \"type\": \"data_report\",\n  \"title\": \"BTC-USD - Info\",\n  \"source\": \"Yahoo Finance\",\n  \"data\": {\n    \"ticker\": \"BTC-USD\",\n    \"name\": \"Bitcoin USD\",\n    \"quote_type\": \"CRYPTOCURRENCY\",\n    \"sector\": null,\n    \"industry\": null,\n    \"country\": null,\n    \"currency\": \"USD\",\n    \"exchange\": \"CCC\",\n    \"market_cap\": 1818406813696,\n    \"enterprise_value\": null,\n    \"trailing_pe\": null,\n    \"forward_pe\": null,\n    \"dividend_yield\": null,\n    \"52_week_high\": 126198.07,\n    \"52_week_low\": 74436.68,\n    \"50_day_avg\": 89243.984,\n    \"200_day_avg\": 106601.45,\n    \"beta\": null\n  },\n  \"fetched_at\": \"2026-01-07T14:52:33.107503\"\n}"
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_18614371",
+        "content": "{\n  \"type\": \"data_report\",\n  \"title\": \"BTC-USD - History\",\n  \"source\": \"Yahoo Finance\",\n  \"data\": {\n    \"ticker\": \"BTC-USD\",\n    \"period\": \"1d\",\n    \"data_points\": 1,\n    \"date_range\": {\n      \"start\": \"2026-01-07\",\n      \"end\": \"2026-01-07\"\n    },\n    \"latest\": {\n      \"date\": \"2026-01-07\",\n      \"open\": 93707.1484375,\n      \"high\": 93707.1484375,\n      \"low\": 90714.0,\n      \"close\": 91044.1640625,\n      \"volume\": 47561969664\n    },\n    \"statistics\": {\n      \"high_period\": 93707.1484375,\n      \"low_period\": 90714.0,\n      \"avg_close\": 91044.1640625,\n      \"avg_volume\": 47561969664.0\n    },\n    \"recent_closes\": [\n      91044.1640625\n    ]\n  },\n  \"fetched_at\": \"2026-01-07T14:52:33.175643\"\n}"
+      }
+    ],
+    "formatted_for_forecaster": "=== RESEARCH SYNTHESIS ===\n**Bitcoin Current Price (BTC-USD, Yahoo Finance, fetched 2026-01-07):** $91,044.16 USD (down 2.84% or -$2,662.99 from previous close of $93,707.15). Day range: $90,714 low to $93,707 high. 24h volume: 47.56B USD. Market cap: $1.818T USD.\n\n**Key Metrics:** 52-week range $74,436.68\u2013$126,198.07. 50-day MA: $89,243.98. 200-day MA: $106,601.45. Recent search snippets (CoinDesk): ~$91,482 (minor timing variance).\n\n**Context for Forecasting:** BTC trading below key MAs amid high volume, signaling potential volatility. No forecast distributions available; price reflects intra-day pullback from recent highs.\n\n=== SEARCH RESULTS ===\n[Source 1]\nTitle: Bitcoin price today, BTC to USD live price, marketcap and chart\nDate: None\nURL: https://coinmarketcap.com/currencies/bitcoin/\nContent: Bitcoin price today, BTC to USD live price, marketcap and chart | CoinMarketCap\n[](https://coinmarketcap.com/)\n[\nCryptocurrencies\n](https://coinmarketcap.com/)\nCryptocurrencies\n[![]()Ranking](https://coinmarketcap.com/)[![]()Categories](https://coinmarketcap.com/cryptocurrency-category/)[![]()Historical Snapshots](https://coinmarketcap.com/historical/)[![]()Token unlocks](https://coinmarketcap.com/token-unlocks/)[![]()Yield](https://coinmarketcap.com/yield/)[![]()Real-World Assets](https://coinmarketcap.com/real-world-assets/)\nLeaderboards\n[![]()Trending](https://coinmarketcap.com/trending-cryptocurrencies/)[![]()Upcoming](https://coinmarketcap.com/upcoming/)[![]()Recently Added](https://coinmarketcap.com/new/)[![]()Gainers &amp; Losers](https://coinmarketcap.com/gainers-losers/)[![]()Most\n\n[Source 2]\nTitle: Bitcoin price today, BTC to USD live price, marketcap and chart\nDate: None\nURL: https://www.coindesk.com/price/bitcoin\nContent: Bitcoin price today, BTC to USD live price, marketcap and chart | CoinDesk\nSearch\n/\n[![Logo](https://www.coindesk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcoindesk-logo-new.38240150.svg&amp;w=384&amp;q=75&amp;dpl=dpl_CYPUXuNuYYaBo3LXRo6uUF9bjkHq)](https://www.coindesk.com/)\n* News\n* Video\n* [Prices](https://www.coindesk.com/price)\n* [Research](https://www.coindesk.com/research)\n* Consensus 2026\n* Data &amp; Indices\n* [Sponsored](https://www.coindesk.com/sponsored-content)\nSearch\n/\nen\n[\n![BTC logo](https://www.coindesk.com/_next/image?url=https%3A%2F%2Fresources.cryptocompare.com%2Fasset-management%2F1%2F1756822117897.png&amp;w=32&amp;q=75)\nBTC\n$91,482.28\n1.21%\n](https://www.coindesk.com/price/bitcoin)\n[\n![ETH logo](https://www.coindesk.com/_next/image?url=https%3A%2F%2Fresources.cry\n\n[Source 3]\nTitle: Buy Bitcoin - BTC Price Today, Live Charts and News - Robinhood\nDate: None\nURL: https://robinhood.com/us/en/crypto/BTC/\nContent: Buy Bitcoin - BTC Price Today, Live Charts and News\n# Bitcoin\n\u200c\u200c\u200cLIVE\n1D\n1W\n1M\n3M\n1Y\n5Y\n## Related Lists\n[\n![Tradable Crypto](https://cdn.robinhood.com/app_assets/list_illustrations/crypto/portrait_48/1x.png)\nTradable Crypto\n](https://robinhood.com/lists/robinhood/97b746a5-bc2f-4c64-a828-1af0fc399bf9)\nDisclaimer: Prices displayed are for informational purposes only. Actual price quotes may differ.\n![](https://cdn.robinhood.com/assets/generated_assets/brand/_next/static/images/crypto-spaceship-up__ea14ae538e34e0aa158bb8ee337eedf8c440418e52d52d4d2c8da72cf4f645b8.svg)\n#### Why Robinhood?\nYou can buy or sell Bitcoin and other crypto 24/7!\n[Sign up](https://robinhood.com/signup)\n## Bitcoin News\n[\nSeeking Alpha15m\nYieldMax Bitcoin Option Income Strategy ETF declares $0.3054 dividend\nTo ensure th\n\n[Source 4]\nTitle: Bitcoin Price, BTC Price, Live Charts, and Marketcap - Coinbase\nDate: None\nURL: https://www.coinbase.com/price/bitcoin\nContent: Bitcoin Price, BTC Price, Live Charts, and Marketcap: bitcoin price, bitcoin price usd, btc price\n[Skip to content](#skip-nav-content)[Skip to site index](#footer-site-index)\n[![Coinbase Logo](https://static-assets.coinbase.com/ui-infra/illustration/v1/pictogram/svg/light/coinbaseLogoNavigation-4.svg)](https://www.coinbase.com/)\n\udb81\udf4a\udb81\udcb0## Language and region\n\udb81\udf48Espa\u00f1ol\nUnited States\nEnglish\nUnited States\n\udb80\ude1aDeutsch\nGermany\nEnglish\nGermany\nEnglish\nUnited Kingdom\nEnglish\nFrance\nFran\u00e7ais\nFrance\nEnglish\nCanada\nFran\u00e7ais\nCanada\nEspa\u00f1ol\nSpain\nEnglish\nSpain\nPortugu\u00eas\nBrazil\nEnglish\nBrazil\nPortugu\u00eas\nPortugal\nEnglish\nPortugal\nEnglish\nAustralia\nEnglish\nSingapore\n\u4e2d\u6587Singapore\nItaliano\nItaly\nEnglish\nItaly\nNederlands\nNetherlands\nEnglish\nNetherlands\nEspa\u00f1ol\nArgentina\nEnglish\nArgentina\nEnglish\nIndia\nEspa\u00f1ol\nMexico\n\n\n[Source 5]\nTitle: Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History\nDate: None\nURL: https://finance.yahoo.com/quote/BTC-USD/\nContent: Yahoo ist Teil der Yahoo-Markenfamilie.\n# guce\n[![](https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage.png)![](https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_w_bestfit_frontpage.png)guce](https://de.yahoo.com/)\nYahoo ist Teil derYahoo Markenfamilie![](../static/images/close.svg)Die Websites und Apps, die uns geh\u00f6ren und die wir betreiben, einschlie\u00dflich Yahoo, AOL, Engadget, In The Know und MAKERS.YahooMarkenfamilie.\nBei der Nutzung unserer Websites und Apps verwenden wirCookies![](../static/images/close.svg)Mithilfe von Cookies (einschlie\u00dflich \u00e4hnlicher Technologien wie der Webspeicherung) k\u00f6nnen die Betreiber von Websites und Apps Informationen auf Ihrem Ger\u00e4t speichern und ablesen. Weitere Informationen finden Sie in unserer[Cookie-Richtlinie](https://consent.yahoo\n\n[Source 6]\nTitle: Bitcoin price today - BTC price chart & live trends - Kraken\nDate: None\nURL: https://www.kraken.com/prices/bitcoin\nContent: Bitcoin price today - BTC price chart &amp; live trends\n[Home](https://www.kraken.com/)[Crypto Prices](https://www.kraken.com/prices)Bitcoin\n$93,431.00\npast\n[Buy BTC](https://app.kraken.com/JDNW)\n# Bitcoin price\n$93,431.00\npast\nBTC\n![BTC icon](https://assets.kraken.com/marketing/web/icons-uni-webp/s_btc.webp?i=kds)\n# Bitcoin price\nBTC\n![BTC icon](https://assets.kraken.com/marketing/web/icons-uni-webp/s_btc.webp?i=kds)\nBTC\n![BTC icon](https://assets.kraken.com/marketing/web/icons-uni-webp/s_btc.webp?i=kds)\n$93,431.00\n+2.24% past 24 hours\n+2.24% past 24 hours\n1H\n24H\n1W\n1M\n1Y\n5Y\nUSD\n1H\n24H\n1W\n1M\n1Y\n5Y\n#### Market stats\nLast updated\nMarket cap\n$1.86T\nCirculating supply\n20M\nVolume\n$49.89B\nMarket rank\n#1\n24H High\n$93,955.17\n24H Low\n$90,925.36\n24H Change\n$2,046.51\nAll-time high\n$126,080.00\n[Buy B\n\n[Source 7]\nTitle: Bitbo: Live Bitcoin Price & Chart\nDate: \nURL: https://bitbo.io/\nContent: # Bitcoin Live Price (USD)\n\n$\n\n89,537.68\n\n+\n\n0\n\n(\n\n0\n\n%\n\n)\n\n### 24h High\n\n90,296.32\n\n### 24h Low\n\n88,932.00\n\n### 24h Vol (BTC)\n\n155,800.12\n\n### 24h Vol (USD)\n\n13.94\n\nB\n\n### ATH (USD)\n\n126,277.05\n\n### Market Cap\n\n1.78\n\nT\n\n### Sats per USD\n\n1,117\n\n[100+ free Bitcoin charts and indicators.\\\n\\\ncharts.bitbo.io](https://charts.bitbo.io/index/)\n\n[1H](https://bitbo.io/) [1D](https://bitbo.io/) [7D](https://bitbo.io/) [1M](https://bitbo.io/) [YTD](https://bitbo.io/) [1Y](https://bitbo.io/) [5Y](https://bitbo.io/) [ALL](https://bitbo.io/)\n\nLOG\n\nLoading...\n\n[100+ free Bitcoin charts and indicators.\\\n\\\ncharts.bitbo.io](https://charts.bitbo.io/index/)\n\n## Latest Articles\n\n[100+ free Bitcoin charts and indicators.\\\n\\\ncharts.bitbo.io](https://charts.bitbo.io/index/)\n\n## Bitcoin Market Stats\n\n### 24hr Ran\n\n[Source 8]\nTitle: Bitcoin Price (BTC), Market Cap, Price Today & Chart History\nDate: None\nURL: https://blockworks.co/price/btc\nContent: Bitcoin Price (BTC), Market Cap, Price Today &amp; Chart History - Blockworks\nOpen menu\nBrands\n[newsletters](https://blockworks.co/newsletter)\n[podcasts](https://blockworks.co/podcasts)\n[events](https://blockworks.co/events)\n[roundtables](https://blockworks.co/roundtables)\n[](https://blockworks.co/)\n[token transparency](https://blockworks.co/token-transparency)\n[etf tracker](https://blockworks.co/analytics/bitcoin-etf/tracker)\n[prices](https://blockworks.co/prices)\n[research](https://blockworksresearch.com/?ref=blockworks.co)\n[analytics](https://blockworks.co/analytics)\n[](https://blockworks.co/search)\n![btc](https://blockworks.co/_next/image?url=https%3A%2F%2Fblockworks-assets.imgix.net%2F1%2Flarge%2Fbitcoin.png%3F1696501400&amp;w=1920&amp;q=75)\n# BitcoinBTC\nLiveBitcoinprice updates and t\n\n[Source 9]\nTitle: Bitcoin Price: BTC Live Price Chart, Market Cap & News Today | CoinGecko\nDate: 2025-12-04T21:15:08.000Z\nURL: https://www.coingecko.com/en/coins/bitcoin\nContent: Portfolios\n\nAdd to New Portfolio\n\nTrack\non the go\n\nGet real-time updates via push notifications on the app.\n\n[Open App](https://coingecko.app.link/yaxgIjInuLb)\n\nBTC$92,268.90\n\n1.3%\n\nBuy\n\nSponsored\n\nAdd\n\n# Bitcoin BTC Price\n\n#1\n\n$92,268.90\n\n1.3%\n\nHow is the price of Bitcoin (BTC) calculated?\n\nThe price of Bitcoin (BTC) is calculated in real-time by aggregating the latest data across 204 exchanges and 2814 markets, using a global volume-weighted average formula. Learn more about [how crypto prices are calculated](https://www.coingecko.com/en/methodology) on CoinGecko.\n\n1.0000 BTC0.0%\n\n$91,029.39\n24h Range\n$94,000.85\n\nAdd to Portfolio\n\u2022\n2,275,592 added\n\nGet BTC Alerts within the CoinGecko app\n\nGet BTC Alerts within the CoinGecko app\n\n## Bitcoin Price Chart (BTC)\n\n24H\n\n7D\n\n1M\n\n3M\n\n1Y\n\nMax\n\\|\nL\n\n[Source 10]\nTitle: Bitcoin Price Today | BTC to USD Live Price, Market Cap & Chart\nDate: 2021-09-08T00:00:00.000Z\nURL: https://www.binance.com/en/price/bitcoin\nContent: [Home](https://www.binance.com/en)\n\n[Crypto prices](https://www.binance.com/en/price)\n\nBitcoin Price (BTC)\n\nShare\n\n# Bitcoin Price (BTC)\n\nHOT\n\nCurrency:USD-$\n\n[AED-\u062f.\u0625](https://www.binance.com/en-US/price/bitcoin/AED)\n\n[ARS-ARS$](https://www.binance.com/en-US/price/bitcoin/ARS)\n\n[AUD-A$](https://www.binance.com/en-US/price/bitcoin/AUD)\n\n[BDT-\u09f3](https://www.binance.com/en-US/price/bitcoin/BDT)\n\n[BGN-\u043b\u0432](https://www.binance.com/en-US/price/bitcoin/BGN)\n\n[BHD-.\u062f.\u0628](https://www.binance.com/en-US/price/bitcoin/BHD)\n\n[BOB-$b](https://www.binance.com/en-US/price/bitcoin/BOB)\n\n[BRL-R$](https://www.binance.com/en-US/price/bitcoin/BRL)\n\n[CAD-C$](https://www.binance.com/en-US/price/bitcoin/CAD)\n\n[CHF-CHF](https://www.binance.com/en-US/price/bitcoin/CHF)\n\n[CNY-\u00a5](https://www.binance.com/en-US/price/bi\n\n\n=== BTC-USD - PRICE ===\nticker: BTC-USD\nprice: 91044.1640\nprevious_close: 93707.1500\nchange: -2662.9860\nchange_percent: -2.8418\nday_high: 93707.1500\nday_low: 90714.0000\nvolume: 47561969664\nmarket_cap: 1818406813696\ncurrency: USD\nexchange: CCC\nquote_type: CRYPTOCURRENCY\n\n=== BTC-USD - INFO ===\nticker: BTC-USD\nname: Bitcoin USD\nquote_type: CRYPTOCURRENCY\nsector: None\nindustry: None\ncountry: None\ncurrency: USD\nexchange: CCC\nmarket_cap: 1818406813696\nenterprise_value: None\ntrailing_pe: None\nforward_pe: None\ndividend_yield: None\n52_week_high: 126198.0700\n52_week_low: 74436.6800\n50_day_avg: 89243.9840\n200_day_avg: 106601.4500\nbeta: None\n\n=== BTC-USD - HISTORY ===\nticker: BTC-USD\nperiod: 1d\ndata_points: 1\ndate_range:\n  start: 2026-01-07\n  end: 2026-01-07\nlatest:\n  date: 2026-01-07\n  open: 93707.1484\n  high: 93707.1484\n  low: 90714.0000\n  close: 91044.1641\n  volume: 47561969664\nstatistics:\n  high_period: 93707.1484\n  low_period: 90714.0000\n  avg_close: 91044.1641\n  avg_volume: 47561969664.0000\nrecent_closes: [91044.1640625]..."
+  },
+  "research_messages": [
+    {
+      "role": "system",
+      "content": "You are a Research Agent with access to specialized tools for market data and forecasting.\n\nYour job is to gather information to help forecast the following question. You can use tools to:\n1. Get market forecast distributions (bonds, spreads, VIX) - these return percentile data\n2. Fetch financial data (Yahoo Finance, options, FRED economic data)\n3. Search the web for relevant news and context\n\nFor MARKET FORECAST questions (bond yields, stock spreads, VIX levels), use the appropriate forecast tool FIRST.\nThese tools run Monte Carlo simulations and return probability distributions.\n\nFor GENERAL questions, use data tools and web search to gather context.\n\nAfter gathering data, write a SHORT REPORT synthesizing:\n- Key quantitative data from tool calls\n- Probability distributions (if from forecast tools)\n- Relevant context and factors\n\nBe concise. The forecaster will use your report to make predictions."
+    },
+    {
+      "role": "user",
+      "content": "Question to forecast:\nWhat is the current price of Bitcoin?\n\nInitial search results:\n[Source 1]\nTitle: Bitcoin price today, BTC to USD live price, marketcap and chart\nDate: None\nURL: https://coinmarketcap.com/currencies/bitcoin/\nContent: Bitcoin price today, BTC to USD live price, marketcap and chart | CoinMarketCap\n[](https://coinmarketcap.com/)\n[\nCryptocurrencies\n](https://coinmarketcap.com/)\nCryptocurrencies\n[![]()Ranking](https://coinmarketcap.com/)[![]()Categories](https://coinmarketcap.com/cryptocurrency-category/)[![]()Historical Snapshots](https://coinmarketcap.com/historical/)[![]()Token unlocks](https://coinmarketcap.com/token-unlocks/)[![]()Yield](https://coinmarketcap.com/yield/)[![]()Real-World Assets](https://coinmarketcap.com/real-world-assets/)\nLeaderboards\n[![]()Trending](https://coinmarketcap.com/trending-cryptocurrencies/)[![]()Upcoming](https://coinmarketcap.com/upcoming/)[![]()Recently Added](https://coinmarketcap.com/new/)[![]()Gainers &amp; Losers](https://coinmarketcap.com/gainers-losers/)[![]()Most\n\n[Source 2]\nTitle: Bitcoin price today, BTC to USD live price, marketcap and chart\nDate: None\nURL: https://www.coindesk.com/price/bitcoin\nContent: Bitcoin price today, BTC to USD live price, marketcap and chart | CoinDesk\nSearch\n/\n[![Logo](https://www.coindesk.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcoindesk-logo-new.38240150.svg&amp;w=384&amp;q=75&amp;dpl=dpl_CYPUXuNuYYaBo3LXRo6uUF9bjkHq)](https://www.coindesk.com/)\n* News\n* Video\n* [Prices](https://www.coindesk.com/price)\n* [Research](https://www.coindesk.com/research)\n* Consensus 2026\n* Data &amp; Indices\n* [Sponsored](https://www.coindesk.com/sponsored-content)\nSearch\n/\nen\n[\n![BTC logo](https://www.coindesk.com/_next/image?url=https%3A%2F%2Fresources.cryptocompare.com%2Fasset-management%2F1%2F1756822117897.png&amp;w=32&amp;q=75)\nBTC\n$91,482.28\n1.21%\n](https://www.coindesk.com/price/bitcoin)\n[\n![ETH logo](https://www.coindesk.com/_next/image?url=https%3A%2F%2Fresources.cry\n\n[Source 3]\nTitle: Buy Bitcoin - BTC Price Today, Live Charts and News - Robinhood\nDate: None\nURL: https://robinhood.com/us/en/crypto/BTC/\nContent: Buy Bitcoin - BTC Price Today, Live Charts and News\n# Bitcoin\n\u200c\u200c\u200cLIVE\n1D\n1W\n1M\n3M\n1Y\n5Y\n## Related Lists\n[\n![Tradable Crypto](https://cdn.robinhood.com/app_assets/list_illustrations/crypto/portrait_48/1x.png)\nTradable Crypto\n](https://robinhood.com/lists/robinhood/97b746a5-bc2f-4c64-a828-1af0fc399bf9)\nDisclaimer: Prices displayed are for informational purposes only. Actual price quotes may differ.\n![](https://cdn.robinhood.com/assets/generated_assets/brand/_next/static/images/crypto-spaceship-up__ea14ae538e34e0aa158bb8ee337eedf8c440418e52d52d4d2c8da72cf4f645b8.svg)\n#### Why Robinhood?\nYou can buy or sell Bitcoin and other crypto 24/7!\n[Sign up](https://robinhood.com/signup)\n## Bitcoin News\n[\nSeeking Alpha15m\nYieldMax Bitcoin Option Income Strategy ETF declares $0.3054 dividend\nTo ensure th\n\n[Source 4]\nTitle: Bitcoin Price, BTC Price, Live Charts, and Marketcap - Coinbase\nDate: None\nURL: https://www.coinbase.com/price/bitcoin\nContent: Bitcoin Price, BTC Price, Live Charts, and Marketcap: bitcoin price, bitcoin price usd, btc price\n[Skip to content](#skip-nav-content)[Skip to site index](#footer-site-index)\n[![Coinbase Logo](https://static-assets.coinbase.com/ui-infra/illustration/v1/pictogram/svg/light/coinbaseLogoNavigation-4.svg)](https://www.coinbase.com/)\n\udb81\udf4a\udb81\udcb0## Language and region\n\udb81\udf48Espa\u00f1ol\nUnited States\nEnglish\nUnited States\n\udb80\ude1aDeutsch\nGermany\nEnglish\nGermany\nEnglish\nUnited Kingdom\nEnglish\nFrance\nFran\u00e7ais\nFrance\nEnglish\nCanada\nFran\u00e7ais\nCanada\nEspa\u00f1ol\nSpain\nEnglish\nSpain\nPortugu\u00eas\nBrazil\nEnglish\nBrazil\nPortugu\u00eas\nPortugal\nEnglish\nPortugal\nEnglish\nAustralia\nEnglish\nSingapore\n\u4e2d\u6587Singapore\nItaliano\nItaly\nEnglish\nItaly\nNederlands\nNetherlands\nEnglish\nNetherlands\nEspa\u00f1ol\nArgentina\nEnglish\nArgentina\nEnglish\nIndia\nEspa\u00f1ol\nMexico\n\n\n[Source 5]\nTitle: Bitcoin BTC (BTC-USD) Live Price, News, Chart & Price History\nDate: None\nURL: https://finance.yahoo.com/quote/BTC-USD/\nContent: Yahoo ist Teil der Yahoo-Markenfamilie.\n# guce\n[![](https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage.png)![](https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_w_bestfit_frontpage.png)guce](https://de.yahoo.com/)\nYahoo ist Teil derYahoo Markenfamilie![](../static/images/close.svg)Die Websites und Apps, die uns geh\u00f6ren und die wir betreiben, einschlie\u00dflich Yahoo, AOL, Engadget, In The Know und MAKERS.YahooMarkenfamilie.\nBei der Nutzung unserer Websites und Apps verwenden wirCookies![](../static/images/close.svg)Mithilfe von Cookies (einschlie\u00dflich \u00e4hnlicher Technologien wie der Webspeicherung) k\u00f6nnen die Betreiber von Websites und Apps Informationen auf Ihrem Ger\u00e4t speichern und ablesen. Weitere Informationen finden Sie in unserer[Cookie-Richtlinie](https://consent.yahoo\n\n\nBased on these search results and your available tools:\n1. If you see an interesting link, use crawl_urls to get full content\n2. If you need financial data, use the data tools (yahoo, fred, options)\n3. If this is a market question, use forecast tools for distributions\n\nWhen done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.\nFocus on NUMBERS and FACTS that help forecasting.\n"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_78728408",
+          "type": "function",
+          "function": {
+            "name": "get_yahoo_data",
+            "arguments": "{\"ticker\": \"BTC-USD\", \"data_type\": \"price\"}"
+          }
+        },
+        {
+          "id": "call_11541149",
+          "type": "function",
+          "function": {
+            "name": "get_yahoo_data",
+            "arguments": "{\"ticker\": \"BTC-USD\", \"data_type\": \"info\"}"
+          }
+        },
+        {
+          "id": "call_18614371",
+          "type": "function",
+          "function": {
+            "name": "get_yahoo_data",
+            "arguments": "{\"ticker\": \"BTC-USD\", \"data_type\": \"history\", \"period\": \"1d\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_78728408",
+      "content": "{\n  \"type\": \"data_report\",\n  \"title\": \"BTC-USD - Price\",\n  \"source\": \"Yahoo Finance\",\n  \"data\": {\n    \"ticker\": \"BTC-USD\",\n    \"price\": 91044.164,\n    \"previous_close\": 93707.15,\n    \"change\": -2662.98599999999,\n    \"change_percent\": -2.841817299960558,\n    \"day_high\": 93707.15,\n    \"day_low\": 90714.0,\n    \"volume\": 47561969664,\n    \"market_cap\": 1818406813696,\n    \"currency\": \"USD\",\n    \"exchange\": \"CCC\",\n    \"quote_type\": \"CRYPTOCURRENCY\"\n  },\n  \"fetched_at\": \"2026-01-07T14:52:33.060012\"\n}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_11541149",
+      "content": "{\n  \"type\": \"data_report\",\n  \"title\": \"BTC-USD - Info\",\n  \"source\": \"Yahoo Finance\",\n  \"data\": {\n    \"ticker\": \"BTC-USD\",\n    \"name\": \"Bitcoin USD\",\n    \"quote_type\": \"CRYPTOCURRENCY\",\n    \"sector\": null,\n    \"industry\": null,\n    \"country\": null,\n    \"currency\": \"USD\",\n    \"exchange\": \"CCC\",\n    \"market_cap\": 1818406813696,\n    \"enterprise_value\": null,\n    \"trailing_pe\": null,\n    \"forward_pe\": null,\n    \"dividend_yield\": null,\n    \"52_week_high\": 126198.07,\n    \"52_week_low\": 74436.68,\n    \"50_day_avg\": 89243.984,\n    \"200_day_avg\": 106601.45,\n    \"beta\": null\n  },\n  \"fetched_at\": \"2026-01-07T14:52:33.107503\"\n}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_18614371",
+      "content": "{\n  \"type\": \"data_report\",\n  \"title\": \"BTC-USD - History\",\n  \"source\": \"Yahoo Finance\",\n  \"data\": {\n    \"ticker\": \"BTC-USD\",\n    \"period\": \"1d\",\n    \"data_points\": 1,\n    \"date_range\": {\n      \"start\": \"2026-01-07\",\n      \"end\": \"2026-01-07\"\n    },\n    \"latest\": {\n      \"date\": \"2026-01-07\",\n      \"open\": 93707.1484375,\n      \"high\": 93707.1484375,\n      \"low\": 90714.0,\n      \"close\": 91044.1640625,\n      \"volume\": 47561969664\n    },\n    \"statistics\": {\n      \"high_period\": 93707.1484375,\n      \"low_period\": 90714.0,\n      \"avg_close\": 91044.1640625,\n      \"avg_volume\": 47561969664.0\n    },\n    \"recent_closes\": [\n      91044.1640625\n    ]\n  },\n  \"fetched_at\": \"2026-01-07T14:52:33.175643\"\n}"
+    }
+  ],
+  "forecasting": {
+    "error": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 64000 tokens, but can only afford 10908. To increase, visit https://openrouter.ai/settings/keys and create a key with a higher total limit', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_2pln3hfHVV2Z6fxxJdQPw1ENcYK'}"
+  },
+  "final_result": {},
+  "end_time": "2026-01-07T14:52:51.244637",
+  "duration_seconds": 24.486165
+}

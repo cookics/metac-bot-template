@@ -16,8 +16,9 @@ def exa_search_raw(
     query: str, 
     num_results: int = 10,
     end_published_date: str = None,
-    start_published_date: str = None
-) -> list[dict]:
+    start_published_date: str = None,
+    return_cost: bool = False
+) -> list[dict] | tuple[list[dict], dict]:
     """
     Perform a search using Exa API and return raw results as list of dicts.
     This is used by the research agent to filter relevant results.
@@ -27,9 +28,10 @@ def exa_search_raw(
         num_results: Number of results to return
         end_published_date: Only return results published before this date (ISO format)
         start_published_date: Only return results published after this date (ISO format)
+        return_cost: If True, return (results, cost_info) tuple
     """
     if not EXA_API_KEY:
-        return []
+        return ([], {"total": 0.0}) if return_cost else []
 
     exa = Exa(api_key=EXA_API_KEY)
     
@@ -60,6 +62,21 @@ def exa_search_raw(
             "text": res.text[:1000] if res.text else "",
             "highlights": res.highlights if res.highlights else [],
         })
+    
+    if return_cost:
+        # Extract cost from response if available
+        cost_info = {"total": 0.0}
+        if hasattr(result, 'cost_dollars') and result.cost_dollars:
+            # CostDollars is an object, access via attributes
+            cost_obj = result.cost_dollars
+            try:
+                cost_info = {
+                    "total": getattr(cost_obj, 'total', 0.0) or 0.0,
+                }
+            except Exception:
+                cost_info = {"total": 0.0}
+        return raw_results, cost_info
+    
     return raw_results
 
 

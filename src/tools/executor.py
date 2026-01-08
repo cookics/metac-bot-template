@@ -43,7 +43,8 @@ async def call_llm_with_tools(
     tools: list[dict],
     model: str = RESEARCH_MODEL,
     temperature: float = RESEARCH_TEMP,
-    tool_choice: str = "auto"
+    tool_choice: str = "auto",
+    thinking: bool = False
 ) -> ChatCompletionMessage:
     """
     Call LLM with tool definitions via OpenRouter.
@@ -70,18 +71,29 @@ async def call_llm_with_tools(
     
     async with llm_rate_limiter:
         try:
-            print(f"[Tool Executor] Calling {model} with {len(tools)} tools available")
+            print(f"[Tool Executor] Calling {model} with {len(tools)} tools available (Thinking: {thinking})")
             
+            # Prepare extra_body for thinking if requested
+            extra_body = {}
+            if thinking:
+                from config import REASONING_MAX_TOKENS
+                extra_body["reasoning"] = {
+                    "max_tokens": REASONING_MAX_TOKENS
+                }
+
             response = await client.chat.completions.create(
                 model=model,
                 messages=messages,
                 tools=tools if tools else None,
                 tool_choice=tool_choice if tools else None,
                 temperature=temperature,
-                # Don't enable extended thinking during tool loops - minimize tokens
+                extra_body=extra_body if extra_body else None
+                # Thinking enabled if requested (essential for Gemini 3 forecast/tool use)
             )
             
             message = response.choices[0].message
+            generation_id = response.id if hasattr(response, 'id') else None
+            usage = response.usage if hasattr(response, 'usage') else None
             
             if message.tool_calls:
                 print(f"[Tool Executor] Model requested {len(message.tool_calls)} tool call(s)")
@@ -89,6 +101,10 @@ async def call_llm_with_tools(
                     print(f"  - {tc.function.name}({tc.function.arguments[:100]}...)")
             else:
                 print(f"[Tool Executor] Model finished (no tool calls)")
+            
+            # Attach usage info to message for cost tracking
+            message._generation_id = generation_id
+            message._usage = usage
             
             return message
             
@@ -140,8 +156,9 @@ async def run_tool_calling_loop(
     model: str = RESEARCH_MODEL,
     temperature: float = RESEARCH_TEMP,
     max_iterations: int = 5,
-    system_prompt: Optional[str] = None
-) -> tuple[str, list[dict]]:
+    system_prompt: Optional[str] = None,
+    thinking: bool = False
+) -> tuple[str, list[dict], list[dict]]:
     """
     Run the complete tool calling loop until the model stops calling tools.
     
@@ -154,7 +171,7 @@ async def run_tool_calling_loop(
         system_prompt: Optional system prompt
     
     Returns:
-        Tuple of (final_response_text, list_of_all_tool_results)
+        Tuple of (final_response_text, list_of_all_tool_results, list_of_all_messages)
     """
     # Build tool registry and schemas
     tool_registry = {t.name: t for t in tools}
@@ -176,7 +193,8 @@ async def run_tool_calling_loop(
             messages=messages,
             tools=tool_schemas,
             model=model,
-            temperature=temperature
+            temperature=temperature,
+            thinking=thinking
         )
         
         # Parse tool calls
@@ -186,7 +204,7 @@ async def run_tool_calling_loop(
             # Model is done - return its final response
             final_text = response.content or ""
             print(f"[Tool Executor] Loop complete after {iteration + 1} iteration(s)")
-            return final_text, all_tool_results
+            return final_text, all_tool_results, messages
         
         # Add assistant message with tool calls to history
         messages.append({
@@ -237,7 +255,7 @@ async def run_tool_calling_loop(
     # Max iterations reached
     print(f"[Tool Executor] Max iterations ({max_iterations}) reached")
     last_content = messages[-1].get("content", "") if messages else ""
-    return last_content, all_tool_results
+    return last_content, all_tool_results, messages
 
 
 # Convenience function for running tools in parallel

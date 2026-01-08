@@ -87,10 +87,19 @@ async def forecast_individual_question(
         forecast, comment = await get_binary_gpt_prediction(
             question_details, num_runs_per_question
         )
-    elif question_type == "numeric":
-        forecast, comment = await get_numeric_gpt_prediction(
+    elif question_type == "numeric" or question_type == "date":
+        # Numeric and Date questions use the same handler now
+        result_tuple = await get_numeric_gpt_prediction(
             question_details, num_runs_per_question
         )
+        # Handle backward compatibility if it returns 2 or 3 values
+        if len(result_tuple) == 3:
+            forecast, comment, metadata = result_tuple
+            if metadata.get("exa_cost", 0) > 0:
+                summary_of_forecast += f"Exa Cost: ${metadata['exa_cost']:.4f}\n"
+        else:
+            forecast, comment = result_tuple
+            
     elif question_type == "multiple_choice":
         forecast, comment = await get_multiple_choice_gpt_prediction(
             question_details, num_runs_per_question
@@ -102,7 +111,7 @@ async def forecast_individual_question(
     print(f"Forecast for post {post_id} (question {question_id}):\n{forecast}")
     print(f"Comment for post {post_id} (question {question_id}):\n{comment}")
 
-    if question_type == "numeric":
+    if question_type == "numeric" or question_type == "date":
         summary_of_forecast += f"Forecast: {str(forecast)[:200]}...\n"
     else:
         summary_of_forecast += f"Forecast: {forecast}\n"
