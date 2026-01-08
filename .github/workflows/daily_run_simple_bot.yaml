@@ -48,61 +48,48 @@ jobs:
           METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      - name: Commit and Push Tournament Records
-        if: always()
-        run: |
-          git config --global user.name "metaculus-bot[bot]"
-          git config --global user.email "metaculus-bot@users.noreply.github.com"
-          
-          # Stage changes from data directories (force add since they are ignored in main)
-          git add -f spring-aib-2026/ minibench/ logs/ 2>/dev/null || echo "Some directories missing, skipping those."
-          # Also stage any new markdown files generated at root (e.g. from tournaments not listed above)
-          git add -f *.md 2>/dev/null || true
-          git reset README.md 2>/dev/null || true
-          
-          # Only commit if there are changes
-          if ! git diff --cached --quiet; then
-            git commit -m "🤖 Update tournament records and logs [skip ci]"
-            # Push to bot-data branch, keeping main clean
-            git push origin HEAD:bot-data
-          else
-            echo "No changes in records to commit."
-          fi
       - name: Job Summary
         if: always()
         run: |
           if [ -f logs/summary.md ]; then
             cat logs/summary.md >> $GITHUB_STEP_SUMMARY
           fi
-      - name: Set Job to Neutral if No Forecasts
+      - name: Commit and Push Tournament Records
         if: always()
-        continue-on-error: true
         run: |
-          if [ -f logs/forecast_count.txt ]; then
-            COUNT=$(cat logs/forecast_count.txt)
-            if [ "$COUNT" -eq 0 ]; then
-              echo "No forecasts made, setting job to neutral status..."
-              
-              # Get the current job's check run ID
-              JOB_ID=$(gh api /repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs \
-                --jq '.jobs[] | select(.name == "daily_build") | .id')
-              
-              echo "Job ID: $JOB_ID"
-              
-              # Patch the check run to neutral
-              gh api --method PATCH \
-                -H "Accept: application/vnd.github+json" \
-                -H "X-GitHub-Api-Version: 2022-11-28" \
-                /repos/${{ github.repository }}/check-runs/$JOB_ID \
-                -f status="completed" \
-                -f conclusion="neutral" \
-                -F output[title]="No New Forecasts" \
-                -F output[summary]="Bot checked questions but found nothing new to forecast."
-              
-              echo "Job conclusion set to neutral"
-            else
-              echo "Forecasts were made ($COUNT), keeping success status"
-            fi
+          # 1. Store the results we want to keep in a temporary location outside the repo
+          mkdir -p ../temp_bot_data
+          cp -r logs spring-aib-2026 minibench ../temp_bot_data/ 2>/dev/null || true
+          # Also copy any root-level markdown records (except README)
+          for f in *.md; do [ "$f" != "README.md" ] && cp "$f" ../temp_bot_data/ 2>/dev/null || true; done
+          
+          # 2. Setup Git
+          git config --global user.name "metaculus-bot[bot]"
+          git config --global user.email "metaculus-bot@users.noreply.github.com"
+          
+          # 3. Switch to bot-data branch
+          # We fetch first to ensure we know about the branch
+          git fetch origin bot-data || echo "bot-data branch does not exist on remote."
+          
+          # Checkout bot-data if it exists, otherwise create it as an orphan
+          if git branch -r | grep -q "origin/bot-data"; then
+            git checkout bot-data
+            git pull origin bot-data
+          else
+            git checkout --orphan bot-data
+            git rm -rf . # Start fresh for the data-only branch
           fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+          # 4. Bring in the new data
+          cp -r ../temp_bot_data/* .
+          # Ensure we don't accidentally carry over the README from main if it's in the temp dir
+          git reset README.md 2>/dev/null || true
+          
+          # 5. Commit and Push
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "🤖 Update tournament records and logs [skip ci]"
+            git push origin bot-data
+          else
+            echo "No changes in records to commit."
+          fi
