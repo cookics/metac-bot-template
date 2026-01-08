@@ -32,3 +32,8 @@ wheels/
 # Other
 .DS_Store
 forecast_count.txt
+
+# Bot Data (stored on bot-data branch)
+logs/
+spring-aib-2026/
+minibench/

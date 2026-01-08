@@ -36,6 +36,11 @@ jobs:
           key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
       - name: Install dependencies
         run: poetry install --no-interaction --no-root
+      - name: Fetch previous records from bot-data
+        continue-on-error: true
+        run: |
+          git fetch origin bot-data:bot-data || echo "bot-data branch does not exist yet."
+          git checkout bot-data -- spring-aib-2026/ minibench/ logs/ 2>/dev/null || echo "No previous data found on bot-data branch."
       - name: Run bot
         run: |
           poetry run python main.py
@@ -49,30 +54,32 @@ jobs:
           git config --global user.name "metaculus-bot[bot]"
           git config --global user.email "metaculus-bot@users.noreply.github.com"
           
-          # Stage changes. Using -f or checking existence properly.
-          # We'll use git add on everything and let the diff handle it.
-          # But to be safe with pathspecs:
-          git add spring-aib-2026/ minibench/ logs/ 2>/dev/null || echo "Some directories missing, skipping those."
+          # Stage changes from data directories (force add since they are ignored in main)
+          git add -f spring-aib-2026/ minibench/ logs/ 2>/dev/null || echo "Some directories missing, skipping those."
+          # Also stage any new markdown files generated at root (e.g. from tournaments not listed above)
+          git add -f *.md 2>/dev/null || true
+          git reset README.md 2>/dev/null || true
           
           # Only commit if there are changes
           if ! git diff --cached --quiet; then
             git commit -m "🤖 Update tournament records and logs [skip ci]"
-            git push origin HEAD:${{ github.ref_name }}
+            # Push to bot-data branch, keeping main clean
+            git push origin HEAD:bot-data
           else
             echo "No changes in records to commit."
           fi
       - name: Job Summary
         if: always()
         run: |
-          if [ -f summary.md ]; then
-            cat summary.md >> $GITHUB_STEP_SUMMARY
+          if [ -f logs/summary.md ]; then
+            cat logs/summary.md >> $GITHUB_STEP_SUMMARY
           fi
       - name: Set Job to Neutral if No Forecasts
         if: always()
         continue-on-error: true
         run: |
-          if [ -f forecast_count.txt ]; then
-            COUNT=$(cat forecast_count.txt)
+          if [ -f logs/forecast_count.txt ]; then
+            COUNT=$(cat logs/forecast_count.txt)
             if [ "$COUNT" -eq 0 ]; then
               echo "No forecasts made, setting job to neutral status..."
               
