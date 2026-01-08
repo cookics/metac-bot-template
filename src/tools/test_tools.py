@@ -146,8 +146,6 @@ async def test_options_tool():
         print(f"\n✗ Failed: {result.error}")
     
     return result.success
-
-
 async def test_fred_tool():
     """Test the FRED data tool."""
     print("\n" + "="*60)
@@ -173,23 +171,84 @@ async def test_fred_tool():
     return result.success
 
 
+async def test_google_trends_tool():
+    """Test the Google Trends tool."""
+    print("\n" + "="*60)
+    print("Testing GoogleTrendsTool")
+    print("="*60)
+    
+    from tools.data.google_trends_tool import GoogleTrendsTool
+    
+    tool = GoogleTrendsTool()
+    result = await tool.execute(keywords=["big mac"], days_back=7)
+    
+    if result.success:
+        print("\n✓ Google Trends Successful!")
+        data = result.data.get("data", {})
+        if "statistics" in data:
+            for kw, stats in data["statistics"].items():
+                print(f"  - {kw}: Avg={stats['average']:.1f}, Max={stats['max']}, Current={stats['current']}")
+    else:
+        print(f"\n✗ Failed: {result.error}")
+    
+    return result.success
+
+
+async def test_polymarket_tool():
+    """Test the PolyMarket search tool."""
+    print("\n" + "="*60)
+    print("Testing PolyMarketSearchTool")
+    print("="*60)
+    
+    from tools.market.polymarket_tool import PolyMarketSearchTool
+    
+    tool = PolyMarketSearchTool()
+    result = await tool.execute(search_terms=["Trump"], limit=5)
+    
+    if result.success:
+        print("\n✓ PolyMarket Search Successful!")
+        markets = result.data.get("data", {}).get("markets", [])
+        print(f"  Found {len(markets)} markets.")
+        for m in markets:
+            print(f"  - {m['question']} (${m['volume']:,.0f})")
+    else:
+        print(f"\n✗ Failed: {result.error}")
+    
+    return result.success
+
+
+async def test_search_tool():
+    """Test the Exa search tool."""
+    print("\n" + "="*60)
+    print("Testing SearchTool (Exa)")
+    print("="*60)
+    
+    from tools.search_tool import SearchTool
+    
+    tool = SearchTool()
+    result = await tool.execute(query="US inflation forecast 2025", num_results=3)
+    
+    if result.success:
+        print("\n✓ Exa Search Successful!")
+        results = result.data.get("data", {}).get("results", [])
+        print(f"  Found {len(results)} results.")
+        for r in results:
+            print(f"  - {r['title']} ({r['url'][:50]}...)")
+    else:
+        print(f"\n✗ Failed: {result.error}")
+    
+    return result.success
+
+
 async def test_tool_schemas():
     """Test that tool schemas are valid for OpenRouter."""
     print("\n" + "="*60)
     print("Testing Tool Schemas (OpenRouter Format)")
     print("="*60)
     
-    from tools.market import BondsForecastTool, SpreadsForecastTool, VIXForecastTool
-    from tools.data import YahooDataTool, OptionsDataTool, FREDDataTool
+    from tools import get_all_tools
     
-    tools = [
-        BondsForecastTool(),
-        SpreadsForecastTool(),
-        VIXForecastTool(),
-        YahooDataTool(),
-        OptionsDataTool(),
-        FREDDataTool(),
-    ]
+    tools = get_all_tools()
     
     all_valid = True
     for tool in tools:
@@ -228,11 +287,16 @@ async def main():
     results["bonds"] = await test_bonds_tool()
     results["spreads"] = await test_spreads_tool()
     results["vix"] = await test_vix_tool()
+    results["polymarket"] = await test_polymarket_tool()
     
     # Test data tools
     results["yahoo"] = await test_yahoo_tool()
     results["options"] = await test_options_tool()
     results["fred"] = await test_fred_tool()
+    results["google_trends"] = await test_google_trends_tool()
+    
+    # Test research tools
+    results["search"] = await test_search_tool()
     
     # Summary
     print("\n" + "="*60)

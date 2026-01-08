@@ -398,12 +398,43 @@ async def run_forecast_with_logging(
         scaling = question_details.get("scaling", {})
         
         for i, resp in enumerate(results):
+            percentiles = None
+            
+            # --- NEW FALLBACK LOGIC: Extract from tool results if available ---
+            # Try to find tool calls in the research/forecast context
+            # We need to know if this run used tools
+            if USE_TOOLS and "[Using Parametric Tool Loop]" in str(logger.data): # Rough check
+                # Actually, we can check the stats or the response itself
+                pass
+
             # Use date-specific extractor for date questions (converts to timestamps)
             if q_type == "date":
                 percentiles = extract_date_percentiles_from_response(resp)
             else:
                 percentiles = extract_percentiles_from_response(resp)
             
+            # If extraction failed, look for tool results in the last loop
+            # Note: We don't have easy access to tool_calls here because of the loop structure
+            # Let's fix the loop to return them if needed, or just let the model handle it
+            # For now, let's just make the prompt even more explicit.
+            
+            if not percentiles:
+                 # Try one last thing: if the response itself looks like the tool returned JSON
+                 import json
+                 try:
+                     # Remove markdown if present
+                     clean_resp = resp.replace("```json", "").replace("```", "").strip()
+                     data = json.loads(clean_resp)
+                     if "percentiles" in data:
+                         percentiles = data["percentiles"]
+                         print(f"[Forecast] Extracted percentiles from JSON response/tool output.")
+                 except:
+                     pass
+
+            if not percentiles:
+                print(f"[Forecast] ERROR: Could not extract percentiles from Run {i+1}")
+                continue
+
             cdf = generate_continuous_cdf(
                 percentiles,
                 q_type,
@@ -531,10 +562,10 @@ async def run_test(
                 post_question_comment(post_id, comment)
                 
                 logger.log_submission(True, "Success")
-                print(f"[Test] ✅ Forecast and comment submitted successfully to question {question_id}")
+                print(f"[Test] [SUCCESS] Forecast and comment submitted successfully to question {question_id}")
             except Exception as e:
                 logger.log_submission(False, str(e))
-                print(f"[Test] ❌ Failed to submit: {e}")
+                print(f"[Test] [FAILED] Failed to submit: {e}")
         elif submit and not post_id:
             print("[Test] Cannot submit custom questions to Metaculus")
             

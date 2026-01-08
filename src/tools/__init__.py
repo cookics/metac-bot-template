@@ -11,8 +11,8 @@ from .base import BaseTool, ToolResult
 from .executor import run_tool_calling_loop, call_llm_with_tools
 
 # Import tool classes
-from .market import BondsForecastTool, SpreadsForecastTool, VIXForecastTool
-from .data import YahooDataTool, OptionsDataTool, FREDDataTool
+from .market import BondsForecastTool, SpreadsForecastTool, VIXForecastTool, PolyMarketSearchTool
+from .data import YahooDataTool, OptionsDataTool, FREDDataTool, GoogleTrendsTool
 from .forecast_tools import GetParametricDistributionCDF
 from .helpers import DistributionGeneratorTool
 from .search_tool import SearchTool
@@ -24,10 +24,12 @@ TOOL_REGISTRY = {
     "forecast_bonds": BondsForecastTool,
     "forecast_spread": SpreadsForecastTool,
     "forecast_vix_max": VIXForecastTool,
+    "search_polymarket": PolyMarketSearchTool,
     # General data tools (return research reports)
     "get_yahoo_data": YahooDataTool,
     "get_options_data": OptionsDataTool,
     "get_fred_data": FREDDataTool,
+    "get_google_trends": GoogleTrendsTool,
     # Helper tools
     "generate_distribution": DistributionGeneratorTool,
     # Search and crawl tools
@@ -58,13 +60,13 @@ def get_market_tools() -> list[BaseTool]:
 
 def get_data_tools() -> list[BaseTool]:
     """Get general data tools (Yahoo, options, FRED)."""
-    data_names = ["get_yahoo_data", "get_options_data", "get_fred_data"]
+    data_names = ["get_yahoo_data", "get_options_data", "get_fred_data", "get_google_trends"]
     return [TOOL_REGISTRY[name]() for name in data_names]
 
 
 def get_research_tools() -> list[BaseTool]:
     """Get tools for general research (search, crawl, data)."""
-    names = ["search_web", "crawl_urls", "get_yahoo_data", "get_options_data", "get_fred_data"]
+    names = ["search_web", "search_polymarket", "crawl_urls", "get_yahoo_data", "get_options_data", "get_fred_data", "get_google_trends"]
     return [TOOL_REGISTRY[name]() for name in names]
 
 

@@ -8,5 +8,6 @@ for the research agent to synthesize.
 from .yahoo_tool import YahooDataTool
 from .options_tool import OptionsDataTool
 from .fred_tool import FREDDataTool
+from .google_trends_tool import GoogleTrendsTool
 
-__all__ = ["YahooDataTool", "OptionsDataTool", "FREDDataTool"]
+__all__ = ["YahooDataTool", "OptionsDataTool", "FREDDataTool", "GoogleTrendsTool"]

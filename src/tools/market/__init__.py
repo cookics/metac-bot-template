@@ -8,5 +8,6 @@ that can be directly used by the forecaster model.
 from .bonds_tool import BondsForecastTool
 from .spreads_tool import SpreadsForecastTool
 from .vix_tool import VIXForecastTool
+from .polymarket_tool import PolyMarketSearchTool
 
-__all__ = ["BondsForecastTool", "SpreadsForecastTool", "VIXForecastTool"]
+__all__ = ["BondsForecastTool", "SpreadsForecastTool", "VIXForecastTool", "PolyMarketSearchTool"]

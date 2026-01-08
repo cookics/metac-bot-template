@@ -18,6 +18,7 @@ forecasting-tools = "^0.2.10"
 matplotlib = "^3.10.0"
 safetensors = "^0.7.0"
 exa-py = "^2.0.2"
+pytrends = "^4.9.2"
 
 
 [tool.poetry.group.dev.dependencies]

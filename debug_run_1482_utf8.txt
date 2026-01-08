@@ -1,0 +1,106 @@
+﻿python : Traceback (most recent call last):
+At line:1 char:1
++ python src/test_single_question.py --id 1482 --runs 1 --submit > debu ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\cooki\Desktop\Spring Bot\metac-bot-template\src\test_single_question.py", line 527, in run_test
+    post_question_prediction(question_id, payload)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cooki\Desktop\Spring Bot\metac-bot-template\src\metaculus_api.py", line 50, in post_question_prediction
+    raise RuntimeError(response.text)
+RuntimeError: {"non_field_errors":[{"non_field_errors":["CDF Invalid:\ncontinuous_cdf must be increasing by at least 5e-05 at 
+every step.\n"]}]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cooki\Desktop\Spring Bot\metac-bot-template\src\test_single_question.py", line 537, in run_test
+    print(f"[Test] \u274c Failed to submit: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cooki\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 7: character maps to <undefined>
+
+[Test] Fetching Metaculus post 1482...
+Getting details for https://www.metaculus.com/api/posts/1482/
+--- Question: What percentage of Americans will be obese or overweight in 2030? ---
+Type: numeric
+
+[Test] Running research pipeline...
+[Research Pipeline] Starting for: What percentage of Americans will be obese or overweight in ...
+[Research Pipeline] Step 1: Web search
+[Research Pipeline] Found 10 search results (Exa cost: $0.0150)
+[Research Pipeline] Step 2: Tool loop with 5 tools
+
+[Tool Executor] === Iteration 1/2 ===
+[Tool Executor] Calling x-ai/grok-4.1-fast with 5 tools available (Thinking: False)
+[Tool Executor] Model requested 4 tool call(s)
+  - search_web({"query":"US adult obesity overweight prevalence forecast 2030 recent","num_results":15,"days_back":...)
+  - search_web({"query":"\"overweight or obese\" US projection 2030","num_results":10}...)
+  - crawl_urls({"urls":["https://www.nejm.org/doi/full/10.1056/NEJMsa1909301","https://www.ajpmonline.org/article/S...)
+  - search_web({"query":"CDC projected obesity rates US 2030 overweight"}...)
+[Tool Executor] Executing search_web with args: {'query': 'US adult obesity overweight prevalence forecast 2030 recent', 'num_results': 15, 'days_back': 1825}
+[Tool Executor] search_web completed: success=True
+[Tool Executor] Executing search_web with args: {'query': '"overweight or obese" US projection 2030', 'num_results': 10}
+[Tool Executor] search_web completed: success=True
+[Tool Executor] Executing crawl_urls with args: {'urls': ['https://www.nejm.org/doi/full/10.1056/NEJMsa1909301', 'https://www.ajpmonline.org/article/S0749-3797(12)00146-8/fulltext', 'https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/', 'https://aasm.org/about-half-of-u-s-adults-predicted-to-be-obese-by-2030/'], 'max_content_length': 3000}
+[Tool Executor] crawl_urls completed: success=True
+[Tool Executor] Executing search_web with args: {'query': 'CDC projected obesity rates US 2030 overweight'}
+[Tool Executor] search_web completed: success=True
+
+[Tool Executor] === Iteration 2/2 ===
+[Tool Executor] Calling x-ai/grok-4.1-fast with 5 tools available (Thinking: False)
+[Tool Executor] Model requested 3 tool call(s)
+  - crawl_urls({"urls":["https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext","http...)
+  - search_web({"query":"US adult overweight obesity prevalence 2030 forecast Lancet GBD IHME"}...)
+  - crawl_urls({"urls":["https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00355-1/fulltext"]}...)
+[Tool Executor] Executing crawl_urls with args: {'urls': ['https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext', 'https://www.healthdata.org/news-events/newsroom/news-releases/lancet-without-immediate-action-nearly-260-million-people-usa', 'https://ghdx.healthdata.org/record/ihme-data/gbd-2021-adult-obesity-overweight-prevalence-1990-2050', 'https://choicesproject.org/overall-obesity-projections/', 'https://www.cdc.gov/nchs/products/databriefs/db508.htm', 'https://www.nejm.org/doi/full/10.1056/NEJMsa1909301'], 'max_content_length': 3000}
+[Tool Executor] crawl_urls completed: success=True
+[Tool Executor] Executing search_web with args: {'query': 'US adult overweight obesity prevalence 2030 forecast Lancet GBD IHME'}
+[Tool Executor] search_web completed: success=True
+[Tool Executor] Executing crawl_urls with args: {'urls': ['https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00355-1/fulltext']}
+[Tool Executor] crawl_urls completed: success=True
+[Tool Executor] Max iterations (2) reached
+[Research Pipeline] Step 3: Made 7 tool calls
+[Research Pipeline] Complete. Output: 20246 chars
+Research complete. Made 7 tool calls.
+
+[Test] Running forecasting (runs=1)...
+[Forecast] Run 1/1 (Using Parametric Tool Loop)...
+
+[Tool Executor] === Iteration 1/3 ===
+[Tool Executor] Calling google/gemini-3-flash-preview with 1 tools available (Thinking: True)
+[Tool Executor] Model requested 1 tool call(s)
+  - get_parametric_cdf({"std":2.8,"skew":-0.3,"mean":79.2}...)
+[Tool Executor] Executing get_parametric_cdf with args: {'std': 2.8, 'skew': -0.3, 'mean': 79.2}
+[Tool Executor] get_parametric_cdf completed: success=True
+
+[Tool Executor] === Iteration 2/3 ===
+[Tool Executor] Calling google/gemini-3-flash-preview with 1 tools available (Thinking: True)
+[Tool Executor] Model requested 1 tool call(s)
+  - get_parametric_cdf({"skew":-0.3,"mean":80.8,"std":2.2}...)
+[Tool Executor] Executing get_parametric_cdf with args: {'skew': -0.3, 'mean': 80.8, 'std': 2.2}
+[Tool Executor] get_parametric_cdf completed: success=True
+
+[Tool Executor] === Iteration 3/3 ===
+[Tool Executor] Calling google/gemini-3-flash-preview with 1 tools available (Thinking: True)
+[Tool Executor] Model finished (no tool calls)
+[Tool Executor] Loop complete after 3 iteration(s)
+[Forecast] Cost: $0.000000 (0 tokens)
+
+--- Forecast: CDF (201 points) ---
+
+[Test] Submitting forecast to Metaculus...
+Prediction Post status code: 400
+
+[Test] Error during forecasting: 'charmap' codec can't encode character '\u274c' in position 7: character maps to <undefined>
+[Logger] Raw log saved: C:\Users\cooki\Desktop\Spring Bot\metac-bot-template\logs\question_tests\test_metaculus_1482_20260108_004231_raw.txt
+
+============================================================
+TEST COMPLETE
+Log saved: C:\Users\cooki\Desktop\Spring Bot\metac-bot-template\logs\question_tests\test_metaculus_1482_20260108_004231.json
+============================================================
+

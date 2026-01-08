@@ -1,0 +1,1464 @@
+================================================================================
+RAW I/O LOG: What percentage of Americans will be obese or overweight in 2030?
+Timestamp: 20260108_004549
+Research Model: x-ai/grok-4.1-fast
+Forecast Model: google/gemini-3-flash-preview
+================================================================================
+
+################################################################################
+# GROK (RESEARCH MODEL) CALLS
+################################################################################
+
+--- GROK CALL 1 ---
+
+[INPUT TO GROK]
+----------------------------------------
+Question to forecast:
+What percentage of Americans will be obese or overweight in 2030?
+
+Initial search results:
+[Source 1]
+Title: About half of U.S. adults predicted to be obese by 2030 - AASM
+Date: 2011-09-01T00:00:00.000Z
+URL: https://aasm.org/about-half-of-u-s-adults-predicted-to-be-obese-by-2030/
+Content: About half of U.S. adults predicted to be obese by 2030 - AASM[Skip to content](#content)
+[![](//aasm.org/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif)](https://aasm.org)
+Search for:
+[JOIN Today](https://members.aasm.org/register)[Login with CSICloud](https://aasm.org/?option=s
+
+[Source 2]
+Title: Obesity and Severe Obesity Forecasts Through 2030
+Date: None
+URL: https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext
+Content: [Skip to Main Content](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#page-body-id) [Skip to Main Menu](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#mega-menu-nav)
+
+ADVERTISEMENT
+
+SCROLL TO CONTINUE WITH CONTENT
+
+Open GPT ConsoleOpen Oracle KeywordsRefresh Val
+
+[Source 3]
+Title: By 2030, nearly half of all U.S. adults will be obese, experts predict
+Date: 2019-12-18T00:00:00.000Z
+URL: https://www.ncbi.nlm.nih.gov/search/research-news/7943
+Content: News: By 2030, nearly half of all U.S.... (The Los Angeles Times) - Behind the headlines - NLM[Skip to main page content](#maincontent)
+![U.S. flag](https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png)
+An official website of the United States government
+Here's how you know
+![Dot
+
+[Source 4]
+Title: Close to half of U.S. population projected to have obesity by 2030
+Date: 2024-11-22T05:03:12.000Z
+URL: https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/
+Content: [Skip to main content](https://hsph.harvard.edu/hsph.harvard.edu#main)
+
+[Chronic Diseases](https://hsph.harvard.edu/topic/chronic-diseases/)
+
+# Close to half of U.S. population projected to have obesity by 2030
+
+By
+
+Staff Writer
+
+December 18, 2019
+
+Jump to Section
+
+Share Post
+
+- [LinkedIn](https://w
+
+[Source 5]
+Title: Projected U.S. State-Level Prevalence of Adult Obesity and Severe ...
+Date: 2019-12-18T00:00:00.000Z
+URL: https://www.nejm.org/doi/full/10.1056/NEJMsa1909301
+Content: Save
+
+- Contents
+- - [Information & Authors](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-info)
+- [Metrics & Citations](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-metrics)
+- [View Options](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collat
+
+
+Based on these search results and your available tools:
+1. If you see an interesting link, use crawl_urls to get full content
+2. If you need financial data, use the data tools (yahoo, fred, options)
+3. If this is a market question, use forecast tools for distributions
+
+When done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.
+Focus on NUMBERS and FACTS that help forecasting.
+
+----------------------------------------
+
+[OUTPUT FROM GROK]
+----------------------------------------
+
+
+[TOOL CALLS MADE]
+  - search_web({"query": "US adult overweight or obese prevalence projection 2030", "num_results": 15}...)
+  - search_web({"query": "\"overweight or obesity\" forecast United States 2030", "num_results": 10}...)
+  - crawl_urls({"urls": ["https://www.nejm.org/doi/full/10.1056/NEJMsa1909301", "https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext", "https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/...)
+  - search_web({"query": "current percentage US adults overweight or obese 2024 CDC"}...)
+----------------------------------------
+
+
+################################################################################
+# FULL RESEARCH MESSAGE HISTORY
+################################################################################
+
+[SYSTEM]
+You are a Research Agent with access to specialized tools for market data and forecasting.
+
+Your job is to gather information to help forecast the following question. You can use tools to:
+1. Get market forecast distributions (bonds, spreads, VIX) - these return percentile data
+2. Fetch financial data (Yahoo Finance, options, FRED economic data)
+3. Search the web for relevant news and context
+
+For MARKET FORECAST questions (bond yields, stock spreads, VIX levels), use the appropriate forecast tool FIRST.
+These tools run Monte Carlo simulations and return probability distributions.
+
+For GENERAL questions, use data tools and web search to gather context.
+
+After gathering data, write a SHORT REPORT synthesizing:
+- Key quantitative data from tool calls
+- Probability distributions (if from forecast tools)
+- Relevant context and factors
+
+Be concise. The forecaster will use your report to make predictions.
+
+------------------------------------------------------------
+
+[USER]
+Question to forecast:
+What percentage of Americans will be obese or overweight in 2030?
+
+Initial search results:
+[Source 1]
+Title: About half of U.S. adults predicted to be obese by 2030 - AASM
+Date: 2011-09-01T00:00:00.000Z
+URL: https://aasm.org/about-half-of-u-s-adults-predicted-to-be-obese-by-2030/
+Content: About half of U.S. adults predicted to be obese by 2030 - AASM[Skip to content](#content)
+[![](//aasm.org/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif)](https://aasm.org)
+Search for:
+[JOIN Today](https://members.aasm.org/register)[Login with CSICloud](https://aasm.org/?option=s
+
+[Source 2]
+Title: Obesity and Severe Obesity Forecasts Through 2030
+Date: None
+URL: https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext
+Content: [Skip to Main Content](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#page-body-id) [Skip to Main Menu](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#mega-menu-nav)
+
+ADVERTISEMENT
+
+SCROLL TO CONTINUE WITH CONTENT
+
+Open GPT ConsoleOpen Oracle KeywordsRefresh Val
+
+[Source 3]
+Title: By 2030, nearly half of all U.S. adults will be obese, experts predict
+Date: 2019-12-18T00:00:00.000Z
+URL: https://www.ncbi.nlm.nih.gov/search/research-news/7943
+Content: News: By 2030, nearly half of all U.S.... (The Los Angeles Times) - Behind the headlines - NLM[Skip to main page content](#maincontent)
+![U.S. flag](https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png)
+An official website of the United States government
+Here's how you know
+![Dot
+
+[Source 4]
+Title: Close to half of U.S. population projected to have obesity by 2030
+Date: 2024-11-22T05:03:12.000Z
+URL: https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/
+Content: [Skip to main content](https://hsph.harvard.edu/hsph.harvard.edu#main)
+
+[Chronic Diseases](https://hsph.harvard.edu/topic/chronic-diseases/)
+
+# Close to half of U.S. population projected to have obesity by 2030
+
+By
+
+Staff Writer
+
+December 18, 2019
+
+Jump to Section
+
+Share Post
+
+- [LinkedIn](https://w
+
+[Source 5]
+Title: Projected U.S. State-Level Prevalence of Adult Obesity and Severe ...
+Date: 2019-12-18T00:00:00.000Z
+URL: https://www.nejm.org/doi/full/10.1056/NEJMsa1909301
+Content: Save
+
+- Contents
+- - [Information & Authors](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-info)
+- [Metrics & Citations](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-metrics)
+- [View Options](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collat
+
+
+Based on these search results and your available tools:
+1. If you see an interesting link, use crawl_urls to get full content
+2. If you need financial data, use the data tools (yahoo, fred, options)
+3. If this is a market question, use forecast tools for distributions
+
+When done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.
+Focus on NUMBERS and FACTS that help forecasting.
+
+
+------------------------------------------------------------
+
+[ASSISTANT]
+
+[TOOL CALLS]
+  - search_web({"query": "US adult overweight or obese prevalence projection 2030", "num_results": 15}...)
+  - search_web({"query": "\"overweight or obesity\" forecast United States 2030", "num_results": 10}...)
+  - crawl_urls({"urls": ["https://www.nejm.org/doi/full/10.1056/NEJMsa1909301", "https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext", "https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/...)
+  - search_web({"query": "current percentage US adults overweight or obese 2024 CDC"}...)
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: US adult overweight or obese prevalence projection 2030",
+  "source": "Exa Search",
+  "data": {
+    "query": "US adult overweight or obese prevalence projection 2030",
+    "num_results": 15,
+    "results": [
+      {
+        "index": 0,
+        "title": "National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990\u20132021, and forecasts up to 2050",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext",
+        "published_date": "2024-12-07T00:00:00.000Z",
+        "snippet": "[Skip to Main Content](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#page-body-id) [Skip to Main Menu](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#mega-menu-nav)\n\nADVERTISEMENT\n\nSCROLL TO CONTINUE WITH CONTENT\n\nOpen GPT ConsoleOpen Oracle KeywordsRefresh Values\n\n| Property | Value |\n| --- | --- |\n| Status |\n| Version |\n| Ad File |\n| Disable Ads Flag |\n| Environment |\n| Moat Init |\n| Moat Ready |\n| Contextual Ready |\n| ..."
+      },
+      {
+        "index": 1,
+        "title": "The evolving burden of obesity in the US: a novel population-level system dynamics approach - PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40880254/",
+        "published_date": "2025-08-29T00:00:00.000Z",
+        "snippet": "Clipboard, Search History, and several other advanced features are temporarily unavailable.\n\n [Skip to main page content](https://pubmed.ncbi.nlm.nih.gov/pubmed.ncbi.nlm.nih.gov#article-details)\n\n**The .gov means it\u2019s official.**\nFederal government websites often end in .gov or .mil. Before\nsharing sensitive information, make sure you\u2019re on a federal\ngovernment site.\n\n**The site is secure.**\nThe **https://** ensures that you are connecting to the\nofficial website and that any information you pro..."
+      },
+      {
+        "index": 2,
+        "title": "Demographic Research - Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425\u2013458)",
+        "url": "https://www.demographic-research.org/articles/volume/51/13",
+        "published_date": "2023-06-16T00:00:00.000Z",
+        "snippet": "Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425&#x2013;458) - Demographic Research\nISSN 1435-9871\nVolume 51 - Article 13 | Pages 425&ndash;458**\n# Projection of US adult obesity trends based on individual BMI trajectories\nBy[Nicolas Todd](/articles/articlesbyauthor/17012),[Mikko Myrskyl&#xE4;](/articles/articlesbyauthor/1237)\n*Date received:*\n16 Jun 2023\n*Date published:*\n13 Aug 2024\n*Word count:*\n3425\n*Keywords:*\n[BMI trajectory rec..."
+      },
+      {
+        "index": 3,
+        "title": "Projected Trends of Obesity throughout the Life Course According to Sex, Race, and Birth Cohorts in the United States",
+        "url": "https://www.medrxiv.org/content/10.1101/2024.10.15.24315456v1.full",
+        "published_date": "2024-10-16T00:00:00.000Z",
+        "snippet": "Projected Trends of Obesity throughout the Life Course According to Sex, Race, and Birth Cohorts in the United States | medRxiv\n[Skip to main content](#main-content)\n[![medRxiv](https://www.medrxiv.org/sites/default/files/medrxiv_inner_logo.png)](/)\nSearch for this keyword\n[Advanced Search](/search)\n# Projected Trends of Obesity throughout the Life Course According to Sex, Race, and Birth Cohorts in the United States\nWilliam D.Hazelton,PeiyunNi,MatthiasHarlass,Anne I.Hahn,RuiyiTian,Ann G.Zauber,..."
+      },
+      {
+        "index": 4,
+        "title": "Projection of US adult obesity trends based on individual BMI trajectories",
+        "url": "https://www.demographic-research.org/volumes/vol51/13/51-13.pdf",
+        "published_date": "2024-08-06T00:00:00.000Z",
+        "snippet": "DEMOGRAPHIC RESEARCH\nVOLUME 51, ARTICLE 13, PAGES 425\uf02d458\nPUBLISHED 13 AUGUST 2024\nhttps://www.demographic-research.org/Volumes/Vol51/13\nDOI: 10.4054/DemRes.2024.51.13\nResearch Article\nProjection of US adult obesity trends based on\nindividual BMI trajectories\nNicolas Todd\nMikko Myrskyl\u00e4\n\u00a9 2024 Nicolas Todd & Mikko Myrskyl\u00e4.\nThis open-access work is published under the terms of the Creative Commons\nAttribution 3.0 Germany (CC BY 3.0 DE), which permits use, reproduction,\nand distribution in any me..."
+      },
+      {
+        "index": 5,
+        "title": "The Lancet: Without immediate action nearly 260 million ...",
+        "url": "https://www.healthdata.org/news-events/newsroom/news-releases/lancet-without-immediate-action-nearly-260-million-people-usa",
+        "published_date": "2024-11-14T00:00:00.000Z",
+        "snippet": "[Skip to main content](https://www.healthdata.org/www.healthdata.org#main-content)\n\n# The Lancet: Without immediate action nearly 260 million people in the USA predicted to have overweight or obesity by 2050\n\nPublished\nNovember 14, 2024\n\nPhotos by Oran Viriyincy, Flickr; \u00a0Allan Foster, Flickr; circulating, Flickr.\n\n## Key takeaways:\n\n- **Most comprehensive US analysis of overweight and obesity at the\u202fnational level and across all states and age groups** estimates that obesity rates in adults (ag..."
+      },
+      {
+        "index": 6,
+        "title": "Projected U.S. State-Level Prevalence of Adult Obesity and ...",
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa1909301",
+        "published_date": null,
+        "snippet": "Save\n\n- Contents\n- - [Information & Authors](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-info)\n- [Metrics & Citations](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-metrics)\n- [View Options](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-fulltext-options)\n- [References](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-references)\n- [Media](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-medi..."
+      },
+      {
+        "index": 7,
+        "title": "Projected U.S. State-Level Prevalence of Adult Obesity and ...",
+        "url": "https://choicesproject.org/publications/projected-state-level-obesity-nejm/",
+        "published_date": "2019-12-19T00:00:00.000Z",
+        "snippet": "\u00d7\n\n- [About](https://choicesproject.org/about/)\n - [About](https://choicesproject.org/about/)\n - [Team](https://choicesproject.org/about/team/)\n - [Partners](https://choicesproject.org/about/partners)\n - [Learning Collaborative Partnership](https://choicesproject.org/learning-collaborative-partnership/)\n - [Funders](https://choicesproject.org/about/funders)\n - [Contact](https://choicesproject.org/about/contact)\n- [Methods](https://choicesproject.org/methods/)\n - [Methods](https://choicesproject...."
+      },
+      {
+        "index": 8,
+        "title": "Overall United States: Adult Obesity & Severe Obesity Projections",
+        "url": "https://choicesproject.org/overall-obesity-projections/",
+        "published_date": "2019-12-18T22:00:52.000Z",
+        "snippet": "Overall United States: Adult Obesity &amp; Severe Obesity Projections - CHOICES Project\n\u00d7* [About](https://choicesproject.org/about/)\n* [About](https://choicesproject.org/about/)\n* [Team](https://choicesproject.org/about/team/)\n* [Partners](https://choicesproject.org/about/partners)\n* [Learning Collaborative Partnership](https://choicesproject.org/learning-collaborative-partnership/)\n* [Funders](https://choicesproject.org/about/funders)\n* [Contact](https://choicesproject.org/about/contact)\n* [Me..."
+      },
+      {
+        "index": 9,
+        "title": "Close to half of U.S. population projected to have obesity ...",
+        "url": "https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/",
+        "published_date": "2024-11-22T05:03:12.000Z",
+        "snippet": "[Skip to main content](https://hsph.harvard.edu/hsph.harvard.edu#main)\n\n[Chronic Diseases](https://hsph.harvard.edu/topic/chronic-diseases/)\n\n# Close to half of U.S. population projected to have obesity by 2030\n\nBy\n\nStaff Writer\n\nDecember 18, 2019\n\nJump to Section\n\nShare Post\n\n- [LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/)\n- [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://hsph.harvard.edu/news/ha..."
+      },
+      {
+        "index": 10,
+        "title": "Obesity and Severe Obesity Forecasts Through 2030",
+        "url": "https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext",
+        "published_date": null,
+        "snippet": "Abstract Background Previous efforts to forecast future trends in obesity applied linear forecasts assuming that the rise in obesity would continue unabated. However, evidence suggests that obesity prevalence may be leveling off. Purpose This study presents estimates of adult obesity and severe obesity prevalence through 2030 based on nonlinear regression models. The forecasted results are then used to simulate the savings that could be achieved through modestly successful obesity prevention eff..."
+      },
+      {
+        "index": 11,
+        "title": "Half of U.S. Adults Projected to be Obese by 2030",
+        "url": "https://www.cardiometabolichealth.org/half-of-u-s-adults-projected-to-be-obese-by-2030/",
+        "published_date": "2020-03-12T20:45:29.000Z",
+        "snippet": "[Skip to content](https://www.cardiometabolichealth.org/half-of-u-s-adults-projected-to-be-obese-by-2030/#content)\n\n[Informa Connect Medical Brands](https://www.cardiometabolichealth.org/half-of-u-s-adults-projected-to-be-obese-by-2030/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE4NCIsInRvZ2dsZSI6ZmFsc2V9)\n\n[My Account](https://www.cardiometabolichealth.org/my-account/)\n\n[Sign In](https://www.cardiometabolichealth.org/login)\n\n[Register](https://www.cardiometabolichealth.org/..."
+      },
+      {
+        "index": 12,
+        "title": "Obesity in the US Projected to Skyrocket by 2050",
+        "url": "https://www.medscape.com/viewarticle/obesity-us-projected-skyrocket-2050-2024a1000kvb",
+        "published_date": "2024-11-15T00:00:00.000Z",
+        "snippet": "This site is intended for healthcare professionals\n\n![](https://img.medscapestatic.com/pi/global/header/langsel/icon-globe.svg)\n\nEnglish Edition\n\n![language edition](https://img.wbmdstatic.com/medscape_static_vue/pages-medscape-viewarticle/client/img/icon-down-stroke.0fb96272.svg)\n\n- English New ![](https://img.medscapestatic.com/pi/global/header/langsel/icon-external-link.svg)\n- Fran\u00e7ais New ![](https://img.medscapestatic.com/pi/global/header/langsel/icon-external-link.svg)\n- Deutsch New ![](ht..."
+      },
+      {
+        "index": 13,
+        "title": "By 2030, nearly half of all U.S. adults will be obese ... - NCBI",
+        "url": "https://www.ncbi.nlm.nih.gov/search/research-news/7943",
+        "published_date": null,
+        "snippet": "News: By 2030, nearly half of all U.S.... (The Los Angeles Times) - Behind the headlines - NLM[Skip to main page content](#maincontent)\n![U.S. flag](https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png)\nAn official website of the United States government\nHere's how you know\n![Dot gov](https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/icon-dot-gov.svg)\n**The .gov means it\u2019s official.**\nFederal government websites often end in .gov or .mil. Before\nsharing sensitive information, ..."
+      },
+      {
+        "index": 14,
+        "title": "One billion people globally estimated to be living with ...",
+        "url": "https://www.worldobesity.org/news/one-billion-people-globally-estimated-to-be-living-with-obesity-by-2030",
+        "published_date": null,
+        "snippet": "One billion people globally estimated to be living with obesity by 2030 | World Obesity Federation\n# One billion people globally estimated to be living with obesity by 2030\n[News](https://www.worldobesity.org/news/)One billion people globally estimated to be living with obesity by 2030\n[**In this section](#section-nav)\n* [**](https://www.facebook.com/sharer/sharer.php?u=https://www.worldobesity.org/news/one-billion-people-globally-estimated-to-be-living-with-obesity-by-2030)\n* [**](https://twitt..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:46:01.459924"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: \"overweight or obesity\" forecast United States 2030",
+  "source": "Exa Search",
+  "data": {
+    "query": "\"overweight or obesity\" forecast United States 2030",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "Close to half of U.S. population projected to have obesity by 2030 | Harvard T.H. Chan School of Public Health",
+        "url": "https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/",
+        "published_date": "2024-11-22T05:03:12.000Z",
+        "snippet": "[Skip to main content](https://hsph.harvard.edu/hsph.harvard.edu#main)\n\n[Chronic Diseases](https://hsph.harvard.edu/topic/chronic-diseases/)\n\n# Close to half of U.S. population projected to have obesity by 2030\n\nBy\n\nStaff Writer\n\nDecember 18, 2019\n\nJump to Section\n\nShare Post\n\n- [LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/)\n- [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://hsph.harvard.edu/news/ha..."
+      },
+      {
+        "index": 1,
+        "title": "Half U.S. Population Will Be Obese by 2030",
+        "url": "https://time.com/5751551/us-obesity-by-state/",
+        "published_date": "2019-12-18T00:00:00.000Z",
+        "snippet": "By [Alice Park](https://time.com/author/alice-park/)\n\nDecember 18, 2019 5:00 PM EST\n\n[Obesity](https://time.com/5100737/obesity-lowering-life-expectancy-united-states/) continues to be a serious health problem in the U.S., contributing to heart disease, diabetes, joint disorders and even [certain types of cancer.](https://time.com/5517858/cancer-rates-obesity/) And according to the latest data, more Americans will be obese by 2030 than ever before.\n\nIn a [study published in the _New England Jour..."
+      },
+      {
+        "index": 2,
+        "title": "National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39551059/",
+        "published_date": "2024-07-12T00:00:00.000Z",
+        "snippet": "National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed\nClipboard, Search History, and several other advanced features are temporarily unavailable.\n[Skip to main page content](#article-details)\n![U.S. flag](https://cdn.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png)\nAn official website of the United States government\nHere's how you know\n![Dot gov](https://cdn.ncbi.nlm.nih.go..."
+      },
+      {
+        "index": 3,
+        "title": "Demographic Research - Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425\u2013458)",
+        "url": "https://www.demographic-research.org/articles/volume/51/13",
+        "published_date": "2023-06-16T00:00:00.000Z",
+        "snippet": "Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425&#x2013;458) - Demographic Research\nISSN 1435-9871\nVolume 51 - Article 13 | Pages 425&ndash;458**\n# Projection of US adult obesity trends based on individual BMI trajectories\nBy[Nicolas Todd](/articles/articlesbyauthor/17012),[Mikko Myrskyl&#xE4;](/articles/articlesbyauthor/1237)\n*Date received:*\n16 Jun 2023\n*Date published:*\n13 Aug 2024\n*Word count:*\n3425\n*Keywords:*\n[BMI trajectory rec..."
+      },
+      {
+        "index": 4,
+        "title": "The evolving burden of obesity in the US: a novel population-level system dynamics approach - PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40880254/",
+        "published_date": "2025-08-29T00:00:00.000Z",
+        "snippet": "Clipboard, Search History, and several other advanced features are temporarily unavailable.\n\n [Skip to main page content](https://pubmed.ncbi.nlm.nih.gov/pubmed.ncbi.nlm.nih.gov#article-details)\n\n**The .gov means it\u2019s official.**\nFederal government websites often end in .gov or .mil. Before\nsharing sensitive information, make sure you\u2019re on a federal\ngovernment site.\n\n**The site is secure.**\nThe **https://** ensures that you are connecting to the\nofficial website and that any information you pro..."
+      },
+      {
+        "index": 5,
+        "title": "Overweight, Obesity to Affect 64% of Americans by 2050",
+        "url": "https://www.ajmc.com/view/overweight-obesity-to-affect-64-of-americans-by-2050",
+        "published_date": "2025-11-21T21:32:14.000Z",
+        "snippet": "Advertisement\n\nNews\\|Articles\\|November 18, 2024\n\n# Overweight, Obesity to Affect 64% of Americans by 2050\n\nAuthor(s) [_Hayden E. Klein_](https://www.ajmc.com/authors/hayden-e-klein)\n\nListen\n\n0:00 / 0:00\n\n### Key Takeaways\n\n- By 2050, 250 million Americans are projected to have overweight or obesity, highlighting a critical public health issue.\n- Obesity rates are highest among women and show significant geographic disparities, particularly in Southern states.\n- The prevalence of overweight and ..."
+      },
+      {
+        "index": 6,
+        "title": "Projected Trends of Obesity throughout the Life Course According to Sex, Race, and Birth Cohorts in the United States",
+        "url": "https://www.medrxiv.org/content/10.1101/2024.10.15.24315456v1.full",
+        "published_date": "2024-10-16T00:00:00.000Z",
+        "snippet": "Projected Trends of Obesity throughout the Life Course According to Sex, Race, and Birth Cohorts in the United States | medRxiv\n[Skip to main content](#main-content)\n[![medRxiv](https://www.medrxiv.org/sites/default/files/medrxiv_inner_logo.png)](/)\nSearch for this keyword\n[Advanced Search](/search)\n# Projected Trends of Obesity throughout the Life Course According to Sex, Race, and Birth Cohorts in the United States\nWilliam D.Hazelton,PeiyunNi,MatthiasHarlass,Anne I.Hahn,RuiyiTian,Ann G.Zauber,..."
+      },
+      {
+        "index": 7,
+        "title": "Global, regional, and national prevalence of adult overweight and obesity, 1990\u20132021, with forecasts to 2050: a forecasting study for the Global Burden of Disease Study 2021",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00355-1/fulltext",
+        "published_date": "2024-03-01T00:00:00.000Z",
+        "snippet": "[Skip to Main Content](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00355-1/fulltext#page-body-id) [Skip to Main Menu](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)00355-1/fulltext#mega-menu-nav)\n\nADVERTISEMENT\n\nSCROLL TO CONTINUE WITH CONTENT\n\nOpen GPT ConsoleOpen Oracle KeywordsRefresh Values\n\n| Property | Value |\n| --- | --- |\n| Status |\n| Version |\n| Ad File |\n| Disable Ads Flag |\n| Environment |\n| Moat Init |\n| Moat Ready |\n| Contextual Ready |\n| ..."
+      },
+      {
+        "index": 8,
+        "title": "National-level and state-level prevalence of overweight ...",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext",
+        "published_date": null,
+        "snippet": "[Skip to Main Content](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#page-body-id) [Skip to Main Menu](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#mega-menu-nav)\n\nADVERTISEMENT\n\nSCROLL TO CONTINUE WITH CONTENT\n\nOpen GPT ConsoleOpen Oracle KeywordsRefresh Values\n\n| Property | Value |\n| --- | --- |\n| Status |\n| Version |\n| Ad File |\n| Disable Ads Flag |\n| Environment |\n| Moat Init |\n| Moat Ready |\n| Contextual Ready |\n| ..."
+      },
+      {
+        "index": 9,
+        "title": "Obesity and overweight",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+        "published_date": "2025-12-08T00:00:00.000Z",
+        "snippet": "Obesity and overweight[Skip to main content](#content)\n**\n**When autocomplete results are available use up and down arrows to review and enter to select.\n**Select languageSelect languageEnglish\u0627\u0644\u0639\u0631\u0628\u064a\u0629\u4e2d\u6587Fran&#231;ais\u0420\u0443\u0441\u0441\u043a\u0438\u0439Espa&#241;ol**\n[![Home](https://www.who.int/ResourcePackages/WHO/assets/dist/images/logos/en/h-logo-blue.svg)](https://www.who.int/)\n[](#XWVXNQGG)\n[](#XFEJCAUE)\n* [All topics](https://www.who.int/health-topics/)\n* [A](https://www.who.int/health-topics/#A)\n* [B](https://www.who...."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:46:02.934616"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Crawled 3 pages",
+  "source": "Exa Crawl",
+  "data": {
+    "pages": [
+      {
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa1909301",
+        "title": "Projected U.S. State-Level Prevalence of Adult Obesity and Severe Obesity",
+        "content": "Save\n\n- Contents\n- - [Information & Authors](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-info)\n- [Metrics & Citations](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-metrics)\n- [View Options](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-fulltext-options)\n- [References](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-references)\n- [Media](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-media)\n- [Tables](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-tables)\n- [Share](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-share)\n\n## Abstract\n\n### Background\n\nAlthough the national obesity epidemic has been well documented, less is known about obesity at the U.S. state level. Current estimates are based on body measures reported by persons themselves that underestimate the prevalence of obesity, especially severe obesity.\n\n### Methods\n\nWe developed methods to correct for self-reporting bias and to estimate state-specific and demographic subgroup\u2013specific trends and projections of the prevalence of categories of body-mass index (BMI). BMI data reported by 6,264,226 adults (18 years of age or older) who participated in the Behavioral Risk Factor Surveillance System Survey (1993\u20131994 and 1999\u20132016) were obtained and corrected for quantile-specific self-reporting bias with the use of measured data from 57,131 adults who participated in the National Health and Nutrition Examination Survey. We fitted multinomial regressions for each state and subgroup to estimate the prevalence of four BMI categories from 1990 through 2030: underweight or normal weight (BMI \\[the weight in kilograms divided by the square of the height in meters\\], <25), overweight (25 to <30), moderate obesity (30 to <35), and severe obesity (\u226535). We evaluated the accuracy of our approach using data from 1990 through 2010 to predict 2016 outcomes.\n\n### Results\n\nThe findings from our approach suggest with high predictive accuracy that by 2030 nearly 1 in 2 adults will have obesity (48.9%; 95% confidence interval \\[CI\\], 47.7 to 50.1), and the prevalence will be higher than 50% in 29 states and not below 35% in any state. Nearly 1 in 4 adults is projected to have severe obesity by 2030 (24.2%; 95% CI, 22.9 to 25.5), and the prevalence will be higher than 25% in 25 states. We predict that, nationally, severe obesity is likely to become the most common BMI category among women (27.6%; 95% CI, 26.1 to 29.2), non-Hispanic black adults (31.7%; 95% CI, 29.9 to 33.4), and low-income adults (31.7%; 95% CI, 30.2 to 33.2).\n\n### Conclusions\n\nOur analysis indicates that the prevalence of adult obesity and severe obesity will continue to increase nationwide, with large disparities across states and demographic subgroups. (Funded by the JPB Foundation.)\n\nAlthough the growing obesity epidemic in the United States has been well documented,[1-4](https://www.nejm.org/d",
+        "content_length": 3000
+      },
+      {
+        "url": "https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext",
+        "title": "Obesity and Severe Obesity Forecasts Through 2030",
+        "content": "[Skip to Main Content](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#page-body-id) [Skip to Main Menu](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#mega-menu-nav)\n\nADVERTISEMENT\n\nSCROLL TO CONTINUE WITH CONTENT\n\nOpen GPT ConsoleOpen Oracle KeywordsRefresh Values\n\n| Property | Value |\n| --- | --- |\n| Status |\n| Version |\n| Ad File |\n| Disable Ads Flag |\n| Environment |\n| Moat Init |\n| Moat Ready |\n| Contextual Ready |\n| Contextual URL |\n| Contextual Initial Segments |\n| Contextual Used Segments |\n| AdUnit |\n| SubAdUnit |\n| Custom Targeting |\n| Ad Events |\n| Invalid Ad Sizes |\n\n[Download PDFDownload PDF](https://www.ajpmonline.org/action/showPdf?pii=S0749-3797%2812%2900146-8)\n\nOutline\n\nShare\n\n#### Share\n\nShare on\n\n- [Email](https://www.ajpmonline.org/#email)\n- [X](https://www.ajpmonline.org/#twitter)\n- [Facebook](https://www.ajpmonline.org/#facebook)\n- [LinkedIn](https://www.ajpmonline.org/#linkedin)\n- [Sina Weibo](https://www.ajpmonline.org/#sina_weibo)\n- [Add to Mendeley](https://www.ajpmonline.org/#mendeley)\n- [bluesky](https://www.ajpmonline.org/#bluesky)\n\n[Add to my reading list](https://www.ajpmonline.org/personalize/addFavoritePublication?doi=10.1016/j.amepre.2011.10.026)\n\nMore\n\nMore\n\n- [Download PDFDownload PDF](https://www.ajpmonline.org/action/showPdf?pii=S0749-3797%2812%2900146-8)\n- [Cite](https://www.ajpmonline.org/action/showCitFormats?doi=10.1016%2Fj.amepre.2011.10.026&pii=S0749-3797%2812%2900146-8)\n- Share\n\n\n\n#### Share\n\n\n\nShare on\n\n- [Email](https://www.ajpmonline.org/#email)\n- [X](https://www.ajpmonline.org/#twitter)\n- [Facebook](https://www.ajpmonline.org/#facebook)\n- [LinkedIn](https://www.ajpmonline.org/#linkedin)\n- [Sina Weibo](https://www.ajpmonline.org/#sina_weibo)\n- [Add to Mendeley](https://www.ajpmonline.org/#mendeley)\n- [Bluesky](https://www.ajpmonline.org/#bluesky)\n\n[Add to my reading list](https://www.ajpmonline.org/personalize/addFavoritePublication?doi=10.1016/j.amepre.2011.10.026)\n\n- [Set Alert](https://www.ajpmonline.org/action/addCitationAlert?doi=10.1016%2Fj.amepre.2011.10.026)\n- [Get Rights](https://s100.copyright.com/AppDispatchServlet?publisherName=ELS&contentID=S0749379712001468&orderBeanReset=true&orderSource=Phoenix)\n- [Reprints](https://www.contentednet.com/salesforce-form/?pii=S0749379712001468&issn=07493797&source=jbs)\n\nDownload Full Issue\n\nDownload started\n\n[Ok](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext)\n\nPrevious article [Next article](https://www.ajpmonline.org/article/S0749-3797(12)00167-5/fulltext)\n\n## Abstract\n\n### Background\n\nPrevious efforts to forecast future trends in obesity applied linear forecasts assuming that the rise in obesity would continue unabated. However, evidence suggests that obesity prevalence may be leveling off.\n\n### Purpose\n\nThis study presents estimates of adult obesity and severe obesity prevalence through 2030 based on nonlinear regression models. The forecasted results are then used to simulate the savings tha",
+        "content_length": 3000
+      },
+      {
+        "url": "https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/",
+        "title": "Close to half of U.S. population projected to have obesity by 2030 | Harvard T.H. Chan School of Public Health",
+        "content": "[Skip to main content](https://hsph.harvard.edu/hsph.harvard.edu#main)\n\n[Chronic Diseases](https://hsph.harvard.edu/topic/chronic-diseases/)\n\n# Close to half of U.S. population projected to have obesity by 2030\n\nBy\n\nStaff Writer\n\nDecember 18, 2019\n\nJump to Section\n\nShare Post\n\n- [LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/)\n- [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/)\n- [WhatsApp](https://wa.me/?text=https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/)\n- [Email](mailto://hsph.harvard.edu?subject=Close+to+half+of+U.S.+population+projected+to+have+obesity+by+2030&?body=https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/)\n- Copy link\n\nFor immediate release: Wednesday, December 18, 2019\n\nBoston, MA \u2013 About half of the adult U.S. population will have [obesity](https://www.hsph.harvard.edu/multitaxo/topic/obesity/) and about a quarter will have severe obesity by 2030, according to a new study led by Harvard T.H. Chan School of Public Health.\n\nThe study also predicts that in 29 states, more than half of the population will have obesity, and all states will have a prevalence of obesity higher than 35%. The study\u2019s researchers estimate that, currently, 40% of American adults have obesity and 18% have severe obesity.\n\nThe study was published in the December 19, 2019 issue of the New England Journal of Medicine.\n\nThe researchers said the predictions are troubling because the health and economic effects of obesity and severe obesity take a toll on several aspects of society. \u201cObesity, and especially severe obesity, are associated with increased rates of [chronic disease](https://www.hsph.harvard.edu/multitaxo/topic/chronic-disease/) and [medical spending](https://www.hsph.harvard.edu/multitaxo/topic/health-costs/), and have negative consequences for life expectancy,\u201d said [Steven Gortmaker](https://www.hsph.harvard.edu/steven-gortmaker/), professor of the practice of health sociology at Harvard Chan School and senior author of the study.\n\nFor the study, the researchers used self-reported body mass index (BMI) data from more than 6.2 million adults who participated in the Behavioral Risk Factor Surveillance System Survey (BRFSS) between 1993 and 2016. Body mass index (BMI) is calculated by dividing a person\u2019s weight in kilograms by the square of their height in meters. Obesity is defined as a BMI of 30 or higher, and severe obesity is a BMI of 35 or higher.\n\nSelf-reported BMIs are frequently biased, so the researchers used novel statistical methods to correct for this bias.\n\nThe large amount of data collected in the BRFSS allowed the researchers to drill down for obesity rates for specific states, income levels, and subpopulations.\n\nThe results showed that by 2030, several states will have obesity prevalence close to 60%, while the lowest states will be approaching 40%. ",
+        "content_length": 3000
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:46:03.381806"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: current percentage US adults overweight or obese 2024 CDC",
+  "source": "Exa Search",
+  "data": {
+    "query": "current percentage US adults overweight or obese 2024 CDC",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "Adult Obesity Prevalence Maps - CDC",
+        "url": "https://www.cdc.gov/obesity/data-and-statistics/adult-obesity-prevalence-maps.html",
+        "published_date": "2025-12-03T00:00:00.000Z",
+        "snippet": "Adult Obesity Prevalence Maps | Obesity | CDC\n[Skip directly to site content](#content)[Skip directly to search](#cdc-search)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government\n[Here's how you know](#gov-notice)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA**.gov**website belongs to an official government organization in the United States.\n![](https://www.cdc.gov/Te..."
+      },
+      {
+        "index": 1,
+        "title": "Obesity and Severe Obesity Prevalence in Adults - CDC",
+        "url": "https://www.cdc.gov/nchs/products/databriefs/db508.htm",
+        "published_date": "2024-09-24T00:00:00.000Z",
+        "snippet": "Products - Data Briefs - Number 508 - September 2024\n[Skip directly to site content](#content)[Skip directly to search](#headerSearch)\n[Espa\u00f1ol](https://www.cdc.gov/spanish/)|[Other Languages](https://wwwn.cdc.gov/pubs/other-languages/)\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/us_flag_small.png)An official website of the United States governmentHere's how you know\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA..."
+      },
+      {
+        "index": 2,
+        "title": "New CDC Data Show Adult Obesity Prevalence Remains High",
+        "url": "https://www.cdc.gov/media/releases/2024/p0912-adult-obesity.html",
+        "published_date": "2024-09-12T00:00:00.000Z",
+        "snippet": "New CDC Data Show Adult Obesity Prevalence Remains High | CDC Newsroom\n[Skip directly to site content](#content)[Skip directly to search](#cdc-search)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government\n[Here's how you know](#gov-notice)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA**.gov**website belongs to an official government organization in the United States.\n!..."
+      },
+      {
+        "index": 3,
+        "title": "Obesity and Overweight - FastStats - CDC",
+        "url": "https://www.cdc.gov/nchs/fastats/obesity-overweight.htm",
+        "published_date": null,
+        "snippet": "FastStats - Overweight Prevalence\n[Skip directly to site content](#content)[Skip directly to search](#headerSearch)\n[Espa\u00f1ol](https://www.cdc.gov/spanish/)|[Other Languages](https://wwwn.cdc.gov/pubs/other-languages/)\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/us_flag_small.png)An official website of the United States governmentHere's how you know\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA .gov website belon..."
+      },
+      {
+        "index": 4,
+        "title": "[PDF] NCHS Data Brief, Number 508, September 2024 - CDC",
+        "url": "https://www.cdc.gov/nchs/data/databriefs/db508.pdf",
+        "published_date": null,
+        "snippet": "NCHS reports can be downloaded from: \nhttps://www.cdc.gov/nchs/products/index.htm.\nNCHS Data Brief \u25a0 No. 508 \u25a0 September 2024\nObesity and Severe Obesity Prevalence in Adults:\nUnited States, August 2021\u2013August 2023\nSamuel D. Emmerich, D.V.M., Cheryl D. Fryar, M.S.P.H., Bryan Stierman, M.D., M.P.H., and \nCynthia L. Ogden, Ph.D., M.R.P. \nKey findings \nData from the National \nHealth and Nutrition \nExamination Survey \n\u25cf During August 2021\u2013August \n2023, the prevalence of obesity \nin adults was 40.3%, ..."
+      },
+      {
+        "index": 5,
+        "title": "Obesity remains high in the US, but more states showing progress",
+        "url": "https://www.nbcdfw.com/news/health/obesity-remains-high-us-more-states-showing-progress/3932935/",
+        "published_date": "2025-10-16T00:00:00.000Z",
+        "snippet": "[Skip to content](https://www.nbcdfw.com/www.nbcdfw.com#content)\n\n[Get connected to a healthier life.](https://www.nbcdfw.com/news/health/)\n\n[Health & Wellness](https://www.nbcdfw.com/tag/health-wellness/)\n\n# Obesity remains high in the U.S., but more states are showing progress, new report finds\n\n## The analysis by Trust for America's Health follows a CDC report last year that found the overall rate of obesity in the U.S. is high but holding steady, affecting about 40% of the population.\n\n#### ..."
+      },
+      {
+        "index": 6,
+        "title": "Obesity Trends US: Rates Drop in More States, But Risks Remain",
+        "url": "https://www.ocacademy.in/blogs/obesity-trends-us-rates-drop-report/",
+        "published_date": "2025-10-16T00:00:00.000Z",
+        "snippet": "[Skip to content](https://www.ocacademy.in/www.ocacademy.in#primary)\n\n### Understanding Recent Obesity Data\n\nSpecifically, the number of US states where obesity rates reached 35% or higher decreased to 19 in 2024, down from 23 in the previous year. This encouraging finding stems from an analysis of the latest data collected by the US Centers for Disease Control and Prevention (CDC). The nonprofit organization, Trust for America\u2019s Health (TFAH), conducted this crucial analysis. Meanwhile, a prior..."
+      },
+      {
+        "index": 7,
+        "title": "Adult Obesity Facts - CDC",
+        "url": "https://www.cdc.gov/obesity/adult-obesity-facts/index.html",
+        "published_date": "2024-05-14T00:00:00.000Z",
+        "snippet": "Adult Obesity Facts | Obesity | CDC\n[Skip directly to site content](#content)[Skip directly to search](#cdc-search)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government\n[Here's how you know](#gov-notice)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA**.gov**website belongs to an official government organization in the United States.\n![](https://www.cdc.gov/TemplatePack..."
+      },
+      {
+        "index": 8,
+        "title": "State of Obesity Report 2025 : Better Policies for a Healthier America",
+        "url": "https://www.tfah.org/report-details/state-of-obesity-report-2025/",
+        "published_date": "2025-10-16T00:00:00.000Z",
+        "snippet": "State of Obesity Report 2025 : Better Policies for a Healthier America - TFAH\n[](https://www.tfah.org/)\n[Donate**](https://www.tfah.org/donate/)[Subscribe](https://www.tfah.org/about/tfah-newsletters/)Connect[**](https://www.facebook.com/TrustforAmericasHealth)[**](https://twitter.com/healthyamerica1)[**](https://in.linkedin.com/company/tfah)[**](https://www.youtube.com/channel/UCPJcVGJzL4pmqGYg-MePVMg)[**]()[**]()\nSearch for:\n# State of Obesity Report 2025 : Better Policies for a Healthier Amer..."
+      },
+      {
+        "index": 9,
+        "title": "Overweight and Obesity",
+        "url": "https://www.cdc.gov/nchs/dqs/topics/overweight-obesity.html",
+        "published_date": "2025-06-25T00:00:00.000Z",
+        "snippet": "Overweight and Obesity | NCHS Data Query System | CDC\n[Skip directly to site content](#content)[Skip directly to search](#cdc-search)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government\n[Here's how you know](#gov-notice)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA**.gov**website belongs to an official government organization in the United States.\n![](https://www.cd..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:46:05.418171"
+}
+
+------------------------------------------------------------
+
+[ASSISTANT]
+
+[TOOL CALLS]
+  - crawl_urls({"urls": ["https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext", "https://www.healthdata.org/news-events/newsroom/news-releases/lancet-without-immediate-action-nearly-2...)
+  - search_web({"query": "US adults overweight or obese percentage 2024 CDC NHANES"}...)
+  - search_web({"query": "percentage Americans overweight obese projection 2030 overweight BMI 25+"}...)
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Crawled 5 pages",
+  "source": "Exa Crawl",
+  "data": {
+    "pages": [
+      {
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext",
+        "title": "National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990\u20132021, and forecasts up to 2050",
+        "content": "[Skip to Main Content](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#page-body-id) [Skip to Main Menu](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#mega-menu-nav)\n\nADVERTISEMENT\n\nSCROLL TO CONTINUE WITH CONTENT\n\nOpen GPT ConsoleOpen Oracle KeywordsRefresh Values\n\n| Property | Value |\n| --- | --- |\n| Status |\n| Version |\n| Ad File |\n| Disable Ads Flag |\n| Environment |\n| Moat Init |\n| Moat Ready |\n| Contextual Ready |\n| Contextual URL |\n| Contextual Initial Segments |\n| Contextual Used Segments |\n| AdUnit |\n| SubAdUnit |\n| Custom Targeting |\n| Ad Events |\n| Invalid Ad Sizes |\n\n[Download PDFDownload PDF](https://www.thelancet.com/action/showPdf?pii=S0140-6736%2824%2901548-4)\n\nOutline\n\nShare\n\n#### Share\n\nShare on\n\n- [Email](https://www.thelancet.com/#email)\n- [X](https://www.thelancet.com/#twitter)\n- [Facebook](https://www.thelancet.com/#facebook)\n- [LinkedIn](https://www.thelancet.com/#linkedin)\n- [Sina Weibo](https://www.thelancet.com/#sina_weibo)\n- [Mendeley](https://www.thelancet.com/#mendeley)\n- [Bluesky](https://www.thelancet.com/#bluesky)\n\n[Add to my reading list](https://www.thelancet.com/personalize/addFavoritePublication?doi=10.1016/S0140-6736(24)01548-4)\n\nMore\n\nMore\n\n- [Download PDFDownload PDF](https://www.thelancet.com/action/showPdf?pii=S0140-6736%2824%2901548-4)\n- [Cite](https://www.thelancet.com/action/showCitFormats?doi=10.1016%2FS0140-6736%2824%2901548-4&pii=S0140-6736%2824%2901548-4)\n- Share\n\n\n\n#### Share\n\n\n\nShare on\n\n- [Email](https://www.thelancet.com/#email)\n- [X](https://www.thelancet.com/#twitter)\n- [Facebook](https://www.thelancet.com/#facebook)\n- [LinkedIn](https://www.thelancet.com/#linkedin)\n- [Sina Weibo](https://www.thelancet.com/#sina_weibo)\n- [Mendeley](https://www.thelancet.com/#mendeley)\n- [Bluesky](https://www.thelancet.com/#bluesky)\n\n[Add to my reading list](https://www.thelancet.com/personalize/addFavoritePublication?doi=10.1016/S0140-6736(24)01548-4)\n\n- [Set Alert](https://www.thelancet.com/action/addCitationAlert?doi=10.1016%2FS0140-6736%2824%2901548-4)\n- [Get Rights](https://s100.copyright.com/AppDispatchServlet?publisherName=ELS&contentID=S0140673624015484&orderBeanReset=true&orderSource=Phoenix)\n- [Reprints](https://www.contentednet.com/salesforce-form/?pii=S0140673624015484&issn=01406736&source=jbs)\n\nDownload Full Issue\n\nDownload started\n\n[Ok](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext)\n\n[Previous article](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01757-4/fulltext) [Next article](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01495-8/fulltext)\n\n## Summary\n\n### Background\n\nOver the past several decades, the overweight and obesity epidemic in the USA has resulted in a significant health and economic burden. Understanding current trends and future trajectories at both national and state levels is crucial for assessing the success of existing interven",
+        "content_length": 3000
+      },
+      {
+        "url": "https://www.healthdata.org/news-events/newsroom/news-releases/lancet-without-immediate-action-nearly-260-million-people-usa",
+        "title": "The Lancet: Without immediate action nearly 260 million people in the USA predicted to have overweight or obesity by 2050",
+        "content": "[Skip to main content](https://www.healthdata.org/www.healthdata.org#main-content)\n\n# The Lancet: Without immediate action nearly 260 million people in the USA predicted to have overweight or obesity by 2050\n\nPublished\nNovember 14, 2024\n\nPhotos by Oran Viriyincy, Flickr; \u00a0Allan Foster, Flickr; circulating, Flickr.\n\n## Key takeaways:\n\n- **Most comprehensive US analysis of overweight and obesity at the\u202fnational level and across all states and age groups** estimates that obesity rates in adults (aged 25 or older) and older adolescents (aged 15-24 years) have at least doubled over the past three decades (1990-2021).\n- **Southern states including Oklahoma, Alabama, Arkansas, Mississippi, Texas, West Virginia, and Kentucky had the highest levels of overweight and obesity among older adolescents (aged 15-24 years) in 2021**\u2014with over half of older adolescent males in Texas and nearly two-thirds of older adolescent females in Mississippi living with overweight or obesity.\n\nHighlight\n\nOverweight and obesity can trigger serious health conditions\u2014many of which are now occurring at younger ages, including diabetes, heart attacks, stroke, cancer, mental health disorders, and even premature death.\n\nShare\n\n[Leer en Espa\u00f1ol](https://www.healthdata.org/sites/default/files/2024-11/US-BMI-newsrelease-es1.pdf)\n\n- **Without immediate action the authors warn of an escalating crisis of overweight and obesity across the USA,** with 213 million adults (over the age of 25) and more than 43 million children and adolescents (aged 5-24 years) expected to have overweight or obesity by 2050, with equally striking health, social, and economic consequences.\n- **With the prevalence of obesity projected to increase at a more rapid rate than overweight,** by 2050, around one in five children, at least one in three adolescents, and two in three adults are expected to have obesity\u2014with the highest levels continuing to be concentrated in southern states.\n- **The authors say these findings underscore the urgent need for policy action** that focuses on population-level prevention and intervention, including legislative actions to promote access to healthy foods and improved regulation of the food, agricultural, and marketing sectors.\n\nOver the past three decades, there has been a startling increase in the prevalence of obesity across the USA, at least doubling in adult men and women (aged 25 and older) and older female and male adolescents (aged 15-24 years) since 1990, with the number of people living with overweight and obesity reaching over 208 million in 2021\u2014a trend set to continue in the coming decades without significant reform, according to a major new analysis from the Global Burden of Disease Study Collaborator Network, [published in _The Lancet_](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext) _._\n\nEspecially high levels of overweight and obesity have already been reached in several US states, with over half (52%) of older adolescent males",
+        "content_length": 3000
+      },
+      {
+        "url": "https://www.demographic-research.org/volumes/vol51/13/51-13.pdf",
+        "title": "Projection of US adult obesity trends based on individual BMI trajectories",
+        "content": "DEMOGRAPHIC RESEARCH\nVOLUME 51, ARTICLE 13, PAGES 425\uf02d458\nPUBLISHED 13 AUGUST 2024\nhttps://www.demographic-research.org/Volumes/Vol51/13\nDOI: 10.4054/DemRes.2024.51.13\nResearch Article\nProjection of US adult obesity trends based on\nindividual BMI trajectories\nNicolas Todd\nMikko Myrskyl\u00e4\n\u00a9 2024 Nicolas Todd & Mikko Myrskyl\u00e4.\nThis open-access work is published under the terms of the Creative Commons\nAttribution 3.0 Germany (CC BY 3.0 DE), which permits use, reproduction,\nand distribution in any medium, provided the original author(s) and source\nare given credit.\nSee https://creativecommons.org/licenses/by/3.0/de/legalcode.\nContents\n1 Introduction 426\n2 Methods 428\n2.1 Data source 428\n2.2 Correction for misreporting of past weights 428\n2.3 Functional data analysis 430\n2.4 Obesity metrics considered 431\n2.5 Sensitivity analyses 431\n3 Results 432\n3.1 Characteristics of participants analyzed 432\n3.2 Individual-level trajectories between ages 25 and 55 433\n3.3 Average BMI trajectory between ages 25 and 55 433\n3.4 Obesity prevalence at age 55 436\n3.5 Severe obesity prevalence at age 55 436\n3.6 Heterogeneity by race/ethnicity 439\n3.7 Time spent being obese by age 55 440\n4 Discussion 441\n5 Acknowledgments 444\nReferences 446\nAppendix 449\nDemographic Research: Volume 51, Article 13\nResearch Article\nhttps://www.demographic-research.org 425\nProjection of US adult obesity trends based on individual\nBMI trajectories\nNicolas Todd1\nMikko Myrskyl\u00e42\nAbstract\nBACKGROUND\nAdult obesity has been increasing in the United States since the 1980s. Its future\nprevalence will be a key determinant for public health. For the cohorts now in young\nadulthood, the future prevalence of obesity will depend on current prevalence and future\nincrease in weight.\nMETHODS\nWe pooled 92,615 body-mass index (BMI) measures from 26,337 adults interviewed and\nexamined by the National Health and Nutrition Examination Survey (NHANES). We\nanalyzed participants examined between ages 25 and 55 in the years 1998\u20132018. We\napplied a functional data analysis technique to probabilistically reconstruct individual\nBMI trajectories in order to investigate the future prevalence of obesity and severe obesity\nat age 55, and the mean time spent being obese and severely obese between ages 25 and\n55.\nRESULTS\nWe found that the prevalence of obesity at age 55 is expected to reach 58% (95% UI,\n54%\u2013 61%) for females born in 1984\u20131988 and 57% (95% UI, 53%\u201361%) for males born\nin the same cohort. The prevalence of severe obesity at age 55 will increase rapidly in\nboth sexes. Time spent being obese will increase; e.g., for females from 10.7 years (95%\nUI, 10.4\u201310.9 years) in the 1964\u20131968 cohort to 14.7 years (95% UI, 14.2\u201315.3 years) in\nthe 1984\u20131988 birth cohort.\n1\n Corresponding Author. Max Planck Institute for Demographic Research, Rostock, Germany. Mus\u00e9um\nNational d\u2019Histoire Naturelle, CNRS, Universit\u00e9 Paris Cit\u00e9, Unit\u00e9 Eco-Anthropologie (UMR7206), Paris,\nFrance. Email: nicolas.todd@cnrs.fr.\n2\n Max Planck Institute f",
+        "content_length": 3000
+      },
+      {
+        "url": "https://www.cdc.gov/nchs/fastats/obesity-overweight.htm",
+        "title": "Obesity and Overweight",
+        "content": "FastStats - Overweight Prevalence\n[Skip directly to site content](#content)[Skip directly to search](#headerSearch)\n[Espa\u00f1ol](https://www.cdc.gov/spanish/)|[Other Languages](https://wwwn.cdc.gov/pubs/other-languages/)\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/us_flag_small.png)An official website of the United States governmentHere's how you know\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA .gov website belongs to an official government organization in the United States.\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/icon-https.svg)\n**Secure .gov websites use HTTPS**\nA lock () or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.\n[Centers for Disease Control and Prevention. CDC twenty four seven. Saving Lives, Protecting People![CDC Logo](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/logo/logo-notext.svg)![CDC Logo](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/logo/logo-notext.svg)](https://www.cdc.gov/)\nSearch****\n\u00d7Search NCHS\n[Search NCHS](#)[All CDC](#)\nSubmit**\n[National Center for Health Statistics](https://www.cdc.gov/nchs/index.htm)\n# Obesity and Overweight\n[Print](#print)\n[Minus](#collapse_1801868465d0054492)\nRelated Pages\nAdults\n* Percent of adults age 20 and older with obesity: 40.3%\nSource:[Obesity and Severe Obesity Prevalence in Adults: United States, August 2021&ndash;August 2023, table for Figure 1](https://www.cdc.gov/nchs/products/databriefs/db508.htm)\n* Percent of adults age 20 and older with overweight, including obesity: 73.6% (2017-2018)\nSource:[Prevalence of Overweight, Obesity, and Severe Obesity Among Adults Ages 20 and Older: United States, 1960-1962 Through 2017-2018](https://www.cdc.gov/nchs/data/hestat/obesity-adult-17-18/obesity-adult.htm)\nChildren and adolescents\n* Percent of adolescents ages 12&ndash;19 years with obesity: 22.2% (2017-March 2020)\n* Percent of children ages 6&ndash;11 years with obesity: 20.7% (2017-March 2020)\n* Percent of children ages 2&ndash;5 years with obesity: 12.7% (2017-March 2020)\nSource:[National Health and Nutrition Examination Survey 2017-March 2020 Prepandemic Data Files-Development of Files and Prevalence Estimates for Selected Health Outcomes, table 3[PDF &ndash; 436 KB]](https://www.cdc.gov/nchs/data/nhsr/nhsr158-508.pdf)\n## Related FastStats\n* [Body Measurements](https://www.cdc.gov/nchs/fastats/body-measurements.htm)## More data\n* [Trends in Obesity and overweight from Health, United States]()\n* [QuickStats: Prevalence of Obesity and Severe Obesity Among Persons Aged 2&ndash;19 Years &mdash; United States, 1999&ndash;2000 Through 2021&ndash;2023](https://www.cdc.gov/mmwr/volumes/73/wr/mm7341a5.htm)\n* [Increases in Pre-pregnancy Obesity: United States, 2016-2019](https://www.cdc.gov/nchs/products/databriefs/db392.htm)\n* [Prevalence of Obesity and Severe Obesity Among Adults: United States, 2017&nda",
+        "content_length": 3000
+      },
+      {
+        "url": "https://www.cdc.gov/nchs/products/databriefs/db508.htm",
+        "title": "Obesity and Severe Obesity Prevalence in Adults: United States, August 2021\u2013August 2023",
+        "content": "Products - Data Briefs - Number 508 - September 2024\n[Skip directly to site content](#content)[Skip directly to search](#headerSearch)\n[Espa\u00f1ol](https://www.cdc.gov/spanish/)|[Other Languages](https://wwwn.cdc.gov/pubs/other-languages/)\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/us_flag_small.png)An official website of the United States governmentHere's how you know\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA .gov website belongs to an official government organization in the United States.\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/icon-https.svg)\n**Secure .gov websites use HTTPS**\nA lock () or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.\n[Centers for Disease Control and Prevention. CDC twenty four seven. Saving Lives, Protecting People![CDC Logo](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/logo/logo-notext.svg)![CDC Logo](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/logo/logo-notext.svg)](https://www.cdc.gov/)\nSearch****\n\u00d7Search NCHS\n[Search NCHS](#)[All CDC](#)\nSubmit**\n[National Center for Health Statistics](https://www.cdc.gov/nchs/index.htm)\n# Obesity and Severe Obesity Prevalence in Adults: United States, August 2021\u2013August 2023\n[Print](#print)\n[Minus](#collapse_2668086706bbcd84028)\nRelated Pages\nNCHS Data Brief No. 508, September 2024\n[PDF Version](https://www.cdc.gov/nchs/data/databriefs/db508.pdf)(454 KB)\nSamuel D. Emmerich, D.V.M., Cheryl D. Fryar, M.S.P.H., Bryan Stierman, M.D., M.P.H., and Cynthia L. Ogden, Ph.D., M.R.P.\n**On This Page**\n* [Key findings](#Key_finding)\n* [What was the prevalence of obesity in adults during August 2021&ndash;August 2023?](#section_1)\n* [Were there differences in the prevalence of obesity in adults by education level during August 2021-August 2023?](#section_2)\n* [What was the prevalence of severe obesity in adults during August 2021&ndash;August 2023?](#section_3)\n* [What are the recent trends in obesity and severe obesity in adults?](#section_4)\n* [Summary](#Summary)\n* [Definition](#Definitions)\n* [Data source and methods](<#Data sources and methods>)\n* [About the authors](#About)\n* [References](#References)\n* [Suggested citation](#Suggested_citation)\nKey findings\n**Data from the National Health and Nutrition Examination Survey**\n* During August 2021&ndash;August 2023, the prevalence of obesity in adults was 40.3%, with no significant differences between men and women. Obesity prevalence was higher in adults ages 40&ndash;59 than in ages 20&ndash;39 and 60 and older.\n* The prevalence of obesity was lower in adults with a bachelor&rsquo;s degree or more than in adults with less education.\n* The prevalence of severe obesity in adults was 9.4% and was higher in women than men for each age group.\n* From 2013&ndash;2014 through August 2021&ndash;August 2023, the age-adjusted prevalence of obesity did not change",
+        "content_length": 3000
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:46:13.877858"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: US adults overweight or obese percentage 2024 CDC NHANES",
+  "source": "Exa Search",
+  "data": {
+    "query": "US adults overweight or obese percentage 2024 CDC NHANES",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "Obesity and Severe Obesity Prevalence in Adults - CDC",
+        "url": "https://www.cdc.gov/nchs/products/databriefs/db508.htm",
+        "published_date": "2024-09-24T00:00:00.000Z",
+        "snippet": "Products - Data Briefs - Number 508 - September 2024\n[Skip directly to site content](#content)[Skip directly to search](#headerSearch)\n[Espa\u00f1ol](https://www.cdc.gov/spanish/)|[Other Languages](https://wwwn.cdc.gov/pubs/other-languages/)\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/us_flag_small.png)An official website of the United States governmentHere's how you know\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA..."
+      },
+      {
+        "index": 1,
+        "title": "Adult Obesity Prevalence Maps - CDC",
+        "url": "https://www.cdc.gov/obesity/data-and-statistics/adult-obesity-prevalence-maps.html",
+        "published_date": "2025-12-03T00:00:00.000Z",
+        "snippet": "Adult Obesity Prevalence Maps | Obesity | CDC\n[Skip directly to site content](#content)[Skip directly to search](#cdc-search)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government\n[Here's how you know](#gov-notice)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA**.gov**website belongs to an official government organization in the United States.\n![](https://www.cdc.gov/Te..."
+      },
+      {
+        "index": 2,
+        "title": "[PDF] NCHS Data Brief, Number 508, September 2024 - CDC",
+        "url": "https://www.cdc.gov/nchs/data/databriefs/db508.pdf",
+        "published_date": null,
+        "snippet": "NCHS reports can be downloaded from: \nhttps://www.cdc.gov/nchs/products/index.htm.\nNCHS Data Brief \u25a0 No. 508 \u25a0 September 2024\nObesity and Severe Obesity Prevalence in Adults:\nUnited States, August 2021\u2013August 2023\nSamuel D. Emmerich, D.V.M., Cheryl D. Fryar, M.S.P.H., Bryan Stierman, M.D., M.P.H., and \nCynthia L. Ogden, Ph.D., M.R.P. \nKey findings \nData from the National \nHealth and Nutrition \nExamination Survey \n\u25cf During August 2021\u2013August \n2023, the prevalence of obesity \nin adults was 40.3%, ..."
+      },
+      {
+        "index": 3,
+        "title": "New CDC Data Show Adult Obesity Prevalence Remains High",
+        "url": "https://www.cdc.gov/media/releases/2024/p0912-adult-obesity.html",
+        "published_date": "2024-11-01T00:00:00.000Z",
+        "snippet": "New CDC Data Show Adult Obesity Prevalence Remains High | CDC Newsroom\n[Skip directly to site content](#content)[Skip directly to search](#cdc-search)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government\n[Here's how you know](#gov-notice)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA**.gov**website belongs to an official government organization in the United States.\n!..."
+      },
+      {
+        "index": 4,
+        "title": "State of Obesity Report 2025 : Better Policies for a Healthier America",
+        "url": "https://www.tfah.org/report-details/state-of-obesity-report-2025/",
+        "published_date": "2025-10-16T00:00:00.000Z",
+        "snippet": "State of Obesity Report 2025 : Better Policies for a Healthier America - TFAH\n[](https://www.tfah.org/)\n[Donate**](https://www.tfah.org/donate/)[Subscribe](https://www.tfah.org/about/tfah-newsletters/)Connect[**](https://www.facebook.com/TrustforAmericasHealth)[**](https://twitter.com/healthyamerica1)[**](https://in.linkedin.com/company/tfah)[**](https://www.youtube.com/channel/UCPJcVGJzL4pmqGYg-MePVMg)[**]()[**]()\nSearch for:\n# State of Obesity Report 2025 : Better Policies for a Healthier Amer..."
+      },
+      {
+        "index": 5,
+        "title": "Obesity Data and Statistics",
+        "url": "https://www.cdc.gov/obesity/data-and-statistics/index.html",
+        "published_date": "2024-12-20T00:00:00.000Z",
+        "snippet": "Obesity Data and Statistics | Obesity | CDC\n[Skip directly to site content](#content)[Skip directly to search](#cdc-search)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government\n[Here's how you know](#gov-notice)\n![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA**.gov**website belongs to an official government organization in the United States.\n![](https://www.cdc.gov/Temp..."
+      },
+      {
+        "index": 6,
+        "title": "Obesity and Severe Obesity Prevalence in Adults: United States, August 2021-August 2023",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11744423/",
+        "published_date": "2024-01-01T00:00:00.000Z",
+        "snippet": "[Skip to main content](https://pmc.ncbi.nlm.nih.gov/pmc.ncbi.nlm.nih.gov#main-content)\n\n**Official websites use .gov**\nA\n**.gov** website belongs to an official\ngovernment organization in the United States.\n\n**Secure .gov websites use HTTPS**\nA **lock** (\n\nLocked padlock icon\n) or **https://** means you've safely\nconnected to the .gov website. Share sensitive\ninformation only on official, secure websites.\n\nSearch PMC Full-Text ArchiveSearch in PMC\n\n- [Journal List](https://pmc.ncbi.nlm.nih.gov/j..."
+      },
+      {
+        "index": 7,
+        "title": "NHANES - Interactive Data Visualizations",
+        "url": "https://www.cdc.gov/nchs/nhanes/visualization/",
+        "published_date": "2025-02-03T00:00:00.000Z",
+        "snippet": "NHANES - Interactive Data Visualizations\n[Skip directly to site content](#content)[Skip directly to search](#headerSearch)\n[Espa\u00f1ol](https://www.cdc.gov/spanish/)|[Other Languages](https://wwwn.cdc.gov/pubs/other-languages/)\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/us_flag_small.png)An official website of the United States governmentHere's how you know\n![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/icon-dot-gov.svg)\n**Official websites use .gov**\nA .gov websit..."
+      },
+      {
+        "index": 8,
+        "title": "Changes in Adult Obesity Trends in the US",
+        "url": "https://jamanetwork.com/journals/jama-health-forum/fullarticle/2827712",
+        "published_date": "2024-12-06T00:00:00.000Z",
+        "snippet": "[iframe](http://t.sharethis.com/a/t_.htm?ver=1.1696.23410&cid=c010&cls=B#cid=c010&cls=B&dmn=jamanetwork.com&rnd=1739633877584&tt=t.dhj&dhjLcy=905&lbl=pxcel&flbl=pxcel&ll=d&ver=1.1696.23410&ell=d&cck=__stid&pn=%2Fjournals%2Fjama-health-forum%2Ffullarticle%2F2827712&qs=na&rdn=www.google.com&rpn=%2F&rqs=na&cc=US&cont=NA&rc=OR&ipaddr=)Changes in Adult Obesity Trends in the US \\| Health Policy \\| JAMA Health Forum \\| JAMA Network [\\[Skip to Navigation\\]](https://jamanetwork.com/journals/jama-health-f..."
+      },
+      {
+        "index": 9,
+        "title": "Map Shows States With Highest Obesity Rates - Newsweek",
+        "url": "https://www.newsweek.com/map-shows-states-with-highest-obesity-rates-10888415",
+        "published_date": "2025-10-16T00:00:00.000Z",
+        "snippet": "latest news\n[Donald Trump: \u2018I Stopped Netanyahu\u2019](https://www.newsweek.com/donald-trump-netanyahu-israel-gaza-war-time-interview-10925054)\n\n- Nation\n\n[News](https://www.newsweek.com/news) [Politics](https://www.newsweek.com/politics) [Tech](https://www.newsweek.com/technology) [Fact Check](https://www.newsweek.com/fact-check) [Personal Finance](https://www.newsweek.com/personal-finance) [Automotive](https://www.newsweek.com/autos) [Sports](https://www.newsweek.com/sports) [Better Workplaces](htt..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:46:15.261679"
+}
+
+------------------------------------------------------------
+
+[TOOL]
+{
+  "type": "data_report",
+  "title": "Search: percentage Americans overweight obese projection 2030 overweight BMI 25+",
+  "source": "Exa Search",
+  "data": {
+    "query": "percentage Americans overweight obese projection 2030 overweight BMI 25+",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "National-level and state-level prevalence of overweight and obesity ...",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext",
+        "published_date": "2024-11-14T00:00:00.000Z",
+        "snippet": "[Skip to Main Content](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#page-body-id) [Skip to Main Menu](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#mega-menu-nav)\n\nADVERTISEMENT\n\nSCROLL TO CONTINUE WITH CONTENT\n\nOpen GPT ConsoleOpen Oracle KeywordsRefresh Values\n\n| Property | Value |\n| --- | --- |\n| Status |\n| Version |\n| Ad File |\n| Disable Ads Flag |\n| Environment |\n| Moat Init |\n| Moat Ready |\n| Contextual Ready |\n| ..."
+      },
+      {
+        "index": 1,
+        "title": "than half of adults and a third of children and adolescents predicted ...",
+        "url": "https://www.healthdata.org/news-events/newsroom/news-releases/lancet-more-half-adults-and-third-children-and-adolescents",
+        "published_date": "2025-03-03T00:00:00.000Z",
+        "snippet": "The Lancet: More than half of adults and a third of children and adolescents predicted to have overweight or obesity by 2050 | Institute for Health Metrics and Evaluation[Skip to main content](#main-content)\n[IHME logo](https://www.healthdata.org/)\n![Loading...](https://www.healthdata.org/themes/custom/healthdata/images/search-loading-indicator-transparent.gif)\n# The Lancet:\u202fMore than half of adults and a third of children and adolescents predicted to have overweight or obesity by 2050\nPublished..."
+      },
+      {
+        "index": 2,
+        "title": "National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39551059/",
+        "published_date": "2024-07-12T00:00:00.000Z",
+        "snippet": "National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed\nClipboard, Search History, and several other advanced features are temporarily unavailable.\n[Skip to main page content](#article-details)\n![U.S. flag](https://cdn.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png)\nAn official website of the United States government\nHere's how you know\n![Dot gov](https://cdn.ncbi.nlm.nih.go..."
+      },
+      {
+        "index": 3,
+        "title": "Demographic Research - Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425\u2013458)",
+        "url": "https://www.demographic-research.org/articles/volume/51/13",
+        "published_date": "2023-06-16T00:00:00.000Z",
+        "snippet": "Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425&#x2013;458) - Demographic Research\nISSN 1435-9871\nVolume 51 - Article 13 | Pages 425&ndash;458**\n# Projection of US adult obesity trends based on individual BMI trajectories\nBy[Nicolas Todd](/articles/articlesbyauthor/17012),[Mikko Myrskyl&#xE4;](/articles/articlesbyauthor/1237)\n*Date received:*\n16 Jun 2023\n*Date published:*\n13 Aug 2024\n*Word count:*\n3425\n*Keywords:*\n[BMI trajectory rec..."
+      },
+      {
+        "index": 4,
+        "title": "Update on the Obesity Epidemic: After the Sudden Rise, Is the ...",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10748771/",
+        "published_date": "2023-10-02T00:00:00.000Z",
+        "snippet": "[Skip to main content](https://pmc.ncbi.nlm.nih.gov/pmc.ncbi.nlm.nih.gov#main-content)\n\n**Official websites use .gov**\nA\n**.gov** website belongs to an official\ngovernment organization in the United States.\n\n**Secure .gov websites use HTTPS**\nA **lock** (\n\nLocked padlock icon\n) or **https://** means you've safely\nconnected to the .gov website. Share sensitive\ninformation only on official, secure websites.\n\nSearch PMC Full-Text ArchiveSearch in PMC\n\n- [Journal List](https://pmc.ncbi.nlm.nih.gov/j..."
+      },
+      {
+        "index": 5,
+        "title": "Projected U.S. State-Level Prevalence of Adult Obesity and Severe ...",
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa1909301",
+        "published_date": "2019-12-18T00:00:00.000Z",
+        "snippet": "Save\n\n- Contents\n- - [Information & Authors](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-info)\n- [Metrics & Citations](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-metrics)\n- [View Options](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-fulltext-options)\n- [References](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-references)\n- [Media](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-medi..."
+      },
+      {
+        "index": 6,
+        "title": "Close to half of U.S. population projected to have obesity by 2030",
+        "url": "https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/",
+        "published_date": "2024-11-22T05:03:12.000Z",
+        "snippet": "[Skip to main content](https://hsph.harvard.edu/hsph.harvard.edu#main)\n\n[Chronic Diseases](https://hsph.harvard.edu/topic/chronic-diseases/)\n\n# Close to half of U.S. population projected to have obesity by 2030\n\nBy\n\nStaff Writer\n\nDecember 18, 2019\n\nJump to Section\n\nShare Post\n\n- [LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/)\n- [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://hsph.harvard.edu/news/ha..."
+      },
+      {
+        "index": 7,
+        "title": "Half of U.S. Adults Projected to be Obese by 2030",
+        "url": "https://www.cardiometabolichealth.org/half-of-u-s-adults-projected-to-be-obese-by-2030/",
+        "published_date": "2020-03-12T00:00:00.000Z",
+        "snippet": "[Skip to content](https://www.cardiometabolichealth.org/half-of-u-s-adults-projected-to-be-obese-by-2030/#content)\n\n[Informa Connect Medical Brands](https://www.cardiometabolichealth.org/half-of-u-s-adults-projected-to-be-obese-by-2030/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE4NCIsInRvZ2dsZSI6ZmFsc2V9)\n\n[My Account](https://www.cardiometabolichealth.org/my-account/)\n\n[Sign In](https://www.cardiometabolichealth.org/login)\n\n[Register](https://www.cardiometabolichealth.org/..."
+      },
+      {
+        "index": 8,
+        "title": "Study Suggests 86 Percent of Americans Could be Overweight or ...",
+        "url": "https://publichealth.jhu.edu/2008/wang_obesity_projections",
+        "published_date": "2008-07-28T00:00:00.000Z",
+        "snippet": "[Skip to main content](https://publichealth.jhu.edu/2008/wang_obesity_projections#main-content)\n\nMost adults in the U.S. will be overweight or obese by 2030, with related health care spending projected to be as much as $956.9 billion, according to researchers at the Johns Hopkins Bloomberg School of Public Health, the Agency for Healthcare Research and Quality and the University of Pennsylvania School of Medicine. Their results are published in the July 2008 online issue of [Obesity](http://www...."
+      },
+      {
+        "index": 9,
+        "title": "By 2030, nearly half of all U.S. adults will be obese, experts predict",
+        "url": "https://www.ncbi.nlm.nih.gov/search/research-news/7943",
+        "published_date": "2019-12-18T00:00:00.000Z",
+        "snippet": "News: By 2030, nearly half of all U.S.... (The Los Angeles Times) - Behind the headlines - NLM[Skip to main page content](#maincontent)\n![U.S. flag](https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png)\nAn official website of the United States government\nHere's how you know\n![Dot gov](https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/icon-dot-gov.svg)\n**The .gov means it\u2019s official.**\nFederal government websites often end in .gov or .mil. Before\nsharing sensitive information, ..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:46:16.541749"
+}
+
+------------------------------------------------------------
+
+
+################################################################################
+# OPUS (FORECASTING MODEL) CALLS
+################################################################################
+
+--- OPUS CALL 1 ---
+
+[INPUT TO OPUS (PROMPT)]
+----------------------------------------
+
+You are a professional forecaster. Your specific strength is the ability to take complex information and piece it together in an integrated way to form accurate probabilistic distributions.
+
+=== FORECASTING PHILOSOPHY ===
+
+**Tournament Context**: These questions come from a pre-set list. The actual situation on the ground may differ significantly from what the question implies. Don't assume the question framing matches reality.
+
+**Calibration Principles**:
+- NEVER assign less than 1% probability to any outcome
+- If there is ANY doubt, stay between 3% and 97%
+- The world changes slowly most of the time - weight status quo outcomes heavily
+- But also: be "based" - when evidence clearly points one direction, don't overthink it
+
+**Scoring Awareness** (Log Scoring):
+- If you predict 1% and outcome happens at that value, you're catastrophically penalized
+- Every doubling helps: 2% is almost twice as good as 1%, 4% even better
+- Your density at the resolution value is what matters - get as close as possible while acknowledging uncertainty
+
+**Two-Fold Uncertainty Model**:
+1. WORLD UNCERTAINTY: Irreducible randomness in reality that even perfect forecasters can't eliminate
+2. MODEL UNCERTAINTY: You likely lack critical data that human forecasters have access to. Account for information gaps.
+
+**Distribution Thinking**:
+- **Unimodal Model**: Start by assuming a single dominant trend. What are its mean and variance?
+- **Multimodal Exceptions**: How "unimodal" is this really? Are there secondary scenarios (e.g. "it either happens or it doesn't") that create a separate peak?
+- **World Model & Base Rates**: What is the historical base rate for this kind of event? 
+- **Tails**: Set wide tails for the 1% and 99% - unexpected outcomes are more common than they seem.
+- **Information Gaps**: You are given limited research. Explicitly consider what is MISSING and how it pulls you toward a conservative prior.
+
+=== YOUR QUESTION ===
+
+What percentage of Americans will be obese or overweight in 2030?
+
+Background:
+The obesity epidemic has been ravaging not just the United States but [much of the world](http://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight) over the past 35-40 years. Critics of the current Dietary Guidelines point out that the emergence of the [obesity epidemic coincided with new government advice to eat less fat and more carbohydrate](https://www.dietdoctor.com/introduction-dietary-guidelines-start-obesity-epidemic). (In 2018, the U.S. government [still mandates](https://www.nutritioncoalition.us/dietary-guidelines-for-americans-dga-introduction) a low fat/high carb plan for all Americans over the age of 2, despite the fact that low carbohydrate diets have [whalloped](https://www.healthline.com/nutrition/23-studies-on-low-carb-and-low-fat-diets) low fat diets in clinical trials.)
+
+In any event, the origins of this disaster notwithstanding, things are clearly getting worse, year after year. Per a recent analysis in The Lancet (described [here](http://www.healthdata.org/news-release/vast-majority-american-adults-are-overweight-or-obese-and-weight-growing-problem-among):)
+
+> An estimated 160 million Americans are either obese or overweight. Nearly three-quarters of American men and more than 60% of women are obese or overweight. These are also major challenges for America’s children – nearly 30% of boys and girls under age 20 are either obese or overweight, up from 19% in 1980.
+
+Per a [CDC report](https://www.cdc.gov/nchs/fastats/obesity-overweight.htm) from a few years ago, in the United States:
+
+> Percent of adults aged 20 and over with obesity: 37.9% (2013-2014)
+> Percent of adults aged 20 and over with overweight, including obesity: 70.7% (2013-2014)
+
+This question will resolve as the percentage of the US population who are overweight or obese according to [US CDC data](https://www.cdc.gov/obesity/resources/reports.html) for 2030.  For the purposes of this question, overweight or obese persons are defined as having a [Body-Mass Index](https://www.cdc.gov/obesity/resources/reports.html) of 25.0 or greater.  This statistic will be calculated for the entire US population, for ages of 18 years or older, for all races, genders, etc.
+
+If CDC data is not available, no other substitutes will be considered, and this question will resolve ambiguously.
+
+*September 6, 2024 update: The link in the original resolution criteria no longer goes to a valid CDC page. When this question resolves in 2030, Metaculus admins will choose the best available CDC source that provides data for the 18+ age range. By default, we'll go to https://www.cdc.gov/obesity/ (the parent url of the link in the resolution criteria) and base the resolution on the data provided there.*
+
+
+
+Your research assistant says:
+=== RESEARCH SYNTHESIS ===
+{
+  "type": "data_report",
+  "title": "Search: percentage Americans overweight obese projection 2030 overweight BMI 25+",
+  "source": "Exa Search",
+  "data": {
+    "query": "percentage Americans overweight obese projection 2030 overweight BMI 25+",
+    "num_results": 10,
+    "results": [
+      {
+        "index": 0,
+        "title": "National-level and state-level prevalence of overweight and obesity ...",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext",
+        "published_date": "2024-11-14T00:00:00.000Z",
+        "snippet": "[Skip to Main Content](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#page-body-id) [Skip to Main Menu](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#mega-menu-nav)\n\nADVERTISEMENT\n\nSCROLL TO CONTINUE WITH CONTENT\n\nOpen GPT ConsoleOpen Oracle KeywordsRefresh Values\n\n| Property | Value |\n| --- | --- |\n| Status |\n| Version |\n| Ad File |\n| Disable Ads Flag |\n| Environment |\n| Moat Init |\n| Moat Ready |\n| Contextual Ready |\n| ..."
+      },
+      {
+        "index": 1,
+        "title": "than half of adults and a third of children and adolescents predicted ...",
+        "url": "https://www.healthdata.org/news-events/newsroom/news-releases/lancet-more-half-adults-and-third-children-and-adolescents",
+        "published_date": "2025-03-03T00:00:00.000Z",
+        "snippet": "The Lancet: More than half of adults and a third of children and adolescents predicted to have overweight or obesity by 2050 | Institute for Health Metrics and Evaluation[Skip to main content](#main-content)\n[IHME logo](https://www.healthdata.org/)\n![Loading...](https://www.healthdata.org/themes/custom/healthdata/images/search-loading-indicator-transparent.gif)\n# The Lancet:\u202fMore than half of adults and a third of children and adolescents predicted to have overweight or obesity by 2050\nPublished..."
+      },
+      {
+        "index": 2,
+        "title": "National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39551059/",
+        "published_date": "2024-07-12T00:00:00.000Z",
+        "snippet": "National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed\nClipboard, Search History, and several other advanced features are temporarily unavailable.\n[Skip to main page content](#article-details)\n![U.S. flag](https://cdn.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png)\nAn official website of the United States government\nHere's how you know\n![Dot gov](https://cdn.ncbi.nlm.nih.go..."
+      },
+      {
+        "index": 3,
+        "title": "Demographic Research - Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425\u2013458)",
+        "url": "https://www.demographic-research.org/articles/volume/51/13",
+        "published_date": "2023-06-16T00:00:00.000Z",
+        "snippet": "Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425&#x2013;458) - Demographic Research\nISSN 1435-9871\nVolume 51 - Article 13 | Pages 425&ndash;458**\n# Projection of US adult obesity trends based on individual BMI trajectories\nBy[Nicolas Todd](/articles/articlesbyauthor/17012),[Mikko Myrskyl&#xE4;](/articles/articlesbyauthor/1237)\n*Date received:*\n16 Jun 2023\n*Date published:*\n13 Aug 2024\n*Word count:*\n3425\n*Keywords:*\n[BMI trajectory rec..."
+      },
+      {
+        "index": 4,
+        "title": "Update on the Obesity Epidemic: After the Sudden Rise, Is the ...",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10748771/",
+        "published_date": "2023-10-02T00:00:00.000Z",
+        "snippet": "[Skip to main content](https://pmc.ncbi.nlm.nih.gov/pmc.ncbi.nlm.nih.gov#main-content)\n\n**Official websites use .gov**\nA\n**.gov** website belongs to an official\ngovernment organization in the United States.\n\n**Secure .gov websites use HTTPS**\nA **lock** (\n\nLocked padlock icon\n) or **https://** means you've safely\nconnected to the .gov website. Share sensitive\ninformation only on official, secure websites.\n\nSearch PMC Full-Text ArchiveSearch in PMC\n\n- [Journal List](https://pmc.ncbi.nlm.nih.gov/j..."
+      },
+      {
+        "index": 5,
+        "title": "Projected U.S. State-Level Prevalence of Adult Obesity and Severe ...",
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa1909301",
+        "published_date": "2019-12-18T00:00:00.000Z",
+        "snippet": "Save\n\n- Contents\n- - [Information & Authors](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-info)\n- [Metrics & Citations](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-metrics)\n- [View Options](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-fulltext-options)\n- [References](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-references)\n- [Media](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-medi..."
+      },
+      {
+        "index": 6,
+        "title": "Close to half of U.S. population projected to have obesity by 2030",
+        "url": "https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/",
+        "published_date": "2024-11-22T05:03:12.000Z",
+        "snippet": "[Skip to main content](https://hsph.harvard.edu/hsph.harvard.edu#main)\n\n[Chronic Diseases](https://hsph.harvard.edu/topic/chronic-diseases/)\n\n# Close to half of U.S. population projected to have obesity by 2030\n\nBy\n\nStaff Writer\n\nDecember 18, 2019\n\nJump to Section\n\nShare Post\n\n- [LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/)\n- [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://hsph.harvard.edu/news/ha..."
+      },
+      {
+        "index": 7,
+        "title": "Half of U.S. Adults Projected to be Obese by 2030",
+        "url": "https://www.cardiometabolichealth.org/half-of-u-s-adults-projected-to-be-obese-by-2030/",
+        "published_date": "2020-03-12T00:00:00.000Z",
+        "snippet": "[Skip to content](https://www.cardiometabolichealth.org/half-of-u-s-adults-projected-to-be-obese-by-2030/#content)\n\n[Informa Connect Medical Brands](https://www.cardiometabolichealth.org/half-of-u-s-adults-projected-to-be-obese-by-2030/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE4NCIsInRvZ2dsZSI6ZmFsc2V9)\n\n[My Account](https://www.cardiometabolichealth.org/my-account/)\n\n[Sign In](https://www.cardiometabolichealth.org/login)\n\n[Register](https://www.cardiometabolichealth.org/..."
+      },
+      {
+        "index": 8,
+        "title": "Study Suggests 86 Percent of Americans Could be Overweight or ...",
+        "url": "https://publichealth.jhu.edu/2008/wang_obesity_projections",
+        "published_date": "2008-07-28T00:00:00.000Z",
+        "snippet": "[Skip to main content](https://publichealth.jhu.edu/2008/wang_obesity_projections#main-content)\n\nMost adults in the U.S. will be overweight or obese by 2030, with related health care spending projected to be as much as $956.9 billion, according to researchers at the Johns Hopkins Bloomberg School of Public Health, the Agency for Healthcare Research and Quality and the University of Pennsylvania School of Medicine. Their results are published in the July 2008 online issue of [Obesity](http://www...."
+      },
+      {
+        "index": 9,
+        "title": "By 2030, nearly half of all U.S. adults will be obese, experts predict",
+        "url": "https://www.ncbi.nlm.nih.gov/search/research-news/7943",
+        "published_date": "2019-12-18T00:00:00.000Z",
+        "snippet": "News: By 2030, nearly half of all U.S.... (The Los Angeles Times) - Behind the headlines - NLM[Skip to main page content](#maincontent)\n![U.S. flag](https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png)\nAn official website of the United States government\nHere's how you know\n![Dot gov](https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/icon-dot-gov.svg)\n**The .gov means it\u2019s official.**\nFederal government websites often end in .gov or .mil. Before\nsharing sensitive information, ..."
+      }
+    ]
+  },
+  "fetched_at": "2026-01-08T00:46:16.541749"
+}
+
+=== SEARCH RESULTS ===
+[Source 1]
+Title: About half of U.S. adults predicted to be obese by 2030 - AASM
+Date: 2011-09-01T00:00:00.000Z
+URL: https://aasm.org/about-half-of-u-s-adults-predicted-to-be-obese-by-2030/
+Content: About half of U.S. adults predicted to be obese by 2030 - AASM[Skip to content](#content)
+[![](//aasm.org/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif)](https://aasm.org)
+Search for:
+[JOIN Today](https://members.aasm.org/register)[Login with CSICloud](https://aasm.org/?option=s
+
+[Source 2]
+Title: Obesity and Severe Obesity Forecasts Through 2030
+Date: None
+URL: https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext
+Content: [Skip to Main Content](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#page-body-id) [Skip to Main Menu](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#mega-menu-nav)
+
+ADVERTISEMENT
+
+SCROLL TO CONTINUE WITH CONTENT
+
+Open GPT ConsoleOpen Oracle KeywordsRefresh Val
+
+[Source 3]
+Title: By 2030, nearly half of all U.S. adults will be obese, experts predict
+Date: 2019-12-18T00:00:00.000Z
+URL: https://www.ncbi.nlm.nih.gov/search/research-news/7943
+Content: News: By 2030, nearly half of all U.S.... (The Los Angeles Times) - Behind the headlines - NLM[Skip to main page content](#maincontent)
+![U.S. flag](https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png)
+An official website of the United States government
+Here's how you know
+![Dot
+
+[Source 4]
+Title: Close to half of U.S. population projected to have obesity by 2030
+Date: 2024-11-22T05:03:12.000Z
+URL: https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/
+Content: [Skip to main content](https://hsph.harvard.edu/hsph.harvard.edu#main)
+
+[Chronic Diseases](https://hsph.harvard.edu/topic/chronic-diseases/)
+
+# Close to half of U.S. population projected to have obesity by 2030
+
+By
+
+Staff Writer
+
+December 18, 2019
+
+Jump to Section
+
+Share Post
+
+- [LinkedIn](https://w
+
+[Source 5]
+Title: Projected U.S. State-Level Prevalence of Adult Obesity and Severe ...
+Date: 2019-12-18T00:00:00.000Z
+URL: https://www.nejm.org/doi/full/10.1056/NEJMsa1909301
+Content: Save
+
+- Contents
+- - [Information & Authors](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-info)
+- [Metrics & Citations](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-metrics)
+- [View Options](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collat
+
+
+=== SEARCH_WEB RESULTS ===
+
+[National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990–2021, and forecasts up to 2050]
+Date: 2024-12-07T00:00:00.000Z
+URL: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext
+Content: [Skip to Main Content](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#page-body-id) [Skip to Main Menu](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#mega-menu-nav)
+
+ADVERTISEMENT
+
+SCROLL TO CONTINUE WITH CONTENT
+
+Open GPT Co
+
+[The evolving burden of obesity in the US: a novel population-level system dynamics approach - PubMed]
+Date: 2025-08-29T00:00:00.000Z
+URL: https://pubmed.ncbi.nlm.nih.gov/40880254/
+Content: Clipboard, Search History, and several other advanced features are temporarily unavailable.
+
+ [Skip to main page content](https://pubmed.ncbi.nlm.nih.gov/pubmed.ncbi.nlm.nih.gov#article-details)
+
+**The .gov means it’s official.**
+Federal government websites often end in .gov or .mil. Before
+sharing 
+
+[Demographic Research - Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425–458)]
+Date: 2023-06-16T00:00:00.000Z
+URL: https://www.demographic-research.org/articles/volume/51/13
+Content: Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425&#x2013;458) - Demographic Research
+ISSN 1435-9871
+Volume 51 - Article 13 | Pages 425&ndash;458**
+# Projection of US adult obesity trends based on individual BMI trajectories
+By[Nicolas Todd
+
+[Projected Trends of Obesity throughout the Life Course According to Sex, Race, and Birth Cohorts in the United States]
+Date: 2024-10-16T00:00:00.000Z
+URL: https://www.medrxiv.org/content/10.1101/2024.10.15.24315456v1.full
+Content: Projected Trends of Obesity throughout the Life Course According to Sex, Race, and Birth Cohorts in the United States | medRxiv
+[Skip to main content](#main-content)
+[![medRxiv](https://www.medrxiv.org/sites/default/files/medrxiv_inner_logo.png)](/)
+Search for this keyword
+[Advanced Search](/search)
+
+[Projection of US adult obesity trends based on individual BMI trajectories]
+Date: 2024-08-06T00:00:00.000Z
+URL: https://www.demographic-research.org/volumes/vol51/13/51-13.pdf
+Content: DEMOGRAPHIC RESEARCH
+VOLUME 51, ARTICLE 13, PAGES 425458
+PUBLISHED 13 AUGUST 2024
+https://www.demographic-research.org/Volumes/Vol51/13
+DOI: 10.4054/DemRes.2024.51.13
+Research Article
+Projection of US adult obesity trends based on
+individual BMI trajectories
+Nicolas Todd
+Mikko Myrskylä
+© 2024 Nicol
+
+=== SEARCH_WEB RESULTS ===
+
+[Close to half of U.S. population projected to have obesity by 2030 | Harvard T.H. Chan School of Public Health]
+Date: 2024-11-22T05:03:12.000Z
+URL: https://hsph.harvard.edu/news/half-of-us-to-have-obesity-by-2030/
+Content: [Skip to main content](https://hsph.harvard.edu/hsph.harvard.edu#main)
+
+[Chronic Diseases](https://hsph.harvard.edu/topic/chronic-diseases/)
+
+# Close to half of U.S. population projected to have obesity by 2030
+
+By
+
+Staff Writer
+
+December 18, 2019
+
+Jump to Section
+
+Share Post
+
+- [LinkedIn](https://w
+
+[Half U.S. Population Will Be Obese by 2030]
+Date: 2019-12-18T00:00:00.000Z
+URL: https://time.com/5751551/us-obesity-by-state/
+Content: By [Alice Park](https://time.com/author/alice-park/)
+
+December 18, 2019 5:00 PM EST
+
+[Obesity](https://time.com/5100737/obesity-lowering-life-expectancy-united-states/) continues to be a serious health problem in the U.S., contributing to heart disease, diabetes, joint disorders and even [certain ty
+
+[National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed]
+Date: 2024-07-12T00:00:00.000Z
+URL: https://pubmed.ncbi.nlm.nih.gov/39551059/
+Content: National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed
+Clipboard, Search History, and several other advanced features are temporarily unavailable.
+[Skip to main page content](#article-detail
+
+[Demographic Research - Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425–458)]
+Date: 2023-06-16T00:00:00.000Z
+URL: https://www.demographic-research.org/articles/volume/51/13
+Content: Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425&#x2013;458) - Demographic Research
+ISSN 1435-9871
+Volume 51 - Article 13 | Pages 425&ndash;458**
+# Projection of US adult obesity trends based on individual BMI trajectories
+By[Nicolas Todd
+
+[The evolving burden of obesity in the US: a novel population-level system dynamics approach - PubMed]
+Date: 2025-08-29T00:00:00.000Z
+URL: https://pubmed.ncbi.nlm.nih.gov/40880254/
+Content: Clipboard, Search History, and several other advanced features are temporarily unavailable.
+
+ [Skip to main page content](https://pubmed.ncbi.nlm.nih.gov/pubmed.ncbi.nlm.nih.gov#article-details)
+
+**The .gov means it’s official.**
+Federal government websites often end in .gov or .mil. Before
+sharing 
+
+=== CRAWL_URLS RESULTS ===
+
+[Projected U.S. State-Level Prevalence of Adult Obesity and Severe Obesity]
+URL: https://www.nejm.org/doi/full/10.1056/NEJMsa1909301
+Content: Save
+
+- Contents
+- - [Information & Authors](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-info)
+- [Metrics & Citations](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-metrics)
+- [View Options](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-fulltext-options)
+- [References](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-references)
+- [Media](https://www.nejm.org/doi/full/10.1056/NEJMsa1909301#core-collateral-medi
+
+[Obesity and Severe Obesity Forecasts Through 2030]
+URL: https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext
+Content: [Skip to Main Content](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#page-body-id) [Skip to Main Menu](https://www.ajpmonline.org/article/s0749-3797(12)00146-8/fulltext#mega-menu-nav)
+
+ADVERTISEMENT
+
+SCROLL TO CONTINUE WITH CONTENT
+
+Open GPT ConsoleOpen Oracle KeywordsRefresh Values
+
+| Property | Value |
+| --- | --- |
+| Status |
+| Version |
+| Ad File |
+| Disable Ads Flag |
+| Environment |
+| Moat Init |
+| Moat Ready |
+| Contextual Ready |
+| Contextual URL |
+| Contextual Initia
+
+=== SEARCH_WEB RESULTS ===
+
+[Adult Obesity Prevalence Maps - CDC]
+Date: 2025-12-03T00:00:00.000Z
+URL: https://www.cdc.gov/obesity/data-and-statistics/adult-obesity-prevalence-maps.html
+Content: Adult Obesity Prevalence Maps | Obesity | CDC
+[Skip directly to site content](#content)[Skip directly to search](#cdc-search)
+![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government
+[Here's how you know](#gov-notice)
+![](https://www
+
+[Obesity and Severe Obesity Prevalence in Adults - CDC]
+Date: 2024-09-24T00:00:00.000Z
+URL: https://www.cdc.gov/nchs/products/databriefs/db508.htm
+Content: Products - Data Briefs - Number 508 - September 2024
+[Skip directly to site content](#content)[Skip directly to search](#headerSearch)
+[Español](https://www.cdc.gov/spanish/)|[Other Languages](https://wwwn.cdc.gov/pubs/other-languages/)
+![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/u
+
+[New CDC Data Show Adult Obesity Prevalence Remains High]
+Date: 2024-09-12T00:00:00.000Z
+URL: https://www.cdc.gov/media/releases/2024/p0912-adult-obesity.html
+Content: New CDC Data Show Adult Obesity Prevalence Remains High | CDC Newsroom
+[Skip directly to site content](#content)[Skip directly to search](#cdc-search)
+![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government
+[Here's how you know](#go
+
+[Obesity and Overweight - FastStats - CDC]
+Date: None
+URL: https://www.cdc.gov/nchs/fastats/obesity-overweight.htm
+Content: FastStats - Overweight Prevalence
+[Skip directly to site content](#content)[Skip directly to search](#headerSearch)
+[Español](https://www.cdc.gov/spanish/)|[Other Languages](https://wwwn.cdc.gov/pubs/other-languages/)
+![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/us_flag_small.png)An
+
+[[PDF] NCHS Data Brief, Number 508, September 2024 - CDC]
+Date: None
+URL: https://www.cdc.gov/nchs/data/databriefs/db508.pdf
+Content: NCHS reports can be downloaded from: 
+https://www.cdc.gov/nchs/products/index.htm.
+NCHS Data Brief ■ No. 508 ■ September 2024
+Obesity and Severe Obesity Prevalence in Adults:
+United States, August 2021–August 2023
+Samuel D. Emmerich, D.V.M., Cheryl D. Fryar, M.S.P.H., Bryan Stierman, M.D., M.P.H., a
+
+=== CRAWL_URLS RESULTS ===
+
+[National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990–2021, and forecasts up to 2050]
+URL: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext
+Content: [Skip to Main Content](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#page-body-id) [Skip to Main Menu](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#mega-menu-nav)
+
+ADVERTISEMENT
+
+SCROLL TO CONTINUE WITH CONTENT
+
+Open GPT ConsoleOpen Oracle KeywordsRefresh Values
+
+| Property | Value |
+| --- | --- |
+| Status |
+| Version |
+| Ad File |
+| Disable Ads Flag |
+| Environment |
+| Moat Init |
+| Moat Ready |
+| Contextual Ready |
+| 
+
+[The Lancet: Without immediate action nearly 260 million people in the USA predicted to have overweight or obesity by 2050]
+URL: https://www.healthdata.org/news-events/newsroom/news-releases/lancet-without-immediate-action-nearly-260-million-people-usa
+Content: [Skip to main content](https://www.healthdata.org/www.healthdata.org#main-content)
+
+# The Lancet: Without immediate action nearly 260 million people in the USA predicted to have overweight or obesity by 2050
+
+Published
+November 14, 2024
+
+Photos by Oran Viriyincy, Flickr;  Allan Foster, Flickr; circulating, Flickr.
+
+## Key takeaways:
+
+- **Most comprehensive US analysis of overweight and obesity at the national level and across all states and age groups** estimates that obesity rates in adults (ag
+
+=== SEARCH_WEB RESULTS ===
+
+[Obesity and Severe Obesity Prevalence in Adults - CDC]
+Date: 2024-09-24T00:00:00.000Z
+URL: https://www.cdc.gov/nchs/products/databriefs/db508.htm
+Content: Products - Data Briefs - Number 508 - September 2024
+[Skip directly to site content](#content)[Skip directly to search](#headerSearch)
+[Español](https://www.cdc.gov/spanish/)|[Other Languages](https://wwwn.cdc.gov/pubs/other-languages/)
+![](https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/uswds/u
+
+[Adult Obesity Prevalence Maps - CDC]
+Date: 2025-12-03T00:00:00.000Z
+URL: https://www.cdc.gov/obesity/data-and-statistics/adult-obesity-prevalence-maps.html
+Content: Adult Obesity Prevalence Maps | Obesity | CDC
+[Skip directly to site content](#content)[Skip directly to search](#cdc-search)
+![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government
+[Here's how you know](#gov-notice)
+![](https://www
+
+[[PDF] NCHS Data Brief, Number 508, September 2024 - CDC]
+Date: None
+URL: https://www.cdc.gov/nchs/data/databriefs/db508.pdf
+Content: NCHS reports can be downloaded from: 
+https://www.cdc.gov/nchs/products/index.htm.
+NCHS Data Brief ■ No. 508 ■ September 2024
+Obesity and Severe Obesity Prevalence in Adults:
+United States, August 2021–August 2023
+Samuel D. Emmerich, D.V.M., Cheryl D. Fryar, M.S.P.H., Bryan Stierman, M.D., M.P.H., a
+
+[New CDC Data Show Adult Obesity Prevalence Remains High]
+Date: 2024-11-01T00:00:00.000Z
+URL: https://www.cdc.gov/media/releases/2024/p0912-adult-obesity.html
+Content: New CDC Data Show Adult Obesity Prevalence Remains High | CDC Newsroom
+[Skip directly to site content](#content)[Skip directly to search](#cdc-search)
+![](https://www.cdc.gov/TemplatePackage/5.0/img/uswds/us_flag_small.png)An official website of the United States government
+[Here's how you know](#go
+
+[State of Obesity Report 2025 : Better Policies for a Healthier America]
+Date: 2025-10-16T00:00:00.000Z
+URL: https://www.tfah.org/report-details/state-of-obesity-report-2025/
+Content: State of Obesity Report 2025 : Better Policies for a Healthier America - TFAH
+[](https://www.tfah.org/)
+[Donate**](https://www.tfah.org/donate/)[Subscribe](https://www.tfah.org/about/tfah-newsletters/)Connect[**](https://www.facebook.com/TrustforAmericasHealth)[**](https://twitter.com/healthyamerica
+
+=== SEARCH_WEB RESULTS ===
+
+[National-level and state-level prevalence of overweight and obesity ...]
+Date: 2024-11-14T00:00:00.000Z
+URL: https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext
+Content: [Skip to Main Content](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#page-body-id) [Skip to Main Menu](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)01548-4/fulltext#mega-menu-nav)
+
+ADVERTISEMENT
+
+SCROLL TO CONTINUE WITH CONTENT
+
+Open GPT Co
+
+[than half of adults and a third of children and adolescents predicted ...]
+Date: 2025-03-03T00:00:00.000Z
+URL: https://www.healthdata.org/news-events/newsroom/news-releases/lancet-more-half-adults-and-third-children-and-adolescents
+Content: The Lancet: More than half of adults and a third of children and adolescents predicted to have overweight or obesity by 2050 | Institute for Health Metrics and Evaluation[Skip to main content](#main-content)
+[IHME logo](https://www.healthdata.org/)
+![Loading...](https://www.healthdata.org/themes/cus
+
+[National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed]
+Date: 2024-07-12T00:00:00.000Z
+URL: https://pubmed.ncbi.nlm.nih.gov/39551059/
+Content: National-level and state-level prevalence of overweight and obesity among children, adolescents, and adults in the USA, 1990-2021, and forecasts up to 2050 - PubMed
+Clipboard, Search History, and several other advanced features are temporarily unavailable.
+[Skip to main page content](#article-detail
+
+[Demographic Research - Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425–458)]
+Date: 2023-06-16T00:00:00.000Z
+URL: https://www.demographic-research.org/articles/volume/51/13
+Content: Projection of US adult obesity trends based on individual BMI trajectories (Volume 51 - Article 13 | Pages 425&#x2013;458) - Demographic Research
+ISSN 1435-9871
+Volume 51 - Article 13 | Pages 425&ndash;458**
+# Projection of US adult obesity trends based on individual BMI trajectories
+By[Nicolas Todd
+
+[Update on the Obesity Epidemic: After the Sudden Rise, Is the ...]
+Date: 2023-10-02T00:00:00.000Z
+URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10748771/
+Content: [Skip to main content](https://pmc.ncbi.nlm.nih.gov/pmc.ncbi.nlm.nih.gov#main-content)
+
+**Official websites use .gov**
+A
+**.gov** website belongs to an official
+government organization in the United States.
+
+**Secure .gov websites use HTTPS**
+A **lock** (
+
+Locked padlock icon
+) or **https://** means
+
+Today is 2026-01-08.
+
+The outcome can not be lower than 1.0.
+The outcome can not be higher than 100.0.
+
+=== INTEGRATIVE REASONING ===
+
+Your research assistant has done the preliminary research for you. Your task is NOT to re-summarize the data, but to **coalesce your own thoughts** and use your specialized ability to **piece together the information in an integrated way**. 
+
+Avoid rambling. Focus on the final synthesis of the probability density:
+(a) How do these specific facts shift the mean or widen the variance?
+(b) What is the most likely "integrated" outcome distribution?
+(c) What is your final, calibrated judgment?
+
+=== ANALYSIS FRAMEWORK ===
+
+Before answering, work through:
+(a) Time remaining until resolution - does this affect uncertainty?
+(b) Status quo outcome if nothing changes
+(c) Outcome if current trends continue
+(d) What do prediction markets, experts, or Metaculus community suggest?
+(e) **Mean & Variance**: What is the center and spread of the most likely scenario?
+(f) **Multimodality**: Are there any "black swan" or "binary" scenarios that create separate probability peaks?
+(g) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
+(h) **Simulate Others**: What would the Metaculus pro-forecaster community likely converge on?
+(i) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
+
+=== TOOL USAGE ===
+You have access to `get_parametric_cdf(mean, std, skew)`.
+1. First, estimate the Mean and Standard Deviation of the target distribution.
+2. Estimate Skewness (0 for symmetric, positive for right-tail, negative for left-tail).
+3. CALL THE TOOL.
+4. The tool will give you a perfect set of percentiles.
+5. Use these percentiles in your final answer (you can adjust them slightly if necessary, but prefer the tool's smooth output).
+
+Formatting Instructions:
+- Match the units in the question (e.g. 1,000,000 vs 1m)
+- Never use scientific notation
+- Values must be strictly increasing from Percentile 1 to Percentile 99
+
+=== YOUR FORECAST ===
+
+The last thing you write is your final answer with these 25 percentiles:
+"
+Percentile 1: XX
+Percentile 2: XX
+Percentile 5: XX
+Percentile 10: XX
+Percentile 15: XX
+Percentile 20: XX
+Percentile 25: XX
+Percentile 30: XX
+Percentile 35: XX
+Percentile 40: XX
+Percentile 45: XX
+Percentile 50: XX
+Percentile 55: XX
+Percentile 60: XX
+Percentile 65: XX
+Percentile 70: XX
+Percentile 75: XX
+Percentile 80: XX
+Percentile 85: XX
+Percentile 90: XX
+Percentile 95: XX
+Percentile 96: XX
+Percentile 97: XX
+Percentile 98: XX
+Percentile 99: XX
+"
+
+----------------------------------------
+
+[OUTPUT FROM OPUS (RESPONSE)]
+----------------------------------------
+{
+  "percentiles": {
+    "p1": 70.01706866962537,
+    "p5": 72.06399396920995,
+    "p10": 73.15483521197228,
+    "p15": 73.89068040083515,
+    "p20": 74.47542772023462,
+    "p25": 74.97703381002141,
+    "p30": 75.4274487905527,
+    "p35": 75.84478965227929,
+    "p40": 76.24077385844514,
+    "p45": 76.62386429470861,
+    "p50": 77.00085353101043,
+    "p55": 77.37781580646356,
+    "p60": 77.76082361609538,
+    "p65": 78.15666391362254,
+    "p70": 78.57378875535255,
+    "p75": 79.02389652060492,
+    "p80": 79.52507000410442,
+    "p85": 80.10919270809333,
+    "p90": 80.84406794405803,
+    "p95": 81.93309441527241,
+    "p99": 83.9754013890455
+  },
+  "parameters": {
+    "input_mean": 77,
+    "input_std": 3,
+    "input_skew": -0.2,
+    "fitted_loc": 77.4752889856089,
+    "fitted_scale": 3.037416602944208,
+    "fitted_alpha": -0.2
+  },
+  "explanation": "Generated SkewNormal distribution with Mean=77, Std=3. Left skewed (tail < mean)."
+}
+----------------------------------------
+
+
+################################################################################
+# FINAL RESULT
+################################################################################
+
+Type: N/A
+Success: False
+Submitted: False
+Forecast: N/A
+
+################################################################################
+# COST SUMMARY
+################################################################################
+
+Research Phase:
+  - Tokens: 0
+  - Cost: $0.000000
+
+Forecast Phase:
+  - Tokens: 0
+  - Cost: $0.000000
+
+Exa API:
+  - Cost: $0.015000
+
+TOTAL:
+  - Total Tokens: 0
+  - Total Cost: $0.015000
+
+################################################################################
+# TOOL USAGE
+################################################################################
+
+  crawl_urls: 2 call(s)
+  search_web: 5 call(s)

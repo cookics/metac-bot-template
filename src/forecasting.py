@@ -274,17 +274,14 @@ def generate_continuous_cdf(
             return y_values
         continuous_cdf = linear_interpolation(cdf_xaxis, value_percentiles)
     
-    # Monotonicity fix: Ensure strictly increasing by at least 5e-5 (Metaculus requires 5e-05)
-    min_increment = 5e-5
-    for i in range(1, len(continuous_cdf)):
-        if continuous_cdf[i] <= continuous_cdf[i-1] + min_increment:
-            continuous_cdf[i] = continuous_cdf[i-1] + min_increment
+    # Monotonicity fix: Ensure strictly increasing by at least 6e-5 (Metaculus requires 5e-05)
+    # We do this AFTER scaling to ensure it sticks.
+    min_increment = 0.00006
     
-    # Clamp CDF to valid range based on bounds
-    # Open bounds require CDF to stay within [0.001, 0.999] to leave room for tails
+    # Boundary definitions
     min_cdf = 0.001 if open_lower_bound else 0.0
     max_cdf = 0.999 if open_upper_bound else 1.0
-    
+
     # Scale the CDF to fit within bounds while preserving monotonicity
     current_min = min(continuous_cdf)
     current_max = max(continuous_cdf)
@@ -294,13 +291,21 @@ def generate_continuous_cdf(
         scale_factor = (max_cdf - min_cdf) / (current_max - current_min + 1e-10)
         for i in range(len(continuous_cdf)):
             continuous_cdf[i] = min_cdf + (continuous_cdf[i] - current_min) * scale_factor
-    
-    # Final monotonicity check - ensure strictly increasing by at least 5e-5
+
+    # Pass 1: Forward pass (ensures i > i-1)
     for i in range(1, len(continuous_cdf)):
-        if continuous_cdf[i] <= continuous_cdf[i-1] + min_increment:
+        if continuous_cdf[i] < continuous_cdf[i-1] + min_increment:
             continuous_cdf[i] = continuous_cdf[i-1] + min_increment
-    
-    # Final clamp to ensure we don't exceed max after monotonicity adjustment
+            
+    # Pass 2: Backward pass (ensures i < i+1 and keeps us under max_cdf)
+    # Ensure the last point is exactly max_cdf if it was pushed over
+    if continuous_cdf[-1] > max_cdf:
+        continuous_cdf[-1] = max_cdf
+        for i in range(len(continuous_cdf) - 2, -1, -1):
+            if continuous_cdf[i] > continuous_cdf[i+1] - min_increment:
+                continuous_cdf[i] = continuous_cdf[i+1] - min_increment
+                
+    # Final safety clamp (should be unnecessary if second pass worked)
     for i in range(len(continuous_cdf)):
         continuous_cdf[i] = max(min_cdf, min(max_cdf, continuous_cdf[i]))
             
