@@ -1,0 +1,34 @@
+name: Test Tools Functionality
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/tools/**'
+      - 'test_tools_gh.py'
+      - 'pyproject.toml'
+
+jobs:
+  test_tools:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root
+      - name: Run Tool Verification
+        run: |
+          poetry run python test_tools_gh.py
+        env:
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Some tools might need these if not hardcoded
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}

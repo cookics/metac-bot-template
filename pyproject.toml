@@ -19,6 +19,10 @@ matplotlib = "^3.10.0"
 safetensors = "^0.7.0"
 exa-py = "^2.0.2"
 pytrends = "^4.9.2"
+yfinance = "^0.2.51"
+fredapi = "^0.5.2"
+scipy = "^1.15.0"
+beautifulsoup4 = "^4.12.3"
 
 
 [tool.poetry.group.dev.dependencies]
