@@ -328,6 +328,10 @@ async def run_bot(args, logs_dir):
             for tournament_id in ACTIVE_TOURNAMENTS:
                 print(f"\n{'='*20} Processing Tournament: {tournament_id} {'='*20}")
                 
+                # Ensure the tournament directory exists early, even if no forecasts are made
+                tournament_dir = ROOT_DIR / str(tournament_id)
+                tournament_dir.mkdir(exist_ok=True)
+                
                 # Fetch questions for this specific tournament
                 tournament_questions = get_open_question_ids_from_tournament(tournament_id=tournament_id)
                 print(f"Found {len(tournament_questions)} open questions in {tournament_id}")

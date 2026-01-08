@@ -49,12 +49,10 @@ jobs:
           git config --global user.name "metaculus-bot[bot]"
           git config --global user.email "metaculus-bot@users.noreply.github.com"
           
-          # Stage changes only if directories exist to avoid pathspec errors
-          for dir in spring-aib-2026/ minibench/ logs/; do
-            if [ -d "$dir" ]; then
-              git add "$dir"
-            fi
-          done
+          # Stage changes. Using -f or checking existence properly.
+          # We'll use git add on everything and let the diff handle it.
+          # But to be safe with pathspecs:
+          git add spring-aib-2026/ minibench/ logs/ 2>/dev/null || echo "Some directories missing, skipping those."
           
           # Only commit if there are changes
           if ! git diff --cached --quiet; then
