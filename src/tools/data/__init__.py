@@ -9,5 +9,6 @@ from .yahoo_tool import YahooDataTool
 from .options_tool import OptionsDataTool
 from .fred_tool import FREDDataTool
 from .google_trends_tool import GoogleTrendsTool
+from .manifold_markets_tool import ManifoldMarketsTool
 
-__all__ = ["YahooDataTool", "OptionsDataTool", "FREDDataTool", "GoogleTrendsTool"]
+__all__ = ["YahooDataTool", "OptionsDataTool", "FREDDataTool", "GoogleTrendsTool", "ManifoldMarketsTool"]

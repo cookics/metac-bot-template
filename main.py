@@ -28,6 +28,7 @@ from config import (
     NUM_RUNS_PER_QUESTION,
     SKIP_PREVIOUSLY_FORECASTED_QUESTIONS,
     EXAMPLE_QUESTIONS,
+    ACTIVE_TOURNAMENTS,
 )
 from metaculus_api import (
     get_open_question_ids_from_tournament,
@@ -44,12 +45,43 @@ from forecasting import (
 )
 
 
+def save_question_record(tournament_id: str, result: dict, forecast: any, comment: str) -> None:
+    """
+    Save a record of the forecast in a tournament-specific folder.
+    """
+    # Create the tournament directory at the root
+    tournament_dir = ROOT_DIR / str(tournament_id)
+    tournament_dir.mkdir(exist_ok=True)
+
+    # Use a safe filename from the title
+    import re
+    safe_title = re.sub(r'[^\w\s-]', '', result["title"]).strip().replace(" ", "_")[:50]
+    filename = f"{safe_title}_{result['url'].split('/')[-2]}.md"
+    file_path = tournament_dir / filename
+
+    content = f"# {result['title']}\n\n"
+    content += f"**URL:** {result['url']}\n"
+    content += f"**Type:** {result['type']}\n\n"
+    content += f"## Forecast\n"
+    if result["type"] in ["numeric", "date"] and isinstance(forecast, list):
+         content += f"CDF: `[{forecast[0]:.4f}, ..., {forecast[-1]:.4f}]` ({len(forecast)} points)\n"
+    else:
+         content += f"{forecast}\n"
+    
+    content += f"\n## Rationale\n\n{comment}\n"
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"Saved record to {file_path}")
+
+
 async def forecast_individual_question(
     question_id: int,
     post_id: int,
     submit_prediction: bool,
     num_runs_per_question: int,
     skip_previously_forecasted_questions: bool,
+    tournament_id: str = "unknown",
 ) -> dict:
     """
     Forecast a single question and optionally submit to Metaculus.
@@ -116,8 +148,6 @@ async def forecast_individual_question(
     else:
         summary_of_forecast += f"Forecast: {forecast}\n"
 
-    summary_of_forecast += f"Comment:\n```\n{comment[:200]}...\n```\n\n"
-
     if submit_prediction:
         forecast_payload = create_forecast_payload(forecast, question_type)
         post_question_prediction(question_id, forecast_payload)
@@ -126,6 +156,12 @@ async def forecast_individual_question(
         result["status"] = "Forecasted & Posted"
     else:
         result["status"] = "Forecasted (Not Posted)"
+
+    # Save record locally regardless of submission
+    try:
+        save_question_record(tournament_id, result, forecast, comment)
+    except Exception as e:
+        print(f"Error saving local record for {title}: {e}")
 
     result["forecast"] = str(forecast)[:100] + "..." if len(str(forecast)) > 100 else str(forecast)
     return result
@@ -227,8 +263,111 @@ def generate_github_summary(results: list, question_info: list, logs_dir: Path) 
     print(f"\nWritten summary to {logs_dir / 'summary.md'} and count to {logs_dir / 'forecast_count.txt'}")
 
 
+async def run_bot(args, logs_dir):
+    """
+    Main bot orchestration loop.
+    """
+    if USE_EXAMPLE_QUESTIONS:
+        open_question_id_post_id = EXAMPLE_QUESTIONS
+        print(f"Using example questions: {open_question_id_post_id}")
+    else:
+        # We'll fetch questions per tournament inside the loop if not check-only
+        pass
+
+    if args.check_only:
+        # Just check if there are questions that need forecasting across all tournaments
+        total_needs_forecast = 0
+        
+        for tournament_id in ACTIVE_TOURNAMENTS:
+            print(f"Checking tournament: {tournament_id}")
+            tournament_questions = get_open_question_ids_from_tournament(tournament_id=tournament_id)
+            
+            if SKIP_PREVIOUSLY_FORECASTED_QUESTIONS:
+                needs_forecast_count = 0
+                for question_id, post_id, title in tournament_questions:
+                    post_details = get_post_details(post_id)
+                    if not forecast_is_already_made(post_details):
+                        needs_forecast_count += 1
+                total_needs_forecast += needs_forecast_count
+                print(f"  - {needs_forecast_count} questions need forecasting in {tournament_id}")
+            else:
+                total_needs_forecast += len(tournament_questions)
+                print(f"  - {len(tournament_questions)} questions to forecast in {tournament_id}")
+        
+        # Write output for GitHub Actions
+        with open("needs_forecast.txt", "w") as f:
+            f.write("true" if total_needs_forecast > 0 else "false")
+        
+        if total_needs_forecast > 0:
+            print(f"✅ Total {total_needs_forecast} questions need forecasting")
+        else:
+            print("⏭️ No questions need forecasting across any tournament")
+    else:
+        # Normal forecasting mode
+        all_forecast_summaries = []
+        all_question_info = []
+
+        # If USE_EXAMPLE_QUESTIONS is True, we only run those
+        if USE_EXAMPLE_QUESTIONS:
+             print(f"\n{'='*20} Processing Example Questions {'='*20}")
+             forecast_tasks = [
+                forecast_individual_question(
+                    qid,
+                    pid,
+                    SUBMIT_PREDICTION,
+                    NUM_RUNS_PER_QUESTION,
+                    SKIP_PREVIOUSLY_FORECASTED_QUESTIONS,
+                    tournament_id="examples",
+                )
+                for qid, pid in EXAMPLE_QUESTIONS
+            ]
+             results = await asyncio.gather(*forecast_tasks, return_exceptions=True)
+             all_forecast_summaries.extend(results)
+             all_question_info.extend([(qid, pid, "Example") for qid, pid in EXAMPLE_QUESTIONS])
+        else:
+            for tournament_id in ACTIVE_TOURNAMENTS:
+                print(f"\n{'='*20} Processing Tournament: {tournament_id} {'='*20}")
+                
+                # Fetch questions for this specific tournament
+                tournament_questions = get_open_question_ids_from_tournament(tournament_id=tournament_id)
+                print(f"Found {len(tournament_questions)} open questions in {tournament_id}")
+                
+                if not tournament_questions:
+                    continue
+
+                # Run forecasting for this tournament
+                forecast_tasks = [
+                    forecast_individual_question(
+                        qid,
+                        pid,
+                        SUBMIT_PREDICTION,
+                        NUM_RUNS_PER_QUESTION,
+                        SKIP_PREVIOUSLY_FORECASTED_QUESTIONS,
+                        tournament_id=tournament_id,
+                    )
+                    for qid, pid, title in tournament_questions
+                ]
+                
+                results = await asyncio.gather(*forecast_tasks, return_exceptions=True)
+                
+                # Print results for this tournament
+                for qinfo, res in zip(tournament_questions, results):
+                    if isinstance(res, Exception):
+                        print(f"Error in {qinfo[0]}: {res}")
+                    else:
+                        print(f"Status for {res['title']}: {res['status']}")
+
+                all_forecast_summaries.extend(results)
+                all_question_info.extend(tournament_questions)
+
+        print("\n", "#" * 100, "\nForecast Summaries (All Tournaments)\n", "#" * 100)
+        # Final output reporting
+        generate_github_summary(all_forecast_summaries, all_question_info, logs_dir)
+
+
 if __name__ == "__main__":
     import argparse
+    from config import SUBMIT_PREDICTION, NUM_RUNS_PER_QUESTION
     
     parser = argparse.ArgumentParser(description="Metaculus Forecasting Bot")
     parser.add_argument(
@@ -243,46 +382,5 @@ if __name__ == "__main__":
     logs_dir.mkdir(exist_ok=True)
 
     print("Starting BOT")
-    if USE_EXAMPLE_QUESTIONS:
-        open_question_id_post_id = EXAMPLE_QUESTIONS
-    else:
-        open_question_id_post_id = get_open_question_ids_from_tournament()
-    print(open_question_id_post_id)
-    
-    if args.check_only:
-        # Just check if there are questions that need forecasting
-        if SKIP_PREVIOUSLY_FORECASTED_QUESTIONS:
-            # Count how many questions need forecasting
-            needs_forecast_count = 0
-            for question_id, post_id, title in open_question_id_post_id:
-                post_details = get_post_details(post_id)
-                if not forecast_is_already_made(post_details):
-                    needs_forecast_count += 1
-            
-            print(f"Questions needing forecast: {needs_forecast_count}")
-            
-            # Write output for GitHub Actions (at root for actions compatibility)
-            with open("needs_forecast.txt", "w") as f:
-                f.write("true" if needs_forecast_count > 0 else "false")
-            
-            # Exit with appropriate message
-            if needs_forecast_count > 0:
-                print(f"✅ {needs_forecast_count} questions need forecasting")
-            else:
-                print("⏭️ No questions need forecasting")
-        else:
-            # If not skipping, always needs forecasting
-            with open("needs_forecast.txt", "w") as f:
-                f.write("true")
-            print(f"✅ {len(open_question_id_post_id)} questions to forecast")
-    else:
-        # Normal forecasting mode
-        asyncio.run(
-            forecast_questions(
-                open_question_id_post_id,
-                SUBMIT_PREDICTION,
-                NUM_RUNS_PER_QUESTION,
-                SKIP_PREVIOUSLY_FORECASTED_QUESTIONS,
-            )
-        )
+    asyncio.run(run_bot(args, logs_dir))
 

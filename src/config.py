@@ -104,8 +104,10 @@ RESPIRATORY_OUTLOOK_ID = 3411
 Q2_2025_AI_BENCHMARKING_ID = 32721
 SPRING_BOT_BENCH = "spring-aib-2026"
 
-# Active tournament
-TOURNAMENT_ID = SPRING_BOT_BENCH
+# Active tournament and list of all active tournaments to check
+TOURNAMENT_ID = SPRING_BOT_BENCH # Default
+MINIBENCH_ID = "minibench"
+ACTIVE_TOURNAMENTS = [SPRING_BOT_BENCH, MINIBENCH_ID]
 
 # ========================= EXAMPLE QUESTIONS =========================
 # For testing - (question_id, post_id)

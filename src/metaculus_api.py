@@ -108,12 +108,12 @@ def list_posts_from_tournament(
     return data
 
 
-def get_open_question_ids_from_tournament() -> list[tuple[int, int, str]]:
+def get_open_question_ids_from_tournament(tournament_id: str = TOURNAMENT_ID) -> list[tuple[int, int, str]]:
     """
     Get all open question IDs from the configured tournament.
     Returns list of (question_id, post_id, title) tuples.
     """
-    posts = list_posts_from_tournament()
+    posts = list_posts_from_tournament(tournament_id=tournament_id)
 
     post_dict = dict()
     for post in posts["results"]:

@@ -68,7 +68,7 @@ def format_tool_results_full(tool_calls: list[dict]) -> str:
                 sections.append(formatted)
         
         # Data tools - give full data
-        elif tool_name in ["get_yahoo_data", "get_fred_data", "get_options_data"]:
+        elif tool_name in ["get_yahoo_data", "get_fred_data", "get_options_data", "search_manifold"]:
             formatted = _format_data_full(tool_name, result)
             if formatted:
                 sections.append(formatted)
@@ -149,6 +149,9 @@ def _format_data_full(tool_name: str, result: Any) -> str:
     if not isinstance(result, dict):
         return ""
     
+    if tool_name == "search_manifold":
+        return _format_manifold_markets(result)
+    
     title = result.get("title", tool_name)
     data = result.get("data", result)
     
@@ -173,6 +176,26 @@ def _format_data_full(tool_name: str, result: Any) -> str:
             else:
                 lines.append(f"{key}: {value}")
     
+    return "\n".join(lines)
+
+
+def _format_manifold_markets(result: dict) -> str:
+    """Format Manifold Markets search results."""
+    data = result.get("data", {})
+    markets = data.get("markets", [])
+    
+    if not markets:
+        return "[No high-signal Manifold markets found]"
+    
+    lines = ["=== MANIFOLD MARKETS REPORT ==="]
+    
+    # Group by question to avoid repeats if any
+    for i, m in enumerate(markets[:15]): # Limit to top 15 rows
+        lines.append(f"\n[{i+1}] {m['question']}")
+        lines.append(f"    Answer: {m['answer']} | Prob: {m['prob']:.2%}")
+        lines.append(f"    Volume: ${m['volume']:,.0f} | Bettors: {m['bettors']}")
+        lines.append(f"    Type: {m['type']} | URL: {m['url']}")
+        
     return "\n".join(lines)
 
 

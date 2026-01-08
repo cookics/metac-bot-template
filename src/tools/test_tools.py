@@ -240,6 +240,34 @@ async def test_search_tool():
     return result.success
 
 
+async def test_manifold_markets_tool():
+    """Test the Manifold Markets search tool."""
+    print("\n" + "="*60)
+    print("Testing ManifoldMarketsTool")
+    print("="*60)
+    
+    from tools.data.manifold_markets_tool import ManifoldMarketsTool
+    
+    tool = ManifoldMarketsTool()
+    result = await tool.execute(term="Federal Reserve", min_volume=100, min_bettors=5)
+    
+    if result.success:
+        print("\n✓ Manifold Search Successful!")
+        data = result.data.get("data", {})
+        markets = data.get("markets", [])
+        print(f"  Found {len(markets)} high-signal market rows.")
+        
+        # Test formatting too
+        from tools.formatting import _format_manifold_markets
+        formatted = _format_manifold_markets(result.data)
+        print("\nFormatted output sample (first 200 chars):")
+        print(formatted[:200] + "...")
+    else:
+        print(f"\n✗ Failed: {result.error}")
+    
+    return result.success
+
+
 async def test_tool_schemas():
     """Test that tool schemas are valid for OpenRouter."""
     print("\n" + "="*60)
@@ -297,6 +325,7 @@ async def main():
     
     # Test research tools
     results["search"] = await test_search_tool()
+    results["manifold"] = await test_manifold_markets_tool()
     
     # Summary
     print("\n" + "="*60)

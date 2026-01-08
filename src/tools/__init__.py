@@ -12,7 +12,7 @@ from .executor import run_tool_calling_loop, call_llm_with_tools
 
 # Import tool classes
 from .market import BondsForecastTool, SpreadsForecastTool, VIXForecastTool, PolyMarketSearchTool
-from .data import YahooDataTool, OptionsDataTool, FREDDataTool, GoogleTrendsTool
+from .data import YahooDataTool, OptionsDataTool, FREDDataTool, GoogleTrendsTool, ManifoldMarketsTool
 from .forecast_tools import GetParametricDistributionCDF
 from .helpers import DistributionGeneratorTool
 from .search_tool import SearchTool
@@ -30,6 +30,7 @@ TOOL_REGISTRY = {
     "get_options_data": OptionsDataTool,
     "get_fred_data": FREDDataTool,
     "get_google_trends": GoogleTrendsTool,
+    "search_manifold": ManifoldMarketsTool,
     # Helper tools
     "generate_distribution": DistributionGeneratorTool,
     # Search and crawl tools
@@ -60,13 +61,13 @@ def get_market_tools() -> list[BaseTool]:
 
 def get_data_tools() -> list[BaseTool]:
     """Get general data tools (Yahoo, options, FRED)."""
-    data_names = ["get_yahoo_data", "get_options_data", "get_fred_data", "get_google_trends"]
+    data_names = ["get_yahoo_data", "get_options_data", "get_fred_data", "get_google_trends", "search_manifold"]
     return [TOOL_REGISTRY[name]() for name in data_names]
 
 
 def get_research_tools() -> list[BaseTool]:
     """Get tools for general research (search, crawl, data)."""
-    names = ["search_web", "search_polymarket", "crawl_urls", "get_yahoo_data", "get_options_data", "get_fred_data", "get_google_trends"]
+    names = ["search_web", "search_polymarket", "search_manifold", "crawl_urls", "get_yahoo_data", "get_options_data", "get_fred_data", "get_google_trends"]
     return [TOOL_REGISTRY[name]() for name in names]
 
 
