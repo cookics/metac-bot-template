@@ -73,9 +73,12 @@ def extract_percentiles_from_response(forecast_text: str) -> dict:
                         last_number = -abs(last_number)
                     results.append((first_number, last_number))
 
-        percentile_values = {}
-        for first_num, second_num in results:
-            percentile_values[first_num] = second_num
+        # Try JSON-like pXX pattern (handles "p50": 42.5)
+        json_pattern = r"(?:\"p|p|P)(\d+)\"\s*:\s*(-?\d+(?:\.\d+)?)"
+        for match in re.finditer(json_pattern, text):
+            p = int(match.group(1))
+            val = float(match.group(2))
+            percentile_values[p] = val
 
         return percentile_values
 
@@ -117,6 +120,26 @@ def extract_date_percentiles_from_response(forecast_text: str) -> dict:
                 continue
             continue
         
+        # Try JSON-like pXX pattern (handles "p50": 2028.5 or "p50": 1735689600)
+        json_pattern = r"(?:\"p|p|P)(\d+)\"\s*:\s*(\d+(?:\.\d+)?)"
+        json_match = re.search(json_pattern, line)
+        if json_match:
+            percentile = int(json_match.group(1))
+            val = float(json_match.group(2))
+            
+            # If value is a small year-like number (e.g. 2028.5)
+            if 1900 < val < 2100:
+                year = int(val)
+                days_in_year = 366 if calendar.isleap(year) else 365
+                remaining_year = val - year
+                seconds = remaining_year * days_in_year * 24 * 3600
+                dt = datetime.datetime(year, 1, 1, tzinfo=datetime.timezone.utc) + datetime.timedelta(seconds=seconds)
+                percentile_values[percentile] = dt.timestamp()
+            else:
+                # Assume it's already a timestamp
+                percentile_values[percentile] = val
+            continue
+
         # Try year-only match
         year_match = re.search(year_only_pattern, line)
         if year_match:
@@ -350,7 +373,7 @@ async def get_binary_gpt_prediction(
     model: str = None,
     prompt_template: str = None,
     thinking: bool = FORECAST_THINKING
-) -> tuple[float, str]:
+) -> tuple[float, str, dict]:
     """Generate prediction for binary question."""
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     title = question_details["title"]
@@ -376,6 +399,11 @@ async def get_binary_gpt_prediction(
         fine_print=fine_print,
         summary_report=summary_report,
     )
+    
+    trace = {
+        "forecaster_prompt": content,
+        "research_data": summary_report
+    }
 
     async def get_rationale_and_probability(content: str) -> tuple[float, str]:
         rationale = await call_llm(content, model=model or FORECAST_MODEL, temperature=FORECAST_TEMP, thinking=thinking)
@@ -396,7 +424,7 @@ async def get_binary_gpt_prediction(
     final_comment = f"Median Probability: {median_probability}\n\n" + "\n\n".join(
         final_comment_sections
     )
-    return median_probability, final_comment
+    return median_probability, final_comment, trace
 
 
 async def get_numeric_gpt_prediction(
@@ -437,7 +465,8 @@ async def get_numeric_gpt_prediction(
         # Capture metadata
         metadata = {
             "exa_cost": research.get("exa_cost", 0.0),
-            "tool_usage": research.get("tool_usage", {})
+            "tool_usage": research.get("tool_usage", {}),
+            "research_messages": research.get("messages", [])
         }
     else:
         relevant_results, research_summary = await run_research_agent(title, existing_results=research_data)
@@ -455,6 +484,10 @@ async def get_numeric_gpt_prediction(
         lower_bound_message=lower_bound_message,
         upper_bound_message=upper_bound_message,
     )
+    
+    metadata["forecaster_prompt"] = content
+    metadata["research_data"] = summary_report
+    metadata["forecaster_messages"] = [] # Default, will be updated in loop if used
 
     async def ask_llm_to_get_cdf(content: str) -> tuple[list[float], str]:
         # --- NEW LOGIC: USE TOOL LOOP IF AVAILABLE ---
@@ -538,7 +571,7 @@ async def get_multiple_choice_gpt_prediction(
     model: str = None,
     prompt_template: str = None,
     thinking: bool = FORECAST_THINKING
-) -> tuple[dict[str, float], str]:
+) -> tuple[dict[str, float], str, dict]:
     """Generate prediction for multiple choice question."""
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     title = question_details["title"]
@@ -565,6 +598,11 @@ async def get_multiple_choice_gpt_prediction(
         summary_report=summary_report,
         options=options,
     )
+    
+    trace = {
+        "forecaster_prompt": content,
+        "research_data": summary_report
+    }
 
     async def ask_llm_for_multiple_choice_probabilities(
         content: str,
@@ -608,4 +646,4 @@ async def get_multiple_choice_gpt_prediction(
         f"Average Probability Yes Per Category: `{average_probability_yes_per_category}`\n\n"
         + "\n\n".join(final_comment_sections)
     )
-    return average_probability_yes_per_category, final_comment
+    return average_probability_yes_per_category, final_comment, trace

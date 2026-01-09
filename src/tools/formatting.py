@@ -265,6 +265,82 @@ def extract_percentiles_from_tool(tool_calls: list[dict]) -> dict | None:
     return None
 
 
+def format_for_forecaster_optimized(
+    research_synthesis: str,
+    search_results: list[dict],
+    tool_calls: list[dict]
+) -> str:
+    """
+    Optimized formatting for the forecaster.
+    - Priortizes the Deep Synthesis (Grok).
+    - Minimizes raw data spew (no raw text snippets if they are in the synthesis).
+    - Keeps critical numbers/percentiles.
+    """
+    sections = []
+    
+    # 1. Grok's Deep Synthesis (The main course)
+    if research_synthesis:
+        sections.append("=== RESEARCH SYNTHESIS (Lead Analyst Report) ===\n" + research_synthesis)
+    
+    # 2. Critical Quantitative Data (Percentiles, Stats)
+    quantitative_data = _format_critical_data_only(tool_calls)
+    if quantitative_data:
+        sections.append("=== CRITICAL QUANTITATIVE DATA ===\n" + quantitative_data)
+    
+    # 3. Source List (Reference only, no text snippets)
+    if search_results:
+        source_list = "=== SOURCES REFERENCED ===\n"
+        for i, r in enumerate(search_results[:10]):
+            title = r.get("title", "Untitled")
+            url = r.get("url", "")
+            date = r.get("published_date", "Unknown")
+            source_list += f"[{i+1}] {title} ({date})\n    URL: {url}\n"
+        sections.append(source_list)
+        
+    return "\n\n".join(sections)
+
+
+def _format_critical_data_only(tool_calls: list[dict]) -> str:
+    """Extract only the most important numbers from tool calls, avoiding long text."""
+    if not tool_calls:
+        return ""
+    
+    parts = []
+    for tc in tool_calls:
+        if tc.get("error"): continue
+        result = tc.get("result")
+        if not result: continue
+        
+        tool_name = tc["tool_name"]
+        
+        # Keep Market Forecasts (Percentiles)
+        if tool_name.startswith("forecast_") or tool_name == "get_options_data":
+            parts.append(_format_single_forecast_full(tool_name.upper(), result))
+            
+        # Keep Manifold Probs (Binary)
+        elif tool_name == "search_manifold":
+            markets = result.get("data", {}).get("markets", [])
+            if markets:
+                m_lines = ["Manifold Market Odds:"]
+                for m in markets[:5]:
+                    m_lines.append(f"  - {m['question']}: {m['prob']:.1%}")
+                parts.append("\n".join(m_lines))
+                
+        # Keep FRED/Yahoo Latest Value
+        elif tool_name in ["get_yahoo_data", "get_fred_data"]:
+            data = result.get("data", result)
+            if isinstance(data, dict):
+                p_lines = [f"{tool_name.upper()} Key Stats:"]
+                # Only keep top-level numeric values
+                for k, v in data.items():
+                    if isinstance(v, (int, float)) and k not in ["type", "fetched_at"]:
+                        p_lines.append(f"  - {k}: {v}")
+                if len(p_lines) > 1:
+                    parts.append("\n".join(p_lines))
+                    
+    return "\n\n".join(parts)
+
+
 def format_for_forecaster(
     research_synthesis: str,
     search_results: list[dict],
@@ -272,28 +348,16 @@ def format_for_forecaster(
 ) -> str:
     """
     Format all research data for the forecaster prompt.
-    
     Gives COMPLETE data - full percentiles, full search results.
-    The forecaster needs all the data to make informed predictions.
     """
     sections = []
-    
-    # 1. Research agent's synthesis
     if research_synthesis:
         sections.append("=== RESEARCH SYNTHESIS ===\n" + research_synthesis)
-    
-    # 2. Full search results (not truncated)
     if search_results:
         sections.append("=== SEARCH RESULTS ===\n" + format_search_results_full(search_results))
-    
-    # 3. Full tool data
     tool_data = format_tool_results_full(tool_calls)
     if tool_data and tool_data != "[No tool data]":
-        sections.append(tool_data)  # Already has headers
-    
+        sections.append(tool_data)
     return "\n\n".join(sections)
-
-
-# Convenience alias for backwards compatibility
 format_search_results_compact = format_search_results_full
 format_tool_results_compact = format_tool_results_full

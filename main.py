@@ -11,6 +11,8 @@ For testing without submission, use test_forecast.py instead.
 import asyncio
 import sys
 from pathlib import Path
+import json
+import re
 
 # Add src to sys.path so modules can find each other
 ROOT_DIR = Path(__file__).resolve().parent
@@ -54,7 +56,6 @@ def save_question_record(tournament_id: str, result: dict, forecast: any, commen
     tournament_dir.mkdir(exist_ok=True)
 
     # Use a safe filename from the title
-    import re
     safe_title = re.sub(r'[^\w\s-]', '', result["title"]).strip().replace(" ", "_")[:50]
     filename = f"{safe_title}_{result['url'].split('/')[-2]}.md"
     file_path = tournament_dir / filename
@@ -69,6 +70,29 @@ def save_question_record(tournament_id: str, result: dict, forecast: any, commen
          content += f"{forecast}\n"
     
     content += f"\n## Rationale\n\n{comment}\n"
+
+    # Add Trace Data
+    if result.get("trace"):
+        trace = result["trace"]
+        content += "\n<details>\n<summary>🔍 Detailed Trace (Research & Forecaster Input)</summary>\n\n"
+        
+        if trace.get("research_data"):
+            content += "### Research Data Provided to Forecaster\n"
+            content += f"```text\n{trace['research_data']}\n```\n\n"
+            
+        if trace.get("forecaster_prompt"):
+            content += "### Full Forecaster Prompt\n"
+            content += f"```text\n{trace['forecaster_prompt']}\n```\n\n"
+            
+        if trace.get("research_messages"):
+            content += "### Research Agent Conversation Trace\n"
+            content += "```json\n" + json.dumps(trace["research_messages"], indent=2, default=str) + "\n```\n\n"
+            
+        if trace.get("forecaster_messages"):
+            content += "### Forecaster Agent Conversation Trace\n"
+            content += "```json\n" + json.dumps(trace["forecaster_messages"], indent=2, default=str) + "\n```\n\n"
+            
+        content += "</details>\n"
 
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -116,28 +140,25 @@ async def forecast_individual_question(
         return result
 
     if question_type == "binary":
-        forecast, comment = await get_binary_gpt_prediction(
+        forecast, comment, trace = await get_binary_gpt_prediction(
             question_details, num_runs_per_question
         )
     elif question_type == "numeric" or question_type == "date":
         # Numeric and Date questions use the same handler now
-        result_tuple = await get_numeric_gpt_prediction(
+        forecast, comment, trace = await get_numeric_gpt_prediction(
             question_details, num_runs_per_question
         )
-        # Handle backward compatibility if it returns 2 or 3 values
-        if len(result_tuple) == 3:
-            forecast, comment, metadata = result_tuple
-            if metadata.get("exa_cost", 0) > 0:
-                summary_of_forecast += f"Exa Cost: ${metadata['exa_cost']:.4f}\n"
-        else:
-            forecast, comment = result_tuple
+        if trace.get("exa_cost", 0) > 0:
+            summary_of_forecast += f"Exa Cost: ${trace['exa_cost']:.4f}\n"
             
     elif question_type == "multiple_choice":
-        forecast, comment = await get_multiple_choice_gpt_prediction(
+        forecast, comment, trace = await get_multiple_choice_gpt_prediction(
             question_details, num_runs_per_question
         )
     else:
         raise ValueError(f"Unknown question type: {question_type}")
+
+    result["trace"] = trace
 
     print(f"-----------------------------------------------\nPost {post_id} Question {question_id}:\n")
     print(f"Forecast for post {post_id} (question {question_id}):\n{forecast}")

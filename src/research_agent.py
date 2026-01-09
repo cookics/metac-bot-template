@@ -213,17 +213,17 @@ def parse_research_agent_response(response: str, raw_results: list[dict]) -> tup
 def format_results_for_forecaster(relevant_results: list[dict], summary: str) -> str:
     """
     Format the filtered results and summary for the forecasting agent.
+    Optimized to be more compact by default.
     """
-    output = f"Research Summary:\n{summary}\n\n"
-    output += "Relevant Sources:\n"
+    output = f"=== RESEARCH SYNTHESIS ===\n{summary}\n\n"
+    output += "=== SOURCES REFERENCED ===\n"
     
-    for i, result in enumerate(relevant_results):
+    for i, result in enumerate(relevant_results[:10]):
         source_type = "[Crawled]" if result.get('crawled') else "[Search]"
         output += (
             f"{source_type} [{i+1}] {result['title']}\n"
             f"    URL: {result['url']}\n"
             f"    Published: {result.get('published_date', 'Unknown')}\n"
-            f"    Content: {result['text'][:500]}...\n\n"
         )
     
     return output
@@ -232,24 +232,39 @@ def format_results_for_forecaster(relevant_results: list[dict], summary: str) ->
 # ========================= TOOL-CALLING RESEARCH =========================
 
 # System prompt for tool-calling research agent
-TOOL_RESEARCH_SYSTEM_PROMPT = """You are a Research Agent with access to specialized tools for market data and forecasting.
+TOOL_RESEARCH_SYSTEM_PROMPT = """Be concise. The forecaster will use your report to make predictions."""
 
-Your job is to gather information to help forecast the following question. You can use tools to:
-1. Get market forecast distributions (bonds, spreads, VIX) - these return percentile data
-2. Fetch financial data (Yahoo Finance, options, FRED economic data)
-3. Search the web for relevant news and context
 
-For MARKET FORECAST questions (bond yields, stock spreads, VIX levels), use the appropriate forecast tool FIRST.
-These tools run Monte Carlo simulations and return probability distributions.
+# Dedicated synthesis prompt for creating an authoritative, deep factual report
+SYNTHESIS_STEP_PROMPT = """You are a Lead Intelligence Analyst. You have been given a collection of raw search results, news snippets, and specialized tool data regarding a specific forecasting question.
 
-For GENERAL questions, use data tools and web search to gather context.
+Your task is to write a COMPREHENSIVE, AUTHORITATIVE, and FACT-DENSE Research Report that will be used by a Superforecaster to make a final prediction.
 
-After gathering data, write a SHORT REPORT synthesizing:
-- Key quantitative data from tool calls
-- Probability distributions (if from forecast tools)
-- Relevant context and factors
+Question to Synthesis:
+{question}
 
-Be concise. The forecaster will use your report to make predictions."""
+=== INPUT DATA ===
+{raw_data}
+
+=== INSTRUCTIONS ===
+1. **Depth over Brevity**: Write a detailed report (targeting 1500-3000 tokens). Do not be afraid of length if it adds factual depth.
+2. **Thematic Organization**: Organize by causal drivers, market themes, or sectors—NOT by source.
+3. **Evidence-Based**: Every claim must be backed by data found in the input. Cite specific numbers, dates, and names.
+4. **Synthesis, not Summary**: Do not simply list what each source said. Instead, integrate the information to show how different facts interact.
+5. **Quantitative Focus**: Prioritize hard data, market prices, percentiles, and statistical historical base rates.
+6. **Causal Reasoning**: Explicitly identify the mechanisms that will drive the outcome.
+7. **Authoritative Tone**: Write like you are briefing a head of state or a top-tier hedge fund manager.
+
+Your goal is to "do the thinking" and "data-mining" for the forecaster, so they can focus entirely on probabilistic calibration. Spew ALL important facts into this report.
+
+REPORT STRUCTURE:
+- Executive Summary
+- Current Market/Situational Context
+- Deep Dive: Key Causal Drivers
+- Historical Base Rates & Comparative Situations
+- Counter-Arguments & Potential Surprises
+- Factual Data Appendix (if needed for raw lists of numbers)
+"""
 
 
 async def run_research_with_tools(
@@ -486,8 +501,7 @@ Based on these search results and your available tools:
 2. If you need financial data, use the data tools (yahoo, fred, options)
 3. If this is a market question, use forecast tools for distributions
 
-When done, write a SHORT SYNTHESIS (max 3 paragraphs) with key findings.
-Focus on NUMBERS and FACTS that help forecasting.
+When done, write a PRELIMINARY summary. After this, I will ask you for a deeper synthesis.
 """
     else:
         research_prompt = f"""Question to forecast:
@@ -496,10 +510,7 @@ Focus on NUMBERS and FACTS that help forecasting.
 This appears to be a market question. Use the forecast tools to generate
 probability distributions, and data tools to get current values.
 
-When done, write a SHORT SYNTHESIS with:
-1. Current market levels
-2. Distribution summary (median, range)
-3. Key assumptions
+When done, write a PRELIMINARY summary. After this, I will ask you for a deeper synthesis.
 """
     
     # Run tool calling loop
@@ -514,26 +525,52 @@ When done, write a SHORT SYNTHESIS with:
     
     print(f"[Research Pipeline] Step 3: Made {len(tool_calls)} tool calls")
     
+    # Step 4: NEW - Dedicated Synthesis Step
+    print("[Research Pipeline] Step 4: Running high-quality synthesis...")
+    
+    # Prepare all raw data for the synthesis prompt
+    from tools.formatting import format_search_results_full, format_tool_results_full
+    raw_data_block = ""
+    if search_results:
+        raw_data_block += "=== WEB SEARCH RESULTS ===\n" + format_search_results_full(search_results, max_results=10) + "\n\n"
+    if tool_calls:
+        raw_data_block += "=== TOOL DATA RESULTS ===\n" + format_tool_results_full(tool_calls) + "\n\n"
+        
+    synthesis_prompt = SYNTHESIS_STEP_PROMPT.format(
+        question=question,
+        raw_data=raw_data_block
+    )
+    
+    # Call Grok for the deep synthesis
+    deep_synthesis = await call_llm(
+        synthesis_prompt,
+        model=RESEARCH_MODEL,
+        temperature=0.4, # Lower temp for factual synthesis
+        thinking=True # Thinking is very helpful for cross-referencing data
+    )
+    
     # Count tool usage
     tool_usage = {}
     for tc in tool_calls:
         name = tc.get("tool_name", "unknown")
         tool_usage[name] = tool_usage.get(name, 0) + 1
     
-    # Step 3: Extract percentiles if available (for direct CDF use)
+    # Step 5: Extract percentiles if available (for direct CDF use)
     percentiles = extract_percentiles_from_tool(tool_calls) if TOOLS_AVAILABLE else None
     
-    # Step 4: Format compact output for forecaster
-    formatted = format_for_forecaster(
-        research_synthesis=final_response,
+    # Step 6: Format OPTIMIZED output for forecaster
+    # This uses the deep_synthesis as the main body and strips raw snippets
+    from tools.formatting import format_for_forecaster_optimized
+    formatted = format_for_forecaster_optimized(
+        research_synthesis=deep_synthesis,
         search_results=search_results,
         tool_calls=tool_calls
     )
     
-    print(f"[Research Pipeline] Complete. Output: {len(formatted)} chars")
+    print(f"[Research Pipeline] Complete. Synthesis length: {len(deep_synthesis)} chars. Final prompt size: {len(formatted)} chars")
     
     return {
-        "synthesis": final_response,
+        "synthesis": deep_synthesis,
         "tool_calls": tool_calls,
         "search_results": search_results,
         "percentiles": percentiles,
