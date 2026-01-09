@@ -73,8 +73,11 @@ jobs:
           
           # Checkout bot-data if it exists, otherwise create it as an orphan
           if git branch -r | grep -q "origin/bot-data"; then
-            git checkout bot-data
+            # Use force to overwrite local changes like logs/summary.md
+            git checkout -f bot-data
             git pull origin bot-data
+            # Clean untracked files that might have been copied/created in main
+            git clean -fd
           else
             git checkout --orphan bot-data
             git rm -rf . # Start fresh for the data-only branch
