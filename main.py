@@ -280,8 +280,17 @@ def generate_github_summary(results: list, question_info: list, logs_dir: Path) 
     
     with open(logs_dir / "forecast_count.txt", "w", encoding="utf-8") as f:
         f.write(str(forecasted))
+    
+    with open(logs_dir / "error_count.txt", "w", encoding="utf-8") as f:
+        f.write(str(errors))
         
-    print(f"\nWritten summary to {logs_dir / 'summary.md'} and count to {logs_dir / 'forecast_count.txt'}")
+    print(f"\nWritten summary to {logs_dir / 'summary.md'}")
+    print(f"Forecasts: {forecasted}, Errors: {errors}, Skipped: {skipped}")
+    
+    # Return True if run should be considered a failure
+    # Fail if ANY errors occurred
+    should_fail = errors > 0
+    return should_fail
 
 
 async def run_bot(args, logs_dir):
@@ -323,6 +332,7 @@ async def run_bot(args, logs_dir):
             print(f"✅ Total {total_needs_forecast} questions need forecasting")
         else:
             print("⏭️ No questions need forecasting across any tournament")
+        return False  # check-only mode doesn't fail
     else:
         # Normal forecasting mode
         all_forecast_summaries = []
@@ -387,7 +397,8 @@ async def run_bot(args, logs_dir):
 
         print("\n", "#" * 100, "\nForecast Summaries (All Tournaments)\n", "#" * 100)
         # Final output reporting
-        generate_github_summary(all_forecast_summaries, all_question_info, logs_dir)
+        should_fail = generate_github_summary(all_forecast_summaries, all_question_info, logs_dir)
+        return should_fail
 
 
 if __name__ == "__main__":
@@ -407,5 +418,11 @@ if __name__ == "__main__":
     logs_dir.mkdir(exist_ok=True)
 
     print("Starting BOT")
-    asyncio.run(run_bot(args, logs_dir))
+    should_fail = asyncio.run(run_bot(args, logs_dir))
+    
+    if should_fail:
+        print("\n❌ FAILURE: No forecasts were posted and errors occurred!")
+        sys.exit(1)
+    else:
+        print("\n✅ Bot run completed successfully.")
 
