@@ -51,6 +51,7 @@ def extract_percentiles_from_response(forecast_text: str) -> dict:
     """Extract percentile values from LLM response for numeric questions."""
     
     def extract_percentile_numbers(text) -> dict:
+        percentile_values = {}  # Initialize here to avoid NameError
         pattern = r"^.*(?:P|p)ercentile.*$"
         number_pattern = r"-\s*(?:[^\d\-]*\s*)?(\d+(?:,\d{3})*(?:\.\d+)?)|(\d+(?:,\d{3})*(?:\.\d+)?)"
         results = []
@@ -72,6 +73,10 @@ def extract_percentiles_from_response(forecast_text: str) -> dict:
                     if "-" in line.split(":")[-1]:
                         last_number = -abs(last_number)
                     results.append((first_number, last_number))
+
+        # Convert results list to dictionary
+        for p, val in results:
+            percentile_values[int(p)] = val
 
         # Try JSON-like pXX pattern (handles "p50": 42.5)
         json_pattern = r"(?:\"p|p|P)(\d+)\"\s*:\s*(-?\d+(?:\.\d+)?)"

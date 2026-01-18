@@ -49,13 +49,13 @@ async def test_forecast_question(post_id: int, num_runs: int = 1) -> None:
     # Generate forecast based on question type
     try:
         if question_type == "binary":
-            forecast, comment = await get_binary_gpt_prediction(
+            forecast, comment, trace = await get_binary_gpt_prediction(
                 question_details, num_runs
             )
             print(f"FORECAST RESULT: {forecast * 100:.1f}% probability of Yes")
             
         elif question_type == "numeric":
-            forecast, comment = await get_numeric_gpt_prediction(
+            forecast, comment, metadata = await get_numeric_gpt_prediction(
                 question_details, num_runs
             )
             print(f"FORECAST RESULT (CDF, first 10 values): {forecast[:10]}...")
@@ -63,7 +63,7 @@ async def test_forecast_question(post_id: int, num_runs: int = 1) -> None:
         elif question_type == "multiple_choice":
             options = question_details["options"]
             print(f"Options: {options}")
-            forecast, comment = await get_multiple_choice_gpt_prediction(
+            forecast, comment, trace = await get_multiple_choice_gpt_prediction(
                 question_details, num_runs
             )
             print(f"FORECAST RESULT:")

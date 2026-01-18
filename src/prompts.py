@@ -21,7 +21,13 @@ Do NOT just "data dump" raw JSON, long lists of facts, or bulleted snippets. Ins
 - **Synthesize, don't just list**: Every metric, date, and expert opinion must be woven into a coherent, surgical analysis of the 'why' and 'how'.
 - **Thematic Structure**: Organize your report by themes and causal drivers, not by source.
 - **Authoritative Tone**: Your report should read like a high-level intelligence briefing. You do the heavy lifting of sense-making so the forecaster can focus entirely on probabilistic judgment.
-- **Avoid Noise**: Only include data that *materially* shifts the probability. 
+- **Avoid Noise**: Only include data that *materially* shifts the probability.
+
+**PROCEDURAL EVENTS**: If the question involves a multi-stage process (e.g., legislation, treaty ratification, regulatory approval, multi-step government action), provide a step-by-step timeline:
+- List each stage required for resolution
+- Current status: which stages are complete?
+- Estimated timeline for each remaining stage
+- Any blocking factors or dependencies between stages
 
 The forecaster should feel like they are reading a finished intelligence product, not a raw scrape.
 
@@ -182,6 +188,10 @@ Before answering, work through:
 (f) What's your uncertainty? Is this a question where good and bad forecasters differ, or is it straightforward?
 (g) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
 (h) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
+(i) **Procedural Timeline (Bayesian Decomposition)**: If this involves a multi-step process, think step-by-step:
+    - What are the required stages? (e.g., House vote → Senate vote → Signature)
+    - What is the timeline for each stage?
+    - Reason about each stage's likelihood in a Bayesian way—how does completing one stage update our beliefs about subsequent stages?
 
 === YOUR FORECAST ===
 
@@ -257,6 +267,10 @@ Before answering, work through:
 (g) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
 (h) **Simulate Others**: What would the Metaculus pro-forecaster community likely converge on?
 (i) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
+(j) **Procedural Timeline (Bayesian Decomposition)**: If this involves a multi-step process, think step-by-step:
+    - What are the required stages?
+    - What is the timeline for each stage?
+    - Reason about each stage's likelihood in a Bayesian way—how does completing one stage update our beliefs about subsequent stages?
 
 === TOOL USAGE ===
 You have access to `get_parametric_cdf(mean, std, skew)`.
@@ -371,6 +385,10 @@ Before answering, work through:
 (e) How much genuine uncertainty is there? High uncertainty = more spread across options
 (f) **Causal Analysis**: List 5 specific causal links with a direct known connection to the outcome and rate their relevance.
 (g) **Missing Information**: What critical data are you missing? How does this gap affect your prior?
+(h) **Procedural Timeline (Bayesian Decomposition)**: If this involves a multi-step process, think step-by-step:
+    - What are the required stages?
+    - What is the timeline for each stage?
+    - Reason about each stage's likelihood in a Bayesian way—how does completing one stage update our beliefs about subsequent stages?
 
 Remember: 
 - Good forecasters weight status quo heavily
