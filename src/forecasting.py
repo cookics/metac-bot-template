@@ -257,54 +257,106 @@ def generate_continuous_cdf(
 
     cdf_xaxis = generate_cdf_locations(range_min, range_max, zero_point)
 
-    # Use PCHIP (Piecewise Cubic Hermite Interpolating Polynomial) for smooth monotonic curves
-    # This replaces the jagged linear interpolation with smooth curves
+    # FIT a SkewNormal distribution to the percentiles for naturally smooth CDFs
+    # This is much better than interpolating through sparse points
     try:
-        from scipy.interpolate import PchipInterpolator
+        from scipy.stats import skewnorm
+        from scipy.optimize import minimize
         
+        # Get percentile data: (value, probability) pairs
         sorted_pairs = sorted(value_percentiles.items())
-        known_x = np.array([pair[0] for pair in sorted_pairs])
-        known_y = np.array([pair[1] for pair in sorted_pairs])
+        target_values = np.array([pair[0] for pair in sorted_pairs])
+        target_probs = np.array([pair[1] for pair in sorted_pairs])
         
-        # PCHIP requires at least 2 points
-        if len(known_x) >= 2:
-            pchip = PchipInterpolator(known_x, known_y, extrapolate=True)
-            continuous_cdf = pchip(cdf_xaxis).tolist()
+        # Estimate initial parameters from data
+        # Use median as loc, IQR-based scale, start with 0 skew
+        median_idx = len(target_values) // 2
+        initial_loc = target_values[median_idx]
+        
+        # Estimate scale from range (p25 to p75 if available, else full range)
+        if len(target_values) >= 4:
+            q1_idx = len(target_values) // 4
+            q3_idx = 3 * len(target_values) // 4
+            iqr = target_values[q3_idx] - target_values[q1_idx]
+            initial_scale = max(iqr / 1.35, 0.01)  # 1.35 ≈ IQR of standard normal
         else:
-            # Fallback to linear for edge cases
-            continuous_cdf = [known_y[0] if len(known_y) > 0 else 0.5] * len(cdf_xaxis)
-    except ImportError:
-        # Fallback to linear interpolation if scipy not available
-        def linear_interpolation(x_values, xy_pairs):
-            sorted_pairs = sorted(xy_pairs.items())
-            known_x = [pair[0] for pair in sorted_pairs]
-            known_y = [pair[1] for pair in sorted_pairs]
-            y_values = []
+            initial_scale = max((target_values[-1] - target_values[0]) / 4, 0.01)
+        
+        def loss_fn(params):
+            """Minimize squared error between target and fitted CDF values."""
+            loc, scale, alpha = params
+            if scale <= 0:
+                return 1e10
+            try:
+                fitted_probs = skewnorm.cdf(target_values, alpha, loc=loc, scale=scale)
+                return np.sum((fitted_probs - target_probs) ** 2)
+            except:
+                return 1e10
+        
+        # Optimize to find best-fit parameters
+        result = minimize(
+            loss_fn,
+            x0=[initial_loc, initial_scale, 0.0],
+            method='Nelder-Mead',
+            options={'maxiter': 500, 'xatol': 1e-6}
+        )
+        
+        fit_loc, fit_scale, fit_alpha = result.x
+        
+        # Generate smooth CDF from the fitted distribution
+        if result.success or result.fun < 0.1:  # Accept if error is small
+            continuous_cdf = skewnorm.cdf(cdf_xaxis, fit_alpha, loc=fit_loc, scale=max(fit_scale, 0.01)).tolist()
+        else:
+            # Fitting failed, fall back to PCHIP
+            raise ValueError("Distribution fitting did not converge well")
+            
+    except Exception as fit_error:
+        # Fallback: Use PCHIP interpolation
+        try:
+            from scipy.interpolate import PchipInterpolator
+            
+            sorted_pairs = sorted(value_percentiles.items())
+            known_x = np.array([pair[0] for pair in sorted_pairs])
+            known_y = np.array([pair[1] for pair in sorted_pairs])
+            
+            if len(known_x) >= 2:
+                pchip = PchipInterpolator(known_x, known_y, extrapolate=True)
+                continuous_cdf = pchip(cdf_xaxis).tolist()
+            else:
+                continuous_cdf = [known_y[0] if len(known_y) > 0 else 0.5] * len(cdf_xaxis)
+        except ImportError:
+            # Final fallback: linear interpolation
+            def linear_interpolation(x_values, xy_pairs):
+                sorted_pairs = sorted(xy_pairs.items())
+                known_x = [pair[0] for pair in sorted_pairs]
+                known_y = [pair[1] for pair in sorted_pairs]
+                y_values = []
 
-            for x in x_values:
-                if x in known_x:
-                    y_values.append(known_y[known_x.index(x)])
-                else:
-                    i = 0
-                    while i < len(known_x) and known_x[i] < x:
-                        i += 1
-
-                    if i == 0:
-                        y_values.append(known_y[0])
-                    elif i == len(known_x):
-                        y_values.append(known_y[-1])
+                for x in x_values:
+                    if x in known_x:
+                        y_values.append(known_y[known_x.index(x)])
                     else:
-                        x0, x1 = known_x[i - 1], known_x[i]
-                        y0, y1 = known_y[i - 1], known_y[i]
-                        y = y0 + (x - x0) * (y1 - y0) / (x1 - x0)
-                        y_values.append(y)
+                        i = 0
+                        while i < len(known_x) and known_x[i] < x:
+                            i += 1
 
-            return y_values
-        continuous_cdf = linear_interpolation(cdf_xaxis, value_percentiles)
+                        if i == 0:
+                            y_values.append(known_y[0])
+                        elif i == len(known_x):
+                            y_values.append(known_y[-1])
+                        else:
+                            x0, x1 = known_x[i - 1], known_x[i]
+                            y0, y1 = known_y[i - 1], known_y[i]
+                            y = y0 + (x - x0) * (y1 - y0) / (x1 - x0)
+                            y_values.append(y)
+
+                return y_values
+            continuous_cdf = linear_interpolation(cdf_xaxis, value_percentiles)
     
     # Monotonicity fix: Ensure strictly increasing by at least 6e-5 (Metaculus requires 5e-05)
-    # We do this AFTER scaling to ensure it sticks.
+    # and by no more than 0.2 (Metaculus max step constraint)
     min_increment = 0.00006
+    max_increment = 0.2  # Metaculus requires CDF to increase by no more than 0.2 at each step
     
     # Boundary definitions
     min_cdf = 0.001 if open_lower_bound else 0.0
@@ -320,12 +372,18 @@ def generate_continuous_cdf(
         for i in range(len(continuous_cdf)):
             continuous_cdf[i] = min_cdf + (continuous_cdf[i] - current_min) * scale_factor
 
-    # Pass 1: Forward pass (ensures i > i-1)
+    # Pass 1: Forward pass - enforce MINIMUM increment (ensures strictly increasing)
     for i in range(1, len(continuous_cdf)):
         if continuous_cdf[i] < continuous_cdf[i-1] + min_increment:
             continuous_cdf[i] = continuous_cdf[i-1] + min_increment
+    
+    # Pass 2: Forward pass - enforce MAXIMUM increment (smooths steep jumps)
+    # When a step is too large, spread the excess to subsequent steps
+    for i in range(1, len(continuous_cdf)):
+        if continuous_cdf[i] > continuous_cdf[i-1] + max_increment:
+            continuous_cdf[i] = continuous_cdf[i-1] + max_increment
             
-    # Pass 2: Backward pass (ensures i < i+1 and keeps us under max_cdf)
+    # Pass 3: Backward pass (ensures we stay under max_cdf and maintains monotonicity)
     # Ensure the last point is exactly max_cdf if it was pushed over
     if continuous_cdf[-1] > max_cdf:
         continuous_cdf[-1] = max_cdf
@@ -333,7 +391,7 @@ def generate_continuous_cdf(
             if continuous_cdf[i] > continuous_cdf[i+1] - min_increment:
                 continuous_cdf[i] = continuous_cdf[i+1] - min_increment
                 
-    # Final safety clamp (should be unnecessary if second pass worked)
+    # Final safety clamp (should be unnecessary if passes worked)
     for i in range(len(continuous_cdf)):
         continuous_cdf[i] = max(min_cdf, min(max_cdf, continuous_cdf[i]))
             
