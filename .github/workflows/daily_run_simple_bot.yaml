@@ -3,7 +3,7 @@ name: Regularly forecast new questions
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *" # runs every 30 minutes. Make sure to skip already forecasted questions!
+    - cron: "*/20 * * * *" # runs every 20 minutes. Make sure to skip already forecasted questions!
 
 # Give the GITHUB_TOKEN permissions to update the repo content and run title
 permissions:
