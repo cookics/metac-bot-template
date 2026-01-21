@@ -2,8 +2,8 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 0 |
-| **New Forecasts Made** | 0 ✅ |
+| **Total Questions Checked** | 1 |
+| **New Forecasts Made** | 1 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
@@ -11,3 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
+| [Will the community prediction be higher than 80.00% on 2026-01-30 for the Metaculus question "Will NASA's Artemis II complete its mission successfully before 2027?"?](https://www.metaculus.com/questions/41651/) | binary | Forecasted & Posted | `0.58` |
