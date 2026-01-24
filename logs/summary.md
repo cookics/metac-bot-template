@@ -2,8 +2,8 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 2 |
-| **New Forecasts Made** | 1 ✅ |
+| **Total Questions Checked** | 1 |
+| **New Forecasts Made** | 0 ✅ |
 | **Sorted/Skipped** | 1 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
@@ -11,5 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What will the seasonally adjusted unemployment rate be in Australia, for the following months? (January 2026)](https://www.metaculus.com/questions/41836/) | numeric | Forecasted & Posted | `[0.001, 0.00106, 0.00112, 0.0011799999999999998, 0.0012399999999999998, 0.0012999999999999997, 0.001...` |
-| [Will FFIV's market close price on 2026-01-31 be higher than its market close price on 2026-01-24?](https://www.metaculus.com/questions/41661/) | binary | Skipped (Already Made) | `-` |
+| [What will the seasonally adjusted unemployment rate be in Australia, for the following months? (January 2026)](https://www.metaculus.com/questions/41836/) | numeric | Skipped (Already Made) | `-` |
