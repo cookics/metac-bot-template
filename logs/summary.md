@@ -2,8 +2,8 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 0 |
-| **New Forecasts Made** | 0 ✅ |
+| **Total Questions Checked** | 1 |
+| **New Forecasts Made** | 1 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
@@ -11,3 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
+| [Will FFIV's market close price on 2026-01-31 be higher than its market close price on 2026-01-24?](https://www.metaculus.com/questions/41661/) | binary | Forecasted & Posted | `0.52` |
