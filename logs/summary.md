@@ -2,13 +2,12 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 1 |
+| **Total Questions Checked** | 0 |
 | **New Forecasts Made** | 0 ✅ |
-| **Sorted/Skipped** | 1 ⏭️ |
+| **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
 ### Detailed Results
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What will be the reported Q4 2025 global revenue for Mounjaro?](https://www.metaculus.com/questions/41746/) | numeric | Skipped (Already Made) | `-` |
