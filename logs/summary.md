@@ -2,13 +2,12 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 1 |
+| **Total Questions Checked** | 0 |
 | **New Forecasts Made** | 0 ✅ |
-| **Sorted/Skipped** | 1 ⏭️ |
+| **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
 ### Detailed Results
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will there be any avian influenza human cases in China reported by the WHO before April 1, 2026?](https://www.metaculus.com/questions/41748/) | binary | Skipped (Already Made) | `-` |
