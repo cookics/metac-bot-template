@@ -3,12 +3,12 @@
 | Statistic | Count |
 | :--- | :--- |
 | **Total Questions Checked** | 1 |
-| **New Forecasts Made** | 0 ✅ |
-| **Sorted/Skipped** | 1 ⏭️ |
+| **New Forecasts Made** | 1 ✅ |
+| **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
 ### Detailed Results
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [[Short fuse] What will be the Rotten Tomatoes Rating for "Melania" on February 13th, 2026?](https://www.metaculus.com/questions/41935/) | numeric | Skipped (Already Made) | `-` |
+| [Will the Trump administration initiate another process to significantly reduce federal funding to New York City before May 1, 2026?](https://www.metaculus.com/questions/41906/) | binary | Forecasted & Posted | `0.94` |
