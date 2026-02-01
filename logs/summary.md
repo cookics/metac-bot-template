@@ -2,8 +2,8 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 1 |
-| **New Forecasts Made** | 1 ✅ |
+| **Total Questions Checked** | 0 |
+| **New Forecasts Made** | 0 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
@@ -11,4 +11,3 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the Liberal Democratic Party win a majority in the 2026 Japanese general election?](https://www.metaculus.com/questions/41892/) | binary | Forecasted & Posted | `0.68` |
