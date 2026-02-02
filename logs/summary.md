@@ -11,5 +11,5 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What will be the value of "Overnight Repurchase Agreements: Treasury Securities Purchased by the Federal Reserve in the Temporary Open Market Operations" on 2026-02-10?](https://www.metaculus.com/questions/41968/) | numeric | Forecasted & Posted | `[0.0, 0.01846464620392783, 0.03711314062910275, 0.05592902072786313, 0.07489534957467002, 0.09399476...` |
-| [What will be the value of "Nominal Broad U.S. Dollar Index" on 2026-02-10?](https://www.metaculus.com/questions/41967/) | numeric | Skipped (Already Made) | `-` |
+| [What will be the closing value of the S&P 500 on March 13, 2026?](https://www.metaculus.com/questions/41569/) | numeric | Forecasted & Posted | `[0.011290997776142434, 0.011939748218462387, 0.012620586280008998, 0.01333477279322068, 0.0140835991...` |
+| [What will be the value of "Overnight Repurchase Agreements: Treasury Securities Purchased by the Federal Reserve in the Temporary Open Market Operations" on 2026-02-10?](https://www.metaculus.com/questions/41968/) | numeric | Skipped (Already Made) | `-` |
