@@ -2,15 +2,14 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 3 |
+| **Total Questions Checked** | 2 |
 | **New Forecasts Made** | 1 ✅ |
-| **Sorted/Skipped** | 2 ⏭️ |
+| **Sorted/Skipped** | 1 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
 ### Detailed Results
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the interest in “steve tisch” change between 2026-02-05 and 2026-02-13 according to Google Trends?](https://www.metaculus.com/questions/42009/) | multiple_choice | Forecasted & Posted | `{'Increases': 0.18, "Doesn't change": 0.67, 'Decreases': 0.15}` |
-| [Will HAL's market close price on 2026-02-13 be higher than its market close price on 2026-02-05?](https://www.metaculus.com/questions/42008/) | binary | Skipped (Already Made) | `-` |
-| [What will be the value of "Overnight Unsecured AMERIBOR Benchmark Interest Rate" on 2026-02-12?](https://www.metaculus.com/questions/42007/) | numeric | Skipped (Already Made) | `-` |
+| [Will 95% or more of Nigerians have a bank account before 2025?](https://www.metaculus.com/questions/41844/) | binary | Forecasted & Posted | `0.01` |
+| [Will the interest in “steve tisch” change between 2026-02-05 and 2026-02-13 according to Google Trends?](https://www.metaculus.com/questions/42009/) | multiple_choice | Skipped (Already Made) | `-` |
