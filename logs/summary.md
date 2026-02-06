@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Which Party will win the 2026 Gorton and Denton by-election?](https://www.metaculus.com/questions/42028/) | multiple_choice | Forecasted & Posted | `{'Labour Party': 0.27, 'Reform UK': 0.4, 'Green Party': 0.28, 'Other': 0.05}` |
+| [Will the community prediction be higher than 25.00% on 2026-02-15 for the Metaculus question "Before May 1, 2026, will the United States offer to purchase Greenland from Denmark?"?](https://www.metaculus.com/questions/42012/) | binary | Forecasted & Posted | `0.42` |
