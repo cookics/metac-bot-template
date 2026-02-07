@@ -2,8 +2,8 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 3 |
-| **New Forecasts Made** | 1 ✅ |
+| **Total Questions Checked** | 2 |
+| **New Forecasts Made** | 0 ✅ |
 | **Sorted/Skipped** | 2 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
@@ -12,5 +12,4 @@
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
 | [What will be the US national average price for regular gasoline (dollars per gallon) for the month of February 2026?](https://www.metaculus.com/questions/42037/) | numeric | Skipped (Already Made) | `-` |
-| [What will be the highest price of silver per troy ounce in April 2026?](https://www.metaculus.com/questions/42029/) | numeric | Skipped (Already Made) | `-` |
-| [Will OpenAI file an initial registration statement (S-1) with the SEC to launch an IPO, before March 15, 2026?](https://www.metaculus.com/questions/41849/) | binary | Forecasted & Posted | `0.04` |
+| [Will OpenAI file an initial registration statement (S-1) with the SEC to launch an IPO, before March 15, 2026?](https://www.metaculus.com/questions/41849/) | binary | Skipped (Already Made) | `-` |
