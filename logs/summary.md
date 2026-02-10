@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What will be the US national average price for regular gasoline (dollars per gallon) for the month of March 2026?](https://www.metaculus.com/questions/42043/) | numeric | Forecasted & Posted | `[0.001, 0.00106, 0.00112, 0.0011799999999999998, 0.0012399999999999998, 0.0012999999999999997, 0.001...` |
+| [Will Ofcom publish at least one enforcement decision under the UK Online Safety Act that includes a monetary penalty amount?](https://www.metaculus.com/questions/42044/) | binary | Forecasted & Posted | `0.98` |
