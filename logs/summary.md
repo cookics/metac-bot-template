@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will Ofcom publish at least one enforcement decision under the UK Online Safety Act that includes a monetary penalty amount?](https://www.metaculus.com/questions/42044/) | binary | Forecasted & Posted | `0.98` |
+| [Will WHO publish an update indicating at least one additional country or territory has been certified malaria-free, before May 1, 2026?](https://www.metaculus.com/questions/42045/) | binary | Forecasted & Posted | `0.55` |
