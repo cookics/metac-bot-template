@@ -2,8 +2,8 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 0 |
-| **New Forecasts Made** | 0 ✅ |
+| **Total Questions Checked** | 1 |
+| **New Forecasts Made** | 1 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
@@ -11,3 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
+| [Will the ECDC weekly SARS-CoV-2 test positivity series show four consecutive week-over-week increases for the EU/EEA, before May 1, 2026?](https://www.metaculus.com/questions/42048/) | binary | Forecasted & Posted | `0.2` |
