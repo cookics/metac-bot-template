@@ -2,15 +2,13 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 3 |
-| **New Forecasts Made** | 2 ✅ |
+| **Total Questions Checked** | 1 |
+| **New Forecasts Made** | 1 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
-| **Errors Encountered** | 1 ❌ |
+| **Errors Encountered** | 0 ✅ |
 
 ### Detailed Results
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will humans go extinct before 2100?](https://www.metaculus.com/questions/578/) | binary | Forecasted (Not Posted) | `0.01` |
-| [Example](https://www.metaculus.com/questions/14333/) | 14333 | ❌ Error: NameError | - |
-| [Before 2030, how many new AI labs will be leading labs within 2 years of their founding?](https://www.metaculus.com/questions/22427/) | multiple_choice | Forecasted (Not Posted) | `{'0 or 1': 0.45, '2 or 3': 0.35, '4 or 5': 0.12, '6 or 7': 0.04, '8 or 9': 0.02, '10 or more': 0.02}` |
+| [What will US airline passenger volume be for these weeks in February 2026, according to the TSA? (Feb 16, 2026-Feb 22, 2026)](https://www.metaculus.com/questions/42099/) | numeric | Forecasted & Posted | `[0.001, 0.00106, 0.00112, 0.0011799999999999998, 0.0012399999999999998, 0.0012999999999999997, 0.001...` |
