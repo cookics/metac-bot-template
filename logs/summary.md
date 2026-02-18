@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 60.00% on 2026-02-25 for the Metaculus question "Will Keir Starmer cease to be Prime Minister of the UK during 2026?"?](https://www.metaculus.com/questions/42193/) | 42193 | ❌ Error: APIStatusError | - |
+| [Will the community prediction be higher than 20.00% on 2026-02-28 for the Metaculus question "Will the North Atlantic sea surface temperature reach a daily record high before May 2026?"?](https://www.metaculus.com/questions/42194/) | 42194 | ❌ Error: APIStatusError | - |
