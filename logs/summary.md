@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will ROP's market close price on 2026-02-24 be higher than its market close price on 2026-02-18?](https://www.metaculus.com/questions/42183/) | 42183 | ❌ Error: APIStatusError | - |
+| [Will the community prediction be higher than 65.00% on 2026-02-28 for the Metaculus question "Will an AI model reach a 3 hour time horizon with 80% reliability during 2026?"?](https://www.metaculus.com/questions/42185/) | 42185 | ❌ Error: APIStatusError | - |
