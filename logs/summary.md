@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 20.00% on 2026-02-28 for the Metaculus question "Will the North Atlantic sea surface temperature reach a daily record high before May 2026?"?](https://www.metaculus.com/questions/42194/) | 42194 | ❌ Error: APIStatusError | - |
+| [Will CCL's market close price on 2026-02-25 be higher than its market close price on 2026-02-18?](https://www.metaculus.com/questions/42195/) | 42195 | ❌ Error: APIStatusError | - |
