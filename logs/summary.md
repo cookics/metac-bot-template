@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will CCL's market close price on 2026-02-25 be higher than its market close price on 2026-02-18?](https://www.metaculus.com/questions/42195/) | 42195 | ❌ Error: APIStatusError | - |
+| [Will the interest in “passport” change between 2026-02-18 and 2026-02-26 according to Google Trends?](https://www.metaculus.com/questions/42196/) | 42196 | ❌ Error: APIStatusError | - |
