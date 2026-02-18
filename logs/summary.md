@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 65.00% on 2026-02-28 for the Metaculus question "Will an AI model reach a 3 hour time horizon with 80% reliability during 2026?"?](https://www.metaculus.com/questions/42185/) | 42185 | ❌ Error: APIStatusError | - |
+| [What will be the value of "NASDAQ 100 Index" on 2026-02-26?](https://www.metaculus.com/questions/42189/) | 42189 | ❌ Error: APIStatusError | - |
