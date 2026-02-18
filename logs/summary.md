@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [How many commercial aircraft deliveries will Airbus report for April 2026 ?](https://www.metaculus.com/questions/42114/) | 42114 | ❌ Error: APIStatusError | - |
+| [Will the community prediction be higher than 60.00% on 2026-02-25 for the Metaculus question "Will Keir Starmer cease to be Prime Minister of the UK during 2026?"?](https://www.metaculus.com/questions/42193/) | 42193 | ❌ Error: APIStatusError | - |
