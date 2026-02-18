@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What will be the value of "NASDAQ 100 Index" on 2026-02-26?](https://www.metaculus.com/questions/42189/) | 42189 | ❌ Error: APIStatusError | - |
+| [Will the community prediction be higher than 80.00% on 2026-02-27 for the Metaculus question "Will NASA's Artemis II complete its mission successfully before 2027?"?](https://www.metaculus.com/questions/42190/) | 42190 | ❌ Error: APIStatusError | - |
