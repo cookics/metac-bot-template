@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the interest in “leslie wexner” change between 2026-02-19 and 2026-02-25 according to Google Trends?](https://www.metaculus.com/questions/42202/) | 42202 | ❌ Error: APIStatusError | - |
+| [Will CDU win the most seats in the Baden-Württemberg Landtag election?](https://www.metaculus.com/questions/42116/) | 42116 | ❌ Error: InternalServerError | - |
