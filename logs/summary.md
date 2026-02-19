@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will CDU win the most seats in the Baden-Württemberg Landtag election?](https://www.metaculus.com/questions/42116/) | 42116 | ❌ Error: AuthenticationError | - |
+| [Will AfD win the most seats in the Baden-Württemberg Landtag election?](https://www.metaculus.com/questions/42117/) | 42117 | ❌ Error: APIStatusError | - |
