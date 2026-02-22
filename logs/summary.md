@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will Frontier Group Holdings, Inc. file for bankruptcy protection before May 1, 2026?](https://www.metaculus.com/questions/42120/) | 42120 | ❌ Error: APIStatusError | - |
+| [Will the IOM Missing Migrants Project record at least 800 Mediterranean migrant deaths in 2026 before March 2026?](https://www.metaculus.com/questions/42236/) | 42236 | ❌ Error: APIStatusError | - |
