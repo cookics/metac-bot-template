@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will H.R. 33 (United States–Taiwan Expedited Double-Tax Relief Act) be enacted into law before May 1, 2026?](https://www.metaculus.com/questions/42246/) | 42246 | ❌ Error: APIStatusError | - |
+| [Which team will win the 2026 Six Nations Championship?](https://www.metaculus.com/questions/42247/) | 42247 | ❌ Error: APIStatusError | - |
