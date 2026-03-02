@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What will be the value of "U.S. Dollars to Euro Spot Exchange Rate" on 2026-03-12?](https://www.metaculus.com/questions/42395/) | 42395 | ❌ Error: APIStatusError | - |
+| [Will the community prediction be higher than 30.00% on 2026-03-14 for the Metaculus question "Will there be a ceasefire in the Sudanese Civil War during 2026?"?](https://www.metaculus.com/questions/42396/) | 42396 | ❌ Error: APIStatusError | - |
