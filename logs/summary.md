@@ -11,5 +11,5 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 23.00% on 2026-03-12 for the Metaculus question "Will the U.S. enact an AI safety federal statute or executive order in 2026?"?](https://www.metaculus.com/questions/42382/) | 42382 | ❌ Error: APIStatusError | - |
-| [What will be the value of "ICE BofA BB US High Yield Index Effective Yield" on 2026-03-10?](https://www.metaculus.com/questions/42381/) | 42381 | ❌ Error: Exception | - |
+| [Will the community prediction be higher than 45.00% on 2026-03-14 for the Metaculus question "Will the DOJ officially remove the requirement for U.S. attorneys to consult with the Public Integrity Section before prosecuting lawmakers before November 4, 2026?"?](https://www.metaculus.com/questions/42383/) | 42383 | ❌ Error: APIStatusError | - |
+| [Will the community prediction be higher than 23.00% on 2026-03-12 for the Metaculus question "Will the U.S. enact an AI safety federal statute or executive order in 2026?"?](https://www.metaculus.com/questions/42382/) | 42382 | ❌ Error: Exception | - |
