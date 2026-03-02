@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 45.00% on 2026-03-14 for the Metaculus question "Will the DOJ officially remove the requirement for U.S. attorneys to consult with the Public Integrity Section before prosecuting lawmakers before November 4, 2026?"?](https://www.metaculus.com/questions/42383/) | 42383 | ❌ Error: APIStatusError | - |
+| [Will PFE's market close price on 2026-03-13 be higher than its market close price on 2026-03-02?](https://www.metaculus.com/questions/42384/) | 42384 | ❌ Error: APIStatusError | - |
