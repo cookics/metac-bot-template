@@ -11,5 +11,5 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will GWW's market close price on 2026-03-12 be higher than its market close price on 2026-03-03?](https://www.metaculus.com/questions/42413/) | 42413 | ❌ Error: APIStatusError | - |
-| [Will the community prediction be higher than 63.00% on 2026-03-11 for the Metaculus question "Will Keir Starmer cease to be Prime Minister of the UK during 2026?"?](https://www.metaculus.com/questions/42412/) | 42412 | ❌ Error: APIStatusError | - |
+| [Will the community prediction be higher than 27.00% on 2026-03-13 for the Metaculus question "Will the US, UK or EU approve a gene editing therapy for a new condition during 2026?"?](https://www.metaculus.com/questions/42415/) | 42415 | ❌ Error: APIStatusError | - |
+| [Will the interest in “grants for reentry programs 2026” change between 2026-03-03 and 2026-03-14 according to Google Trends?](https://www.metaculus.com/questions/42414/) | 42414 | ❌ Error: APIStatusError | - |
