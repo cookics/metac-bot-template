@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the interest in “bbc news” change between 2026-03-03 and 2026-03-12 according to Google Trends?](https://www.metaculus.com/questions/42408/) | 42408 | ❌ Error: APIStatusError | - |
+| [What will U.S. Customs and Border Protection report as the number of Southwest Land Border Encounters in March 2026?](https://www.metaculus.com/questions/42319/) | 42319 | ❌ Error: APIStatusError | - |
