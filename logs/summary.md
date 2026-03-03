@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What will be the value of "Crude Oil Prices: Brent - Europe" on 2026-03-12?](https://www.metaculus.com/questions/42410/) | 42410 | ❌ Error: APIStatusError | - |
+| [Will INTC's market close price on 2026-03-12 be higher than its market close price on 2026-03-03?](https://www.metaculus.com/questions/42411/) | 42411 | ❌ Error: APIStatusError | - |
