@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [How far will the Duke Blue Devils advance in the NCAA's 2026 March Madness?](https://www.metaculus.com/questions/42438/) | 42438 | ❌ Error: APIStatusError | - |
+| [As of April 30, 2026, what will be the cumulative number of people detected arriving in the UK in small boats in 2026?](https://www.metaculus.com/questions/42323/) | 42323 | ❌ Error: APIStatusError | - |
