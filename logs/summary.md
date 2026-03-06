@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What will the ATP Singles #1 ranking points be on April 27, 2026?](https://www.metaculus.com/questions/42322/) | 42322 | ❌ Error: APIStatusError | - |
+| [How far will the Duke Blue Devils advance in the NCAA's 2026 March Madness?](https://www.metaculus.com/questions/42438/) | 42438 | ❌ Error: APIStatusError | - |
