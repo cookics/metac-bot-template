@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will an IAEA Iran report mention new centrifuge cascade installation at Natanz or Fordow before May 1, 2026?](https://www.metaculus.com/questions/42327/) | 42327 | ❌ Error: APIStatusError | - |
+| [Will France have a cabinet reshuffle replacing more than two ministers before May 1, 2026?](https://www.metaculus.com/questions/42328/) | 42328 | ❌ Error: APIStatusError | - |
