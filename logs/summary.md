@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will Anthropic be a designated supply chain risk on May 1, 2026?](https://www.metaculus.com/questions/42498/) | 42498 | ❌ Error: APIStatusError | - |
+| [Will an IAEA Iran report mention new centrifuge cascade installation at Natanz or Fordow before May 1, 2026?](https://www.metaculus.com/questions/42327/) | 42327 | ❌ Error: APIStatusError | - |
