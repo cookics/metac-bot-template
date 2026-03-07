@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will US existing home sales (seasonally adjusted annual rate) for March 2026 be at least 4.0 million?](https://www.metaculus.com/questions/42499/) | 42499 | ❌ Error: APIStatusError | - |
+| [Will Anthropic be a designated supply chain risk on May 1, 2026?](https://www.metaculus.com/questions/42498/) | 42498 | ❌ Error: APIStatusError | - |
