@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the U.S. Supreme Court issue at least 15 signed merits opinions in argued cases before May 1, 2026?](https://www.metaculus.com/questions/42504/) | 42504 | ❌ Error: APIStatusError | - |
+| [Will the U.S. Supreme Court issue at least 15 signed merits opinions in argued cases before May 1, 2026?](https://www.metaculus.com/questions/42504/) | 42504 | ❌ Error: ValueError | - |
