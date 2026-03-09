@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the U.S. Supreme Court grant certiorari in at least 10 new cases before May 1, 2026?](https://www.metaculus.com/questions/42505/) | 42505 | ❌ Error: ValueError | - |
+| [Will there be at least one INES Level 3 or higher event in 2026 listed by May 1, 2026?](https://www.metaculus.com/questions/42506/) | 42506 | ❌ Error: ValueError | - |
