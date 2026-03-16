@@ -11,5 +11,5 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 14.00% on 2026-03-23 for the Metaculus question "Will Lisa Cook cease to be a member of the Federal Reserve Board of Governors before November 3, 2026?"?](https://www.metaculus.com/questions/42690/) | 42690 | ❌ Error: APIStatusError | - |
-| [Will the interest in “netanyahu dead” change between 2026-03-16 and 2026-03-24 according to Google Trends?](https://www.metaculus.com/questions/42689/) | 42689 | ❌ Error: APIStatusError | - |
+| [Will MO's market close price on 2026-03-27 be higher than its market close price on 2026-03-16?](https://www.metaculus.com/questions/42692/) | 42692 | ❌ Error: ValueError | - |
+| [Will the community prediction be higher than 50.00% on 2026-03-26 for the Metaculus question "Will Cloudflare experience another critical incident before May 2026?"?](https://www.metaculus.com/questions/42691/) | 42691 | ❌ Error: APIStatusError | - |
