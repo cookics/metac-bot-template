@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What will be the value of "ICE BofA CCC & Lower US High Yield Index Effective Yield" on 2026-03-24?](https://www.metaculus.com/questions/42695/) | 42695 | ❌ Error: APIStatusError | - |
+| [Will Copernicus report that Europe was warmer than the 1991–2020 average in March 2026 before April 30, 2026?](https://www.metaculus.com/questions/42638/) | 42638 | ❌ Error: ValueError | - |
