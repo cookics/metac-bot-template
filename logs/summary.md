@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 43.00% on 2026-03-26 for the Metaculus question "Will Anthropic be a designated supply chain risk on May 1, 2026?"?](https://www.metaculus.com/questions/42712/) | 42712 | ❌ Error: APIStatusError | - |
+| [Will Blue Origin launch its New Glenn rocket before May 1, 2026?](https://www.metaculus.com/questions/42641/) | 42641 | ❌ Error: ValueError | - |
