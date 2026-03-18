@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will Blue Origin launch its New Glenn rocket before May 1, 2026?](https://www.metaculus.com/questions/42641/) | 42641 | ❌ Error: ValueError | - |
+| [Will the U.S. Supreme Court’s current Granted & Noted List show at least five distinct cases with “Granted” dates from March 5, 2026 through April 30, 2026 ?](https://www.metaculus.com/questions/42642/) | 42642 | ❌ Error: ValueError | - |
