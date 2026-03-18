@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the U.S. Supreme Court’s current Granted & Noted List show at least five distinct cases with “Granted” dates from March 5, 2026 through April 30, 2026 ?](https://www.metaculus.com/questions/42642/) | 42642 | ❌ Error: ValueError | - |
+| [Will the community prediction be higher than 63.00% on 2026-03-27 for the Metaculus question "Will the United States conduct a ground invasion of Iran before 2027?"?](https://www.metaculus.com/questions/42713/) | 42713 | ❌ Error: APIStatusError | - |
