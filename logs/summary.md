@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [What cumulative influenza-associated pediatric death total will CDC report for the 2025–26 U.S. flu season in the last eligible FluView before April 30, 2026?](https://www.metaculus.com/questions/42643/) | 42643 | ❌ Error: ValueError | - |
+| [Will CDC report cumulative influenza-associated pediatric deaths of at least 140 for the 2025–26 U.S. flu season before April 30, 2026?](https://www.metaculus.com/questions/42644/) | 42644 | ❌ Error: ValueError | - |
