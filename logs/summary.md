@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will California’s official statewide snowpack on April 1, 2026 be at least 80.0% of the April 1 average?](https://www.metaculus.com/questions/42798/) | 42798 | ❌ Error: ValueError | - |
+| [Which month will have the highest officially reported TSMC consolidated net revenue among January, February, and March 2026?](https://www.metaculus.com/questions/42800/) | 42800 | ❌ Error: ValueError | - |
