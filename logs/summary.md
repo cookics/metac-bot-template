@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the “Yes” side receive strictly more than 60.0% of valid votes in the 2026 Maldives constitutional referendum?](https://www.metaculus.com/questions/42801/) | 42801 | ❌ Error: ValueError | - |
+| [Will ASML’s Q1 2026 results show gross margin strictly above 52.0%?](https://www.metaculus.com/questions/42802/) | 42802 | ❌ Error: ValueError | - |
