@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Which list will win the most seats in Bulgaria’s 2026 parliamentary election?](https://www.metaculus.com/questions/42805/) | 42805 | ❌ Error: ValueError | - |
+| [Which turnout range will the official nationwide turnout in Bulgaria’s 2026 parliamentary election fall into?](https://www.metaculus.com/questions/42806/) | 42806 | ❌ Error: ValueError | - |
