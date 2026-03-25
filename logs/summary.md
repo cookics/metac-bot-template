@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will Meta publicly announce or release a model explicitly named “Llama 5” before April 30, 2026?](https://www.metaculus.com/questions/42809/) | 42809 | ❌ Error: APIStatusError | - |
+| [Will CDC’s official U.S. human A(H5N1) case tally increase by at least one before April 30, 2026?](https://www.metaculus.com/questions/42810/) | 42810 | ❌ Error: ValueError | - |
