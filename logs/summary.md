@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [How many charges will the ICC confirm against Rodrigo Duterte before May 2026?](https://www.metaculus.com/questions/42871/) | 42871 | ❌ Error: ValueError | - |
+| [What will be the value of "ICE BofA 7-10 Year US Corporate Index Effective Yield" on 2026-04-08?](https://www.metaculus.com/questions/42985/) | 42985 | ❌ Error: APIStatusError | - |
