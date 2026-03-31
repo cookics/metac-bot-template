@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the interest in “the visit” change between 2026-03-31 and 2026-04-10 according to Google Trends?](https://www.metaculus.com/questions/42996/) | 42996 | ❌ Error: APIStatusError | - |
+| [Will WHO publish at least one new Disease Outbreak News item about cholera or acute watery diarrhoea before April 30, 2026?](https://www.metaculus.com/questions/42929/) | 42929 | ❌ Error: ValueError | - |
