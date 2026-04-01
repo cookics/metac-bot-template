@@ -2,13 +2,12 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 1 |
+| **Total Questions Checked** | 0 |
 | **New Forecasts Made** | 0 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
-| **Errors Encountered** | 1 ❌ |
+| **Errors Encountered** | 0 ✅ |
 
 ### Detailed Results
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [How many barrels of crude oil will be in the US Strategic Petroleum Reserve on April 30, 2026?](https://www.metaculus.com/questions/42874/) | 42874 | ❌ Error: APIStatusError | - |
