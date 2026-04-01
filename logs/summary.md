@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will BKNG's market close price on 2026-04-10 be higher than its market close price on 2026-04-01?](https://www.metaculus.com/questions/43013/) | 43013 | ❌ Error: ValueError | - |
+| [Will TSCO's market close price on 2026-04-10 be higher than its market close price on 2026-04-01?](https://www.metaculus.com/questions/43014/) | 43014 | ❌ Error: ValueError | - |
