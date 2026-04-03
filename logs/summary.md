@@ -2,12 +2,13 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 0 |
+| **Total Questions Checked** | 1 |
 | **New Forecasts Made** | 0 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
-| **Errors Encountered** | 0 ✅ |
+| **Errors Encountered** | 1 ❌ |
 
 ### Detailed Results
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
+| [Will NASA's Artemis II mission launch before May 1, 2026?](https://www.metaculus.com/questions/43047/) | 43047 | ❌ Error: ValueError | - |
