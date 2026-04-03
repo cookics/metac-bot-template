@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Which of the following will best match Copernicus’s explicit wording about March 2026 Arctic sea ice in its March 2026 climate bulletin before April 30, 2026?](https://www.metaculus.com/questions/43048/) | 43048 | ❌ Error: ValueError | - |
+| [Will the S&P 500 Index post a daily close strictly below 4,800.00 on any trading day before May 1, 2026?](https://www.metaculus.com/questions/43049/) | 43049 | ❌ Error: ValueError | - |
