@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will NASA's Artemis II mission launch before May 1, 2026?](https://www.metaculus.com/questions/43047/) | 43047 | ❌ Error: ValueError | - |
+| [Which of the following will best match Copernicus’s explicit wording about March 2026 Arctic sea ice in its March 2026 climate bulletin before April 30, 2026?](https://www.metaculus.com/questions/43048/) | 43048 | ❌ Error: ValueError | - |
