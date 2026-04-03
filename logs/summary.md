@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the S&P 500 Index post a daily close strictly below 4,800.00 on any trading day before May 1, 2026?](https://www.metaculus.com/questions/43049/) | 43049 | ❌ Error: ValueError | - |
+| [Which Bloc will form the 2026 Danish Government?](https://www.metaculus.com/questions/43074/) | 43074 | ❌ Error: ValueError | - |
