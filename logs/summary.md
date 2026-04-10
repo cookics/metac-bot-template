@@ -2,8 +2,8 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 1 |
-| **New Forecasts Made** | 1 ✅ |
+| **Total Questions Checked** | 0 |
+| **New Forecasts Made** | 0 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
@@ -11,4 +11,3 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [At Google Cloud Next ’26, will Google announce a new named TPU generation not publicly announced before April 2, 2026?](https://www.metaculus.com/questions/43121/) | binary | Forecasted & Posted | `0.35` |
