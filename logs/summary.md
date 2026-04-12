@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will any model evaluated by Epoch AI score at least 40.0% on FrontierMath Tier 4 before May 1, 2026?](https://www.metaculus.com/questions/43134/) | 43134 | ❌ Error: ValueError | - |
+| [Will U.S. spot Bitcoin ETFs take in at least $1 billion of net inflows during April 2026?](https://www.metaculus.com/questions/43135/) | 43135 | ❌ Error: ValueError | - |
