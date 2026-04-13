@@ -11,5 +11,5 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
+| [Will the community prediction be higher than 25.00% on 2026-04-25 for the Metaculus question "Will there be a ceasefire in the Sudanese Civil War during 2026?"?](https://www.metaculus.com/questions/43192/) | binary | Forecasted & Posted | `0.37` |
 | [Will AMP's market close price on 2026-04-23 be higher than its market close price on 2026-04-13?](https://www.metaculus.com/questions/43191/) | 43191 | ❌ Error: ValueError | - |
-| [What will be the value of "ICE BofA Single-A US Corporate Index Option-Adjusted Spread" on 2026-04-21?](https://www.metaculus.com/questions/43190/) | numeric | Forecasted & Posted | `[0.08611570733089201, 0.08919934571055503, 0.09236440433738309, 0.09561181479710364, 0.0989424703472...` |
