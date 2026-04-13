@@ -2,14 +2,13 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 2 |
+| **Total Questions Checked** | 1 |
 | **New Forecasts Made** | 1 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
-| **Errors Encountered** | 1 ❌ |
+| **Errors Encountered** | 0 ✅ |
 
 ### Detailed Results
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 25.00% on 2026-04-25 for the Metaculus question "Will there be a ceasefire in the Sudanese Civil War during 2026?"?](https://www.metaculus.com/questions/43192/) | binary | Forecasted & Posted | `0.37` |
-| [Will AMP's market close price on 2026-04-23 be higher than its market close price on 2026-04-13?](https://www.metaculus.com/questions/43191/) | 43191 | ❌ Error: ValueError | - |
+| [What will be the value of "Market Yield on U.S. Treasury Securities at 30-Year Constant Maturity, Quoted on an Investment Basis" on 2026-04-23?](https://www.metaculus.com/questions/43193/) | numeric | Forecasted & Posted | `[0.001, 0.00106, 0.00112, 0.0011799999999999998, 0.0012399999999999998, 0.0012999999999999997, 0.001...` |
