@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 15.00% on 2026-04-25 for the Metaculus question "Will the U.S. conduct a ground invasion of Iran before May 2026?"?](https://www.metaculus.com/questions/43203/) | binary | Forecasted & Posted | `0.38` |
+| [Will the interest in “united arab emirates” change between 2026-04-14 and 2026-04-24 according to Google Trends?](https://www.metaculus.com/questions/43204/) | multiple_choice | Forecasted & Posted | `{'Increases': 0.15, "Doesn't change": 0.25, 'Decreases': 0.6}` |
