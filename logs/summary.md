@@ -2,8 +2,8 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 1 |
-| **New Forecasts Made** | 1 ✅ |
+| **Total Questions Checked** | 0 |
+| **New Forecasts Made** | 0 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
@@ -11,4 +11,3 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the interest in “travel warning” change between 2026-04-14 and 2026-04-23 according to Google Trends?](https://www.metaculus.com/questions/43210/) | multiple_choice | Forecasted & Posted | `{'Increases': 0.15, "Doesn't change": 0.3, 'Decreases': 0.55}` |
