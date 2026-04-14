@@ -2,8 +2,8 @@
 
 | Statistic | Count |
 | :--- | :--- |
-| **Total Questions Checked** | 2 |
-| **New Forecasts Made** | 2 ✅ |
+| **Total Questions Checked** | 1 |
+| **New Forecasts Made** | 1 ✅ |
 | **Sorted/Skipped** | 0 ⏭️ |
 | **Errors Encountered** | 0 ✅ |
 
@@ -11,5 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 35.00% on 2026-04-25 for the Metaculus question "Will the United States attempt to occupy or blockade Kharg Island during 2026?"?](https://www.metaculus.com/questions/43207/) | binary | Forecasted & Posted | `0.62` |
-| [What will be the value of "ICE BofA US Corporate Index Effective Yield" on 2026-04-23?](https://www.metaculus.com/questions/43206/) | numeric | Forecasted & Posted | `[0.001, 0.0011230522493858317, 0.0012585999493109911, 0.0014077599171177897, 0.0015717320108787343, ...` |
+| [Will the interest in “hungary election” change between 2026-04-14 and 2026-04-25 according to Google Trends?](https://www.metaculus.com/questions/43208/) | multiple_choice | Forecasted & Posted | `{'Increases': 0.3, "Doesn't change": 0.22, 'Decreases': 0.48}` |
