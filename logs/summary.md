@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the interest in “hungary election” change between 2026-04-14 and 2026-04-25 according to Google Trends?](https://www.metaculus.com/questions/43208/) | multiple_choice | Forecasted & Posted | `{'Increases': 0.3, "Doesn't change": 0.22, 'Decreases': 0.48}` |
+| [Will the community prediction be higher than 36.00% on 2026-04-22 for the Metaculus question "Will another U.S. cabinet member leave office before May 2026?"?](https://www.metaculus.com/questions/43209/) | binary | Forecasted & Posted | `0.68` |
