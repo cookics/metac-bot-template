@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 80.00% on 2026-04-23 for the Metaculus question "In Louisiana v. Callais, will SCOTUS strike down Louisiana’s two majority-Black districts, restoring a GOP-leaning map?"?](https://www.metaculus.com/questions/43194/) | binary | Forecasted & Posted | `0.25` |
+| [Will the interest in “trump magic paint” change between 2026-04-14 and 2026-04-25 according to Google Trends?](https://www.metaculus.com/questions/43198/) | multiple_choice | Forecasted & Posted | `{'Increases': 0.28, "Doesn't change": 0.42, 'Decreases': 0.3}` |
