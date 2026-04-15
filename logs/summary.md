@@ -11,5 +11,5 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the community prediction be higher than 33.00% on 2026-04-25 for the Metaculus question "Will the DOJ officially remove the requirement for U.S. attorneys to consult with the Public Integrity Section before prosecuting lawmakers before November 4, 2026?"?](https://www.metaculus.com/questions/43212/) | binary | Forecasted & Posted | `0.25` |
-| [Will CTVA's market close price on 2026-04-25 be higher than its market close price on 2026-04-15?](https://www.metaculus.com/questions/43211/) | 43211 | ❌ Error: ValueError | - |
+| [Will the interest in “joint comprehensive plan of action” change between 2026-04-15 and 2026-04-24 according to Google Trends?](https://www.metaculus.com/questions/43215/) | multiple_choice | Forecasted & Posted | `{'Increases': 0.18, "Doesn't change": 0.3, 'Decreases': 0.52}` |
+| [Will ED's market close price on 2026-04-25 be higher than its market close price on 2026-04-15?](https://www.metaculus.com/questions/43214/) | 43214 | ❌ Error: ValueError | - |
