@@ -11,4 +11,4 @@
 
 | Question | Type | Status | Forecast Preview |
 | :--- | :--- | :--- | :--- |
-| [Will the interest in “eric swalwell” change between 2026-04-16 and 2026-04-23 according to Google Trends?](https://www.metaculus.com/questions/43226/) | multiple_choice | Forecasted & Posted | `{'Increases': 0.12, "Doesn't change": 0.23, 'Decreases': 0.65}` |
+| [Will the community prediction be higher than 15.00% on 2026-04-24 for the Metaculus question "Will the U.S. enact an AI safety federal statute or executive order in 2026?"?](https://www.metaculus.com/questions/43227/) | binary | Forecasted & Posted | `0.62` |
